@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<title type="text">Niklas' Blog</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
+<link rel="self" type="application/atom+xml" href="//niklas-heer.de/feed.xml" />
+<link rel="alternate" type="text/html" href="//niklas-heer.de" />
+<updated>2015-02-05T20:04:33+01:00</updated>
+<id>//niklas-heer.de/</id>
+<author>
+  <name>Niklas Heer</name>
+  <uri>//niklas-heer.de/</uri>
+  <email>niklas.heer@gmail.com</email>
+</author>
+
+
+<entry>
+  <title type="html"><![CDATA[Jekyll - from zero to hero]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/jekyll-from-zero-to-hero/" />
+  <id>//niklas-heer.de/jekyll-from-zero-to-hero</id>
+  <published>2014-12-05T15:16:47+01:00</published>
+  <updated>2014-12-05T15:16:47+01:00</updated>
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/2014-12-05/after.png&quot;&gt;&lt;img src=&quot;/assets/images/2014-12-05/after.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+        &lt;figcaption&gt;my blog was never faster nor easier to deploy!&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;
+
+&lt;h2 id=&quot;deployment-via-git&quot;&gt;Deployment via git&lt;/h2&gt;
+
+&lt;h3 id=&quot;the-local-repository&quot;&gt;The local repository&lt;/h3&gt;
+&lt;p&gt;You can host your site on &lt;a href=&quot;https://about.gitlab.com/&quot;&gt;Gitlab&lt;/a&gt;, &lt;a href=&quot;https://github.com/&quot;&gt;Github&lt;/a&gt; or something else - just like I do.
+But if you want to start from scratch you can make a folder and initialize git in it, after that you can copy over your Jekyll files.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;mkdir jekyll &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;jekyll
+git init
+cp -r /path/to/old_jekyll_folder /path/to/jekyll
+git add .
+git commit -am &lt;span class=&quot;s2&quot;&gt;&amp;quot;initial commit.&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;the-remote-repository&quot;&gt;The remote repository&lt;/h3&gt;
+&lt;p&gt;Now we need a new repository on your web-server, but it doesn’t need to be inside your web directory - just somewhere inside the system. I assume you have configured your public-key to work as a login and you also need write-privileges to the web directory with this user.&lt;br /&gt;
+First we need to initialize the repository:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#Initialized empty Git repository in /home/nh/website.git/&lt;/span&gt;
+mkdir website.git &lt;span class=&quot;o&quot;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;cd &lt;/span&gt;website.git
+git init --bare&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Then we need define a post-receive hook that checks out the latest changes into the web-servers DocumentRoot (this directory must exist; Git will not create it for you):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nano hooks/post-receive&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Put this inside the file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;GIT_WORK_TREE&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/var/www/www.example.org git checkout -f&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that we need to enable the hook which will be triggered every time we push our changes to this repository. It will apply every commit to the directory which you have defined inside the post-receive hook.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;chmod +x hooks/post-receive&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;We are now done on the server and we only need to set up the update process on the local system.&lt;/p&gt;
+
+&lt;h3 id=&quot;the-update-process&quot;&gt;The update process&lt;/h3&gt;
+&lt;p&gt;First we need to edit our git config file in our local repository to add the remote server.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nano .git/config&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Add this to the file:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote &lt;span class=&quot;s2&quot;&gt;&amp;quot;production&amp;quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; username@webserver:/home/nh/website.git&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;That’s it! Now you have set up your deployment! To deploy your jekyll changes is now as easy as this:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;git push production&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;make-jekyll-fly&quot;&gt;Make jekyll fly&lt;/h2&gt;
+
+&lt;blockquote&gt;
+This is the fastest site I&#39;ve ever built.
+&lt;/blockquote&gt;
+
+&lt;center&gt;
+    &lt;figure class=&quot;half&quot;&gt;
+        &lt;a href=&quot;/assets/images/2014-12-05/before.png&quot;&gt;&lt;img src=&quot;/assets/images/2014-12-05/before.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+        &lt;a href=&quot;/assets/images/2014-12-05/after.png&quot;&gt;&lt;img src=&quot;/assets/images/2014-12-05/after.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+        &lt;figcaption&gt;before and after&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;
+
+&lt;h3 id=&quot;optimizing-the-web-server&quot;&gt;Optimizing the web-server&lt;/h3&gt;
+&lt;p&gt;Since I wanted to optimize my server I looked for a site which would allow me to test my servers performance and maybe also give me hints, than I found &lt;a href=&quot;http://tools.pingdom.com/fpt/#!/dG49JO/http://blog.niklas-heer.de&quot;&gt;pingdom&lt;/a&gt; which is a really good tool to test your site!&lt;/p&gt;
+
+&lt;p&gt;First I installed &lt;a href=&quot;https://developers.google.com/speed/pagespeed/module&quot;&gt;Googles Pagespeed&lt;/a&gt; on my CentOS machine which was a &lt;a href=&quot;http://www.tecmint.com/install-mod_pagespeed-website-optimizer-for-apache-in-rhel-centos-and-fedora/&quot;&gt;fairly easy process&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now I needed some optimization of my servers cache, for this I needed to use the &lt;code&gt;mod_expires&lt;/code&gt; module of my apache installation.&lt;br /&gt;
+I made a new file &lt;code&gt;/etc/httpd/conf.d/expires.conf&lt;/code&gt; with the following content:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-apache&quot; data-lang=&quot;apache&quot;&gt;&lt;span class=&quot;nb&quot;&gt;ExpiresActive&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;On&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ExpiresByType&lt;/span&gt; image/gif &lt;span class=&quot;s2&quot;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ExpiresByType&lt;/span&gt; image/png &lt;span class=&quot;s2&quot;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ExpiresByType&lt;/span&gt; image/jpeg &lt;span class=&quot;s2&quot;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ExpiresByType&lt;/span&gt; text/css &lt;span class=&quot;s2&quot;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ExpiresByType&lt;/span&gt; text/javascript &lt;span class=&quot;s2&quot;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ExpiresByType&lt;/span&gt; application/x-javascript &lt;span class=&quot;s2&quot;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;nb&quot;&gt;ExpiresByType&lt;/span&gt; application/x-shockwave-flash &lt;span class=&quot;s2&quot;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that I edited my DNS entry to use &lt;a href=&quot;https://www.cloudflare.com&quot;&gt;CloudFlare&lt;/a&gt; which I &lt;em&gt;highly&lt;/em&gt; recommend to you!&lt;/p&gt;
+
+&lt;p&gt;Now I have a really fast Apache web-server with caching and &lt;a href=&quot;https://www.cloudflare.com&quot;&gt;CloudFlare&lt;/a&gt; enabled.&lt;/p&gt;
+
+&lt;h3 id=&quot;optimizing-pictures&quot;&gt;Optimizing pictures&lt;/h3&gt;
+&lt;p&gt;You can make images smaller by using &lt;a href=&quot;https://github.com/toy/image_optim&quot;&gt;image_optim&lt;/a&gt;! This is a great tool and fairly simple to install:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem install image_optim image_optim_pack&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;If you want the full suit you also need to do this on ArchLinux:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;yaourt -S pngout
+sudo npm install -g svgo&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that you can simply go to the directory in which you stored your pictures and let &lt;a href=&quot;https://github.com/toy/image_optim&quot;&gt;image_optim&lt;/a&gt; run through all subdirectories and files recursively with this command:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;# WARNING: This could take a while!&lt;/span&gt;
+image_optim -r .&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&quot;hiding-the-clutter&quot;&gt;Hiding the clutter&lt;/h2&gt;
+
+&lt;p&gt;I have made an &lt;code&gt;.htaccess&lt;/code&gt; file for this reason, but since I have the opportunity to simply change the DocumentRoot to &lt;code&gt;_site&lt;/code&gt; I did that instead!&lt;br /&gt;
+Maybe it will help you!&lt;/p&gt;
+
+&lt;script src=&quot;https://gist.github.com/niklas-heer/f1392572c9f0469f2133.js&quot;&gt; &lt;/script&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/jekyll-from-zero-to-hero/&quot;&gt;Jekyll - from zero to hero&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 05, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[vtop an unknown terminal beauty]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/vtop-an-unknown-beauty/" />
+  <id>//niklas-heer.de/vtop-an-unknown-beauty</id>
+  <published>2014-12-01T09:40:31+01:00</published>
+  <updated>2014-12-01T09:40:31+01:00</updated>
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;blockquote&gt;
+Wow such top. So stats. More better than regular top. Written in node.js
+&lt;cite&gt;&lt;a href=&quot;https://parall.ax/vtop&quot;&gt;vtop&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I’ve been using &lt;code&gt;top&lt;/code&gt; since I started maintaining a server in 2010. &lt;br /&gt;
+It’s a really powerful tool to glance at it and see if your system is alright, but since I discovered &lt;code&gt;htop&lt;/code&gt;, &lt;code&gt;top&lt;/code&gt; was made obsolete for me.&lt;/p&gt;
+
+&lt;p&gt;Although I really liked &lt;code&gt;htop&lt;/code&gt; I always felt that it sometimes had a too clunky representation of the data, so that I couldn’t quickly enough see if my system was acting out of the common workload.&lt;/p&gt;
+
+&lt;p&gt;Than I discovered &lt;code&gt;vtop&lt;/code&gt;! &lt;br /&gt;
+But let’s start at the beginning of my journey.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-not-simple-old-top&quot;&gt;Why not simple old &lt;code&gt;top&lt;/code&gt;?&lt;/h3&gt;
+&lt;center&gt;
+    &lt;figure class=&quot;half&quot;&gt;
+        &lt;a href=&quot;/assets/images/2014-12-01/top.png&quot;&gt;&lt;img src=&quot;/assets/images/2014-12-01/top.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+        &lt;a href=&quot;/assets/images/2014-12-01/htop.png&quot;&gt;&lt;img src=&quot;/assets/images/2014-12-01/htop.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+        &lt;figcaption&gt;top vs htop&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;
+
+&lt;p&gt;As you can guess from the pictures above &lt;code&gt;htop&lt;/code&gt; does really exactly the same as &lt;code&gt;top&lt;/code&gt;, but in a much nicer way so in my opinion there is no discussion about why you would choose &lt;code&gt;top&lt;/code&gt; over &lt;code&gt;htop&lt;/code&gt;!&lt;/p&gt;
+
+&lt;h3 id=&quot;vtopvtop-the-unknown-beauty&quot;&gt;&lt;strong&gt;&lt;a href=&quot;https://github.com/MrRio/vtop&quot;&gt;vtop&lt;/a&gt;&lt;/strong&gt; the unknown beauty&lt;/h3&gt;
+&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&quot;/assets/images/2014-12-01/vtop.png&quot;&gt;&lt;img src=&quot;/assets/images/2014-12-01/vtop.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+        &lt;figcaption&gt;vtop&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/MrRio/vtop&quot;&gt;vtop&lt;/a&gt; looks much cleaner than htop. One look and you exactly know whats going on on the system! You can list processes by CPU or Memory usage which is really awesome, you can navigate with your arrow keys or &lt;code&gt;k&lt;/code&gt; and &lt;code&gt;j&lt;/code&gt; which is also nice and the best of all you can simply highlight/select a process and kill it by typing &lt;code&gt;dd&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt;(you need to install &lt;a href=&quot;http://nodejs.org/&quot;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo npm install -g vtop&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;After that you can execute it by typing &lt;code&gt;vtop&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I really love it! Maybe there are some use-cases where I still need &lt;code&gt;htop&lt;/code&gt; e.g. when I want to find a PID and don’t need it to kill the process, but &lt;code&gt;vtop&lt;/code&gt; is now a part of my daily used tool!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Try it out yourself!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/vtop-an-unknown-beauty/&quot;&gt;vtop an unknown terminal beauty&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 01, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Hello Jekyll!]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/jekyll/update/hello-jekyll/" />
+  <id>//niklas-heer.de/jekyll/update/hello-jekyll</id>
+  <published>2014-11-30T02:34:52+01:00</published>
+  <updated>2014-11-30T02:34:52+01:00</updated>
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;I changed my blog from &lt;a href=&quot;https://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; to &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;why-i-switched-to-jekyll&quot;&gt;Why i switched to Jekyll&lt;/h2&gt;
+&lt;p&gt;I was thinking about switching from &lt;a href=&quot;https://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; to something else for quite a while, but I didn’t find anything I really liked.&lt;/p&gt;
+
+&lt;p&gt;First I thought about switching my blog to a self made &lt;a href=&quot;http://laravel.com/&quot;&gt;Laravel&lt;/a&gt; site, but it’s kind of reinventing the wheel.
+It’s a lot of work and is still open to bugs and exploits and therefore has to be updated really often - which I was not willing to do and also didn’t had the time for to do.
+Also I still would have PHP Code which to be totally honest I don’t really like because it is really slow in comparison to &lt;a href=&quot;http://www.nodejs.org/&quot;&gt;Node.js&lt;/a&gt; or &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt; code.&lt;/p&gt;
+
+&lt;p&gt;My second thought was to implement my blog in &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt;. Yay! The response time would be amazing and I sure would learn a lot - given I only played around with &lt;a href=&quot;https://golang.org/&quot;&gt;Go&lt;/a&gt; so far.
+But then again - a lot of overhead, fast out-of-date and time-consuming to maintain.&lt;/p&gt;
+
+&lt;p&gt;At first I was against static site generation.&lt;/p&gt;
+
+&lt;p&gt;I search a while and read a little bit more about static site generation and the more I thought about it the more it became clear to me: “This is the way to go.”&lt;/p&gt;
+
+&lt;p&gt;Static site generation was the key to the cons I had previously had against other solution. No security risks, because it is “only” HTML and no code is compiled on the server at runtime. No overhead - there are a lot of great static site generators out here and it would be - once set up - really fast to write articles and publish them.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Okay, so where to start?&lt;/em&gt; &lt;br /&gt;
+There is &lt;a href=&quot;http://blog.getpelican.com/&quot;&gt;Pelican&lt;/a&gt;, &lt;a href=&quot;http://picocms.org/&quot;&gt;Pico&lt;/a&gt;, &lt;a href=&quot;http://getnikola.com/&quot;&gt;Nikola&lt;/a&gt; and of course &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;So I looked at them all with the following requirements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;easy to use&lt;/li&gt;
+  &lt;li&gt;can import my post from &lt;a href=&quot;https://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; (would turn out as a ‘biggy’)&lt;/li&gt;
+  &lt;li&gt;support &lt;a href=&quot;https://help.github.com/articles/github-flavored-markdown/&quot;&gt;Markdown&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;actively maintained&lt;/li&gt;
+  &lt;li&gt;easy way to preview my work before uploading it to any server&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;nikolanikolabr&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&quot;http://getnikola.com/&quot;&gt;Nikola&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/h3&gt;
+&lt;p&gt;I started with &lt;a href=&quot;http://getnikola.com/&quot;&gt;Nikola&lt;/a&gt; because it seemed like the perfect fit to me. It met all my requirements and also was very easy to install on &lt;a href=&quot;https://www.archlinux.org/&quot;&gt;ArchLinux&lt;/a&gt; (&lt;code&gt;yaourt -S python-nikola-git&lt;/code&gt;).
+So I headed right into it made a new git repo and &lt;code&gt;nikola init&lt;/code&gt; to start a new &lt;a href=&quot;http://getnikola.com/&quot;&gt;Nikola&lt;/a&gt; instance.
+Okay now let’s import my &lt;a href=&quot;https://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; posts.&lt;br /&gt;
+I made exported my posts from within &lt;a href=&quot;https://wordpress.org/&quot;&gt;Wordpress&lt;/a&gt; thought a XML file and executed &lt;a href=&quot;http://getnikola.com/&quot;&gt;Nikolas&lt;/a&gt; built-in import method &lt;code&gt;nikola import_wordpress posts.xml&lt;/code&gt;. Wow, that was easy.
+Nope. Error. Damn it! &lt;a href=&quot;https://duckduckgo.com/&quot;&gt;DuckDuckGo&lt;/a&gt; to the rescue!
+Okay installed &lt;a href=&quot;http://getnikola.com/&quot;&gt;Nikola&lt;/a&gt; from source on Github. Still that Error. 
+After a few hours of fumbling around I admitted defeat and moved on the the next generator on my list.&lt;/p&gt;
+
+&lt;h3 id=&quot;pelicanpelicanbr&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&quot;http://blog.getpelican.com/&quot;&gt;Pelican&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/h3&gt;
+&lt;p&gt;Aswell as &lt;a href=&quot;http://getnikola.com/&quot;&gt;Nikola&lt;/a&gt;, &lt;a href=&quot;http://blog.getpelican.com/&quot;&gt;Pelican&lt;/a&gt; checked off everything on my list so i also installed it. This time through &lt;a href=&quot;https://pypi.python.org/pypi/pip/&quot;&gt;pip&lt;/a&gt;. Just for funsies.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;pip install pelican markdown&lt;/code&gt;&lt;br /&gt;
+&lt;code&gt;pelican-quickstart&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Okay so now let’s import it.&lt;br /&gt;
+&lt;code&gt;pelican-import --wpfile --dir-page -o content -m markdown posts.xml&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Cool, so far so good let’s look at my files.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python -m SimpleHTTPServer&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Doesn’t work. Mhmmm… let’s try Python2.&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;python2 -m SimpleHTTPServer&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Eureka! Long story short I really didn’t like the way theming works in &lt;a href=&quot;http://blog.getpelican.com/&quot;&gt;Pelican&lt;/a&gt; although I thought I could live with it, there where still some options on my list and I thought: “Better make sure you like it, because you will be using it for quite a while!”&lt;/p&gt;
+
+&lt;h3 id=&quot;picopicobr&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&quot;http://picocms.org/&quot;&gt;Pico&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/h3&gt;
+&lt;p&gt;Okay so I started on &lt;a href=&quot;http://picocms.org/&quot;&gt;Picos&lt;/a&gt; website. Oh my.. PHP? Why? Oh boy, now I have to set up a complete web developing environment for a “simple” static site generator? Nah!&lt;br /&gt;
+So I searched for lightweight Web-Servers for in-place use.&lt;br /&gt;
+I discovered [node-sng][http://code.ravelsoft.com/node-sng] and thanks to &lt;a href=&quot;https://www.archlinux.org/&quot;&gt;Arch&lt;/a&gt; it was also easy to install.&lt;/p&gt;
+
+&lt;p&gt;But at this point I thought I just drop &lt;a href=&quot;http://picocms.org/&quot;&gt;Pico&lt;/a&gt; because it is not practical for me and thus I wouldn’t use it for long.&lt;/p&gt;
+
+&lt;h3 id=&quot;jekylljekyllbr&quot;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;&lt;/h3&gt;
+&lt;p&gt;Let’s try the clear mainstream option. Nice checks off everything on my list. &lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gem update
+gem install jekyll&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Nice! So let’s import everything. &lt;a href=&quot;http://import.jekyllrb.com/docs/wordpressdotcom/&quot;&gt;Awesome Doc&lt;/a&gt; is awesome!&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ruby -rubygems -e &lt;span class=&quot;s1&quot;&gt;&amp;#39;require &amp;quot;jekyll-import&amp;quot;;&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;    JekyllImport::Importers::WordpressDotCom.run({&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;      &amp;quot;source&amp;quot; =&amp;gt; &amp;quot;wordpress.xml&amp;quot;,&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;      &amp;quot;no_fetch_images&amp;quot; =&amp;gt; false,&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;      &amp;quot;assets_folder&amp;quot; =&amp;gt; &amp;quot;assets&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;s1&quot;&gt;    })&amp;#39;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Mhm.. now my posts are still in HTML - I want them in &lt;code&gt;.md&lt;/code&gt; format. Okay Bash-Script to the rescue! (you need &lt;a href=&quot;http://johnmacfarlane.net/pandoc/installing.html&quot;&gt;pandoc&lt;/a&gt; to use this script)&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/bash&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;FILES&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/nh/Desktop/posts/*
+&lt;span class=&quot;nv&quot;&gt;MDFOLDER&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;/home/nh/Desktop/mdfiles/
+&lt;span class=&quot;k&quot;&gt;for &lt;/span&gt;f in &lt;span class=&quot;nv&quot;&gt;$FILES&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;completename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${f##*/}&amp;quot;&lt;/span&gt;          &lt;span class=&quot;c&quot;&gt;# complete file name with .ext&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;filename&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;${completename%.*}&amp;quot;&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;# name without .ext&lt;/span&gt;
+    &lt;span class=&quot;nv&quot;&gt;mdname&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$filename.md&amp;quot;&lt;/span&gt;            &lt;span class=&quot;c&quot;&gt;# lets add .md extension&lt;/span&gt;
+
+    &lt;span class=&quot;nv&quot;&gt;pathToMd&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;$MDFOLDER$mdname&amp;quot;&lt;/span&gt;      &lt;span class=&quot;c&quot;&gt;# define the output path&lt;/span&gt;
+
+    &lt;span class=&quot;c&quot;&gt;# Let&amp;#39;s rock!&lt;/span&gt;
+    &lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Processing $mdname&amp;quot;&lt;/span&gt;
+    pandoc -s &lt;span class=&quot;s2&quot;&gt;&amp;quot;$f&amp;quot;&lt;/span&gt; -o &lt;span class=&quot;s2&quot;&gt;&amp;quot;$pathToMd&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;done&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Awesome! Let’s compile them and look at what I’ve got so far.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;jekyll serve -w&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Oh it looks kind of messy. The file header it not right. Okay I will go through my posts I also need to change some image urls and stuff.&lt;br /&gt;
+Nice auto-compile function! While we’re at it let’s also install a &lt;a href=&quot;https://mademistakes.com/articles/hpstr-jekyll-theme/&quot;&gt;nice theme&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Here are some useful code-blocks:
+&lt;script src=&quot;https://gist.github.com/niklas-heer/25336b9b6758a35b720b.js&quot;&gt; &lt;/script&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Although it was quite some time editing 60+ posts I really like the result and you may like it too! I’m really glad I took the journey to discover &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This very article is my first one completely written in &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; on my beloved &lt;a href=&quot;http://www.sublimetext.com/&quot;&gt;SublimeText-Editor&lt;/a&gt; with some Plugins. (&lt;a href=&quot;https://sublime.wbond.net/packages/Jekyll&quot;&gt;Jekyll&lt;/a&gt;, &lt;a href=&quot;https://sublime.wbond.net/packages/Markdown%20Preview&quot;&gt;Markdown Preview&lt;/a&gt; and &lt;a href=&quot;https://sublime.wbond.net/packages/MarkdownEditing&quot;&gt;Markdown​Editing&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;I hope I gave you some insights in my journey and maybe you can save yourself some trouble and fist try &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; before you end up digging through the entire internet to find a static site generator you like.&lt;/p&gt;
+
+&lt;p&gt;Good luck! ;)&lt;/p&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/jekyll/update/hello-jekyll/&quot;&gt;Hello Jekyll!&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on November 30, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[R.I.P. WhatsApp - Es lebe Telegram!]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/r-i-p-whatsapp-es-lebe-telegram/" />
+  <id>//niklas-heer.de/r-i-p-whatsapp-es-lebe-telegram</id>
+  <updated>2014-02-20T00:00:00-00:00</updated>
+  <published>2014-02-20T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;center&gt;
+	&lt;em&gt;&lt;small&gt;Disclaimer: Dieser Beitrag kann ironische/sarkastische Passagen enthalten. Er ist stellenweise wahrscheinlich sehr technisch. Achso und nein ich bekomme kein Geld von Telegram, ich bin einfach davon überzeugt.&lt;/small&gt;&lt;/em&gt;
+&lt;/center&gt;
+
+&lt;p&gt;Okay also wir wissen, dass &lt;a href=&quot;https://telegram.org/faq#q-how-secure-is-telegram&quot;&gt;WhatsApp&lt;/a&gt; das
+Imperium ist und von &lt;a href=&quot;http://www.heise.de/newsticker/meldung/Facebook-kauft-WhatsApp-2118920.html&quot;&gt;Facebook verschlungen&lt;/a&gt; zu werden, kann den Imageschaden der durch &lt;a href=&quot;http://de.wikipedia.org/wiki/WhatsApp#Sicherheit.2FKritik&quot;&gt;zahlreiche Sicherheitsskandale&lt;/a&gt; in der Vergangenheit verursacht wurde auch nicht kitten.
+Also was tut nur der sicherheitsbewusste User? Er wechselt zu &lt;a href=&quot;https://telegram.org/&quot;&gt;Telegram&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&quot;warum-telegram-und-nicht-threema&quot;&gt;Warum Telegram und nicht Threema?&lt;/h2&gt;
+
+&lt;p&gt;Threema ist eine nicht-freie und kostenpflichtige App. Nicht-frei, was soll das denn heißen?
+Das bedeutet, dass Threema nicht zu &lt;a href=&quot;http://de.wikipedia.org/wiki/Free/Libre_Open_Source_Software&quot;&gt;FOSS [Free and Open Source Software]&lt;/a&gt; gehört. 
+Das ist bei sicherheitskritischen Anwendungen essenziell um sicher zu sein, dass etwas wirklich sicher ist, denn bei FOSS &lt;a href=&quot;https://www.gnu.org/philosophy/free-sw.html&quot;&gt;hat jeder Zugriff zum Quelltext der Software&lt;/a&gt; und man kann
+überprüfen, ob die Software auch das macht was der Hersteller behauptet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Warum kann man sich bei Threema also nicht sicher sein?&lt;/em&gt;&lt;/strong&gt; &lt;br /&gt;
+Zwar benutzt laut Hersteller-Angaben &lt;a href=&quot;http://nacl.cr.yp.to/&quot;&gt;eine freie Bibliothek&lt;/a&gt; (das heißt dieser Teil ist FOSS) für die eigentliche verschlüsselte Kommunikation und hat zur Überprüfung dafür auch extra ein &lt;a href=&quot;https://threema.ch/validation/&quot;&gt;spezielles Logging&lt;/a&gt; bereit gestellt, aber dadurch, dass nicht das komplette Programm einsehbar ist, ist es nicht auszuschließen, dass der Hersteller die Daten - selbst wenn tatsächlich mit &lt;a href=&quot;http://nacl.cr.yp.to/&quot;&gt;NaCl&lt;/a&gt; verschlüsselt wird - nicht irgendwo anders abgreift.
+Das ginge eben nur wenn Threema selbst FOSS wäre, dies ist aber leider nicht der Fall.
+Dies weiß auch der Hersteller unddeshalb sagte er in einem Interview mit der Zeit:  &lt;a href=&quot;http://www.zeit.de/digital/mobil/2013-07/threema-app-manuel-kasper/seite-2&quot;&gt;“Letztlich ist es eine Gefühlssache, ob man mir vertrauen will”&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Was macht Telegram also anders?&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+Zu aller erst ist Telegram FOSS! Telegram steht unter der &lt;a href=&quot;http://www.gnu.de/documents/gpl-2.0.de.html&quot;&gt;GPLv2&lt;/a&gt; und ist damit freie Software.
+Zudem gibt des den aktuellen Quelltext für die Android-Version auf &lt;a href=&quot;https://github.com/DrKLO/Telegram&quot;&gt;Github&lt;/a&gt; und somit ist auch eine einfache Zugangsmöglichkeit gegeben. &lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Okay Telegram ist frei, aber wie sieht es jetzt mit der Verschlüsselung aus?&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt;
+Also kommen wir zum Eingemachten. 
+Dies mag für den ein oder anderen zuerst kontrovers erscheinen, macht aber bei näherer Betrachtung durchaus Sinn. 
+Telegram hat sein &lt;a href=&quot;https://core.telegram.org/mtproto&quot;&gt;eigenes Protokoll&lt;/a&gt; für die sichere Kommunikation entwickelt, damit der Versand von Nachrichten schnell geht und man auch die Chat-History von anderen Geräten aus einsehen kann. 
+Man ist also immer synchron und kann schnell auch Fotos und Dateien versenden. 
+Damit ist aber die Nachricht an sich nur von Client zu Server und von dort wieder von Server zu Client verschlüsselt.
+Hier wurde auf Grund der schnellen Übertragung ein Kompromiss zwischen Sicherheit und schneller Verfügbarkeit eingegangen. 
+Deshalb gibt es bei Telegram auch die &lt;a href=&quot;https://telegram.org/faq#secret-chats&quot;&gt;“secret chats”&lt;/a&gt; diese sind dann End-zu-End verschlüsselt.
+Das bedeutet, dass die Nachricht weder von einem Dritten noch vom Hersteller gelesen werden kann, sondern nur von
+den Gesprächspartnern.
+Dies hat ein paar Nachteile, wie zum Beispiel das Wegfallen der Synchronisation über mehrere Geräte, denn die Nachricht ist nur auf dem Empfangsgerät verfügbar. Mann kann aber auch Sachen einstellen wie das automatische Selbstzerstören einer Nachricht.
+Damit hat Telegram in der Hinsicht dieselbe Funktionalität wie Threema, denn dort ist das &lt;a href=&quot;https://threema.ch/de/faq.html#platform_switch&quot;&gt;Synchronisieren über mehrere Geräte hinweg auch nicht möglich&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;[Quelle: &lt;a href=&quot;https://telegram.org/faq#security&quot;&gt;Telegram FAQ&lt;/a&gt; und &lt;a href=&quot;https://threema.ch/de/faq.html&quot;&gt;Threema FAQ&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h2 id=&quot;extras&quot;&gt;Extras&lt;/h2&gt;
+
+&lt;p&gt;Telegram hat ja sogar noch eine &lt;a href=&quot;https://core.telegram.org/api&quot;&gt;API&lt;/a&gt; welche es Entwicklern ermöglicht die vorhandene Infrastruktur von Telegram zu benutzen und eigene Funktionalität hinzu zu fügen oder einfach Telegram auf anderen Plattformen wie zum Beispiel dem &lt;a href=&quot;https://telegram.org/apps&quot;&gt;Desktop&lt;/a&gt; zur Verfügung zu stellen.
+Das ist nicht nur Spielerei sondern wir werden dadurch in Zukunft hoffentlich viel coole neue Software sehen.&lt;/p&gt;
+
+&lt;h2 id=&quot;fazit&quot;&gt;&lt;strong&gt;Fazit&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Telegram ist im Vergleich zu Threema kostenlos und dazu noch freie Software.
+Es hat eine Api um Entwicklern das Verwenden von Telegram zu erleichern und es ist mindestens genauso sicher wie Threema, wenn nicht gar noch sicherer.
+Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a href=&quot;https://telegram.org/faq#q-how-are-you-going-to-make-money-out-of-this&quot;&gt;non-profit Unternehmung&lt;/a&gt;&lt;/p&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/r-i-p-whatsapp-es-lebe-telegram/&quot;&gt;R.I.P. WhatsApp - Es lebe Telegram!&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on February 20, 2014.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Let's Learn - Programmieren #4 - Netbeans & Java auf dem Mac]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/lets-learn-programmieren-4-netbeans-java-auf-dem-mac-/" />
+  <id>//niklas-heer.de/lets-learn-programmieren-4-netbeans-java-auf-dem-mac-</id>
+  <updated>2013-12-03T00:00:00-00:00</updated>
+  <published>2013-12-03T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/qj1oLI7bL8c&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/lets-learn-programmieren-4-netbeans-java-auf-dem-mac-/&quot;&gt;Let's Learn - Programmieren #4 - Netbeans & Java auf dem Mac&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 03, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Let's Learn - Programmieren #3 - Netbeans & Java in Linux]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/lets-learn-programmieren-3-netbeans-java-in-linux/" />
+  <id>//niklas-heer.de/lets-learn-programmieren-3-netbeans-java-in-linux</id>
+  <updated>2013-10-27T00:00:00-00:00</updated>
+  <published>2013-10-27T00:00:00+02:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4WahwewBgDs&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/lets-learn-programmieren-3-netbeans-java-in-linux/&quot;&gt;Let's Learn - Programmieren #3 - Netbeans & Java in Linux&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on October 27, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Let's Learn - Programmieren #2]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/lets-learn-programmieren-2-netbeans-java-in-windows/" />
+  <id>//niklas-heer.de/lets-learn-programmieren-2-netbeans-java-in-windows</id>
+  <updated>2013-10-26T00:00:00-00:00</updated>
+  <published>2013-10-26T00:00:00+02:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/4TxI4wmhzP4&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/lets-learn-programmieren-2-netbeans-java-in-windows/&quot;&gt;Let's Learn - Programmieren #2&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on October 26, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Let's Learn - Programmieren #1]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/lets-learn-programmieren-1/" />
+  <id>//niklas-heer.de/lets-learn-programmieren-1</id>
+  <updated>2013-10-26T00:00:00-00:00</updated>
+  <published>2013-10-26T00:00:00+02:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Hier wolltet schon immer mal Programmieren lernen?&lt;/p&gt;
+
+&lt;p&gt;Dann ist diese Video-Reihe ideal für euch!&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;https://www.youtube.com/embed/DCxbtJMlkuk&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/lets-learn-programmieren-1/&quot;&gt;Let's Learn - Programmieren #1&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on October 26, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Ubuntu 13.04 - Ein besserer File-Browser]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/ubuntu-13-04-ein-besserer-file-browser/" />
+  <id>//niklas-heer.de/ubuntu-13-04-ein-besserer-file-browser</id>
+  <updated>2013-04-30T00:00:00-00:00</updated>
+  <published>2013-04-30T00:00:00+02:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;center&gt;
+	&lt;figure&gt;
+		&lt;a href=&quot;/assets/images/2013-04-30/Arbeitsfläche-1_002.png&quot;&gt;&lt;img src=&quot;/assets/images/2013-04-30/Arbeitsfläche-1_002.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+		&lt;figcaption&gt;Pantheon Files&lt;/figcaption&gt;
+	&lt;/figure&gt;
+&lt;/center&gt;
+
+&lt;p&gt;Diejenigen unter euch, die sich schon das neue Ubuntu 13.04 geladen haben, haben sicher schon gemerkt, dass der File-Explorer neu gestaltet wurde. Im Prinzip ist es aber immer noch der gute alte Nautilus.&lt;/p&gt;
+
+&lt;p&gt;Jeder der schon mal den Finder von Mac OS gesehen hat, hat sicher die “komische” Ansicht gesehen, die es in diesem File-Explorer gibt.&lt;/p&gt;
+
+&lt;p&gt;Doch diese Ansicht ist kein von Apple selbst entwickelte Ansicht, sondern vielmehr ist es ein schon recht alter Standard für die Ansicht von Dateien und Ordnern (seit 1980).&lt;/p&gt;
+
+&lt;p&gt;Diese Ansicht nennt man &lt;a href=&quot;http://en.wikipedia.org/wiki/Miller_columns&quot;&gt;Miller Columns&lt;/a&gt; diese Ansicht ist besonders effizient und übersichtlich um mit Dateien zu arbeiten.&lt;/p&gt;
+
+&lt;p&gt;Das ist so ziemlich der Hauptgrund wieso ich nach einem alternativen File-Browser gesucht hab.&lt;/p&gt;
+
+&lt;p&gt;Und mit &lt;a href=&quot;https://launchpad.net/pantheon-files&quot;&gt;Pantheon-Files&lt;/a&gt; einem Fork von &lt;a href=&quot;https://launchpad.net/marlin&quot;&gt;Marlin&lt;/a&gt; ist und auch im Gegensatz zu Marlin aktiv entwickelt wird, wurde ich fündig!&lt;/p&gt;
+
+&lt;p&gt;Ich kann euch diesen Filebrowser nur wärmstens empfehlen!&lt;/p&gt;
+
+&lt;h3 id=&quot;installation&quot;&gt;Installation:&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo add-apt-repository ppa:elementary-os/daily
+sudo apt-get update
+sudo apt-get install pantheon-files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Danach solltet ihr es per Terminal starten, da der Ubuntu-Launcher beide Explorer unter demselben Namen führt.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;pantheon-files&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.&lt;/p&gt;
+
+&lt;center&gt;
+	&lt;a href=&quot;http://creativecommons.org/licenses/by-nc-sa/3.0/&quot;&gt;&lt;img src=&quot;/assets/images/cc/by-nc-sa.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+&lt;/center&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/ubuntu-13-04-ein-besserer-file-browser/&quot;&gt;Ubuntu 13.04 - Ein besserer File-Browser&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on April 30, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Thinklight Script für Linux]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/thinklight-script-fur-linux/" />
+  <id>//niklas-heer.de/thinklight-script-fur-linux</id>
+  <updated>2013-04-30T00:00:00-00:00</updated>
+  <published>2013-04-30T00:00:00+02:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Wolltet ihr schon immer mal das LED-Licht in einem Script benutzen, oder es einfach nur per Terminal-Befehl an- und ausschalten?&lt;/p&gt;
+
+&lt;p&gt;Wenn ja dann hab ich hier eine Lösung für euch:&lt;/p&gt;
+
+&lt;h3 id=&quot;voraussetungen-prfen&quot;&gt;1. Voraussetungen prüfen:&lt;/h3&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;lsmod &lt;span class=&quot;p&quot;&gt;|&lt;/span&gt; grep pad&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;sollte ungefähr so aussehen:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;thinkpad_acpi          81222  0 
+nvram                  14362  1 thinkpad_acpi&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;falls nicht kann man das Kernel-Modul damit nachinstallieren:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo modprobe -v thinkpad-acpi&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;script-installieren&quot;&gt;2. Script installieren&lt;/h3&gt;
+
+&lt;p&gt;Script an dem richtigen Ort herunterladen und ausführbar machen:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
+sudo chmod +x /usr/local/bin/thinklight&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;h3 id=&quot;script-benutzen&quot;&gt;3. Script benutzen&lt;/h3&gt;
+
+&lt;p&gt;Zum Anschalten:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo thinklight on&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt;Zum Abschalten:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo thinklight off&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Und hier noch das Script selbst ;D&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$1&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;on&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;1 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+&lt;span class=&quot;k&quot;&gt;elif&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;$1&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;off&amp;quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;then&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo &lt;/span&gt;0 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;    &lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Error: Wrong paramater! Only on/off allowed!&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;fi&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/thinklight-script-fur-linux/&quot;&gt;Thinklight Script für Linux&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on April 30, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Öfter mal was neues. Heute: “Sounds Just Like”]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/ofter-mal-was-neues-heute-sounds-just-like/" />
+  <id>//niklas-heer.de/ofter-mal-was-neues-heute-sounds-just-like</id>
+  <updated>2013-01-14T00:00:00-00:00</updated>
+  <published>2013-01-14T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;Das Radio ist an und das Lied läuft und ihr denkt euch: “Hört sich das nicht genauso an wie…?”&lt;/p&gt;
+
+&lt;p&gt;Kommt euch das Szenario bekannt vor? Also mir passiert das irgendwie häufiger und deshalb möchte ich euch heute gerne die Website &lt;strong&gt;&lt;a href=&quot;http://soundsjustlike.com/&quot;&gt;SoundsJust Like&lt;/a&gt;&lt;/strong&gt; empfehlen. Dort könnt ihr euch Lieder anhören die tatsächlich ähnlich sind und falls ihr ähnliche Lieder gefunden habt, könnt ihr sie dort auch einstellen, sodass auch andere die verblüffende Ähnlichkeiten von z.B. &lt;strong&gt;Smash Mouth&lt;/strong&gt; “&lt;em&gt;Then the morning comes&lt;/em&gt;” (1999) und &lt;strong&gt;The Animals&lt;/strong&gt; “&lt;em&gt;It’s my life&lt;/em&gt;” (1965) anhören können!&lt;/p&gt;
+
+&lt;center&gt;&lt;div&gt;&lt;a href=&quot;http://soundsjustlike.com/&quot; class=&quot;btn btn-success&quot;&gt;Sounds Just Like&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/ofter-mal-was-neues-heute-sounds-just-like/&quot;&gt;Öfter mal was neues. Heute: “Sounds Just Like”&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on January 14, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apfelkorb #10 - mit Moom Fenster verwalten]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/apfelkorb-10-mit-moom-fenster-verwalten/" />
+  <id>//niklas-heer.de/apfelkorb-10-mit-moom-fenster-verwalten</id>
+  <updated>2013-01-08T00:00:00-00:00</updated>
+  <published>2013-01-08T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In diesem Video stelle ich euch die Software Moom vor, die euch euer Fenstermanagement erleichtert.&lt;/p&gt;
+
+&lt;p&gt;Hier könnt ihr es für ca. 7,50€ auf der Website bekommen bekommen: &lt;a href=&quot;http://bit.ly/11ceA9M&quot;&gt;http://bit.ly/11ceA9M&lt;/a&gt; &lt;br /&gt;
+Oder im Appstore für 8,99€: &lt;a href=&quot;http://bit.ly/SicGSv&quot;&gt;http://bit.ly/SicGSv&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/Asi5wr_FerI&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/apfelkorb-10-mit-moom-fenster-verwalten/&quot;&gt;Apfelkorb #10 - mit Moom Fenster verwalten&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on January 08, 2013.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apfelkorb #9 - Spotlight iStat Menus]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/apfelkorb-9-spotlight-istat-menus/" />
+  <id>//niklas-heer.de/apfelkorb-9-spotlight-istat-menus</id>
+  <updated>2012-12-28T00:00:00-00:00</updated>
+  <published>2012-12-28T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In diesem Video stelle ich das Programm iStat Menus für ca. 12€ vor.&lt;/p&gt;
+
+&lt;p&gt;Hier könnt ihr es bekommen: &lt;a href=&quot;http://bit.ly/TnymL2&quot;&gt;http://bit.ly/TnymL2&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/\_HR3QTYlqWg&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/apfelkorb-9-spotlight-istat-menus/&quot;&gt;Apfelkorb #9 - Spotlight iStat Menus&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 28, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Ausblick #1 - Neue Homepage und neues Design]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/ausblick-1-neue-homepage-und-neues-design/" />
+  <id>//niklas-heer.de/ausblick-1-neue-homepage-und-neues-design</id>
+  <updated>2012-12-23T00:00:00-00:00</updated>
+  <published>2012-12-23T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In diesem Video gebe ich euch ein Update über meinen Kanal und einen Ausblick auf kommende Projekte von mir.&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/2U9EtWoDi7A&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/ausblick-1-neue-homepage-und-neues-design/&quot;&gt;Ausblick #1 - Neue Homepage und neues Design&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 23, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apfelkorb #8 - Pimp my Finder]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/apfelkorb-8-pimp-my-finder/" />
+  <id>//niklas-heer.de/apfelkorb-8-pimp-my-finder</id>
+  <updated>2012-12-23T00:00:00-00:00</updated>
+  <published>2012-12-23T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In dieser Folge zeige ich euch wie ihr versteckte Funktionen im Finder aktiviert, eure QuickLook-Anzeige erweitert und ein paar Finder-Alternativen.&lt;/p&gt;
+
+&lt;p&gt;Folge in dem ich euch den Befehl zeige Dateien sichtbar zu machen: &lt;a href=&quot;http://bit.ly/TZcN0i&quot;&gt;http://bit.ly/TZcN0i&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;QuickLook Text selektieren:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Befehl zum anschalten: &lt;br /&gt;
+&lt;code&gt;defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder&lt;/code&gt;
+Befehl zum ausschalten: &lt;br /&gt;
+&lt;code&gt;defaults delete com.apple.finder QLEnableTextSelection; killall Finder&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;QuickLook Plugin installieren:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Nimm das entsprechende Plugin (&lt;em&gt;xxx.qlgenerator&lt;/em&gt;) und verschiebe es in eins der folgenden Verzeichnisse. &lt;br /&gt;
+&lt;code&gt;/Library/QuickLook&lt;/code&gt; - verschiebe es dort hin um es für jeden Nutzer zu installieren &lt;br /&gt;
+&lt;code&gt;~/Library/QuickLook&lt;/code&gt; - verschiebe es hier hin um es nur für dich zu installieren (dein Homeverzeichnis)&lt;/p&gt;
+
+&lt;p&gt;Dann führe folgenden Befehl im Terminal aus: &lt;br /&gt;
+&lt;code&gt;qlmanage -r&lt;/code&gt; oder melde dich ab und wieder an.&lt;/p&gt;
+
+&lt;p&gt;mein QuickLook Plugin Pack: &lt;a href=&quot;/assets/files/2012-12-23/Quick-Look_Plugins.zip&quot;&gt;download&lt;/a&gt; &lt;br /&gt;
+mehr QuickLook-Plugins: &lt;a href=&quot;http://www.qlplugins.com/&quot;&gt;http://www.qlplugins.com/&lt;/a&gt; &lt;br /&gt;
+Zip QuickLook-Plugin: &lt;a href=&quot;http://macitbetter.com/BetterZip-Quick-Look-Generator/&quot;&gt;http://macitbetter.com/BetterZip-Quick-Look-Generator/&lt;/a&gt; &lt;br /&gt;
+Total Finder (ca. 13,50€) - &lt;a href=&quot;http://totalfinder.binaryage.com/&quot;&gt;http://totalfinder.binaryage.com/&lt;/a&gt; &lt;br /&gt;
+Path Finder (ca. 30€) - &lt;a href=&quot;http://cocoatech.com/pathfinder/&quot;&gt;http://cocoatech.com/pathfinder/&lt;/a&gt; &lt;br /&gt;
+ForkLift (ca. 15€) - &lt;a href=&quot;http://www.binarynights.com/&quot;&gt;http://www.binarynights.com/&lt;/a&gt; &lt;br /&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/TmPBrhVv\_uY&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/apfelkorb-8-pimp-my-finder/&quot;&gt;Apfelkorb #8 - Pimp my Finder&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 23, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apfelkorb #7 - Dein Freund der Terminal]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/apfelkorb-7-dein-freund-der-terminal/" />
+  <id>//niklas-heer.de/apfelkorb-7-dein-freund-der-terminal</id>
+  <updated>2012-12-22T00:00:00-00:00</updated>
+  <published>2012-12-22T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In diesem Video zeige ich euch, wie ihr lange unangenehme Arbeit einfach
+von eurem Terminal verrichten lassen könnt!&lt;/p&gt;
+
+&lt;p&gt;Mehr über ZSH erfährst du hier: &lt;a href=&quot;http://bit.ly/12kM5Vu&quot;&gt;http://bit.ly/12kM5Vu&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Mehr zum Thema Java 1.6 auf Mountain Lion gibt’s hier: &lt;a href=&quot;http://bit.ly/12kM7N5&quot;&gt;http://bit.ly/12kM7N5&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Der Open-Befehl:&lt;/p&gt;
+
+&lt;p&gt;&lt;code&gt;open -e &quot;deine Datei&quot;&lt;/code&gt; (Um “&lt;em&gt;deine Datei&lt;/em&gt;” in TextEdit zu öffnen) &lt;br /&gt;
+&lt;code&gt;open -t &quot;deine Datei&quot;&lt;/code&gt; (Um “&lt;em&gt;deine Datei&lt;/em&gt;” in eurem Standrad-Editor
+zu öffnen)&lt;/p&gt;
+
+&lt;p&gt;Die Befehle die in .zshrc in deinem Home-Verzeichnis rein kommen: &lt;a href=&quot;http://bit.ly/127Cgel&quot;&gt;http://bit.ly/127Cgel&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/dt6EbRIpm2M&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/apfelkorb-7-dein-freund-der-terminal/&quot;&gt;Apfelkorb #7 - Dein Freund der Terminal&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 22, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apfelkorb #6 - Das Google Chrome Sound Problem heben]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/apfelkorb-6-das-google-chrome-sound-problem-beheben/" />
+  <id>//niklas-heer.de/apfelkorb-6-das-google-chrome-sound-problem-beheben</id>
+  <updated>2012-12-22T00:00:00-00:00</updated>
+  <published>2012-12-22T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In diesem Video zeige ich euch wie ihr ein Sound-Problem in Google Chrome beheben könnt.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Der Link&lt;/em&gt;: &lt;a href=&quot;chrome://plugins&quot;&gt;chrome://plugins&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/BB8QWjrmlGg&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/apfelkorb-6-das-google-chrome-sound-problem-beheben/&quot;&gt;Apfelkorb #6 - Das Google Chrome Sound Problem heben&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 22, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apfelkorb #5 - Screensaver für den MAC]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/apfelkorb-5-screensaver-fur-den-mac/" />
+  <id>//niklas-heer.de/apfelkorb-5-screensaver-fur-den-mac</id>
+  <updated>2012-12-22T00:00:00-00:00</updated>
+  <published>2012-12-22T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In diesem Video zeige ich euch ein paar tolle Screensaver und wie man sie installiert. (OSX - Mountain Lion)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;FlipClock&lt;/em&gt;: &lt;a href=&quot;http://bit.ly/QPavFk&quot;&gt;http://bit.ly/QPavFk&lt;/a&gt; &lt;br /&gt;
+&lt;em&gt;PolarClock&lt;/em&gt;: &lt;a href=&quot;http://bit.ly/Ttk7l9&quot;&gt;http://bit.ly/Ttk7l9&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/LOpgRIgn7wo&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/apfelkorb-5-screensaver-fur-den-mac/&quot;&gt;Apfelkorb #5 - Screensaver für den MAC&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 22, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apfelkorb #4 - Java JRE6 in OS X Mountain Lion]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/apfelkorb-4-java-jre6-in-os-x-mountain-lion/" />
+  <id>//niklas-heer.de/apfelkorb-4-java-jre6-in-os-x-mountain-lion</id>
+  <updated>2012-12-13T00:00:00-00:00</updated>
+  <published>2012-12-13T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In diesem Video zeige ich euch wie ihr in OS X Mountain Lion von Java JRE 1.7 auf Java JRE 1.6 umstellt und auch wie ihr das ganze wieder rückgängig machen könnt!&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/4noAhK05frg&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/apfelkorb-4-java-jre6-in-os-x-mountain-lion/&quot;&gt;Apfelkorb #4 - Java JRE6 in OS X Mountain Lion&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 13, 2012.&lt;/p&gt;</content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[Apfelkorb #3 - Der Terminal]]></title>
+ <link rel="alternate" type="text/html" href="//niklas-heer.de/apfelkorb-3-der-terminal/" />
+  <id>//niklas-heer.de/apfelkorb-3-der-terminal</id>
+  <updated>2012-12-13T00:00:00-00:00</updated>
+  <published>2012-12-13T00:00:00+01:00</published>
+  
+  <author>
+    <name>Niklas Heer</name>
+    <uri>//niklas-heer.de</uri>
+    <email>niklas.heer@gmail.com</email>
+  </author>
+  <content type="html">&lt;p&gt;In diesem Video zeige ich euch wie man eine alternative Shell in Mac OS X verwendet und man damit auch besser arbeiten kann!&lt;/p&gt;
+
+&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/HvNfo9rRnQk&quot; frameborder=&quot;0&quot;&gt; &lt;/iframe&gt;
+
+  &lt;p&gt;&lt;a href=&quot;//niklas-heer.de/apfelkorb-3-der-terminal/&quot;&gt;Apfelkorb #3 - Der Terminal&lt;/a&gt; was originally published by Niklas Heer at &lt;a href=&quot;//niklas-heer.de&quot;&gt;Niklas' Blog&lt;/a&gt; on December 13, 2012.&lt;/p&gt;</content>
+</entry>
+
+</feed>

@@ -1,0 +1,24 @@
+---
+layout: post
+title: TunlrControl 1.0.0.8 ist da!
+description: "TunlrControl 1.0.0.8 ist da!"
+modified: 2012-04-04
+tags: [code, tunlr, tunlrcontrol]
+image:
+  feature: abstract-3.jpg
+  credit: dargadgetz
+  creditlink: http://www.dargadgetz.com/ios-7-abstract-wallpaper-pack-for-iphone-5-and-ipod-touch-retina/
+---
+
+Ich habe das Programm überarbeitet.
+
+<center>
+	<a href="/assets/images/2012-04-04/tunlrControl-1.0.0.8.png"><img src="/assets/images/2012-04-04/tunlrControl-1.0.0.8.png" alt=""></a>
+</center>
+
+Was ist neu?
+
+Nun kann jeder, egal ob er über W-LAN, LAN, WebStick oder sonst
+irgendetwas online geht TunlrContorl nutzen!
+
+Schaut auf der Programm-Seite vorbei: [TunlrControl 1.0.0.8](http://wedevelop.de/software/tunlrControl/publish.htm)
