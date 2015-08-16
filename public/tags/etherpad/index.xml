@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Etherpad on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/etherpad/</link>
+    <description>Recent content in Etherpad on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 14 Mar 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/etherpad/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Walkthrough durch Etherpad</title>
+      <link>http://localhost:1313/2012/03/14/walkthrough-durch-etherpad</link>
+      <pubDate>Wed, 14 Mar 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/03/14/walkthrough-durch-etherpad</guid>
+      <description>&lt;p&gt;Nach längerer Pause nun endlich wieder ein Video von mir.&lt;/p&gt;
+
+&lt;p&gt;Es geht um Etherpad.&lt;/p&gt;
+
+&lt;p&gt;Was kann man damit machen, wozu ist es gedacht, dies sind alles Fragen,
+die ich in meinem neuen Video beantworte, also schaut es euch an. ;)&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/QojQgfl5i0M&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

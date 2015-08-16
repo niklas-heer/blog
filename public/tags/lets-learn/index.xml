@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lets Learn on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/lets-learn/</link>
+    <description>Recent content in Lets Learn on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/lets-learn/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #4 - Netbeans &amp; Java auf dem Mac</title>
+      <link>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</link>
+      <pubDate>Tue, 03 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/qj1oLI7bL8c&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #3 - Netbeans &amp; Java in Linux</title>
+      <link>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4WahwewBgDs&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #1</title>
+      <link>http://localhost:1313/2013/10/26/lets-learn---programmieren-</link>
+      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/10/26/lets-learn---programmieren-</guid>
+      <description>&lt;p&gt;Hier wolltet schon immer mal Programmieren lernen?&lt;/p&gt;
+
+&lt;p&gt;Dann ist diese Video-Reihe ideal für euch!&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/DCxbtJMlkuk&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #2</title>
+      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</link>
+      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4TxI4wmhzP4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

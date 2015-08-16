@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Discussion on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/discussion/</link>
+    <description>Recent content in Discussion on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 20 Feb 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/discussion/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>R.I.P. WhatsApp - Es lebe Telegram!</title>
+      <link>http://localhost:1313/2014/02/20/threema-vs-telegram</link>
+      <pubDate>Thu, 20 Feb 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2014/02/20/threema-vs-telegram</guid>
+      <description>
+
+&lt;p&gt;&lt;center&gt;
+    &lt;em&gt;&lt;small&gt;Disclaimer: Dieser Beitrag kann ironische/sarkastische Passagen enthalten. Er ist stellenweise wahrscheinlich sehr technisch. Achso und nein ich bekomme kein Geld von Telegram, ich bin einfach davon überzeugt.&lt;/small&gt;&lt;/em&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Okay also wir wissen, dass &lt;a href=&#34;https://telegram.org/faq#q-how-secure-is-telegram&#34;&gt;WhatsApp&lt;/a&gt; das
+Imperium ist und von &lt;a href=&#34;http://www.heise.de/newsticker/meldung/Facebook-kauft-WhatsApp-2118920.html&#34;&gt;Facebook verschlungen&lt;/a&gt; zu werden, kann den Imageschaden der durch &lt;a href=&#34;http://de.wikipedia.org/wiki/WhatsApp#Sicherheit.2FKritik&#34;&gt;zahlreiche Sicherheitsskandale&lt;/a&gt; in der Vergangenheit verursacht wurde auch nicht kitten.
+Also was tut nur der sicherheitsbewusste User? Er wechselt zu &lt;a href=&#34;https://telegram.org/&#34;&gt;Telegram&lt;/a&gt;!&lt;/p&gt;
+
+&lt;h2 id=&#34;warum-telegram-und-nicht-threema:ae5dabb6ae307cc7ee074536b7f44364&#34;&gt;Warum Telegram und nicht Threema?&lt;/h2&gt;
+
+&lt;p&gt;Threema ist eine nicht-freie und kostenpflichtige App. Nicht-frei, was soll das denn heißen?
+Das bedeutet, dass Threema nicht zu &lt;a href=&#34;http://de.wikipedia.org/wiki/Free/Libre_Open_Source_Software&#34;&gt;FOSS [Free and Open Source Software]&lt;/a&gt; gehört.
+Das ist bei sicherheitskritischen Anwendungen essenziell um sicher zu sein, dass etwas wirklich sicher ist, denn bei FOSS &lt;a href=&#34;https://www.gnu.org/philosophy/free-sw.html&#34;&gt;hat jeder Zugriff zum Quelltext der Software&lt;/a&gt; und man kann
+überprüfen, ob die Software auch das macht was der Hersteller behauptet.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Warum kann man sich bei Threema also nicht sicher sein?&lt;/em&gt;&lt;/strong&gt; &lt;br&gt;
+Zwar benutzt laut Hersteller-Angaben &lt;a href=&#34;http://nacl.cr.yp.to/&#34;&gt;eine freie Bibliothek&lt;/a&gt; (das heißt dieser Teil ist FOSS) für die eigentliche verschlüsselte Kommunikation und hat zur Überprüfung dafür auch extra ein &lt;a href=&#34;https://threema.ch/validation/&#34;&gt;spezielles Logging&lt;/a&gt; bereit gestellt, aber dadurch, dass nicht das komplette Programm einsehbar ist, ist es nicht auszuschließen, dass der Hersteller die Daten - selbst wenn tatsächlich mit &lt;a href=&#34;http://nacl.cr.yp.to/&#34;&gt;NaCl&lt;/a&gt; verschlüsselt wird - nicht irgendwo anders abgreift.
+Das ginge eben nur wenn Threema selbst FOSS wäre, dies ist aber leider nicht der Fall.
+Dies weiß auch der Hersteller unddeshalb sagte er in einem Interview mit der Zeit:  &lt;a href=&#34;http://www.zeit.de/digital/mobil/2013-07/threema-app-manuel-kasper/seite-2&#34;&gt;&amp;ldquo;Letztlich ist es eine Gefühlssache, ob man mir vertrauen will&amp;rdquo;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Was macht Telegram also anders?&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;
+Zu aller erst ist Telegram FOSS! Telegram steht unter der &lt;a href=&#34;http://www.gnu.de/documents/gpl-2.0.de.html&#34;&gt;GPLv2&lt;/a&gt; und ist damit freie Software.
+Zudem gibt des den aktuellen Quelltext für die Android-Version auf &lt;a href=&#34;https://github.com/DrKLO/Telegram&#34;&gt;Github&lt;/a&gt; und somit ist auch eine einfache Zugangsmöglichkeit gegeben.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Okay Telegram ist frei, aber wie sieht es jetzt mit der Verschlüsselung aus?&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;
+Also kommen wir zum Eingemachten.
+Dies mag für den ein oder anderen zuerst kontrovers erscheinen, macht aber bei näherer Betrachtung durchaus Sinn.
+Telegram hat sein &lt;a href=&#34;https://core.telegram.org/mtproto&#34;&gt;eigenes Protokoll&lt;/a&gt; für die sichere Kommunikation entwickelt, damit der Versand von Nachrichten schnell geht und man auch die Chat-History von anderen Geräten aus einsehen kann.
+Man ist also immer synchron und kann schnell auch Fotos und Dateien versenden.
+Damit ist aber die Nachricht an sich nur von Client zu Server und von dort wieder von Server zu Client verschlüsselt.
+Hier wurde auf Grund der schnellen Übertragung ein Kompromiss zwischen Sicherheit und schneller Verfügbarkeit eingegangen.
+Deshalb gibt es bei Telegram auch die &lt;a href=&#34;https://telegram.org/faq#secret-chats&#34;&gt;&amp;ldquo;secret chats&amp;rdquo;&lt;/a&gt; diese sind dann End-zu-End verschlüsselt.
+Das bedeutet, dass die Nachricht weder von einem Dritten noch vom Hersteller gelesen werden kann, sondern nur von
+den Gesprächspartnern.
+Dies hat ein paar Nachteile, wie zum Beispiel das Wegfallen der Synchronisation über mehrere Geräte, denn die Nachricht ist nur auf dem Empfangsgerät verfügbar. Mann kann aber auch Sachen einstellen wie das automatische Selbstzerstören einer Nachricht.
+Damit hat Telegram in der Hinsicht dieselbe Funktionalität wie Threema, denn dort ist das &lt;a href=&#34;https://threema.ch/de/faq.html#platform_switch&#34;&gt;Synchronisieren über mehrere Geräte hinweg auch nicht möglich&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;[Quelle: &lt;a href=&#34;https://telegram.org/faq#security&#34;&gt;Telegram FAQ&lt;/a&gt; und &lt;a href=&#34;https://threema.ch/de/faq.html&#34;&gt;Threema FAQ&lt;/a&gt;]&lt;/p&gt;
+
+&lt;h2 id=&#34;extras:ae5dabb6ae307cc7ee074536b7f44364&#34;&gt;Extras&lt;/h2&gt;
+
+&lt;p&gt;Telegram hat ja sogar noch eine &lt;a href=&#34;https://core.telegram.org/api&#34;&gt;API&lt;/a&gt; welche es Entwicklern ermöglicht die vorhandene Infrastruktur von Telegram zu benutzen und eigene Funktionalität hinzu zu fügen oder einfach Telegram auf anderen Plattformen wie zum Beispiel dem &lt;a href=&#34;https://telegram.org/apps&#34;&gt;Desktop&lt;/a&gt; zur Verfügung zu stellen.
+Das ist nicht nur Spielerei sondern wir werden dadurch in Zukunft hoffentlich viel coole neue Software sehen.&lt;/p&gt;
+
+&lt;h2 id=&#34;fazit:ae5dabb6ae307cc7ee074536b7f44364&#34;&gt;&lt;strong&gt;Fazit&lt;/strong&gt;&lt;/h2&gt;
+
+&lt;p&gt;Telegram ist im Vergleich zu Threema kostenlos und dazu noch freie Software.
+Es hat eine Api um Entwicklern das Verwenden von Telegram zu erleichern und es ist mindestens genauso sicher wie Threema, wenn nicht gar noch sicherer.
+Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a href=&#34;https://telegram.org/faq#q-how-are-you-going-to-make-money-out-of-this&#34;&gt;non-profit Unternehmung&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: “Sounds Just Like”</title>
+      <link>http://localhost:1313/2013/01/14/%C3%B6fter-mal-was-neues.-heute-sounds-just-like</link>
+      <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/01/14/%C3%B6fter-mal-was-neues.-heute-sounds-just-like</guid>
+      <description>&lt;p&gt;Das Radio ist an und das Lied läuft und ihr denkt euch: &amp;ldquo;Hört sich das nicht genauso an wie&amp;hellip;?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Kommt euch das Szenario bekannt vor? Also mir passiert das irgendwie häufiger und deshalb möchte ich euch heute gerne die Website &lt;strong&gt;&lt;a href=&#34;http://soundsjustlike.com/&#34;&gt;SoundsJust Like&lt;/a&gt;&lt;/strong&gt; empfehlen. Dort könnt ihr euch Lieder anhören die tatsächlich ähnlich sind und falls ihr ähnliche Lieder gefunden habt, könnt ihr sie dort auch einstellen, sodass auch andere die verblüffende Ähnlichkeiten von z.B. &lt;strong&gt;Smash Mouth&lt;/strong&gt; &amp;ldquo;&lt;em&gt;Then the morning comes&lt;/em&gt;&amp;rdquo; (1999) und &lt;strong&gt;The Animals&lt;/strong&gt; &amp;ldquo;&lt;em&gt;It&amp;rsquo;s my life&lt;/em&gt;&amp;rdquo; (1965) anhören können!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://soundsjustlike.com/&#34; class=&#34;btn btn-success&#34;&gt;Sounds Just Like&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: &#34;Coca Cola&#34;</title>
+      <link>http://localhost:1313/2012/06/27/%C3%B6fter-mal-was-neues.-heute-coca-cola</link>
+      <pubDate>Wed, 27 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/27/%C3%B6fter-mal-was-neues.-heute-coca-cola</guid>
+      <description>
+
+&lt;p&gt;Eine amerikanische Zeitung (&lt;a href=&#34;http://www.thisamericanlife.org&#34;&gt;this american life&lt;/a&gt;) meint nun das orginal Coca-Cola Rezept gefunden zu haben.&lt;/p&gt;
+
+&lt;p&gt;Die Fotos sehen zumindest relativ echt aus.&lt;/p&gt;
+
+&lt;p&gt;Aber lest selbst: &lt;a href=&#34;http://www.thisamericanlife.org/radio-archives/episode/427/original-recipe&#34;&gt;http://www.thisamericanlife.org/radio-archives/episode/427/original-recipe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hier die Zutatenliste: &lt;a href=&#34;http://www.thisamericanlife.org/radio-archives/episode/427/original-recipe/recipe&#34;&gt;http://www.thisamericanlife.org/radio-archives/episode/427/original-recipe/recipe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hier das Rezept [Quelle: &lt;a href=&#34;http://en.wikipedia.org/wiki/Coca-Cola_formula#Beal.2FThis_American_Life_recipe&#34;&gt;Wikipedia&lt;/a&gt; ins Deutsche übersetzt von mir]:&lt;/p&gt;
+
+&lt;h3 id=&#34;der-sirup:0d122f0c0487d8cda8fcd3fbd4449d36&#34;&gt;Der Sirup:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;flüssiger Auszug aus dem &lt;a href=&#34;http://de.wikipedia.org/wiki/Cocastrauch&#34;&gt;Cocastrauch&lt;/a&gt;: &lt;strong&gt;5,32 g&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Citronens%C3%A4ure&#34;&gt;Citronensäure&lt;/a&gt;: &lt;strong&gt;85,05 g&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Coffein&#34; title=&#34;Coffein&#34;&gt;Coffein&lt;/a&gt;: &lt;strong&gt;28.35 g&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Zucker&#34;&gt;Zucker&lt;/a&gt;: &lt;strong&gt;13,6 kg&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Wasser: &lt;strong&gt;9.46 l&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Limette&#34;&gt;Limetten&lt;/a&gt;saft: &lt;strong&gt;0,95 l&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Vanille_(Gew%C3%BCrz&#34;&gt;Vanille&lt;/a&gt;): &lt;strong&gt;28.35 g&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Karamell&#34;&gt;Karamell&lt;/a&gt;: &lt;strong&gt;42,53 g&lt;/strong&gt; oder mehr für die Farbe&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;der-geheime-7x-flavor-man-braucht-56-7g-geschmack-für-18-93l-sirup:0d122f0c0487d8cda8fcd3fbd4449d36&#34;&gt;Der geheime &amp;ldquo;7X flavor&amp;rdquo; &lt;em&gt;(man braucht 56,7g  Geschmack für 18,93l Sirup)&lt;/em&gt;:&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alkohol: &lt;strong&gt;226.79 g&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Orangen%C3%B6l&#34;&gt;Orangenöl&lt;/a&gt;: &lt;strong&gt;20 Tropfen&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Zimt&#34;&gt;Zimt&lt;/a&gt;öl: &lt;strong&gt;10 Tropfen&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Zitrone&#34;&gt;Zitrone&lt;/a&gt;nöl: &lt;strong&gt;30 Tropfen&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Echter_Koriander&#34;&gt;Koriander&lt;/a&gt;öl: &lt;strong&gt;5 Tropfen&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Muskatnussbaum&#34;&gt;Muskatnuss&lt;/a&gt;öl (das &lt;a href=&#34;http://en.wikipedia.org/wiki/Nutmeg_oil&#34;&gt;Öl&lt;/a&gt;): &lt;strong&gt;10 Tropfen&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;http://de.wikipedia.org/wiki/Neroli&#34;&gt;Neroli&lt;/a&gt;öl: &lt;strong&gt;10 Tropfen&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Danach hat man ca. 19 Liter &amp;ldquo;echtes&amp;rdquo; Cola. Wer&amp;rsquo;s ausprobiert, schreibt
+doch bitte in die Kommentare wie&amp;rsquo;s schmeckt ;D&lt;/p&gt;
+
+&lt;p&gt;Hier noch ein Link  zu &amp;ldquo;Open Cola&amp;rdquo;, dort werden Rezepte für Cola
+gesammelt die unter der GPL veröffentlicht werden ;D&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://en.wikipedia.org/wiki/OpenCola_(drink&#34;&gt;Open Cola&lt;/a&gt;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: &#34;Pinched! (Minecraft Machinima)&#34;</title>
+      <link>http://localhost:1313/2012/06/19/%C3%B6fter-mal-was-neues.-heute-pinched-minecraft-machinima</link>
+      <pubDate>Tue, 19 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/19/%C3%B6fter-mal-was-neues.-heute-pinched-minecraft-machinima</guid>
+      <description>&lt;p&gt;Minecraft ist kein normales Spiel, aber die Idee mit Hilfe solch eines
+Spiels&lt;/p&gt;
+
+&lt;p&gt;Kurzfilme zu erstellen ist wirklich kreativ, wie ich finde.&lt;/p&gt;
+
+&lt;p&gt;Hier ein wie ich finde echt gelungenes Video :)&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/F\_-kLEdJxfw&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: Dick Figures - Erster &#34;Cool&#34;-Tag [german dub by thetrueblacky]</title>
+      <link>http://localhost:1313/2012/06/15/%C3%B6fter-mal-was-neues.-heute-dick-figures---erster-cool-tag-german-dub-by-thetrueblacky</link>
+      <pubDate>Fri, 15 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/15/%C3%B6fter-mal-was-neues.-heute-dick-figures---erster-cool-tag-german-dub-by-thetrueblacky</guid>
+      <description>&lt;p&gt;Es gibt eine unglaublich gute Zeichentrick-Serie auf Youtube.&lt;/p&gt;
+
+&lt;p&gt;Sie handelt von Red, dem coolen Draufgänger und Blue dem liebenswürdigen Nerd.&lt;/p&gt;
+
+&lt;p&gt;Das ganze hat auch in Deutschland eine Fan-Gemeinde gefunden und daher werden die Folgen auch ins deutsche übersetzt und synchronisiert.&lt;/p&gt;
+
+&lt;p&gt;Hier der deutsche Youtube-Kanal: &lt;a href=&#34;http://www.youtube.com/watch?v=CMUW-cRh67g&amp;amp;list=PL33C696C7A7C703B6&amp;amp;feature=plcp&#34;&gt;Dick Figures auf deutsch&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Der orginale Kanal: &lt;a href=&#34;http://www.youtube.com/show?p=qKrZOTKMhto&#34;&gt;MondoMedia&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/kn7sEPMSIlA&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+
+&lt;p&gt;Was ihr gerade gesehen habt waren die ersten paar Minuten des Spielfilms welches das Dick Figures Team produzieren will.&lt;/p&gt;
+
+&lt;p&gt;Wenn es euch gefallen hat könnt ihr hier spenden damit der Film realisiert werden kann: &lt;a href=&#34;http://www.kickstarter.com/projects/dickfigures/dick-figures-the-movie?ref=live&#34;&gt;KickStarter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: &#34;A Floating Chinese Spherical Car Created by Volkswagen&#34;</title>
+      <link>http://localhost:1313/2012/06/14/%C3%B6fter-mal-was-neues.-heute-a-floating-chinese-spherical-car-created-by-volkswagen</link>
+      <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/14/%C3%B6fter-mal-was-neues.-heute-a-floating-chinese-spherical-car-created-by-volkswagen</guid>
+      <description>&lt;p&gt;Wie die Zukunft im Automobilmarkt aussehen könnte hat VW China in einem
+neuen Projekt namens ‘The People’s Car Project&amp;rsquo;,&lt;/p&gt;
+
+&lt;p&gt;in dem Leute ihre Idee für die Zukunft des Automobils einsenden konnten.&lt;/p&gt;
+
+&lt;p&gt;Gewonnen hat eine junge Frau die Animation und Game Design an der &lt;a href=&#34;http://micgadget.com/goto/http://en.wikipedia.org/wiki/Chengdu&#34;&gt;Chengdu city&lt;/a&gt; studiert.&lt;/p&gt;
+
+&lt;p&gt;Ihr Design ist sehr futuristisch und kommt ohne Räder aus.&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/kbytE\_FAZuA&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+
+&lt;p&gt;[Quelle: &lt;a href=&#34;http://micgadget.com/25621/a-floating-chinese-spherical-car-created-by-a-volkswagen-video/&#34;&gt;Micgadget&lt;/a&gt;]&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: &#34;Polizei, Hausdurchsuchung: Sie haben das Recht zu schweigen (Udo Vetter)&#34;</title>
+      <link>http://localhost:1313/2012/06/14/%C3%B6fter-mal-was-neues.-heute-polizei-hausdurchsuchung-sie-haben-das-recht-zu-schweigen-udo-vetter</link>
+      <pubDate>Thu, 14 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/14/%C3%B6fter-mal-was-neues.-heute-polizei-hausdurchsuchung-sie-haben-das-recht-zu-schweigen-udo-vetter</guid>
+      <description>&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-06-14/Paragraph-icon.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-06-14/Paragraph-icon.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;Bild von &lt;a href=&#34;http://www.iconarchive.com/show/red-orb-alphabet-icons-by-iconarchive.html&#34;&gt;Red Orb Alphabet Icons&lt;/a&gt;.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Heute gibt&amp;rsquo;s einen Vortrag von &lt;a href=&#34;http://www.lawblog.de/&#34;&gt;Udo Vetter&lt;/a&gt; über das Thema Hausdurchsuchung.&lt;/p&gt;
+
+&lt;p&gt;Jetzt fragt ihr euch sicher warum sollte das mich interessieren, das wird ja bei mir nie vorkommen?&lt;/p&gt;
+
+&lt;p&gt;Eine der Haupt-aussagen von Udo Vetter ist, dass es jeden treffen kann der einen PC zu Hause hat.&lt;/p&gt;
+
+&lt;p&gt;Hört es euch einfach mal an!&lt;/p&gt;
+
+&lt;p&gt;Es ist sehr informativ und Udo Vetter weiß auch wovon er redet ;)&lt;/p&gt;
+
+&lt;p&gt;Leider ist es ein bisschen lang, aber trotzdem - hört es euch an!&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/a0n1PNpB00g&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Kurze Info</title>
+      <link>http://localhost:1313/2012/06/13/kurze-info</link>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/13/kurze-info</guid>
+      <description>&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://localhost:1313/assets/images/2012-06-13/copyright1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-06-13/copyright1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ihr habt vielleicht schon bemerkt, dass ein paar Artikel aus meinem Blog
+verschwunden sind.&lt;/p&gt;
+
+&lt;p&gt;Das war Absicht, denn die Copyright-Lage war zu den Artikeln nicht eindeutig.&lt;/p&gt;
+
+&lt;p&gt;Deshalb hab ich sie vorerst mal vom Netz genommen, bis sich die
+Situation geklärt hat.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: &#34;NYC Phoneharmonic | cdza&#34;</title>
+      <link>http://localhost:1313/2012/06/13/%C3%B6fter-mal-was-neues.-heute-nyc-phoneharmonic--cdza</link>
+      <pubDate>Wed, 13 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/13/%C3%B6fter-mal-was-neues.-heute-nyc-phoneharmonic--cdza</guid>
+      <description>&lt;p&gt;&lt;center&gt;&lt;br /&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-06-13/nexus-one-256x256.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-06-13/nexus-one-256x256.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;Bild von &lt;a href=&#34;http://miniartx.deviantart.com/&#34;&gt;Mihail Nikitin&lt;/a&gt;.&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ihr habt euch schon immer gefragt wie eine Symphonie aus Telefonklingeltönen sich anhören würde?&lt;/p&gt;
+
+&lt;p&gt;Kein Problem &lt;a href=&#34;http://www.youtube.com/user/collectivecadenza?feature=watch&#34;&gt;cdza&lt;/a&gt; zeigt uns wie es sich anhören kann ;)&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/ECYkqdx8ueQ&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: &#34;History of Whistling&#34;</title>
+      <link>http://localhost:1313/2012/06/08/%C3%B6fter-mal-was-neues.-heute-history-of-whistling</link>
+      <pubDate>Fri, 08 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/08/%C3%B6fter-mal-was-neues.-heute-history-of-whistling</guid>
+      <description>&lt;p&gt;Wir alle kennen das man ist gerade unbeschwert und dann pfeift mal
+einfach mal ein Lied vor sich hin.&lt;/p&gt;
+
+&lt;p&gt;Aber kennt errinnert ihr euch noch an die Lieder in den gepfiffen wurde?&lt;/p&gt;
+
+&lt;p&gt;Hier ein kleines Video über die &amp;ldquo;Geschichte des Pfeifens&amp;rdquo; ;D&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/BslzZEEwFa8&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: &#34;Robot string quintet composes and performs music&#34;</title>
+      <link>http://localhost:1313/2012/06/07/%C3%B6fter-mal-was-neues.-heute-robot-string-quintet-composes-and-performs-music</link>
+      <pubDate>Thu, 07 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/07/%C3%B6fter-mal-was-neues.-heute-robot-string-quintet-composes-and-performs-music</guid>
+      <description>&lt;p&gt;Das die Roboter uns einmal unterdrücken werden macht uns ja Hollywood
+des öfteren klar,&lt;/p&gt;
+
+&lt;p&gt;aber musizierende Roboter?&lt;/p&gt;
+
+&lt;p&gt;Ja das ist neu :)&lt;/p&gt;
+
+&lt;p&gt;Hier ein kleiner Einblick wie unsere &amp;ldquo;klangliche Unterdrückung&amp;rdquo; sich
+anhören könnte:&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;iframe width=&#34;500&#34; height=&#34;420&#34; src=&#34;http://localhost:1313/assets/pages/robot_music.html&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;&gt; &lt;/iframe&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Hier noch der Artikel: &lt;a href=&#34;http://www.newscientist.com/blogs/nstv/2012/05/smart-string-instruments-compose-and-perform-symphony.html&#34;&gt;New Scientist TV Artikel&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Viel Spaß,&lt;/p&gt;
+
+&lt;p&gt;euer Niklas&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Alles was sie zum Thema Privatkopie wissen sollten!</title>
+      <link>http://localhost:1313/2012/06/06/alles-was-sie-zum-thema-privatkopie-wissen-sollten</link>
+      <pubDate>Wed, 06 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/06/alles-was-sie-zum-thema-privatkopie-wissen-sollten</guid>
+      <description>&lt;p&gt;Hier mal eine Reihe von SemperVidoe zum Thema Copyright!&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/\_YNlbWDPjag&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/zIG0mMFrkrk&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/Yh9lqIX7ax8&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/g4G8fdTvxtI&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/DHyqD7u-Y0M&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/L9KX6U-5nys&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/l10rcq7VjOQ&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: &#34;VOICE ACTORS&#34;</title>
+      <link>http://localhost:1313/2012/06/06/%C3%B6fter-mal-was-neues.-heute-voice-actors</link>
+      <pubDate>Wed, 06 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/06/%C3%B6fter-mal-was-neues.-heute-voice-actors</guid>
+      <description>&lt;p&gt;Wir alle kennen die zahlreichen Helden unserer Kindheit.&lt;/p&gt;
+
+&lt;p&gt;Die Simpsons, Batman, Pinky &amp;amp; Brain &amp;hellip;. (und noch viele viele mehr :)&lt;/p&gt;
+
+&lt;p&gt;Aber kennt ihr auch die legendären Stimmen dahinter?&lt;/p&gt;
+
+&lt;p&gt;Hier ein kleines Youtube-Video, welches euch die Stimmen hinter den Helden zeigt ;)&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/6QvEpCXzcBI&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Öfter mal was neues. Heute: &#34;Pencil Vs Camera&#34;</title>
+      <link>http://localhost:1313/2012/06/05/%C3%B6fter-mal-was-neues.-heute-pencil-vs-camera</link>
+      <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/05/%C3%B6fter-mal-was-neues.-heute-pencil-vs-camera</guid>
+      <description>&lt;p&gt;Ich bin auf die beeindruckenden Bilder von &lt;strong&gt;&lt;a href=&#34;http://www.flickr.com/photos/benheine/&#34;&gt;Ben Heine&lt;/a&gt; &lt;/strong&gt;gestoßen und wollte sie
+gleich mit euch teilen! :)&lt;/p&gt;
+
+&lt;p&gt;Hier noch ein Entstehungsvideo der Bilder:&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/2JQYUwskc\_I&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+
+&lt;p&gt;Website von Ben Heine: &lt;a href=&#34;http://www.benheine.com/&#34;&gt;http://www.benheine.com&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Auch wir sind Urheber/innen</title>
+      <link>http://localhost:1313/2012/05/11/auch-wir-sind-urheber/innen</link>
+      <pubDate>Fri, 11 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/05/11/auch-wir-sind-urheber/innen</guid>
+      <description>&lt;p&gt;Ich bin nicht nur Urheber sondern eben auch Konsument und wie alle
+Urheber kommen meine Werke nicht vom Himmel, denn auch ich schnappe als
+Konsument Ideen auf und setzte diese dann um.&lt;/p&gt;
+
+&lt;p&gt;Wir beschneiden unsere Erfindungskraft und unsere Gesellschaft im
+Allgemeinen, wenn wir nicht zusammen an einer Lösung arbeiten, von der
+alle profitieren!&lt;/p&gt;
+
+&lt;p&gt;Deshalb untertstützt &lt;a href=&#34;http://niklas-heer.de&#34;&gt;http://niklas-heer.de&lt;/a&gt; diese Aktion!&lt;/p&gt;
+
+&lt;p&gt;Selber mitmachen: &lt;a href=&#34;https://docs.google.com/document/d/1HeB2yC1_gty568VhGUxixvHuJj9PX9Raa8iLZ4-yYQM/preview?pli=1&amp;amp;sle=true&#34;&gt;Google Docs&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/eUi7PPDl65U&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

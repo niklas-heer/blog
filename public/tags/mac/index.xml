@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/mac/</link>
+    <description>Recent content in Mac on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 03 Dec 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #4 - Netbeans &amp; Java auf dem Mac</title>
+      <link>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</link>
+      <pubDate>Tue, 03 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/qj1oLI7bL8c&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>NTFS kostenlos auf dem MAC</title>
+      <link>http://localhost:1313/2012/07/11/ntfs-kostenlos-auf-dem-mac</link>
+      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/07/11/ntfs-kostenlos-auf-dem-mac</guid>
+      <description>
+
+&lt;p&gt;Wer kennt das nicht, man hat eine Festplatte von einem Windows-Rechner
+oder evtl. einen USB-Stick und dann möchte man mit seinem Mac eigentlich
+nur &amp;ldquo;kurz&amp;rdquo; eine Datei darauf schreiben, muss aber feststellen, dass das
+so einfach gar nicht geht.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-option-die-kommerzielle-variante:465b3f532e3acb4988ae1b34a8536835&#34;&gt;1. Option &lt;em&gt;(die kommerzielle Variante)&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Man installiert sich einfach: Paragon - NTFS für Mac® OS X 9.5 für 29,95€ kann man die Vollversion &lt;a href=&#34;http://www.paragon-software.com/de/home/ntfs-mac/&#34;&gt;hier&lt;/a&gt; kaufen.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Vorteil:&lt;/em&gt; einfach zu installieren; schnell; performant und sorgenfrei&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nachteil:&lt;/em&gt; kommerziell und naja&amp;hellip; nicht gerade billig.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-option-die-kostenlose-variante:465b3f532e3acb4988ae1b34a8536835&#34;&gt;2. Option &lt;em&gt;(die kostenlose Variante)&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Die Installation ist nicht ganz so leicht.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-schritt:465b3f532e3acb4988ae1b34a8536835&#34;&gt;1. Schritt:&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://osxfuse.github.com/&#34;&gt;OSXFuse&lt;/a&gt; installieren. Bei der Installation muss man darauf achten, dass man auch den MacFUSE Compatibility Layer mit installiert.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/Fuse-install.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/Fuse-install.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;OSX Fuse&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-schritt:465b3f532e3acb4988ae1b34a8536835&#34;&gt;2. Schritt:&lt;/h4&gt;
+
+&lt;p&gt;Ihr installiert nun &lt;a href=&#34;http://www.macupdate.com/app/mac/24481/ntfs-3g/&#34;&gt;NTFS-3G for Mac&lt;/a&gt; hier müsst ihr bei Installationstyp auf &amp;ldquo;Anpassen&amp;rdquo; klicken und MacFUSE deaktivieren, da ihr das schon in Schritt 1 gemacht habt. Diese 2 Schritte sind nötig, weil es auf Lion anders leider nicht mehr funktioniert.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure class=&#34;half&#34;&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-1.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-1.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-2.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-2.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;NTFS-3G for Mac&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Vorteil:&lt;/em&gt; komplett kostenlos; mit OSXFuse würden theoretisch noch andere Dateisysteme unterstützt&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nachteil:&lt;/em&gt; evtl. nicht ganz optimale Performance (also ich habe keine Nachteile gemerkt); keine &amp;ldquo;einfach&amp;rdquo; Installation&lt;/p&gt;
+
+&lt;h3 id=&#34;fazit:465b3f532e3acb4988ae1b34a8536835&#34;&gt;Fazit:&lt;/h3&gt;
+
+&lt;p&gt;Also ich habe beide Varianten ausgiebig getestet und erst vor kurzem
+festgestellt, dass es auch kostenlos geht. Ich werde wahrscheinlich bei
+der kostenlosen Variante bleiben, weil OSXFuse eben auch Open Source ist
+und dadurch natürlich auch wesentlich mehr Neuerungen und Anpassungen
+zulässt. Ich hoffe ich konnte euch weiterhelfen, bei fragen einfach ein
+Kommentar ;D&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>automatischer Upload von Bildern in der Zwischenablage [Mac]</title>
+      <link>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</link>
+      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</guid>
+      <description>
+
+&lt;p&gt;Ihr kennt das vielleicht, ihr habt ein Bild mit &amp;ldquo;⌘ + Ctrl + ⇧ + 4&amp;rdquo;
+gemacht und wollt diesen Screenshot nun mit jemandem teilen, mit dem ihr
+evtl. gerade chattet oder eine Email schreibt oder oder oder.&lt;/p&gt;
+
+&lt;p&gt;Ich habe eine wirklich schnelle Lösung für dieses Problem gefunden.
+Leider braucht ihr ein bisschen Einrichtungszeit und auch ein spezielles
+Tool dafür.&lt;/p&gt;
+
+&lt;h3 id=&#34;was-wir-brauchen:515c33b92df032cc708a5a8fc182b56b&#34;&gt;&lt;em&gt;Was wir brauchen:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://itunes.apple.com/de/app/textexpander-for-mac/id405274824?mt=12&#34;&gt;Textexpander&lt;/a&gt; leider nicht ganz billig mit 27,99€, aber ein wirklich mächtiges und gutes Tool.&lt;/li&gt;
+&lt;li&gt;Applescript (schon bei Mac dabei)&lt;/li&gt;
+&lt;li&gt;einen Webspace mit FTP Zugriff. (kostenlos: &lt;a href=&#34;http://forum.chip.de/webspace-webserver-webhosting/kostenloser-webspace-160515.html&#34;&gt;zum Artikel&lt;/a&gt; - ich kann auch &lt;a href=&#34;http://www.funpic.de/&#34;&gt;Funpic&lt;/a&gt; empfehlen)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;strong&gt;1. Schritt Erstellung der Scripte:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Upload-terminal muss auf jeden Fall angepasst werden. &amp;ldquo;save_img_from_clip.scpt&amp;rdquo; kann so bleiben ;)&lt;/p&gt;
+
+&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
+
+&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;Am besten man speichert sie unter &amp;ldquo;/Users/&amp;lt;username&amp;gt;/Scripte&amp;rdquo; ab.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;strong&gt;2. Schritt Erstellung des
+Textexpander Makros:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Dieser Code muss angepasst werden mit euren Pfaden und in Textexpander
+eingefügt werden:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-- Code unterliegt der CC BY-NC-SA (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+-- Autor: Niklas Heer (http://niklas-heer.de)
+ 
+-- der CMD Pfad muss zu eurem Pfad zeigen, in dem das &amp;quot;save_img_from_clip.scpt&amp;quot; Script liegt
+set CMD to &amp;quot;osascript /Users/nh/Dropbox/AppleScripts/Plaintext/save_img_from_clip.scpt&amp;quot;
+ignoring case
+    set pic_path to (do shell script CMD)
+ 
+        -- der CMD_upload Pfad muss zu eurem Pfad zeigen, in dem das &amp;quot;Upload-terminal.scpt&amp;quot; Script liegt
+    set CMD_upload to &amp;quot;osascript /Users/nh/Dropbox/AppleScripts/Plaintext/Upload-terminal.scpt &amp;quot; &amp;amp;amp; pic_path
+    set pic_url to (do shell script CMD_upload)
+ 
+end ignoring
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/TextExpander1.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/TextExpander1-150x150.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;TextExpander&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FERTIG!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Nun könnt ihr überall einfach &amp;ldquo;/upload&amp;rdquo; (oder wie immer ihr es genannt
+habt) eingeben und sofort wird &amp;ldquo;/upload&amp;rdquo; mit der URL zu eurem Bild
+ersetzt, dass auf euren Server hochgeladen wurde.&lt;/p&gt;
+
+&lt;p&gt;Noch ein paar Anmerkungen: Es nimmt auch nicht viel Platz weg, da es
+immer dasselbe Bild neu erzeugt und überschreibt, das heißt auch, dass
+die URLs die ihr damit verschickt nur temporär sind, da sie bei der
+nächsten Verwendung dann schon auf ein neues Bild zeigen. Da hätte ich
+auch schon eine Lösung und zwar müsste man dafür &amp;ldquo;einfach&amp;rdquo; das
+Upload-terminal Script anpassen, sodass dieses noch Argumente für den
+Dateinamen bekommt. Und im Textexpander Script müsste man noch ein
+FillForm für diesen Dateinamen angeben. Wenn ihr es mögt werde ich die
+Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>MAC Tipp 01 - Arbeiten mit dem Automator</title>
+      <link>http://localhost:1313/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</link>
+      <pubDate>Thu, 05 Jan 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</guid>
+      <description>&lt;p&gt;In diesem Video zeige ich euch wie ihr mit Hilfe eures Automator ein
+alltägliches Problem, wie das Entfernen eines bestimmten Dateityps aus
+einem Ordner, lösen könnt.&lt;/p&gt;
+
+&lt;p&gt;Ich hoffe es gefällt und hilft euch ;D&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/GuhbFHFZkY0&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

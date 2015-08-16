@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/windows/</link>
+    <description>Recent content in Windows on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 26 Oct 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #2</title>
+      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</link>
+      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4TxI4wmhzP4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

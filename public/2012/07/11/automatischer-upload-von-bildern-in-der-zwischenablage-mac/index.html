@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+
+
+ <html class="no-js"> 
+<head>
+    <title>automatischer Upload von Bildern in der Zwischenablage [Mac] &middot; Niklas&#39; Blog</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Niklas Heer">
+    <meta name="description" content="My personal blog.">
+    <meta name="generator" content="Hugo 0.14" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    
+    <div class="off-canvas">
+    <figure class="avatar">
+        <img src="http://localhost:1313/img/avatar.jpg" title="Niklas Heer">
+    </figure>
+    <div class="bio">
+        
+        <h1>Hi, I&#39;m Niklas Heer.</h1>
+        
+        
+        <p>I love to write stuff about things that grab my attention!</p>
+        
+    </div>
+    <nav>
+        
+        <h6>Subscribe</h6>
+        
+
+        <ul>
+            <li><a target="_blank" href="http://localhost:1313/index.xml">RSS feed</a></li>
+        </ul>
+
+        
+        <h6>Follow me on</h6>
+        
+
+        <ul>
+        
+            <li><a target="_blank" href="//github.com/niklas-heer">Github</a></li>
+        
+            <li><a target="_blank" href="//twitter.com/niklas_heer">Twitter</a></li>
+        
+        </ul>
+
+        
+        <h6>Other interesting sites</h6>
+        
+
+        <ul>
+        
+            <li><a target="_blank" href="http://nheer.io">About me</a></li>
+        
+            <li><a target="_blank" href="https://linux-statt-windows.org">Linux statt Windows</a></li>
+        
+        </ul>      
+    </nav>
+</div>
+
+    <div class="site-wrapper">
+        <header>
+	<div class="h-wrap">
+		
+		<h1 class="title"><a href="http://localhost:1313/">Niklas&#39; Blog</a></h1>
+		
+		<a class="menu-icon" title="Menu"><span class="lines"></span></a>
+	</div>
+</header>
+        
+        <section class="single-wrap">
+            <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+                <div class="feat">
+                    <h5 class="page-date">
+                    <time datetime="" itemprop="datePublished">
+                    7. July 2012
+                    </time>                  
+                    </h5>
+                    
+                </div>
+                <div class="feat-sub">
+                    <span class="post-reading-time">
+                        <i class="fa fa-clock-o"></i>
+                        Reading time ~ 2 Min
+                    </span>
+                </div>
+                <h1 class="page-title" itemprop="name headline">automatischer Upload von Bildern in der Zwischenablage [Mac]</h1>
+                <div itemprop="articleBody">
+                    
+
+<p>Ihr kennt das vielleicht, ihr habt ein Bild mit &ldquo;⌘ + Ctrl + ⇧ + 4&rdquo;
+gemacht und wollt diesen Screenshot nun mit jemandem teilen, mit dem ihr
+evtl. gerade chattet oder eine Email schreibt oder oder oder.</p>
+
+<p>Ich habe eine wirklich schnelle Lösung für dieses Problem gefunden.
+Leider braucht ihr ein bisschen Einrichtungszeit und auch ein spezielles
+Tool dafür.</p>
+
+<h3 id="was-wir-brauchen:515c33b92df032cc708a5a8fc182b56b"><em>Was wir brauchen:</em></h3>
+
+<ul>
+<li><a href="http://itunes.apple.com/de/app/textexpander-for-mac/id405274824?mt=12">Textexpander</a> leider nicht ganz billig mit 27,99€, aber ein wirklich mächtiges und gutes Tool.</li>
+<li>Applescript (schon bei Mac dabei)</li>
+<li>einen Webspace mit FTP Zugriff. (kostenlos: <a href="http://forum.chip.de/webspace-webserver-webhosting/kostenloser-webspace-160515.html">zum Artikel</a> - ich kann auch <a href="http://www.funpic.de/">Funpic</a> empfehlen)</li>
+</ul>
+
+<p><span style="text-decoration: underline;"><strong>1. Schritt Erstellung der Scripte:</strong></span></p>
+
+<p>Upload-terminal muss auf jeden Fall angepasst werden. &ldquo;save_img_from_clip.scpt&rdquo; kann so bleiben ;)</p>
+
+<div markdown="0"><a href="/assets/files/2012-07-11/Upload-terminal.scpt" class="btn btn-success">download Upload-terminal.scpt</a></div>
+
+<div markdown="0"><a href="/assets/files/2012-07-11/save_img_from_clip.scpt" class="btn btn-success">download save_img_from_clip.scpt</a></div>
+
+<p>Am besten man speichert sie unter &ldquo;/Users/&lt;username&gt;/Scripte&rdquo; ab.</p>
+
+<p><span style="text-decoration: underline;"><strong>2. Schritt Erstellung des
+Textexpander Makros:</strong></span></p>
+
+<p>Dieser Code muss angepasst werden mit euren Pfaden und in Textexpander
+eingefügt werden:</p>
+
+<pre><code>-- Code unterliegt der CC BY-NC-SA (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+-- Autor: Niklas Heer (http://niklas-heer.de)
+ 
+-- der CMD Pfad muss zu eurem Pfad zeigen, in dem das &quot;save_img_from_clip.scpt&quot; Script liegt
+set CMD to &quot;osascript /Users/nh/Dropbox/AppleScripts/Plaintext/save_img_from_clip.scpt&quot;
+ignoring case
+    set pic_path to (do shell script CMD)
+ 
+        -- der CMD_upload Pfad muss zu eurem Pfad zeigen, in dem das &quot;Upload-terminal.scpt&quot; Script liegt
+    set CMD_upload to &quot;osascript /Users/nh/Dropbox/AppleScripts/Plaintext/Upload-terminal.scpt &quot; &amp;amp; pic_path
+    set pic_url to (do shell script CMD_upload)
+ 
+end ignoring
+</code></pre>
+
+<p><center>
+    <figure>
+        <a href="/assets/images/2012-07-11/TextExpander1.jpg"><img src="/assets/images/2012-07-11/TextExpander1-150x150.jpg" alt=""></a>
+        <figcaption>TextExpander</figcaption>
+    </figure>
+</center></p>
+
+<p><strong>FERTIG!</strong></p>
+
+<p>Nun könnt ihr überall einfach &ldquo;/upload&rdquo; (oder wie immer ihr es genannt
+habt) eingeben und sofort wird &ldquo;/upload&rdquo; mit der URL zu eurem Bild
+ersetzt, dass auf euren Server hochgeladen wurde.</p>
+
+<p>Noch ein paar Anmerkungen: Es nimmt auch nicht viel Platz weg, da es
+immer dasselbe Bild neu erzeugt und überschreibt, das heißt auch, dass
+die URLs die ihr damit verschickt nur temporär sind, da sie bei der
+nächsten Verwendung dann schon auf ein neues Bild zeigen. Da hätte ich
+auch schon eine Lösung und zwar müsste man dafür &ldquo;einfach&rdquo; das
+Upload-terminal Script anpassen, sodass dieses noch Argumente für den
+Dateinamen bekommt. Und im Textexpander Script müsste man noch ein
+FillForm für diesen Dateinamen angeben. Wenn ihr es mögt werde ich die
+Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!</p>
+
+<p><center>
+    <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="/assets/images/cc/by-nc-sa.png" alt=""></a>
+</center></p>
+
+                </div>
+                <div class="feat share">
+                    <a href="//twitter.com/share" class="popup">
+                        <span class="icon-twitter"></span>
+                    </a>
+                </div>
+                
+                
+                    <section class="disqus">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'niklas_heer';
+	var disqus_developer = 0; 
+	(function() {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+                
+
+                
+                
+                    <a rel="next" href="http://localhost:1313/2012/06/27/%C3%B6fter-mal-was-neues.-heute-coca-cola" id="next">
+                        <span class="nav-title nav-title-next">Older</span> &rarr;
+                    </a>
+                
+                
+                    <a rel="prev" href="http://localhost:1313/2012/07/11/ntfs-kostenlos-auf-dem-mac" id="prev">
+                        &larr; <span class="nav-title nav-title-prev">Newer</span>
+                    </a>
+                
+            </article>
+        </section>
+
+        <footer>
+	
+	<small>© Niklas Heer</small>
+	
+</footer>
+    </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://localhost:1313/js/main.js"></script>
+
+<script src="http://localhost:1313/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="http://localhost:1313/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<script src="http://localhost:1313/js/plugins/jquery.magnific-popup.js"></script>
+<script src="http://localhost:1313/js/plugins/jquery.fitvids.js"></script>
+
+
+
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

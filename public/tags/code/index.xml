@@ -1,0 +1,643 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Code on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/code/</link>
+    <description>Recent content in Code on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 05 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Jekyll - from zero to hero</title>
+      <link>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</link>
+      <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</guid>
+      <description>
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;my blog was never faster nor easier to deploy!&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;deployment-via-git:abed85835c828a38e19690cbc75bb36d&#34;&gt;Deployment via git&lt;/h2&gt;
+
+&lt;h3 id=&#34;the-local-repository:abed85835c828a38e19690cbc75bb36d&#34;&gt;The local repository&lt;/h3&gt;
+
+&lt;p&gt;You can host your site on &lt;a href=&#34;https://about.gitlab.com/&#34;&gt;Gitlab&lt;/a&gt;, &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; or something else - just like I do.
+But if you want to start from scratch you can make a folder and initialize git in it, after that you can copy over your Jekyll files.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;mkdir jekyll &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd &lt;/span&gt;jekyll
+git init
+cp -r /path/to/old_jekyll_folder /path/to/jekyll
+git add .
+git commit -am &lt;span class=&#34;s2&#34;&gt;&amp;quot;initial commit.&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;h3 id=&#34;the-remote-repository:abed85835c828a38e19690cbc75bb36d&#34;&gt;The remote repository&lt;/h3&gt;
+
+&lt;p&gt;Now we need a new repository on your web-server, but it doesn&amp;rsquo;t need to be inside your web directory - just somewhere inside the system. I assume you have configured your public-key to work as a login and you also need write-privileges to the web directory with this user.&lt;br&gt;
+First we need to initialize the repository:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;#Initialized empty Git repository in /home/nh/website.git/&lt;/span&gt;
+mkdir website.git &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd &lt;/span&gt;website.git
+git init --bare
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Then we need define a post-receive hook that checks out the latest changes into the web-servers DocumentRoot (this directory must exist; Git will not create it for you):&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;nano hooks/post-receive
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Put this inside the file:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&#34;nv&#34;&gt;GIT_WORK_TREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/var/www/www.example.org git checkout -f
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;After that we need to enable the hook which will be triggered every time we push our changes to this repository. It will apply every commit to the directory which you have defined inside the post-receive hook.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;chmod +x hooks/post-receive
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;We are now done on the server and we only need to set up the update process on the local system.&lt;/p&gt;
+
+&lt;h3 id=&#34;the-update-process:abed85835c828a38e19690cbc75bb36d&#34;&gt;The update process&lt;/h3&gt;
+
+&lt;p&gt;First we need to edit our git config file in our local repository to add the remote server.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;nano .git/config
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;Add this to the file:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote &lt;span class=&#34;s2&#34;&gt;&amp;quot;production&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
+    &lt;span class=&#34;nv&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; username@webserver:/home/nh/website.git
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;That&amp;rsquo;s it! Now you have set up your deployment! To deploy your jekyll changes is now as easy as this:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;git push production
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;make-jekyll-fly:abed85835c828a38e19690cbc75bb36d&#34;&gt;Make jekyll fly&lt;/h2&gt;
+
+&lt;blockquote&gt;
+This is the fastest site I&#39;ve ever built.
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure class=&#34;half&#34;&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;before and after&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;optimizing-the-web-server:abed85835c828a38e19690cbc75bb36d&#34;&gt;Optimizing the web-server&lt;/h3&gt;
+
+&lt;p&gt;Since I wanted to optimize my server I looked for a site which would allow me to test my servers performance and maybe also give me hints, than I found &lt;a href=&#34;http://tools.pingdom.com/fpt/#!/dG49JO/http://blog.niklas-heer.de&#34;&gt;pingdom&lt;/a&gt; which is a really good tool to test your site!&lt;/p&gt;
+
+&lt;p&gt;First I installed &lt;a href=&#34;https://developers.google.com/speed/pagespeed/module&#34;&gt;Googles Pagespeed&lt;/a&gt; on my CentOS machine which was a &lt;a href=&#34;http://www.tecmint.com/install-mod_pagespeed-website-optimizer-for-apache-in-rhel-centos-and-fedora/&#34;&gt;fairly easy process&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Now I needed some optimization of my servers cache, for this I needed to use the &lt;code&gt;mod_expires&lt;/code&gt; module of my apache installation.&lt;br&gt;
+I made a new file &lt;code&gt;/etc/httpd/conf.d/expires.conf&lt;/code&gt; with the following content:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;ExpiresActive On
+ExpiresByType image/gif &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+ExpiresByType image/png &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+ExpiresByType image/jpeg &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+ExpiresByType text/css &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+ExpiresByType text/javascript &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+ExpiresByType application/x-javascript &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+ExpiresByType application/x-shockwave-flash &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;After that I edited my DNS entry to use &lt;a href=&#34;https://www.cloudflare.com&#34;&gt;CloudFlare&lt;/a&gt; which I &lt;em&gt;highly&lt;/em&gt; recommend to you!&lt;/p&gt;
+
+&lt;p&gt;Now I have a really fast Apache web-server with caching and &lt;a href=&#34;https://www.cloudflare.com&#34;&gt;CloudFlare&lt;/a&gt; enabled.&lt;/p&gt;
+
+&lt;h3 id=&#34;optimizing-pictures:abed85835c828a38e19690cbc75bb36d&#34;&gt;Optimizing pictures&lt;/h3&gt;
+
+&lt;p&gt;You can make images smaller by using &lt;a href=&#34;https://github.com/toy/image_optim&#34;&gt;image_optim&lt;/a&gt;! This is a great tool and fairly simple to install:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;gem install image_optim image_optim_pack
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;If you want the full suit you also need to do this on ArchLinux:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;yaourt -S pngout
+sudo npm install -g svgo
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;After that you can simply go to the directory in which you stored your pictures and let &lt;a href=&#34;https://github.com/toy/image_optim&#34;&gt;image_optim&lt;/a&gt; run through all subdirectories and files recursively with this command:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;# WARNING: This could take a while!&lt;/span&gt;
+image_optim -r .
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h2 id=&#34;hiding-the-clutter:abed85835c828a38e19690cbc75bb36d&#34;&gt;Hiding the clutter&lt;/h2&gt;
+
+&lt;p&gt;I have made an &lt;code&gt;.htaccess&lt;/code&gt; file for this reason, but since I have the opportunity to simply change the DocumentRoot to &lt;code&gt;_site&lt;/code&gt; I did that instead!&lt;br&gt;
+Maybe it will help you!&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&#34;text/javascript&#34; src=&#34;http://gist.github.com/f1392572c9f0469f2133.js&#34;&gt;&lt;/script&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>vtop an unknown terminal beauty</title>
+      <link>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
+      <description>
+
+&lt;blockquote&gt;
+Wow such top. So stats. More better than regular top. Written in node.js
+&lt;cite&gt;&lt;a href=&#34;https://parall.ax/vtop&#34;&gt;vtop&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been using &lt;code&gt;top&lt;/code&gt; since I started maintaining a server in 2010. &lt;br&gt;
+It&amp;rsquo;s a really powerful tool to glance at it and see if your system is alright, but since I discovered &lt;code&gt;htop&lt;/code&gt;, &lt;code&gt;top&lt;/code&gt; was made obsolete for me.&lt;/p&gt;
+
+&lt;p&gt;Although I really liked &lt;code&gt;htop&lt;/code&gt; I always felt that it sometimes had a too clunky representation of the data, so that I couldn&amp;rsquo;t quickly enough see if my system was acting out of the common workload.&lt;/p&gt;
+
+&lt;p&gt;Than I discovered &lt;code&gt;vtop&lt;/code&gt;! &lt;br&gt;
+But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
+
+&lt;h3 id=&#34;why-not-simple-old-top:aea07f019cd63a19e48302eedde9dab8&#34;&gt;Why not simple old &lt;code&gt;top&lt;/code&gt;?&lt;/h3&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure class=&#34;half&#34;&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;top vs htop&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can guess from the pictures above &lt;code&gt;htop&lt;/code&gt; does really exactly the same as &lt;code&gt;top&lt;/code&gt;, but in a much nicer way so in my opinion there is no discussion about why you would choose &lt;code&gt;top&lt;/code&gt; over &lt;code&gt;htop&lt;/code&gt;!&lt;/p&gt;
+
+&lt;h3 id=&#34;vtop-vtop-the-unknown-beauty:aea07f019cd63a19e48302eedde9dab8&#34;&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/MrRio/vtop&#34;&gt;vtop&lt;/a&gt;&lt;/strong&gt; the unknown beauty&lt;/h3&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;vtop&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/MrRio/vtop&#34;&gt;vtop&lt;/a&gt; looks much cleaner than htop. One look and you exactly know whats going on on the system! You can list processes by CPU or Memory usage which is really awesome, you can navigate with your arrow keys or &lt;code&gt;k&lt;/code&gt; and &lt;code&gt;j&lt;/code&gt; which is also nice and the best of all you can simply highlight/select a process and kill it by typing &lt;code&gt;dd&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt;(you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo npm install -g vtop
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;After that you can execute it by typing &lt;code&gt;vtop&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I really love it! Maybe there are some use-cases where I still need &lt;code&gt;htop&lt;/code&gt; e.g. when I want to find a PID and don&amp;rsquo;t need it to kill the process, but &lt;code&gt;vtop&lt;/code&gt; is now a part of my daily used tool!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Try it out yourself!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #4 - Netbeans &amp; Java auf dem Mac</title>
+      <link>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</link>
+      <pubDate>Tue, 03 Dec 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/qj1oLI7bL8c&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #3 - Netbeans &amp; Java in Linux</title>
+      <link>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</link>
+      <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4WahwewBgDs&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #1</title>
+      <link>http://localhost:1313/2013/10/26/lets-learn---programmieren-</link>
+      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/10/26/lets-learn---programmieren-</guid>
+      <description>&lt;p&gt;Hier wolltet schon immer mal Programmieren lernen?&lt;/p&gt;
+
+&lt;p&gt;Dann ist diese Video-Reihe ideal für euch!&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/DCxbtJMlkuk&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Let&#39;s Learn - Programmieren #2</title>
+      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</link>
+      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4TxI4wmhzP4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Thinklight Script für Linux</title>
+      <link>http://localhost:1313/2013/04/30/thinklight-script-f%C3%BCr-linux</link>
+      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/04/30/thinklight-script-f%C3%BCr-linux</guid>
+      <description>
+
+&lt;p&gt;Wolltet ihr schon immer mal das LED-Licht in einem Script benutzen, oder es einfach nur per Terminal-Befehl an- und ausschalten?&lt;/p&gt;
+
+&lt;p&gt;Wenn ja dann hab ich hier eine Lösung für euch:&lt;/p&gt;
+
+&lt;h3 id=&#34;1-voraussetungen-prüfen:9fda1d7fdf802a2767563d8649c62eb6&#34;&gt;1. Voraussetungen prüfen:&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;    lsmod | grep pad
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;sollte ungefähr so aussehen:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;thinkpad_acpi          81222  0 
+nvram                  14362  1 thinkpad_acpi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;falls nicht kann man das Kernel-Modul damit nachinstallieren:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo modprobe -v thinkpad-acpi
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;2-script-installieren:9fda1d7fdf802a2767563d8649c62eb6&#34;&gt;2. Script installieren&lt;/h3&gt;
+
+&lt;p&gt;Script an dem richtigen Ort herunterladen und ausführbar machen:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
+sudo chmod +x /usr/local/bin/thinklight
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;3-script-benutzen:9fda1d7fdf802a2767563d8649c62eb6&#34;&gt;3. Script benutzen&lt;/h3&gt;
+
+&lt;p&gt;Zum Anschalten:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;
+Zum Abschalten:
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Und hier noch das Script selbst ;D&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
+if [ &amp;quot;$1&amp;quot; = &amp;quot;on&amp;quot; ]; then
+    echo 1 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+elif [ &amp;quot;$1&amp;quot; = &amp;quot;off&amp;quot; ]; then
+    echo 0 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+else
+    echo &amp;quot;Error: Wrong paramater! Only on/off allowed!&amp;quot;
+fi
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu 13.04 - Ein besserer File-Browser</title>
+      <link>http://localhost:1313/2013/04/30/ubuntu-13.04---ein-besserer-file-browser</link>
+      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/04/30/ubuntu-13.04---ein-besserer-file-browser</guid>
+      <description>
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;Pantheon Files&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Diejenigen unter euch, die sich schon das neue Ubuntu 13.04 geladen haben, haben sicher schon gemerkt, dass der File-Explorer neu gestaltet wurde. Im Prinzip ist es aber immer noch der gute alte Nautilus.&lt;/p&gt;
+
+&lt;p&gt;Jeder der schon mal den Finder von Mac OS gesehen hat, hat sicher die &amp;ldquo;komische&amp;rdquo; Ansicht gesehen, die es in diesem File-Explorer gibt.&lt;/p&gt;
+
+&lt;p&gt;Doch diese Ansicht ist kein von Apple selbst entwickelte Ansicht, sondern vielmehr ist es ein schon recht alter Standard für die Ansicht von Dateien und Ordnern (seit 1980).&lt;/p&gt;
+
+&lt;p&gt;Diese Ansicht nennt man &lt;a href=&#34;http://en.wikipedia.org/wiki/Miller_columns&#34;&gt;Miller Columns&lt;/a&gt; diese Ansicht ist besonders effizient und übersichtlich um mit Dateien zu arbeiten.&lt;/p&gt;
+
+&lt;p&gt;Das ist so ziemlich der Hauptgrund wieso ich nach einem alternativen File-Browser gesucht hab.&lt;/p&gt;
+
+&lt;p&gt;Und mit &lt;a href=&#34;https://launchpad.net/pantheon-files&#34;&gt;Pantheon-Files&lt;/a&gt; einem Fork von &lt;a href=&#34;https://launchpad.net/marlin&#34;&gt;Marlin&lt;/a&gt; ist und auch im Gegensatz zu Marlin aktiv entwickelt wird, wurde ich fündig!&lt;/p&gt;
+
+&lt;p&gt;Ich kann euch diesen Filebrowser nur wärmstens empfehlen!&lt;/p&gt;
+
+&lt;h3 id=&#34;installation:66744ec3ab086fa0a24dec09d9a0a5b4&#34;&gt;Installation:&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:elementary-os/daily
+sudo apt-get update
+sudo apt-get install pantheon-files
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Danach solltet ihr es per Terminal starten, da der Ubuntu-Launcher beide Explorer unter demselben Namen führt.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;pantheon-files
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Awesome Password Change now on Github!</title>
+      <link>http://localhost:1313/2012/08/14/awesome-password-change-now-on-github</link>
+      <pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/08/14/awesome-password-change-now-on-github</guid>
+      <description>&lt;p&gt;Ich habe beschlossen mein Script auf Github zu tun.&lt;/p&gt;
+
+&lt;p&gt;Wer mit mir daran arbeiten will, kontaktiert mich einfach! ;D&lt;/p&gt;
+
+&lt;p&gt;Ansonsten:&lt;/p&gt;
+
+&lt;div class=&#34;github-button&#34;&gt;&lt;a href=&#34;https://github.com/niklas-heer/awesome-password-change&#34; class=&#34;btn btn-lg btn-info&#34;&gt;Fork me!&lt;/a&gt;&lt;/div&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Awesome Password Change [PHP Script]</title>
+      <link>http://localhost:1313/2012/07/24/awesome-password-change-php-script</link>
+      <pubDate>Tue, 24 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/07/24/awesome-password-change-php-script</guid>
+      <description>
+
+&lt;p&gt;Ich verwalte meinen Server mit ZPanel und da ich dort auch Nutzern eine Mail-Adresse mache, hatte ich das Problem, dass diese zwar auf ihre Mails problemlos zugreifen konnten, aber nicht eigenständig ihr Passwort ändern konnten.&lt;/p&gt;
+
+&lt;p&gt;Also musste ein PHP Script her, aber da mir keins gefallen hat, musste ich selbst eins machen und heute möchte ich es mit euch teilen :)&lt;/p&gt;
+
+&lt;p&gt;Die bis jetzt unterstützen Sprachen sind: Deutsch und English&lt;/p&gt;
+
+&lt;p&gt;Wer übersetzten will, kann sich gern bei mir melden und Feedback, Lob und Kritik höre ich auch gerne :P&lt;/p&gt;
+
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-24/awesome_password_change_v1.0.zip&#34; class=&#34;btn btn-lg btn-success&#34;&gt;Download v1.0&lt;/a&gt;&lt;/div&gt;
+
+&lt;h4 id=&#34;deutsch:938690065cb95c6fe18357fe8268958d&#34;&gt;DEUTSCH:&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Autor:&lt;/strong&gt; Niklas Heer &lt;br&gt;
+&lt;strong&gt;Lizenz:&lt;/strong&gt; Frei (&lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0&#34;&gt;CC BY-NC-SA &lt;/a&gt;)&lt;br&gt;
+Ein schönes Script, um das Passwort eines Useres zu ändern. Es wurde im speziellen für Emails die per ZPanel erstellt wurden gemacht kann aber für beliebige andere Situationen verwendet werden. Zudem ist es mehrsprachig und kann um weitere Sprachen erweitert werden!&lt;br&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;english:938690065cb95c6fe18357fe8268958d&#34;&gt;ENGLISH:&lt;/h4&gt;
+
+&lt;p&gt;&lt;strong&gt;Author:&lt;/strong&gt; Niklas Heer &lt;br&gt;
+&lt;strong&gt;License:&lt;/strong&gt; Free (&lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0&#34;&gt;CC BY-NC-SA &lt;/a&gt;)&lt;br&gt;
+A fancy script to let users change their mail passwords. It was designed for mail-adresses created with ZPanel, but can be used for all other systems too. It is multilingual and new languages can be added easily.&lt;br&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>automatischer Upload von Bildern in der Zwischenablage [Mac]</title>
+      <link>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</link>
+      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</guid>
+      <description>
+
+&lt;p&gt;Ihr kennt das vielleicht, ihr habt ein Bild mit &amp;ldquo;⌘ + Ctrl + ⇧ + 4&amp;rdquo;
+gemacht und wollt diesen Screenshot nun mit jemandem teilen, mit dem ihr
+evtl. gerade chattet oder eine Email schreibt oder oder oder.&lt;/p&gt;
+
+&lt;p&gt;Ich habe eine wirklich schnelle Lösung für dieses Problem gefunden.
+Leider braucht ihr ein bisschen Einrichtungszeit und auch ein spezielles
+Tool dafür.&lt;/p&gt;
+
+&lt;h3 id=&#34;was-wir-brauchen:515c33b92df032cc708a5a8fc182b56b&#34;&gt;&lt;em&gt;Was wir brauchen:&lt;/em&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;http://itunes.apple.com/de/app/textexpander-for-mac/id405274824?mt=12&#34;&gt;Textexpander&lt;/a&gt; leider nicht ganz billig mit 27,99€, aber ein wirklich mächtiges und gutes Tool.&lt;/li&gt;
+&lt;li&gt;Applescript (schon bei Mac dabei)&lt;/li&gt;
+&lt;li&gt;einen Webspace mit FTP Zugriff. (kostenlos: &lt;a href=&#34;http://forum.chip.de/webspace-webserver-webhosting/kostenloser-webspace-160515.html&#34;&gt;zum Artikel&lt;/a&gt; - ich kann auch &lt;a href=&#34;http://www.funpic.de/&#34;&gt;Funpic&lt;/a&gt; empfehlen)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;strong&gt;1. Schritt Erstellung der Scripte:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Upload-terminal muss auf jeden Fall angepasst werden. &amp;ldquo;save_img_from_clip.scpt&amp;rdquo; kann so bleiben ;)&lt;/p&gt;
+
+&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
+
+&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
+
+&lt;p&gt;Am besten man speichert sie unter &amp;ldquo;/Users/&amp;lt;username&amp;gt;/Scripte&amp;rdquo; ab.&lt;/p&gt;
+
+&lt;p&gt;&lt;span style=&#34;text-decoration: underline;&#34;&gt;&lt;strong&gt;2. Schritt Erstellung des
+Textexpander Makros:&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;Dieser Code muss angepasst werden mit euren Pfaden und in Textexpander
+eingefügt werden:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;-- Code unterliegt der CC BY-NC-SA (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+-- Autor: Niklas Heer (http://niklas-heer.de)
+ 
+-- der CMD Pfad muss zu eurem Pfad zeigen, in dem das &amp;quot;save_img_from_clip.scpt&amp;quot; Script liegt
+set CMD to &amp;quot;osascript /Users/nh/Dropbox/AppleScripts/Plaintext/save_img_from_clip.scpt&amp;quot;
+ignoring case
+    set pic_path to (do shell script CMD)
+ 
+        -- der CMD_upload Pfad muss zu eurem Pfad zeigen, in dem das &amp;quot;Upload-terminal.scpt&amp;quot; Script liegt
+    set CMD_upload to &amp;quot;osascript /Users/nh/Dropbox/AppleScripts/Plaintext/Upload-terminal.scpt &amp;quot; &amp;amp;amp; pic_path
+    set pic_url to (do shell script CMD_upload)
+ 
+end ignoring
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/TextExpander1.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/TextExpander1-150x150.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;TextExpander&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;FERTIG!&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Nun könnt ihr überall einfach &amp;ldquo;/upload&amp;rdquo; (oder wie immer ihr es genannt
+habt) eingeben und sofort wird &amp;ldquo;/upload&amp;rdquo; mit der URL zu eurem Bild
+ersetzt, dass auf euren Server hochgeladen wurde.&lt;/p&gt;
+
+&lt;p&gt;Noch ein paar Anmerkungen: Es nimmt auch nicht viel Platz weg, da es
+immer dasselbe Bild neu erzeugt und überschreibt, das heißt auch, dass
+die URLs die ihr damit verschickt nur temporär sind, da sie bei der
+nächsten Verwendung dann schon auf ein neues Bild zeigen. Da hätte ich
+auch schon eine Lösung und zwar müsste man dafür &amp;ldquo;einfach&amp;rdquo; das
+Upload-terminal Script anpassen, sodass dieses noch Argumente für den
+Dateinamen bekommt. Und im Textexpander Script müsste man noch ein
+FillForm für diesen Dateinamen angeben. Wenn ihr es mögt werde ich die
+Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Wordpress zu Twitter Plugin?</title>
+      <link>http://localhost:1313/2012/06/06/wordpress-zu-twitter-plugin</link>
+      <pubDate>Wed, 06 Jun 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/06/06/wordpress-zu-twitter-plugin</guid>
+      <description>&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://localhost:1313/assets/images/2012-06-06/twitter1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-06-06/twitter1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Ihr habt euch gefragt wie ihr es hin bekommt, dass eure &lt;strong&gt;Artikel&lt;/strong&gt; in Wordpress &lt;strong&gt;automatisch als&lt;/strong&gt; &lt;strong&gt;Tweet veröffentlicht&lt;/strong&gt; werden?&lt;/p&gt;
+
+&lt;p&gt;Kein Problem! Ich habe für euch das passende Plugin!&lt;/p&gt;
+
+&lt;p&gt;Es heißt &amp;ldquo;&lt;strong&gt;WP to Twitter&lt;/strong&gt;&amp;rdquo; und ist sehr mächtig. Ihr könnt viele Einstellungen vornehmen von &lt;strong&gt;URL-Shortner&lt;/strong&gt;n bis hin zu &lt;strong&gt;Text-Layout&lt;/strong&gt;s von Tweets.&lt;/p&gt;
+
+&lt;p&gt;Hier der Link: &lt;a href=&#34;http://wordpress.org/extend/plugins/wp-to-twitter/screenshots/&#34;&gt;WP to Twitter&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Google Chrome Apps</title>
+      <link>http://localhost:1313/2012/05/02/google-chrome-apps</link>
+      <pubDate>Wed, 02 May 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/05/02/google-chrome-apps</guid>
+      <description>
+
+&lt;p&gt;Ich habe mich in der letzten Zeit ein wenig mit Google Chrome Apps
+beschäftigt und sogleich 4 erstellt.&lt;/p&gt;
+
+&lt;p&gt;2 davon kann man schon herunterladen und ausprobieren.&lt;/p&gt;
+
+&lt;h3 id=&#34;app-für-diesen-blog:95d7d025701459a0ab612ab164ff6291&#34;&gt;App für diesen Blog&lt;/h3&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;https://chrome.google.com/webstore/detail/cgagfhejeenbaomfbdipcknalolodkkm&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-05-02/Niklas-Logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/cgagfhejeenbaomfbdipcknalolodkkm&#34;&gt;niklas-Heer.de&lt;/a&gt;&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h3 id=&#34;app-für-die-jusos-schwäbisch-hall-und-hohenlohe:95d7d025701459a0ab612ab164ff6291&#34;&gt;App für die Jusos Schwäbisch Hall und Hohenlohe&lt;/h3&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;https://chrome.google.com/webstore/detail/gmhhndbopniohlapeafgoddeohgbdokg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-05-02/logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/gmhhndbopniohlapeafgoddeohgbdokg/publish-accepted&#34;&gt;JusosSHOK&lt;/a&gt;&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Die anderen beiden werden gerade noch erstellt und sind erst in einer
+Beta-Version in der ich sie der Öffentlichkeit leider noch nicht
+präsentieren kann. Aber sobald sie fertig sind und ich alle Rechte daran
+habe (Bild :D) werde ich euch darüber informieren! ;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TunlrControl 1.0.0.16</title>
+      <link>http://localhost:1313/2012/04/10/tunlrcontrol-1.0.0.16</link>
+      <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/10/tunlrcontrol-1.0.0.16</guid>
+      <description>&lt;p&gt;TunlrControl 1.0.0.16 ist da!&lt;/p&gt;
+
+&lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.16&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;
+ &lt;/p&gt;
+
+&lt;p&gt;Was ist neu?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fenster ist nun nicht mehr resizeable -&amp;gt; machte keinen Sinn (danke an Manu für den Tipp)&lt;/li&gt;
+&lt;li&gt;kleiner Buchstabendreher gefixt&lt;/li&gt;
+&lt;li&gt;kleiner Bug mit der Status-Lampe gefixt (hoffentlich - ich bitte um Feedback)&lt;/li&gt;
+&lt;li&gt;Versions-Label war verrutscht -&amp;gt; korrigiert.&lt;/li&gt;
+&lt;li&gt;Es gibt jetzt einen Link zu meiner Homepage im Programm, sodass man immer up-to-date bleibt was gerade neu ist :)&lt;/li&gt;
+&lt;li&gt;Es gab eine Speicher-Optimierung. :)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TunlrControl 1.0.0.15 ist da!</title>
+      <link>http://localhost:1313/2012/04/06/tunlrcontrol-1.0.0.15-ist-da</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/06/tunlrcontrol-1.0.0.15-ist-da</guid>
+      <description>&lt;p&gt;TunlrControl 1.0.0.15 ist da!&lt;/p&gt;
+
+&lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.15&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure class=&#34;half&#34;&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;
+ &lt;/p&gt;
+
+&lt;p&gt;Was ist neu?&lt;/p&gt;
+
+&lt;p&gt;TunlrControl kann sich nun auf Wunsch an den zuvor ausgewählten Adapter
+erinnern. Danke an dieser Stelle an &amp;ldquo;Philip Weiss&amp;rdquo;, der mir diesen
+Feature-Vorschlag per Twitter gesendet hat.&lt;/p&gt;
+
+&lt;p&gt;Habt ihr auch einen Wunsch? Dann schreibt&amp;rsquo;s in die Kommentare!&lt;/p&gt;
+
+&lt;p&gt;Was war mit Version 1.0.0.14?&lt;/p&gt;
+
+&lt;p&gt;Tja da hatte ich kurzer Hand einen kleinen Schreibfehler im englischen
+Teil meiner Application gefixt. Deswegen gab&amp;rsquo;s dafür keinen extra
+Eintrag ;)&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

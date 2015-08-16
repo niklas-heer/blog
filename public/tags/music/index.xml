@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Music on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/music/</link>
+    <description>Recent content in Music on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Nov 2011 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/music/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>4 Chord Song</title>
+      <link>http://localhost:1313/2011/11/28/4-chord-song</link>
+      <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2011/11/28/4-chord-song</guid>
+      <description>&lt;p&gt;&amp;ldquo;&lt;a href=&#34;http://www.axisofawesome.net/&#34;&gt;The Axis of Awesome&lt;/a&gt;&amp;rdquo; haben eine neue
+Version ihres genialen Lieds &amp;ldquo;4 Chords&amp;rdquo; rausgebracht. Da sind ein paar
+neue und bekannte Songs drin! Hier ist es:&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/oOlDewpCfZQ&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+ 
+
+und noch das Original:
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/5pidokakU4I&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+
+&lt;p&gt;BILD-QUELLEN: &lt;a href=&#34;http://www.axisofawesome.net/&#34;&gt;The Axis of Awesome&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

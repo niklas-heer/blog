@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Website on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/website/</link>
+    <description>Recent content in Website on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 14 Jan 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/website/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Öfter mal was neues. Heute: “Sounds Just Like”</title>
+      <link>http://localhost:1313/2013/01/14/%C3%B6fter-mal-was-neues.-heute-sounds-just-like</link>
+      <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2013/01/14/%C3%B6fter-mal-was-neues.-heute-sounds-just-like</guid>
+      <description>&lt;p&gt;Das Radio ist an und das Lied läuft und ihr denkt euch: &amp;ldquo;Hört sich das nicht genauso an wie&amp;hellip;?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Kommt euch das Szenario bekannt vor? Also mir passiert das irgendwie häufiger und deshalb möchte ich euch heute gerne die Website &lt;strong&gt;&lt;a href=&#34;http://soundsjustlike.com/&#34;&gt;SoundsJust Like&lt;/a&gt;&lt;/strong&gt; empfehlen. Dort könnt ihr euch Lieder anhören die tatsächlich ähnlich sind und falls ihr ähnliche Lieder gefunden habt, könnt ihr sie dort auch einstellen, sodass auch andere die verblüffende Ähnlichkeiten von z.B. &lt;strong&gt;Smash Mouth&lt;/strong&gt; &amp;ldquo;&lt;em&gt;Then the morning comes&lt;/em&gt;&amp;rdquo; (1999) und &lt;strong&gt;The Animals&lt;/strong&gt; &amp;ldquo;&lt;em&gt;It&amp;rsquo;s my life&lt;/em&gt;&amp;rdquo; (1965) anhören können!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://soundsjustlike.com/&#34; class=&#34;btn btn-success&#34;&gt;Sounds Just Like&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

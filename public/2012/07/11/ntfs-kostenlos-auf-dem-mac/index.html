@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+
+
+ <html class="no-js"> 
+<head>
+    <title>NTFS kostenlos auf dem MAC &middot; Niklas&#39; Blog</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Niklas Heer">
+    <meta name="description" content="My personal blog.">
+    <meta name="generator" content="Hugo 0.14" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    
+    <div class="off-canvas">
+    <figure class="avatar">
+        <img src="http://localhost:1313/img/avatar.jpg" title="Niklas Heer">
+    </figure>
+    <div class="bio">
+        
+        <h1>Hi, I&#39;m Niklas Heer.</h1>
+        
+        
+        <p>I love to write stuff about things that grab my attention!</p>
+        
+    </div>
+    <nav>
+        
+        <h6>Subscribe</h6>
+        
+
+        <ul>
+            <li><a target="_blank" href="http://localhost:1313/index.xml">RSS feed</a></li>
+        </ul>
+
+        
+        <h6>Follow me on</h6>
+        
+
+        <ul>
+        
+            <li><a target="_blank" href="//github.com/niklas-heer">Github</a></li>
+        
+            <li><a target="_blank" href="//twitter.com/niklas_heer">Twitter</a></li>
+        
+        </ul>
+
+        
+        <h6>Other interesting sites</h6>
+        
+
+        <ul>
+        
+            <li><a target="_blank" href="http://nheer.io">About me</a></li>
+        
+            <li><a target="_blank" href="https://linux-statt-windows.org">Linux statt Windows</a></li>
+        
+        </ul>      
+    </nav>
+</div>
+
+    <div class="site-wrapper">
+        <header>
+	<div class="h-wrap">
+		
+		<h1 class="title"><a href="http://localhost:1313/">Niklas&#39; Blog</a></h1>
+		
+		<a class="menu-icon" title="Menu"><span class="lines"></span></a>
+	</div>
+</header>
+        
+        <section class="single-wrap">
+            <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+                <div class="feat">
+                    <h5 class="page-date">
+                    <time datetime="" itemprop="datePublished">
+                    7. July 2012
+                    </time>                  
+                    </h5>
+                    
+                </div>
+                <div class="feat-sub">
+                    <span class="post-reading-time">
+                        <i class="fa fa-clock-o"></i>
+                        Reading time ~ 2 Min
+                    </span>
+                </div>
+                <h1 class="page-title" itemprop="name headline">NTFS kostenlos auf dem MAC</h1>
+                <div itemprop="articleBody">
+                    
+
+<p>Wer kennt das nicht, man hat eine Festplatte von einem Windows-Rechner
+oder evtl. einen USB-Stick und dann möchte man mit seinem Mac eigentlich
+nur &ldquo;kurz&rdquo; eine Datei darauf schreiben, muss aber feststellen, dass das
+so einfach gar nicht geht.</p>
+
+<h3 id="1-option-die-kommerzielle-variante:465b3f532e3acb4988ae1b34a8536835">1. Option <em>(die kommerzielle Variante)</em></h3>
+
+<p>Man installiert sich einfach: Paragon - NTFS für Mac® OS X 9.5 für 29,95€ kann man die Vollversion <a href="http://www.paragon-software.com/de/home/ntfs-mac/">hier</a> kaufen.</p>
+
+<p><em>Vorteil:</em> einfach zu installieren; schnell; performant und sorgenfrei</p>
+
+<p><em>Nachteil:</em> kommerziell und naja&hellip; nicht gerade billig.</p>
+
+<h3 id="2-option-die-kostenlose-variante:465b3f532e3acb4988ae1b34a8536835">2. Option <em>(die kostenlose Variante)</em></h3>
+
+<p>Die Installation ist nicht ganz so leicht.</p>
+
+<h4 id="1-schritt:465b3f532e3acb4988ae1b34a8536835">1. Schritt:</h4>
+
+<p><a href="http://osxfuse.github.com/">OSXFuse</a> installieren. Bei der Installation muss man darauf achten, dass man auch den MacFUSE Compatibility Layer mit installiert.</p>
+
+<p><center>
+    <figure>
+        <a href="/assets/images/2012-07-11/Fuse-install.jpg"><img src="/assets/images/2012-07-11/Fuse-install.jpg" alt=""></a>
+        <figcaption>OSX Fuse</figcaption>
+    </figure>
+</center></p>
+
+<h4 id="2-schritt:465b3f532e3acb4988ae1b34a8536835">2. Schritt:</h4>
+
+<p>Ihr installiert nun <a href="http://www.macupdate.com/app/mac/24481/ntfs-3g/">NTFS-3G for Mac</a> hier müsst ihr bei Installationstyp auf &ldquo;Anpassen&rdquo; klicken und MacFUSE deaktivieren, da ihr das schon in Schritt 1 gemacht habt. Diese 2 Schritte sind nötig, weil es auf Lion anders leider nicht mehr funktioniert.</p>
+
+<p><center>
+    <figure class="half">
+        <a href="/assets/images/2012-07-11/NTFS-3G-1.jpg"><img src="/assets/images/2012-07-11/NTFS-3G-1.jpg" alt=""></a>
+        <a href="/assets/images/2012-07-11/NTFS-3G-2.jpg"><img src="/assets/images/2012-07-11/NTFS-3G-2.jpg" alt=""></a>
+        <figcaption>NTFS-3G for Mac</figcaption>
+    </figure>
+</center></p>
+
+<p><em>Vorteil:</em> komplett kostenlos; mit OSXFuse würden theoretisch noch andere Dateisysteme unterstützt</p>
+
+<p><em>Nachteil:</em> evtl. nicht ganz optimale Performance (also ich habe keine Nachteile gemerkt); keine &ldquo;einfach&rdquo; Installation</p>
+
+<h3 id="fazit:465b3f532e3acb4988ae1b34a8536835">Fazit:</h3>
+
+<p>Also ich habe beide Varianten ausgiebig getestet und erst vor kurzem
+festgestellt, dass es auch kostenlos geht. Ich werde wahrscheinlich bei
+der kostenlosen Variante bleiben, weil OSXFuse eben auch Open Source ist
+und dadurch natürlich auch wesentlich mehr Neuerungen und Anpassungen
+zulässt. Ich hoffe ich konnte euch weiterhelfen, bei fragen einfach ein
+Kommentar ;D</p>
+
+<p><center>
+    <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="/assets/images/cc/by-nc-sa.png" alt=""></a>
+</center></p>
+
+                </div>
+                <div class="feat share">
+                    <a href="//twitter.com/share" class="popup">
+                        <span class="icon-twitter"></span>
+                    </a>
+                </div>
+                
+                
+                    <section class="disqus">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'niklas_heer';
+	var disqus_developer = 0; 
+	(function() {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+                
+
+                
+                
+                    <a rel="next" href="http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac" id="next">
+                        <span class="nav-title nav-title-next">Older</span> &rarr;
+                    </a>
+                
+                
+                    <a rel="prev" href="http://localhost:1313/2012/07/24/awesome-password-change-php-script" id="prev">
+                        &larr; <span class="nav-title nav-title-prev">Newer</span>
+                    </a>
+                
+            </article>
+        </section>
+
+        <footer>
+	
+	<small>© Niklas Heer</small>
+	
+</footer>
+    </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://localhost:1313/js/main.js"></script>
+
+<script src="http://localhost:1313/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="http://localhost:1313/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<script src="http://localhost:1313/js/plugins/jquery.magnific-popup.js"></script>
+<script src="http://localhost:1313/js/plugins/jquery.fitvids.js"></script>
+
+
+
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

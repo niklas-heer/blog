@@ -1,0 +1,24 @@
+<main>
+    <div id="home">
+        <ul class="posts">
+        {{ $paginator := .Paginate (where .Data.Pages.ByDate.Reverse "Type" "post") }}
+        {{ range $paginator.Pages }}
+            <li itemscope itemtype="//schema.org/BlogPosting">
+                <a href="{{ .Permalink }}" itemprop="url">
+                    <div class="p-wrap">
+                        <time datetime="" itemprop="datePublished">
+                        {{ .Date.Format "01. Jan 2006" }}
+                        </time>
+                        <p itemprop="name headline">{{ .Title }}</p>
+                        
+                        <span class="entry-reading-time pull-right">
+                            <i class="fa fa-clock-o"></i>
+                            Reading time ~ {{ .ReadingTime }} Min
+                        </span>
+                    </div>
+                </a>
+            </li>
+        {{ end }}
+        </ul>
+    </div>
+</main>

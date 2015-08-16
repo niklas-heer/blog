@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminal on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/terminal/</link>
+    <description>Recent content in Terminal on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Dec 2014 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>vtop an unknown terminal beauty</title>
+      <link>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</link>
+      <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
+      <description>
+
+&lt;blockquote&gt;
+Wow such top. So stats. More better than regular top. Written in node.js
+&lt;cite&gt;&lt;a href=&#34;https://parall.ax/vtop&#34;&gt;vtop&lt;/a&gt;&lt;/cite&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;I&amp;rsquo;ve been using &lt;code&gt;top&lt;/code&gt; since I started maintaining a server in 2010. &lt;br&gt;
+It&amp;rsquo;s a really powerful tool to glance at it and see if your system is alright, but since I discovered &lt;code&gt;htop&lt;/code&gt;, &lt;code&gt;top&lt;/code&gt; was made obsolete for me.&lt;/p&gt;
+
+&lt;p&gt;Although I really liked &lt;code&gt;htop&lt;/code&gt; I always felt that it sometimes had a too clunky representation of the data, so that I couldn&amp;rsquo;t quickly enough see if my system was acting out of the common workload.&lt;/p&gt;
+
+&lt;p&gt;Than I discovered &lt;code&gt;vtop&lt;/code&gt;! &lt;br&gt;
+But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
+
+&lt;h3 id=&#34;why-not-simple-old-top:aea07f019cd63a19e48302eedde9dab8&#34;&gt;Why not simple old &lt;code&gt;top&lt;/code&gt;?&lt;/h3&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure class=&#34;half&#34;&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;top vs htop&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;As you can guess from the pictures above &lt;code&gt;htop&lt;/code&gt; does really exactly the same as &lt;code&gt;top&lt;/code&gt;, but in a much nicer way so in my opinion there is no discussion about why you would choose &lt;code&gt;top&lt;/code&gt; over &lt;code&gt;htop&lt;/code&gt;!&lt;/p&gt;
+
+&lt;h3 id=&#34;vtop-vtop-the-unknown-beauty:aea07f019cd63a19e48302eedde9dab8&#34;&gt;&lt;strong&gt;&lt;a href=&#34;https://github.com/MrRio/vtop&#34;&gt;vtop&lt;/a&gt;&lt;/strong&gt; the unknown beauty&lt;/h3&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;vtop&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/MrRio/vtop&#34;&gt;vtop&lt;/a&gt; looks much cleaner than htop. One look and you exactly know whats going on on the system! You can list processes by CPU or Memory usage which is really awesome, you can navigate with your arrow keys or &lt;code&gt;k&lt;/code&gt; and &lt;code&gt;j&lt;/code&gt; which is also nice and the best of all you can simply highlight/select a process and kill it by typing &lt;code&gt;dd&lt;/code&gt;!&lt;/p&gt;
+
+&lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt;(you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo npm install -g vtop
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;After that you can execute it by typing &lt;code&gt;vtop&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I really love it! Maybe there are some use-cases where I still need &lt;code&gt;htop&lt;/code&gt; e.g. when I want to find a PID and don&amp;rsquo;t need it to kill the process, but &lt;code&gt;vtop&lt;/code&gt; is now a part of my daily used tool!&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;em&gt;Try it out yourself!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

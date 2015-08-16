@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tunlr on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/tunlr/</link>
+    <description>Recent content in Tunlr on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 10 Apr 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/tunlr/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>TunlrControl 1.0.0.16</title>
+      <link>http://localhost:1313/2012/04/10/tunlrcontrol-1.0.0.16</link>
+      <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/10/tunlrcontrol-1.0.0.16</guid>
+      <description>&lt;p&gt;TunlrControl 1.0.0.16 ist da!&lt;/p&gt;
+
+&lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.16&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;
+ &lt;/p&gt;
+
+&lt;p&gt;Was ist neu?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Fenster ist nun nicht mehr resizeable -&amp;gt; machte keinen Sinn (danke an Manu für den Tipp)&lt;/li&gt;
+&lt;li&gt;kleiner Buchstabendreher gefixt&lt;/li&gt;
+&lt;li&gt;kleiner Bug mit der Status-Lampe gefixt (hoffentlich - ich bitte um Feedback)&lt;/li&gt;
+&lt;li&gt;Versions-Label war verrutscht -&amp;gt; korrigiert.&lt;/li&gt;
+&lt;li&gt;Es gibt jetzt einen Link zu meiner Homepage im Programm, sodass man immer up-to-date bleibt was gerade neu ist :)&lt;/li&gt;
+&lt;li&gt;Es gab eine Speicher-Optimierung. :)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TunlrControl 1.0.0.15 ist da!</title>
+      <link>http://localhost:1313/2012/04/06/tunlrcontrol-1.0.0.15-ist-da</link>
+      <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/06/tunlrcontrol-1.0.0.15-ist-da</guid>
+      <description>&lt;p&gt;TunlrControl 1.0.0.15 ist da!&lt;/p&gt;
+
+&lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.15&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure class=&#34;half&#34;&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;
+ &lt;/p&gt;
+
+&lt;p&gt;Was ist neu?&lt;/p&gt;
+
+&lt;p&gt;TunlrControl kann sich nun auf Wunsch an den zuvor ausgewählten Adapter
+erinnern. Danke an dieser Stelle an &amp;ldquo;Philip Weiss&amp;rdquo;, der mir diesen
+Feature-Vorschlag per Twitter gesendet hat.&lt;/p&gt;
+
+&lt;p&gt;Habt ihr auch einen Wunsch? Dann schreibt&amp;rsquo;s in die Kommentare!&lt;/p&gt;
+
+&lt;p&gt;Was war mit Version 1.0.0.14?&lt;/p&gt;
+
+&lt;p&gt;Tja da hatte ich kurzer Hand einen kleinen Schreibfehler im englischen
+Teil meiner Application gefixt. Deswegen gab&amp;rsquo;s dafür keinen extra
+Eintrag ;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TunlrControl 1.0.0.12</title>
+      <link>http://localhost:1313/2012/04/05/tunlrcontrol-1.0.0.12</link>
+      <pubDate>Thu, 05 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/05/tunlrcontrol-1.0.0.12</guid>
+      <description>&lt;p&gt;Und wieder gibt es eine neue Version!&lt;/p&gt;
+
+&lt;p&gt;TunlrControl 1.0.0.12 ist da!&lt;/p&gt;
+
+&lt;p&gt;Äußerlich hat sich nicht viel getan, aber inner sehr! Die komplette
+Funktionsweise wurde überarbeitet und sollte jetzt
+weniger störanfällig sein.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.12.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.12.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;
+ &lt;/p&gt;
+
+&lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.12&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Was ist neu?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Alternativ-Server ist jetzt &amp;ldquo;199.167.30.144&amp;rdquo;, der neue alternative
+Server von Tunlr.net&lt;/li&gt;
+&lt;li&gt;Bug &amp;ldquo;System.Windows.Forms&amp;rdquo; wurde gefixt.&lt;/li&gt;
+&lt;li&gt;kleiner Bugfixes&lt;/li&gt;
+&lt;li&gt;Die Versionsnummer wird nun angezeigt.&lt;/li&gt;
+&lt;li&gt;Die Auswahl der Adapter wurde verbessert.&lt;/li&gt;
+&lt;li&gt;Die Application arbeitet jetzt mit &lt;a href=&#34;http://www.microsoft.com/germany/technet/datenbank/articles/600682.mspx&#34;&gt;WMI&lt;/a&gt; anstatt mit dem Command-Line-Tool &amp;ldquo;Netsh&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Dies sollte dazu führen, dass die Application auch bei denen läuft,
+bei denen sie nicht tat.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TunlrControl 1.0.0.13 - Now speaks English, too!</title>
+      <link>http://localhost:1313/2012/04/05/tunlrcontrol-1.0.0.13---now-speaks-english-too</link>
+      <pubDate>Thu, 05 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/05/tunlrcontrol-1.0.0.13---now-speaks-english-too</guid>
+      <description>&lt;p&gt;Und wieder gibt es ein Update von TunlrControl.&lt;/p&gt;
+
+&lt;p&gt;Diesmal ist es die Version 1.0.0.13&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure class=&#34;half&#34;&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.13_de.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.13_de.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.13_en1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.13_en1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt; &lt;/p&gt;
+
+&lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.13&lt;/a&gt;
+ &lt;/p&gt;
+
+&lt;p&gt;Was ist neu?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Die Systemsprache wird nun automatisch erkannt und wenn diese
+unterstützt wird (momentan Deutsch und English(USA)) wird das Programm
+in selbiger angezeigt.&lt;/li&gt;
+&lt;li&gt;kleinere Änderungen an der Oberfläche&lt;/li&gt;
+&lt;li&gt;kleine Textänderungen im deutschen Text&lt;/li&gt;
+&lt;li&gt;große innere Strukturänderungen ;D&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TunlrControl 1.0.0.11 - mehr Produktivität!</title>
+      <link>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.11---mehr-produktivit%C3%A4t</link>
+      <pubDate>Wed, 04 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.11---mehr-produktivit%C3%A4t</guid>
+      <description>&lt;p&gt;Und schon wieder gibt es eine neue Version! :D&lt;/p&gt;
+
+&lt;p&gt;Was ist neu?&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ein kleiner Bug wurde gefixt&lt;/li&gt;
+&lt;li&gt;es gibt keine nervigen aufpoppenden Fenster mehr&lt;/li&gt;
+&lt;li&gt;Informationen werden in Tooltipps angezeigt&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/1sL6SDe-QaE&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TunlrControl 1.0.0.8 ist da!</title>
+      <link>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.8-ist-da</link>
+      <pubDate>Wed, 04 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.8-ist-da</guid>
+      <description>&lt;p&gt;Ich habe das Programm überarbeitet.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-04/tunlrControl-1.0.0.8.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-04/tunlrControl-1.0.0.8.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Was ist neu?&lt;/p&gt;
+
+&lt;p&gt;Nun kann jeder, egal ob er über W-LAN, LAN, WebStick oder sonst
+irgendetwas online geht TunlrContorl nutzen!&lt;/p&gt;
+
+&lt;p&gt;Schaut auf der Programm-Seite vorbei: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.8&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TunlrControl 1.0.0.9 - mit Status-Anzeige!</title>
+      <link>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.9---mit-status-anzeige</link>
+      <pubDate>Wed, 04 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.9---mit-status-anzeige</guid>
+      <description>&lt;p&gt;Und schon wieder gibt es ein Update!&lt;/p&gt;
+
+&lt;p&gt;TunlrControl 1.0.0.9 ist da und diesmal könnt ihr wesentlich einfacher
+sehen, ob der Dienst aktiv ist oder nicht!&lt;/p&gt;
+
+&lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.9&lt;/a&gt;&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/SKnrVX9tgbc&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tunlr - Ausländische Videos schauen</title>
+      <link>http://localhost:1313/2012/04/03/tunlr---ausl%C3%A4ndische-videos-schauen</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/03/tunlr---ausl%C3%A4ndische-videos-schauen</guid>
+      <description>&lt;p&gt;Ihr wollt gerne auf Dienste wie Netflix, Hulu, MTV, CBS, ABC, Pandora
+oder andere aus Deutschland zugreifen, aber könnt dies nicht, weil die
+Seiten euch daran hindern?&lt;/p&gt;
+
+&lt;p&gt;Dann ist Tunlr genau das richtige für euch! Damit habt ihr auch aus
+Deutschland Zugriff aus die Dienste.&lt;/p&gt;
+
+&lt;p&gt;Hier gehts zu der Website: &lt;a href=&#34;http://tunlr.net/get-started/&#34;&gt;Tunlr.net&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Wenn die Einrichtung zu schwierig für euch ist, macht nichts! Ich habe
+ein Programm geschrieben mit dem ihr den Dienst nach belieben an und
+ausschalten könnt.&lt;/p&gt;
+
+&lt;p&gt;Voraussetzungen: Einen Windows-Computer und ihr müsst per W-Lan ins
+Internet gehen.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-03/tunlrControl.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-03/tunlrControl.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Hier der Link: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Wenn das Programm funktioniert oder auch nicht funktioniert schreibts in
+die Kommentare. Auch Verbesserungsvorschläge nehme ich durch die
+Kommentare entgegen.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Tunlr - How-To Video</title>
+      <link>http://localhost:1313/2012/04/03/tunlr---how-to-video</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/03/tunlr---how-to-video</guid>
+      <description>&lt;p&gt;Ich werde in deisem Video Tunlr.net vorstellen und auch mein Programm
+zeigen und vorstellen.&lt;/p&gt;
+
+&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/L_0IhPcz2SY&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>TunlrControl - Update!</title>
+      <link>http://localhost:1313/2012/04/03/tunlrcontrol---update</link>
+      <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/04/03/tunlrcontrol---update</guid>
+      <description>&lt;p&gt;Ich habe nun meinem Programm eine rudimentäre Installationsroutine
+verpasst und eine Update-Funktion hinzugefügt!&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-03/tunlrControl1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-03/tunlrControl1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;Hier ist die neue URL: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.7&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

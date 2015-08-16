@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+
+
+
+ <html class="no-js"> 
+<head>
+    <title>vtop an unknown terminal beauty &middot; Niklas&#39; Blog</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta http-equiv="content-language" content="en-us" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Niklas Heer">
+    <meta name="description" content="My personal blog.">
+    <meta name="generator" content="Hugo 0.14" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+</head>
+<body>
+    
+    <div class="off-canvas">
+    <figure class="avatar">
+        <img src="http://localhost:1313/img/avatar.jpg" title="Niklas Heer">
+    </figure>
+    <div class="bio">
+        
+        <h1>Hi, I&#39;m Niklas Heer.</h1>
+        
+        
+        <p>I love to write stuff about things that grab my attention!</p>
+        
+    </div>
+    <nav>
+        
+        <h6>Subscribe</h6>
+        
+
+        <ul>
+            <li><a target="_blank" href="http://localhost:1313/index.xml">RSS feed</a></li>
+        </ul>
+
+        
+        <h6>Follow me on</h6>
+        
+
+        <ul>
+        
+            <li><a target="_blank" href="//github.com/niklas-heer">Github</a></li>
+        
+            <li><a target="_blank" href="//twitter.com/niklas_heer">Twitter</a></li>
+        
+        </ul>
+
+        
+        <h6>Other interesting sites</h6>
+        
+
+        <ul>
+        
+            <li><a target="_blank" href="http://nheer.io">About me</a></li>
+        
+            <li><a target="_blank" href="https://linux-statt-windows.org">Linux statt Windows</a></li>
+        
+        </ul>      
+    </nav>
+</div>
+
+    <div class="site-wrapper">
+        <header>
+	<div class="h-wrap">
+		
+		<h1 class="title"><a href="http://localhost:1313/">Niklas&#39; Blog</a></h1>
+		
+		<a class="menu-icon" title="Menu"><span class="lines"></span></a>
+	</div>
+</header>
+        
+        <section class="single-wrap">
+            <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
+                <div class="feat">
+                    <h5 class="page-date">
+                    <time datetime="" itemprop="datePublished">
+                    12. December 2014
+                    </time>                  
+                    </h5>
+                    
+                </div>
+                <div class="feat-sub">
+                    <span class="post-reading-time">
+                        <i class="fa fa-clock-o"></i>
+                        Reading time ~ 2 Min
+                    </span>
+                </div>
+                <h1 class="page-title" itemprop="name headline">vtop an unknown terminal beauty</h1>
+                <div itemprop="articleBody">
+                    
+
+<blockquote>
+Wow such top. So stats. More better than regular top. Written in node.js
+<cite><a href="https://parall.ax/vtop">vtop</a></cite>
+</blockquote>
+
+<p>I&rsquo;ve been using <code>top</code> since I started maintaining a server in 2010. <br>
+It&rsquo;s a really powerful tool to glance at it and see if your system is alright, but since I discovered <code>htop</code>, <code>top</code> was made obsolete for me.</p>
+
+<p>Although I really liked <code>htop</code> I always felt that it sometimes had a too clunky representation of the data, so that I couldn&rsquo;t quickly enough see if my system was acting out of the common workload.</p>
+
+<p>Than I discovered <code>vtop</code>! <br>
+But let&rsquo;s start at the beginning of my journey.</p>
+
+<h3 id="why-not-simple-old-top:aea07f019cd63a19e48302eedde9dab8">Why not simple old <code>top</code>?</h3>
+
+<p><center>
+    <figure class="half">
+        <a href="/assets/images/2014-12-01/top.png"><img src="/assets/images/2014-12-01/top.png" alt=""></a>
+        <a href="/assets/images/2014-12-01/htop.png"><img src="/assets/images/2014-12-01/htop.png" alt=""></a>
+        <figcaption>top vs htop</figcaption>
+    </figure>
+</center></p>
+
+<p>As you can guess from the pictures above <code>htop</code> does really exactly the same as <code>top</code>, but in a much nicer way so in my opinion there is no discussion about why you would choose <code>top</code> over <code>htop</code>!</p>
+
+<h3 id="vtop-vtop-the-unknown-beauty:aea07f019cd63a19e48302eedde9dab8"><strong><a href="https://github.com/MrRio/vtop">vtop</a></strong> the unknown beauty</h3>
+
+<p><center>
+    <figure>
+        <a href="/assets/images/2014-12-01/vtop.png"><img src="/assets/images/2014-12-01/vtop.png" alt=""></a>
+        <figcaption>vtop</figcaption>
+    </figure>
+</center></p>
+
+<p><a href="https://github.com/MrRio/vtop">vtop</a> looks much cleaner than htop. One look and you exactly know whats going on on the system! You can list processes by CPU or Memory usage which is really awesome, you can navigate with your arrow keys or <code>k</code> and <code>j</code> which is also nice and the best of all you can simply highlight/select a process and kill it by typing <code>dd</code>!</p>
+
+<p>You can install it also very easily through <code>npm</code>(you need to install <a href="http://nodejs.org/">node.js</a> on your system)!</p>
+
+<p><div class="highlight"><pre>sudo npm install -g vtop
+</pre></div>
+</p>
+
+<p>After that you can execute it by typing <code>vtop</code></p>
+
+<p>I really love it! Maybe there are some use-cases where I still need <code>htop</code> e.g. when I want to find a PID and don&rsquo;t need it to kill the process, but <code>vtop</code> is now a part of my daily used tool!</p>
+
+<p><strong><em>Try it out yourself!</em></strong></p>
+
+                </div>
+                <div class="feat share">
+                    <a href="//twitter.com/share" class="popup">
+                        <span class="icon-twitter"></span>
+                    </a>
+                </div>
+                
+                
+                    <section class="disqus">
+	<div id="disqus_thread"></div>
+	<script type="text/javascript">
+	var disqus_shortname = 'niklas_heer';
+	var disqus_developer = 0; 
+	(function() {
+	var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	dsq.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+	(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	})();
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+	<a href="//disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+                
+
+                
+                
+                    <a rel="next" href="http://localhost:1313/2014/11/30/hello-jekyll" id="next">
+                        <span class="nav-title nav-title-next">Older</span> &rarr;
+                    </a>
+                
+                
+                    <a rel="prev" href="http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero" id="prev">
+                        &larr; <span class="nav-title nav-title-prev">Newer</span>
+                    </a>
+                
+            </article>
+        </section>
+
+        <footer>
+	
+	<small>© Niklas Heer</small>
+	
+</footer>
+    </div>
+    
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="http://localhost:1313/js/main.js"></script>
+
+<script src="http://localhost:1313/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="http://localhost:1313/js/vendor/modernizr-2.6.2.custom.min.js"></script>
+
+<script src="http://localhost:1313/js/plugins/jquery.magnific-popup.js"></script>
+<script src="http://localhost:1313/js/plugins/jquery.fitvids.js"></script>
+
+
+
+
+<script data-no-instant>document.write('<script src="http://'
+        + (location.host || 'localhost').split(':')[0]
+		+ ':1313/livereload.js?mindelay=10"></'
+        + 'script>')</script></body>
+</html>

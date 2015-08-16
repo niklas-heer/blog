@@ -1,0 +1,48 @@
+BaseURL = "http://blog.nheer.io/"
+languageCode = "en-us"
+title = "Niklas' Blog"
+pygmentsuseclasses = true
+
+
+[permalinks]
+	post = "/:year/:month/:day/:slug"
+
+[params]
+	name = "Niklas Heer"
+	description = "My personal blog."
+	copyright = "© Niklas Heer"
+
+	# Enable comments by entering your Disqus shortname
+	disqusshortname = "niklas_heer"
+	# Enable Google Analytics by entering your tracking code
+	googleanalytics = ""
+
+	# Links to newer/older blog posts
+	newer = "Newer"
+	older = "Older"
+
+[params.offcanvas]
+	# Menu items
+	title = "Hi, I'm Niklas Heer."
+	bio = "I love to write stuff about things that grab my attention!"
+	subscribe = "Subscribe"
+	followme = "Follow me on"
+	mysites = "Other interesting sites"
+
+	[[params.offcanvas.socialnetworks]]
+		name = "Github"
+		url = "//github.com/niklas-heer"
+
+	[[params.offcanvas.socialnetworks]]
+		name = "Twitter"
+		url = "//twitter.com/niklas_heer"
+
+
+	[[params.offcanvas.mysitesentries]]
+		name = "About me"
+		url = "http://nheer.io"
+
+	[[params.offcanvas.mysitesentries]]
+		name = "Linux statt Windows"
+		url = "https://linux-statt-windows.org"
+

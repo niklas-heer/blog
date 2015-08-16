@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ntfs on Niklas&#39; Blog</title>
+    <link>http://localhost:1313/tags/ntfs/</link>
+    <description>Recent content in Ntfs on Niklas&#39; Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 11 Jul 2012 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ntfs/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>NTFS kostenlos auf dem MAC</title>
+      <link>http://localhost:1313/2012/07/11/ntfs-kostenlos-auf-dem-mac</link>
+      <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/07/11/ntfs-kostenlos-auf-dem-mac</guid>
+      <description>
+
+&lt;p&gt;Wer kennt das nicht, man hat eine Festplatte von einem Windows-Rechner
+oder evtl. einen USB-Stick und dann möchte man mit seinem Mac eigentlich
+nur &amp;ldquo;kurz&amp;rdquo; eine Datei darauf schreiben, muss aber feststellen, dass das
+so einfach gar nicht geht.&lt;/p&gt;
+
+&lt;h3 id=&#34;1-option-die-kommerzielle-variante:465b3f532e3acb4988ae1b34a8536835&#34;&gt;1. Option &lt;em&gt;(die kommerzielle Variante)&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Man installiert sich einfach: Paragon - NTFS für Mac® OS X 9.5 für 29,95€ kann man die Vollversion &lt;a href=&#34;http://www.paragon-software.com/de/home/ntfs-mac/&#34;&gt;hier&lt;/a&gt; kaufen.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Vorteil:&lt;/em&gt; einfach zu installieren; schnell; performant und sorgenfrei&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nachteil:&lt;/em&gt; kommerziell und naja&amp;hellip; nicht gerade billig.&lt;/p&gt;
+
+&lt;h3 id=&#34;2-option-die-kostenlose-variante:465b3f532e3acb4988ae1b34a8536835&#34;&gt;2. Option &lt;em&gt;(die kostenlose Variante)&lt;/em&gt;&lt;/h3&gt;
+
+&lt;p&gt;Die Installation ist nicht ganz so leicht.&lt;/p&gt;
+
+&lt;h4 id=&#34;1-schritt:465b3f532e3acb4988ae1b34a8536835&#34;&gt;1. Schritt:&lt;/h4&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://osxfuse.github.com/&#34;&gt;OSXFuse&lt;/a&gt; installieren. Bei der Installation muss man darauf achten, dass man auch den MacFUSE Compatibility Layer mit installiert.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/Fuse-install.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/Fuse-install.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;OSX Fuse&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;2-schritt:465b3f532e3acb4988ae1b34a8536835&#34;&gt;2. Schritt:&lt;/h4&gt;
+
+&lt;p&gt;Ihr installiert nun &lt;a href=&#34;http://www.macupdate.com/app/mac/24481/ntfs-3g/&#34;&gt;NTFS-3G for Mac&lt;/a&gt; hier müsst ihr bei Installationstyp auf &amp;ldquo;Anpassen&amp;rdquo; klicken und MacFUSE deaktivieren, da ihr das schon in Schritt 1 gemacht habt. Diese 2 Schritte sind nötig, weil es auf Lion anders leider nicht mehr funktioniert.&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;figure class=&#34;half&#34;&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-1.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-1.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-2.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-2.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;figcaption&gt;NTFS-3G for Mac&lt;/figcaption&gt;
+    &lt;/figure&gt;
+&lt;/center&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Vorteil:&lt;/em&gt; komplett kostenlos; mit OSXFuse würden theoretisch noch andere Dateisysteme unterstützt&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nachteil:&lt;/em&gt; evtl. nicht ganz optimale Performance (also ich habe keine Nachteile gemerkt); keine &amp;ldquo;einfach&amp;rdquo; Installation&lt;/p&gt;
+
+&lt;h3 id=&#34;fazit:465b3f532e3acb4988ae1b34a8536835&#34;&gt;Fazit:&lt;/h3&gt;
+
+&lt;p&gt;Also ich habe beide Varianten ausgiebig getestet und erst vor kurzem
+festgestellt, dass es auch kostenlos geht. Ich werde wahrscheinlich bei
+der kostenlosen Variante bleiben, weil OSXFuse eben auch Open Source ist
+und dadurch natürlich auch wesentlich mehr Neuerungen und Anpassungen
+zulässt. Ich hoffe ich konnte euch weiterhelfen, bei fragen einfach ein
+Kommentar ;D&lt;/p&gt;
+
+&lt;p&gt;&lt;center&gt;
+    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
