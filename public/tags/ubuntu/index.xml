@@ -11,10 +11,10 @@
     
     <item>
       <title>Ubuntu 13.04 - Ein besserer File-Browser</title>
-      <link>http://localhost:1313/2013/04/30/ubuntu-13.04---ein-besserer-file-browser</link>
+      <link>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/30/ubuntu-13.04---ein-besserer-file-browser</guid>
+      <guid>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
@@ -40,20 +40,22 @@
 
 &lt;h3 id=&#34;installation:66744ec3ab086fa0a24dec09d9a0a5b4&#34;&gt;Installation:&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:elementary-os/daily
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo add-apt-repository ppa:elementary-os/daily
 sudo apt-get update
 sudo apt-get install pantheon-files
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Danach solltet ihr es per Terminal starten, da der Ubuntu-Launcher beide Explorer unter demselben Namen führt.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pantheon-files
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;pantheon-files
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img id=&#34;cc&#34; src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 </description>
     </item>

@@ -462,11 +462,11 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
     </item>
     
     <item>
-      <title>Let&#39;s Learn - Programmieren #2</title>
-      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</link>
+      <title>Let&#39;s Learn - Programmieren #2 - Netbeans &amp; Java in Windows</title>
+      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</guid>
+      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4TxI4wmhzP4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
@@ -476,25 +476,29 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
     </item>
     
     <item>
-      <title>Let&#39;s Learn - Programmieren #1</title>
-      <link>http://localhost:1313/2013/10/26/lets-learn---programmieren-</link>
-      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      <title>Let&#39;s Learn - Programmieren #1 - Teaser</title>
+      <link>http://localhost:1313/2013/10/25/lets-learn_programmieren-1</link>
+      <pubDate>Fri, 25 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/26/lets-learn---programmieren-</guid>
+      <guid>http://localhost:1313/2013/10/25/lets-learn_programmieren-1</guid>
       <description>&lt;p&gt;Hier wolltet schon immer mal Programmieren lernen?&lt;/p&gt;
 
 &lt;p&gt;Dann ist diese Video-Reihe ideal für euch!&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/DCxbtJMlkuk&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/DCxbtJMlkuk&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Ubuntu 13.04 - Ein besserer File-Browser</title>
-      <link>http://localhost:1313/2013/04/30/ubuntu-13.04---ein-besserer-file-browser</link>
+      <link>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/30/ubuntu-13.04---ein-besserer-file-browser</guid>
+      <guid>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
@@ -520,30 +524,32 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
 
 &lt;h3 id=&#34;installation:66744ec3ab086fa0a24dec09d9a0a5b4&#34;&gt;Installation:&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:elementary-os/daily
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo add-apt-repository ppa:elementary-os/daily
 sudo apt-get update
 sudo apt-get install pantheon-files
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Danach solltet ihr es per Terminal starten, da der Ubuntu-Launcher beide Explorer unter demselben Namen führt.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pantheon-files
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;pantheon-files
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img id=&#34;cc&#34; src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Thinklight Script für Linux</title>
-      <link>http://localhost:1313/2013/04/30/thinklight-script-f%C3%BCr-linux</link>
-      <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
+      <link>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</link>
+      <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/30/thinklight-script-f%C3%BCr-linux</guid>
+      <guid>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</guid>
       <description>
 
 &lt;p&gt;Wolltet ihr schon immer mal das LED-Licht in einem Script benutzen, oder es einfach nur per Terminal-Befehl an- und ausschalten?&lt;/p&gt;
@@ -552,49 +558,56 @@ sudo apt-get install pantheon-files
 
 &lt;h3 id=&#34;1-voraussetungen-prüfen:9fda1d7fdf802a2767563d8649c62eb6&#34;&gt;1. Voraussetungen prüfen:&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;    lsmod | grep pad
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;    lsmod &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep pad
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;sollte ungefähr so aussehen:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;thinkpad_acpi          81222  0 
-nvram                  14362  1 thinkpad_acpi
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;thinkpad_acpi          &lt;span class=&#34;m&#34;&gt;81222&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 
+nvram                  &lt;span class=&#34;m&#34;&gt;14362&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; thinkpad_acpi
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;falls nicht kann man das Kernel-Modul damit nachinstallieren:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo modprobe -v thinkpad-acpi
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo modprobe -v thinkpad-acpi
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;h3 id=&#34;2-script-installieren:9fda1d7fdf802a2767563d8649c62eb6&#34;&gt;2. Script installieren&lt;/h3&gt;
 
 &lt;p&gt;Script an dem richtigen Ort herunterladen und ausführbar machen:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
 sudo chmod +x /usr/local/bin/thinklight
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;h3 id=&#34;3-script-benutzen:9fda1d7fdf802a2767563d8649c62eb6&#34;&gt;3. Script benutzen&lt;/h3&gt;
 
-&lt;p&gt;Zum Anschalten:&lt;/p&gt;
+&lt;p&gt;Zum Anschalten:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo thinklight on
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;
-Zum Abschalten:
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt; &lt;/p&gt;
+&lt;p&gt;Zum Abschalten:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo thinklight off
+&lt;/pre&gt;&lt;/div&gt;
+ &lt;/p&gt;
 
 &lt;p&gt;Und hier noch das Script selbst ;D&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
-if [ &amp;quot;$1&amp;quot; = &amp;quot;on&amp;quot; ]; then
-    echo 1 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
-elif [ &amp;quot;$1&amp;quot; = &amp;quot;off&amp;quot; ]; then
-    echo 0 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
-else
-    echo &amp;quot;Error: Wrong paramater! Only on/off allowed!&amp;quot;
-fi
-&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;on&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+&lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;off&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
+    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Error: Wrong paramater! Only on/off allowed!&amp;quot;&lt;/span&gt;
+&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     

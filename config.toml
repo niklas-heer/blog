@@ -1,6 +1,9 @@
-BaseURL = "http://blog.nheer.io/"
+baseurl = "http://blog.nheer.io/"
 languageCode = "en-us"
 title = "Niklas' Blog"
+theme = "nh"
+
+
 pygmentsuseclasses = true
 
 
@@ -9,8 +12,10 @@ pygmentsuseclasses = true
 
 [params]
 	name = "Niklas Heer"
+	DateForm = "2. Jan 2006"
+	DateFormPost = "2. January 2006"
 	description = "My personal blog."
-	copyright = "© Niklas Heer"
+	copyright = "© 2015 Niklas Heer<br /> [CC BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/) Some rights reserved."
 
 	# Enable comments by entering your Disqus shortname
 	disqusshortname = "niklas_heer"
@@ -28,7 +33,25 @@ pygmentsuseclasses = true
 	subscribe = "Subscribe"
 	followme = "Follow me on"
 	mysites = "Other interesting sites"
+	links = "Links"
 
+	[[params.offcanvas.linksentries]]
+		name = "About me"
+		url = "http://nheer.io"
+
+	[[params.offcanvas.linksentries]]
+		name = "Imprint"
+		url = "http://nheer.io#imprint"
+
+	[[params.offcanvas.linksentries]]
+		name = "Disclaimer"
+		url = "http://nheer.io#disclaimer"
+
+	[[params.offcanvas.linksentries]]
+		name = "Privacy"
+		url = "http://nheer.io#privacy"
+
+	
 	[[params.offcanvas.socialnetworks]]
 		name = "Github"
 		url = "//github.com/niklas-heer"
@@ -38,9 +61,7 @@ pygmentsuseclasses = true
 		url = "//twitter.com/niklas_heer"
 
 
-	[[params.offcanvas.mysitesentries]]
-		name = "About me"
-		url = "http://nheer.io"
+	
 
 	[[params.offcanvas.mysitesentries]]
 		name = "Linux statt Windows"

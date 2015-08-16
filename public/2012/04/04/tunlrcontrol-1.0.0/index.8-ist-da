@@ -34,6 +34,22 @@
         
     </div>
     <nav>
+    
+        <h6>Links</h6>
+        
+
+        <ul>
+        
+            <li><a target="_blank" href="http://nheer.io">About me</a></li>
+        
+            <li><a target="_blank" href="http://nheer.io#imprint">Imprint</a></li>
+        
+            <li><a target="_blank" href="http://nheer.io#disclaimer">Disclaimer</a></li>
+        
+            <li><a target="_blank" href="http://nheer.io#privacy">Privacy</a></li>
+        
+        </ul> 
+
         
         <h6>Subscribe</h6>
         
@@ -59,8 +75,6 @@
         
 
         <ul>
-        
-            <li><a target="_blank" href="http://nheer.io">About me</a></li>
         
             <li><a target="_blank" href="https://linux-statt-windows.org">Linux statt Windows</a></li>
         
@@ -149,7 +163,7 @@ irgendetwas online geht TunlrContorl nutzen!</p>
 
         <footer>
 	
-	<small>© Niklas Heer</small>
+	<small>© 2015 Niklas Heer<br /> <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA</a> Some rights reserved.</small>
 	
 </footer>
     </div>

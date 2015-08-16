@@ -38,27 +38,31 @@
     </item>
     
     <item>
-      <title>Let&#39;s Learn - Programmieren #1</title>
-      <link>http://localhost:1313/2013/10/26/lets-learn---programmieren-</link>
+      <title>Let&#39;s Learn - Programmieren #2 - Netbeans &amp; Java in Windows</title>
+      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/26/lets-learn---programmieren-</guid>
-      <description>&lt;p&gt;Hier wolltet schon immer mal Programmieren lernen?&lt;/p&gt;
-
-&lt;p&gt;Dann ist diese Video-Reihe ideal für euch!&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/DCxbtJMlkuk&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</guid>
+      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4TxI4wmhzP4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Let&#39;s Learn - Programmieren #2</title>
-      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</link>
-      <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
+      <title>Let&#39;s Learn - Programmieren #1 - Teaser</title>
+      <link>http://localhost:1313/2013/10/25/lets-learn_programmieren-1</link>
+      <pubDate>Fri, 25 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</guid>
-      <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
-&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4TxI4wmhzP4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+      <guid>http://localhost:1313/2013/10/25/lets-learn_programmieren-1</guid>
+      <description>&lt;p&gt;Hier wolltet schon immer mal Programmieren lernen?&lt;/p&gt;
+
+&lt;p&gt;Dann ist diese Video-Reihe ideal für euch!&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/DCxbtJMlkuk&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;/p&gt;

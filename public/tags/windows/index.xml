@@ -10,11 +10,11 @@
     <atom:link href="http://localhost:1313/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Let&#39;s Learn - Programmieren #2</title>
-      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</link>
+      <title>Let&#39;s Learn - Programmieren #2 - Netbeans &amp; Java in Windows</title>
+      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-3</guid>
+      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4TxI4wmhzP4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
