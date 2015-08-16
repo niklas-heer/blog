@@ -1,5 +1,6 @@
 ---
 title: 'Apfelkorb #10 - mit Moom Fenster verwalten'
+slug: apfelkorb_Moom
 description: 'Apfelkorb #10 - mit Moom Fenster verwalten'
 date: 2013-01-08
 tags: [youtube, apfelkorb]
