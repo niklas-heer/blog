@@ -18,9 +18,9 @@ pygmentsuseclasses = true
 	copyright = "© 2015 Niklas Heer<br /> [![CC BY-SA](/assets/images/cc/by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)"
 
 	# Enable comments by entering your Disqus shortname
-	disqusshortname = "niklas_heer"
+	disqusshortname = "niklasheer"
 	# Enable Google Analytics by entering your tracking code
-	googleanalytics = ""
+	googleanalytics = "UA-27512118-6"
 
 	# Links to newer/older blog posts
 	newer = "Newer"

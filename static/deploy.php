@@ -10,18 +10,22 @@
 	// The commands
 
 	// Maybe for later use:
+	//
+	// git - discard changes
 	// 		'git stash save --keep-index',
 	//	    'git stash drop',
 	$commands = array(
-		'pwd',
 		'whoami',
-		'git pull',
+		'pwd',		
+		'git pull origin master',
 		'git status',
 		'/usr/local/bin/hugo',
 	);
 
 	// Run the commands for output
 	$output = '';
+
+	// Change to working directory
 	chdir('/var/www/sites/blog');
 	foreach($commands AS $command){
 		// Run it
