@@ -1,18 +1,16 @@
-name = "Hikari"
+name = "nh"
 license = "MIT"
-licenselink = "//github.com/digitalcraftsman/hugo-hikari-theme/blob/dev/LICENSE.MD"
+licenselink = "//github.com/niklas-heer/blog/blob/master/LICENSE"
 description = " A minimal theme perfect for dev-savvy bloggers."
-homepage = "//github.com/digitalcraftsman/hugo-hikari-theme"
+homepage = "//github.com/niklas-heer/blog/tree/master/themes/nh"
 tags = ["blog", "minimal", "syntax highlighting", "Disqus", "Google Analytics"]
 features = ["", ""]
 min_version = 0.14
 
 [author]
-  name = "digitalcraftsman"
-  homepage = "//github.com/digitalcraftsman"
+  name = "niklas-heer"
+  homepage = "//github.com/niklas-heer"
 
-# If porting an existing theme
 [original]
-  name = "Mathieu Mayer-Mazzoli"
-  homepage = "//mx3m.github.io"
-  repo = "//github.com/mx3m/hikari-for-Jekyll"
+  name = "digitalcraftsman"
+  homepage = "//github.com/digitalcraftsman/hugo-hikari-theme"

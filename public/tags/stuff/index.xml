@@ -259,10 +259,10 @@ anhören könnte:&lt;/p&gt;
     
     <item>
       <title>Öfter mal was neues. Heute: &#34;VOICE ACTORS&#34;</title>
-      <link>http://localhost:1313/2012/06/06/%C3%B6fter-mal-was-neues.-heute-voice-actors</link>
-      <pubDate>Wed, 06 Jun 2012 00:00:00 +0000</pubDate>
+      <link>http://localhost:1313/2012/06/06/oemwn_voice-actors</link>
+      <pubDate>Wed, 06 Jun 2012 10:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/06/%C3%B6fter-mal-was-neues.-heute-voice-actors</guid>
+      <guid>http://localhost:1313/2012/06/06/oemwn_voice-actors</guid>
       <description>&lt;p&gt;Wir alle kennen die zahlreichen Helden unserer Kindheit.&lt;/p&gt;
 
 &lt;p&gt;Die Simpsons, Batman, Pinky &amp;amp; Brain &amp;hellip;. (und noch viele viele mehr :)&lt;/p&gt;
@@ -271,7 +271,11 @@ anhören könnte:&lt;/p&gt;
 
 &lt;p&gt;Hier ein kleines Youtube-Video, welches euch die Stimmen hinter den Helden zeigt ;)&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/6QvEpCXzcBI&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/6QvEpCXzcBI&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     

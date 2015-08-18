@@ -971,6 +971,10 @@ footer a img:hover {
   margin: 3.5em auto;
 }
 
+.single-wrap .share a {
+  color: #0c8ac4;
+}
+
 .single-wrap .share a:hover {
   color: #0e9ee1;
 }

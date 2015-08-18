@@ -1,7 +1,8 @@
 ---
 title: 'Öfter mal was neues. Heute: "VOICE ACTORS"'
+slug: oemwn_VOICE-ACTORS
 description: 'Öfter mal was neues. Heute: "VOICE ACTORS"'
-date: 2012-06-06
+date: 2012-06-06T10:00:00
 tags: [stuff, discussion, youtube]
  
 ---
@@ -15,4 +16,4 @@ Aber kennt ihr auch die legendären Stimmen dahinter?
 
 Hier ein kleines Youtube-Video, welches euch die Stimmen hinter den Helden zeigt ;)
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/6QvEpCXzcBI" frameborder="0"> </iframe>
+{{< youtube 6QvEpCXzcBI >}}

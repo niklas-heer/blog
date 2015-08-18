@@ -1,7 +1,7 @@
 ---
 title: Wordpress zu Twitter Plugin?
 description: 'Wordpress zu Twitter Plugin?'
-date: 2012-06-06
+date: 2012-06-06T13:00:00
 tags: [code, wordpress, social]
 ---
 

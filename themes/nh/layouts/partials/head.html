@@ -13,6 +13,10 @@
     <meta name="description" content="{{ with .Site.Params.description }}{{ . }}{{ end }}">
     {{ .Hugo.Generator }}
 
+    <meta property="os:repo" content="https://github.com/niklas-heer/blog" />
+    <meta property="os:rcs_type" content="git" />
+    <meta property="os:src" content="git@github.com:niklas-heer/blog.git" />
+
     {{ "<!-- Stylesheets -->" | safeHTML }}
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
 
