@@ -1,5 +1,6 @@
 ---
 title: 'Apfelkorb #3 - Der Terminal'
+eyecatch: fa-youtube-play
 slug: apfelkorb-3_Terminal
 description: 'Apfelkorb #3 - Der Terminal'
 date: 2012-12-13

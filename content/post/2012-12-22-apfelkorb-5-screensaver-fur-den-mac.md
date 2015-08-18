@@ -1,5 +1,6 @@
 ---
 title: 'Apfelkorb #5 - Screensaver für den MAC'
+eyecatch: fa-youtube-play
 slug: apfelkorb-5_Screensaver
 description: 'Apfelkorb #5 - Screensaver für den MAC'
 date: 2012-12-20

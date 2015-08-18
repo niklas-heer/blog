@@ -1,7 +1,8 @@
 ---
 title: 'Tunlr - Ausländische Videos schauen'
+eyecatch: fa-download
 description: "Tunlr - Ausländische Videos schauen"
-date: 2012-04-03
+date: 2012-04-03T10:00:00
 tags: [tutorial, youtube, tunlr]
 ---
 
@@ -32,4 +33,3 @@ Hier der Link: [TunlrControl](http://wedevelop.de/software/tunlrControl/publish.
 Wenn das Programm funktioniert oder auch nicht funktioniert schreibts in
 die Kommentare. Auch Verbesserungsvorschläge nehme ich durch die
 Kommentare entgegen.
-

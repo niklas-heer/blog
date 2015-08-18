@@ -1,7 +1,8 @@
 ---
 title: TunlrControl - Update!
+eyecatch: fa-download
 description: "TunlrControl - Update!"
-date: 2012-04-03
+date: 2012-04-03T16:00:00
 tags: [code, tunlr, tunlrcontrol]
 ---
 

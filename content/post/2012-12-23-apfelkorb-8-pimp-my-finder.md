@@ -1,5 +1,6 @@
 ---
 title: 'Apfelkorb #8 - Pimp my Finder'
+eyecatch: fa-youtube-play
 slug: apfelkorb-8_Finder
 description: 'Apfelkorb #8 - Pimp my Finder'
 date: 2012-12-23

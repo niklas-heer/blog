@@ -1,5 +1,6 @@
 ---
 title:  "Hello Jekyll!"
+eyecatch: "fa-code"
 date:   2014-11-30
 categories: jekyll update
 ---
@@ -39,7 +40,7 @@ So I headed right into it made a new git repo and ```nikola init``` to start a n
 Okay now let's import my [Wordpress][wordpress] posts.<br>
 I made exported my posts from within [Wordpress][wordpress] thought a XML file and executed [Nikolas][nikola] built-in import method ```nikola import_wordpress posts.xml```. Wow, that was easy.
 Nope. Error. Damn it! [DuckDuckGo][duckduck] to the rescue!
-Okay installed [Nikola][nikola] from source on Github. Still that Error. 
+Okay installed [Nikola][nikola] from source on Github. Still that Error.
 After a few hours of fumbling around I admitted defeat and moved on the the next generator on my list.
 
 ### **[Pelican][pelican]**<br>
@@ -78,7 +79,7 @@ I discovered [node-sng](http://code.ravelsoft.com/node-sng) and thanks to [Arch]
 But at this point I thought I just drop [Pico][pico] because it is not practical for me and thus I wouldn't use it for long.
 
 ### **[Jekyll][jekyll]**<br>
-Let's try the clear mainstream option. Nice checks off everything on my list. 
+Let's try the clear mainstream option. Nice checks off everything on my list.
 
 ``` bash
 gem update
@@ -155,4 +156,3 @@ Good luck! ;)
 [pip]: https://pypi.python.org/pypi/pip/
 [sng]: http://code.ravelsoft.com/node-sng
 [sublime]: http://www.sublimetext.com/
-

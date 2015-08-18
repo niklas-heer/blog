@@ -1,5 +1,6 @@
 ---
 title: Die ersten Raubkopierer der Geschichte
+eyecatch: fa-youtube-play
 description: "Die ersten Raubkopierer der Geschichte"
 date: 2012-01-26
 tags: [discussion, youtube, copyright]

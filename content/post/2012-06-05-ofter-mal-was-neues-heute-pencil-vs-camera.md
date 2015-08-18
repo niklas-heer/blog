@@ -1,5 +1,6 @@
 ---
 title: 'Öfter mal was neues. Heute: "Pencil Vs Camera"'
+eyecatch: fa-lightbulb-o
 slug: oemwn_Pencil-vs-Camera
 description: 'Öfter mal was neues. Heute: "Pencil Vs Camera"'
 date: 2012-06-05

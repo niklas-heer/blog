@@ -1,5 +1,6 @@
 ---
 title: 'Öfter mal was neues. Heute: "Coca Cola"'
+eyecatch: fa-lightbulb-o
 slug: oemwn_Coca-Cola
 description: 'Öfter mal was neues. Heute: "Coca Cola"'
 date: 2012-06-27

@@ -1,5 +1,6 @@
 ---
 title: MAC Tipp 01 - Arbeiten mit dem Automator
+eyecatch: fa-youtube-play
 description: "Arbeiten mit dem Automator"
 date: 2012-01-05
 tags: [code, howto, mac, youtube, automator]

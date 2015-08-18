@@ -1,5 +1,6 @@
 ---
 title: Google Chrome Apps
+eyecatch: fa-chrome
 description: "Google Chrome Apps"
 date: 2012-05-02
 tags: [code, google-chrome]

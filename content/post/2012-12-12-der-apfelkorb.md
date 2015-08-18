@@ -1,5 +1,6 @@
 ---
 title: 'Der Apfelkorb'
+eyecatch: fa-youtube-play
 description: 'Der Apfelkorb'
 date: 2012-12-12
 tags: [new, youtube, apfelkorb]

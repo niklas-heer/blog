@@ -1,5 +1,6 @@
 ---
 title: Wordpress zu Twitter Plugin?
+eyecatch: fa-twitter
 description: 'Wordpress zu Twitter Plugin?'
 date: 2012-06-06T13:00:00
 tags: [code, wordpress, social]

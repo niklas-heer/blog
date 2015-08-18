@@ -1,5 +1,6 @@
 ---
 title: Walkthrough durch Etherpad
+eyecatch: fa-youtube-play
 description: "Walkthrough durch Etherpad"
 date: 2012-03-14
 tags: [tutorial, youtube, etherpad]

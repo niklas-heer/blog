@@ -1,5 +1,6 @@
 ---
 title: 'Thinklight Script für Linux'
+eyecatch: fa-code
 description: 'Thinklight Script für Linux'
 date: 2013-04-29
 tags: [code, linux, thinkpad]
@@ -19,7 +20,7 @@ sollte ungefähr so aussehen:
 
 
 ```
-thinkpad_acpi          81222  0 
+thinkpad_acpi          81222  0
 nvram                  14362  1 thinkpad_acpi
 ```
 
@@ -51,11 +52,10 @@ Und hier noch das Script selbst ;D
 ``` bash
 #!/bin/sh
 if [ "$1" = "on" ]; then
-    echo 1 > /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+    echo 1 > /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness
 elif [ "$1" = "off" ]; then
-    echo 0 > /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+    echo 0 > /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness
 else
     echo "Error: Wrong paramater! Only on/off allowed!"
 fi
 ```
-

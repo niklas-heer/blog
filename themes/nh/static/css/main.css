@@ -903,6 +903,67 @@ footer a img:hover {
   background-color: #ededed;
 }
 
+@media (max-width: 942px) {
+  .eyecatcher {
+    display: none;
+  }
+}
+
+@media (min-width: 942px) {
+  .eyecatcher {
+    float: left;
+    display: block;
+    width: 0px;
+    left: -1.3em;
+    top: -0.3em;
+    position: relative;
+    margin-right: 3.5em;
+    height: 0px;
+  }
+  .posts {
+    width: 100%;
+    max-width: 942px;
+    margin: 1em auto;
+  }
+  .posts li {
+    margin: 0.5em 0;
+    border-bottom: 0.4em solid #0a76a7;
+  }
+  .posts li:first-child {
+    border-top: none;
+  }
+  .posts li #name {
+    margin: -1.8em 0;
+    float: right;
+  }
+  .posts li time {
+    font-weight: bold;
+    margin-left: 4em;
+  }
+  .posts li .p-wrap {
+    background-color: transparent;
+    color: #222;
+    font-weight: bold;
+  }
+  .posts li .p-wrap:hover {
+    color: white;
+  }
+  .posts li .pull-right {
+    clear: both;
+    float: inherit;
+  }
+  .posts li .entry-reading-time {
+    display: block;
+    font-weight: normal;
+    margin-left: 4.6em;
+  }
+  .pagination {
+    width: 100%;
+    max-width: 942px;
+    margin: 1em auto;
+  }
+}
+
 .single-wrap {
   width: 100%;
   max-width: 740px;

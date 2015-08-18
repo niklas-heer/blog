@@ -1,9 +1,10 @@
 ---
-title: automatischer Upload von Bildern in der Zwischenablage [Mac]
-description: automatischer Upload von Bildern in der Zwischenablage [Mac]
+title: automatischer Upload von Bildern in der Zwischenablage
+eyecatch: fa-code
+description: automatischer Upload von Bildern in der Zwischenablage
 date: 2012-07-11
 tags: [code, mac]
- 
+
 ---
 
 Ihr kennt das vielleicht, ihr habt ein Bild mit "⌘ + Ctrl + ⇧ + 4"
@@ -40,16 +41,16 @@ eingefügt werden:
 ```
 -- Code unterliegt der CC BY-NC-SA (http://creativecommons.org/licenses/by-nc-sa/3.0/)
 -- Autor: Niklas Heer (http://niklas-heer.de)
- 
+
 -- der CMD Pfad muss zu eurem Pfad zeigen, in dem das "save_img_from_clip.scpt" Script liegt
 set CMD to "osascript /Users/nh/Dropbox/AppleScripts/Plaintext/save_img_from_clip.scpt"
 ignoring case
     set pic_path to (do shell script CMD)
- 
+
         -- der CMD_upload Pfad muss zu eurem Pfad zeigen, in dem das "Upload-terminal.scpt" Script liegt
     set CMD_upload to "osascript /Users/nh/Dropbox/AppleScripts/Plaintext/Upload-terminal.scpt " &amp; pic_path
     set pic_url to (do shell script CMD_upload)
- 
+
 end ignoring
 ```
 
@@ -76,5 +77,3 @@ Upload-terminal Script anpassen, sodass dieses noch Argumente für den
 Dateinamen bekommt. Und im Textexpander Script müsste man noch ein
 FillForm für diesen Dateinamen angeben. Wenn ihr es mögt werde ich die
 Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!
-
-

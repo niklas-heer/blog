@@ -1,5 +1,6 @@
 ---
-title: 'Öfter mal was neues. Heute: "Polizei, Hausdurchsuchung: Sie haben das Recht zu schweigen (Udo Vetter)"'
+title: 'Öfter mal was neues. Heute: "Polizei, Hausdurchsuchung"'
+eyecatch: fa-lightbulb-o
 slug: oemwn_Hausdurchsuchung
 description: 'Öfter mal was neues. Heute: "Polizei, Hausdurchsuchung: Sie haben das Recht zu schweigen (Udo Vetter)"'
 date: 2012-06-14T15:00:00

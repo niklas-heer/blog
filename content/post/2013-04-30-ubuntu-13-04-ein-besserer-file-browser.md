@@ -1,5 +1,6 @@
 ---
 title: 'Ubuntu 13.04 - Ein besserer File-Browser'
+eyecatch: fa-terminal
 slug: "ubuntu_pantheon-files"
 description: 'Ubuntu 13.04 - Ein besserer File-Browser'
 date: 2013-04-30
@@ -27,7 +28,7 @@ Und mit [Pantheon-Files](https://launchpad.net/pantheon-files) einem Fork von [
 
 Ich kann euch diesen Filebrowser nur wärmstens empfehlen!
 
-### Installation: 
+### Installation:
 
 ``` bash
 sudo add-apt-repository ppa:elementary-os/daily
@@ -42,5 +43,3 @@ pantheon-files
 ```
 
 Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.
-
-

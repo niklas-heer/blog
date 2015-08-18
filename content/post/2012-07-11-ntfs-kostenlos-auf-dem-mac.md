@@ -1,5 +1,6 @@
 ---
 title: NTFS kostenlos auf dem MAC
+eyecatch: fa-wrench
 description: 'NTFS kostenlos auf dem MAC'
 date: 2012-07-11
 tags: [mac, ntfs]
@@ -23,7 +24,7 @@ _Nachteil:_ kommerziell und naja... nicht gerade billig.
 
 Die Installation ist nicht ganz so leicht.
 
-#### 1. Schritt: 
+#### 1. Schritt:
 [OSXFuse](http://osxfuse.github.com/) installieren. Bei der Installation muss man darauf achten, dass man auch den MacFUSE Compatibility Layer mit installiert.
 
 <center>
@@ -33,7 +34,7 @@ Die Installation ist nicht ganz so leicht.
 	</figure>
 </center>
 
-#### 2. Schritt: 
+#### 2. Schritt:
 Ihr installiert nun [NTFS-3G for Mac](http://www.macupdate.com/app/mac/24481/ntfs-3g/) hier müsst ihr bei Installationstyp auf "Anpassen" klicken und MacFUSE deaktivieren, da ihr das schon in Schritt 1 gemacht habt. Diese 2 Schritte sind nötig, weil es auf Lion anders leider nicht mehr funktioniert.
 
 <center>

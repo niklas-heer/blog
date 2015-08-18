@@ -1,5 +1,6 @@
 ---
 title: TunlrControl 1.0.0.8 ist da!
+eyecatch: fa-download
 slug: tunlrcontrol-8
 description: "TunlrControl 1.0.0.8 ist da!"
 date: 2012-04-04T08:00:00

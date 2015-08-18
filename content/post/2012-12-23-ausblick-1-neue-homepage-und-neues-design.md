@@ -1,5 +1,6 @@
 ---
 title: 'Ausblick #1 - Neue Homepage und neues Design'
+eyecatch: fa-youtube-play
 slug: ausblick-1_neue-homepage
 description: 'Ausblick #1 - Neue Homepage und neues Design'
 date: 2012-12-23

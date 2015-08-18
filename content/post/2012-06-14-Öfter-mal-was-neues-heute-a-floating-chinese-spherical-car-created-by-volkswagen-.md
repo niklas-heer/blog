@@ -1,5 +1,6 @@
 ---
-title: 'Öfter mal was neues. Heute: "A Floating Chinese Spherical Car Created by Volkswagen"'
+title: 'Öfter mal was neues. Heute: "A Floating Car"'
+eyecatch: fa-lightbulb-o
 slug: oemwn_Floating-Car
 description: 'Öfter mal was neues. Heute: "A Floating Chinese Spherical Car Created by Volkswagen"'
 date: 2012-06-14T10:00:00

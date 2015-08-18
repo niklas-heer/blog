@@ -1,5 +1,6 @@
 ---
 title: 'Apfelkorb #7 - Dein Freund der Terminal'
+eyecatch: fa-youtube-play
 slug: apfelkorb-7_Terminal
 description: 'Apfelkorb #7 - Dein Freund der Terminal'
 date: 2012-12-22

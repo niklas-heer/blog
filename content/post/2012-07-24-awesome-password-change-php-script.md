@@ -1,5 +1,6 @@
 ---
 title: Awesome Password Change [PHP Script]
+eyecatch: fa-code
 description: 'Awesome Password Change [PHP Script]'
 date: 2012-07-24
 tags: [code, php]
@@ -27,4 +28,3 @@ Ein schönes Script, um das Passwort eines Useres zu ändern. Es wurde im spezie
 **Author:** Niklas Heer <br>
 **License:** Free ([CC BY-NC-SA ](http://creativecommons.org/licenses/by-nc-sa/3.0))<br>
 A fancy script to let users change their mail passwords. It was designed for mail-adresses created with ZPanel, but can be used for all other systems too. It is multilingual and new languages can be added easily.<br>
-

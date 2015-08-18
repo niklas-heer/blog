@@ -1,5 +1,6 @@
 ---
 title: 'Öfter mal was neues. Heute: "History of Whistling"'
+eyecatch: fa-lightbulb-o
 slug: oemwn_History-of-Whistling
 description: 'Öfter mal was neues. Heute: "History of Whistling"'
 date: 2012-06-08

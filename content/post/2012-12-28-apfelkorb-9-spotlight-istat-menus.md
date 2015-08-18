@@ -1,5 +1,6 @@
 ---
 title: 'Apfelkorb #9 - Spotlight iStat Menus'
+eyecatch: fa-youtube-play
 slug: apfelkorb-9_iStat
 description: 'Apfelkorb #9 - Spotlight iStat Menus'
 date: 2012-12-28

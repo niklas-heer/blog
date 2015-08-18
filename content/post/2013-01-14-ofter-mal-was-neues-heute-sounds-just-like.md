@@ -1,5 +1,6 @@
 ---
 title: 'Öfter mal was neues. Heute: “Sounds Just Like”'
+eyecatch: fa-lightbulb-o
 slug: oemwn_Sounds-Just-Like
 description: 'Öfter mal was neues. Heute: “Sounds Just Like”'
 date: 2013-01-14

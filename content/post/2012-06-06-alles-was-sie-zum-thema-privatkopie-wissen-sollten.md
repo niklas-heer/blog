@@ -1,5 +1,6 @@
 ---
 title: Alles was sie zum Thema Privatkopie wissen sollten!
+eyecatch: fa-youtube-play
 slug: oemwn_Privatkopie
 description: 'Alles was sie zum Thema Privatkopie wissen sollten!'
 date: 2012-06-06T9:00:00

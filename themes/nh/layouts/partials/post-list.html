@@ -6,15 +6,21 @@
             <li itemscope itemtype="//schema.org/BlogPosting">
                 <a href="{{ .Permalink }}" itemprop="url">
                     <div class="p-wrap">
+                        <div class="eyecatcher">
+                          {{ if isset .Params "eyecatch" }}
+                            <i class="fa {{ .Params.eyecatch }} fa-3x"></i>
+                          {{ else }}
+                            <i class="fa fa-pencil fa-3x"></i>
+                          {{ end }}
+                        </div>
                         <time datetime="" itemprop="datePublished">
                         {{ .Date.Format .Site.Params.DateForm }}
                         </time>
-                        <p itemprop="name headline">{{ .Title }}</p>
-                        
                         <span class="entry-reading-time pull-right">
                             <i class="fa fa-clock-o"></i>
                             Reading time ~ {{ .ReadingTime }} Min
                         </span>
+                        <p id="name" itemprop="name headline">{{ .Title }}</p>
                     </div>
                 </a>
             </li>

@@ -1,5 +1,6 @@
 ---
-title: The Animals House of the Rising Sun Old School Computer Remix
+title: The Animals House of the Rising Sun
+eyecatch: fa-youtube-play
 description: "nerdy version of 'The Animals House of the Rising Sun'"
 date: 2011-12-05
 tags: [fun, youtube, nerdy]

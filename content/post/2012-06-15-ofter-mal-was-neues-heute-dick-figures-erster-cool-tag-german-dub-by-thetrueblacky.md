@@ -1,5 +1,6 @@
 ---
-title: 'Öfter mal was neues. Heute: Dick Figures - Erster "Cool"-Tag'
+title: 'Öfter mal was neues. Heute: Dick Figures'
+eyecatch: fa-lightbulb-o
 slug: oemwn_Dick-Figures_Cool
 description: 'Öfter mal was neues. Heute: Dick Figures - Erster "Cool"-Tag [german dub by thetrueblacky]'
 date: 2012-06-15

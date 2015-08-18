@@ -1,5 +1,6 @@
 ---
 title: TunlrControl 1.0.0.13 - Now speaks English, too!
+eyecatch: fa-download
 slug: tunlrcontrol-13
 description: "TunlrControl 1.0.0.13 - Now speaks English, too!"
 date: 2012-04-05
@@ -30,4 +31,3 @@ in selbiger angezeigt.
 * kleinere Änderungen an der Oberfläche
 * kleine Textänderungen im deutschen Text
 * große innere Strukturänderungen ;D
-

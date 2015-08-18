@@ -1,5 +1,6 @@
 ---
 title: Jekyll - from zero to hero
+eyecatch: "fa-code"
 published: true
 date: 2014-12-05
 categories: []

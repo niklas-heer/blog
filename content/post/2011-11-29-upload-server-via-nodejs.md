@@ -1,5 +1,6 @@
 ---
 title: Upload-Server via NodeJS
+eyecatch: fa-code
 description: "NodeJs Upload Server"
 date: 2011-11-29
 tags: [code, nodejs]
@@ -24,17 +25,17 @@ Ansonsten unterliegt der Code hier der GNU/GPL 3!
 ``` javascript
 // Code unterliegt der GNU/GPL 3
 // Autor: Niklas Heer
- 
+
 require('../test/common');
 var http = require('http'),
     util = require('util'),
     formidable = require('./formidable'),
     server;
- 
+
 server = http.createServer(function(req, res) {
   if (req.url == '/') {
     res.writeHead(200, {'content-type': 'text/html'});
- 
+
           // HTML
           res.write(
               '&lt;style&gt;'+
@@ -58,8 +59,8 @@ server = http.createServer(function(req, res) {
                     'width: 0;'+
                     '}'+
                     '&lt;/style&gt;'
-                    );              
- 
+                    );
+
     res.end(
         '&lt;h1&gt; File Upload &lt;/h1&gt;'+
       '&lt;form action="/upload" enctype="multipart/form-data" method="post"&gt;'+
@@ -68,17 +69,17 @@ server = http.createServer(function(req, res) {
       '&lt;input type="submit" value="Upload"&gt;'+
       '&lt;/form&gt;'
     );
- 
+
   } else if (req.url == '/upload') {
     var form = new formidable.IncomingForm(),
         files = [],
         fields = [];
- 
+
     form.uploadDir = '/home/root/node/testing/TEST_TMP';
         form.keepExtensions = true;
- 
+
     form
- 
+
       .on('field', function(field, value) {
         console.log(field, value);
         fields.push([field, value]);
@@ -86,11 +87,11 @@ server = http.createServer(function(req, res) {
       .on('progress', function(recieved, total) {
           var progress = parseInt((recieved / total) * 100);
           var mb =(total / 1024 / 1024).toFixed(1);
- 
+
           // Printing to screen
           util.print("Uploading "+mb+"mb ("+progress+"%)\015");
       })
- 
+
       .on('file', function(field, file) {
         console.log(field, file);
         files.push([field, file]);
@@ -109,6 +110,6 @@ server = http.createServer(function(req, res) {
   }
 });
 server.listen(1337);
- 
+
 console.log('listening on http://we-host.de/');
 ```

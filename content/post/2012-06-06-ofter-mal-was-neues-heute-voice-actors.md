@@ -1,10 +1,11 @@
 ---
 title: 'Öfter mal was neues. Heute: "VOICE ACTORS"'
+eyecatch: fa-lightbulb-o
 slug: oemwn_VOICE-ACTORS
 description: 'Öfter mal was neues. Heute: "VOICE ACTORS"'
 date: 2012-06-06T10:00:00
 tags: [stuff, discussion, youtube]
- 
+
 ---
 
 

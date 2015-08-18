@@ -1,5 +1,6 @@
 ---
 title: Blog goes Facebook
+eyecatch: fa-facebook
 description: "Blog mit Facebook verbinden"
 date: 2011-11-24
 tags: [news, facebook]

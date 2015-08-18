@@ -1,5 +1,6 @@
 +++
 date = "2015-08-18T10:21:41+02:00"
+eyecatch= "fa-code"
 title = "Hello Hugo!"
 description = "Hugo, even faster than jekyll"
 +++

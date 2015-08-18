@@ -1,5 +1,6 @@
 ---
-title: 'Öfter mal was neues. Heute: "Pinched! (Minecraft Machinima)"'
+title: 'Öfter mal was neues. Heute: "Pinched! (Minecraft)"'
+eyecatch: fa-lightbulb-o
 slug: oemwn_Minecraft-Pinched
 description: 'Öfter mal was neues. Heute: "Pinched! (Minecraft Machinima)"'
 date: 2012-06-19

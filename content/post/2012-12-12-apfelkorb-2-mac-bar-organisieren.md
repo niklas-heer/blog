@@ -1,5 +1,6 @@
 ---
 title: 'Apfelkorb #2 - Mac Bar organisieren'
+eyecatch: fa-youtube-play
 slug: apfelkorb-2_Mac-Bar
 description: 'Apfelkorb #2 - Mac Bar organisieren'
 date: 2012-12-11
