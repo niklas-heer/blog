@@ -40,17 +40,15 @@
 
 &lt;h3 id=&#34;installation:66744ec3ab086fa0a24dec09d9a0a5b4&#34;&gt;Installation:&lt;/h3&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo add-apt-repository ppa:elementary-os/daily
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:elementary-os/daily
 sudo apt-get update
 sudo apt-get install pantheon-files
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Danach solltet ihr es per Terminal starten, da der Ubuntu-Launcher beide Explorer unter demselben Namen führt.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;pantheon-files
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pantheon-files
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.&lt;/p&gt;
 

@@ -58,6 +58,9 @@
 
   .share {
     margin: $spacing-l auto;
+    a:hover {
+      color: lighten($main-color, 6%);
+    }
   }
 
   h1.page-title {
@@ -198,7 +201,7 @@
       font: normal normal normal 14px/1 FontAwesome;
       font-size: 4em;
       margin-left: -65px;
-      margin-top: -8px;
+      margin-top: -4px;
       float: left;
     }
   }
@@ -211,7 +214,7 @@
         font: normal normal normal 14px/1 FontAwesome;
         font-size: 3em;
         margin-left: -65px;
-        margin-top: -8px;
+        margin-top: -5px;
         float: left;
       }
     }

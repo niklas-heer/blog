@@ -17,7 +17,11 @@
     <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
 
     <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
+
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/vendor/highlight/styles/monokai_sublime.css" />
+    
 </head>
 <body>
     
@@ -158,28 +162,24 @@ After a few hours of fumbling around I admitted defeat and moved on the the next
 
 <p>Aswell as <a href="http://getnikola.com/">Nikola</a>, <a href="http://blog.getpelican.com/">Pelican</a> checked off everything on my list so i also installed it. This time through <a href="https://pypi.python.org/pypi/pip/">pip</a>. Just for funsies.</p>
 
-<p><div class="highlight"><pre>pip install pelican markdown
+<pre><code>pip install pelican markdown
 pelican-quickstart
-</pre></div>
-</p>
+</code></pre>
 
 <p>Okay so now let&rsquo;s import it.</p>
 
-<p><div class="highlight"><pre>pelican-import --wpfile --dir-page -o content -m markdown posts.xml
-</pre></div>
-</p>
+<pre><code>pelican-import --wpfile --dir-page -o content -m markdown posts.xml
+</code></pre>
 
 <p>Cool, so far so good let&rsquo;s look at my files.</p>
 
-<p><div class="highlight"><pre>python -m SimpleHTTPServer
-</pre></div>
-</p>
+<pre><code>python -m SimpleHTTPServer
+</code></pre>
 
 <p>Doesn&rsquo;t work. Mhmmm&hellip; let&rsquo;s try Python2.</p>
 
-<p><div class="highlight"><pre>python2 -m SimpleHTTPServer
-</pre></div>
-</p>
+<pre><code>python2 -m SimpleHTTPServer
+</code></pre>
 
 <p>Eureka! Long story short I really didn&rsquo;t like the way theming works in <a href="http://blog.getpelican.com/">Pelican</a>. Although I thought I could live with that, there where still some alternatives on my list and I thought: &ldquo;Better make sure you like it, because you&rsquo;ll be using it for quite a while!&rdquo;</p>
 
@@ -195,47 +195,43 @@ I discovered <a href="http://code.ravelsoft.com/node-sng">node-sng</a> and thank
 
 <p>Let&rsquo;s try the clear mainstream option. Nice checks off everything on my list.</p>
 
-<p><div class="highlight"><pre>gem update
+<pre><code>gem update
 gem install jekyll
-</pre></div>
-</p>
+</code></pre>
 
 <p>Nice! So let&rsquo;s import everything. <a href="http://import.jekyllrb.com/docs/wordpressdotcom/">Awesome Doc</a> is awesome!</p>
 
-<p><div class="highlight"><pre>ruby -rubygems -e <span class="s1">&#39;require &quot;jekyll-import&quot;;</span>
-<span class="s1">    JekyllImport::Importers::WordpressDotCom.run({</span>
-<span class="s1">      &quot;source&quot; =&gt; &quot;wordpress.xml&quot;,</span>
-<span class="s1">      &quot;no_fetch_images&quot; =&gt; false,</span>
-<span class="s1">      &quot;assets_folder&quot; =&gt; &quot;assets&quot;</span>
-<span class="s1">    })&#39;</span>
-</pre></div>
-</p>
+<pre><code>ruby -rubygems -e 'require &quot;jekyll-import&quot;;
+    JekyllImport::Importers::WordpressDotCom.run({
+      &quot;source&quot; =&gt; &quot;wordpress.xml&quot;,
+      &quot;no_fetch_images&quot; =&gt; false,
+      &quot;assets_folder&quot; =&gt; &quot;assets&quot;
+    })'
+</code></pre>
 
 <p>Mhm.. now my posts are still in HTML - I want them in <code>.md</code> format. Okay Bash-Script to the rescue! (you need <a href="http://johnmacfarlane.net/pandoc/installing.html">pandoc</a> to use this script)</p>
 
-<p><div class="highlight"><pre><span class="c">#!/bin/bash</span>
-<span class="nv">FILES</span><span class="o">=</span>/home/nh/Desktop/posts/*
-<span class="nv">MDFOLDER</span><span class="o">=</span>/home/nh/Desktop/mdfiles/
-<span class="k">for</span> f in <span class="nv">$FILES</span>
-<span class="k">do</span>
-    <span class="nv">completename</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">f</span><span class="p">##*/</span><span class="si">}</span><span class="s2">&quot;</span>          <span class="c"># complete file name with .ext</span>
-    <span class="nv">filename</span><span class="o">=</span><span class="s2">&quot;</span><span class="si">${</span><span class="nv">completename</span><span class="p">%.*</span><span class="si">}</span><span class="s2">&quot;</span>    <span class="c"># name without .ext</span>
-    <span class="nv">mdname</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$filename</span><span class="s2">.md&quot;</span>            <span class="c"># lets add .md extension</span>
+<pre><code>#!/bin/bash
+FILES=/home/nh/Desktop/posts/*
+MDFOLDER=/home/nh/Desktop/mdfiles/
+for f in $FILES
+do
+    completename=&quot;${f##*/}&quot;          # complete file name with .ext
+    filename=&quot;${completename%.*}&quot;    # name without .ext
+    mdname=&quot;$filename.md&quot;            # lets add .md extension
 
-    <span class="nv">pathToMd</span><span class="o">=</span><span class="s2">&quot;</span><span class="nv">$MDFOLDER$mdname</span><span class="s2">&quot;</span>      <span class="c"># define the output path</span>
+    pathToMd=&quot;$MDFOLDER$mdname&quot;      # define the output path
 
-    <span class="c"># Let&#39;s rock!</span>
-    <span class="nb">echo</span> <span class="s2">&quot;Processing </span><span class="nv">$mdname</span><span class="s2">&quot;</span>
-    pandoc -s <span class="s2">&quot;</span><span class="nv">$f</span><span class="s2">&quot;</span> -o <span class="s2">&quot;</span><span class="nv">$pathToMd</span><span class="s2">&quot;</span>
-<span class="k">done</span>
-</pre></div>
-</p>
+    # Let's rock!
+    echo &quot;Processing $mdname&quot;
+    pandoc -s &quot;$f&quot; -o &quot;$pathToMd&quot;
+done
+</code></pre>
 
 <p>Awesome! Let&rsquo;s compile them and look at what I&rsquo;ve got so far.</p>
 
-<p><div class="highlight"><pre>jekyll serve -w
-</pre></div>
-</p>
+<pre><code>jekyll serve -w
+</code></pre>
 
 <p>Oh it looks kind of messy. The file header it not right. Okay I will go through my posts I also need to change some image urls and stuff.<br>
 Nice auto-compile function! While we&rsquo;re at it let&rsquo;s also install a <a href="https://mademistakes.com/articles/hpstr-jekyll-theme/">nice theme</a>.</p>
@@ -256,7 +252,7 @@ Nice auto-compile function! While we&rsquo;re at it let&rsquo;s also install a <
                 </div>
                 <div class="feat share">
                     <a href="//twitter.com/share" class="popup">
-                        <span class="icon-twitter"></span>
+                        <i class="fa fa-twitter"></i>
                     </a>
                 </div>
                 
@@ -280,12 +276,12 @@ Nice auto-compile function! While we&rsquo;re at it let&rsquo;s also install a <
                 
                 
                     <a rel="next" href="http://localhost:1313/2014/02/20/threema-vs-telegram" id="next">
-                        <span class="nav-title nav-title-next">Older</span> &rarr;
+                        <span class="nav-title nav-title-next">Older</span> <i class="fa fa-long-arrow-right"></i>
                     </a>
                 
                 
                     <a rel="prev" href="http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty" id="prev">
-                        &larr; <span class="nav-title nav-title-prev">Newer</span>
+                        <i class="fa fa-long-arrow-left"></i> <span class="nav-title nav-title-prev">Newer
                     </a>
                 
             </article>
@@ -298,14 +294,19 @@ Nice auto-compile function! While we&rsquo;re at it let&rsquo;s also install a <
 </footer>
     </div>
     
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="http://localhost:1313/js/main.js"></script>
-
-<script src="http://localhost:1313/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="http://localhost:1313/js/vendor/jquery-2.1.4.min.js"></script>
 <script src="http://localhost:1313/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
 <script src="http://localhost:1313/js/plugins/jquery.magnific-popup.js"></script>
 <script src="http://localhost:1313/js/plugins/jquery.fitvids.js"></script>
+<script src="http://localhost:1313/js/plugins/jquery.slimscroll.min.js"></script>
+
+<script src="http://localhost:1313/js/vendor/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="http://localhost:1313/js/main.js"></script>
+
+
 
 
 

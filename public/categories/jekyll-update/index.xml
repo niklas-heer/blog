@@ -63,28 +63,24 @@ After a few hours of fumbling around I admitted defeat and moved on the the next
 
 &lt;p&gt;Aswell as &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt;, &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt; checked off everything on my list so i also installed it. This time through &lt;a href=&#34;https://pypi.python.org/pypi/pip/&#34;&gt;pip&lt;/a&gt;. Just for funsies.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;pip install pelican markdown
+&lt;pre&gt;&lt;code&gt;pip install pelican markdown
 pelican-quickstart
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Okay so now let&amp;rsquo;s import it.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;pelican-import --wpfile --dir-page -o content -m markdown posts.xml
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pelican-import --wpfile --dir-page -o content -m markdown posts.xml
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Cool, so far so good let&amp;rsquo;s look at my files.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;python -m SimpleHTTPServer
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python -m SimpleHTTPServer
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Doesn&amp;rsquo;t work. Mhmmm&amp;hellip; let&amp;rsquo;s try Python2.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;python2 -m SimpleHTTPServer
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python2 -m SimpleHTTPServer
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Eureka! Long story short I really didn&amp;rsquo;t like the way theming works in &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;. Although I thought I could live with that, there where still some alternatives on my list and I thought: &amp;ldquo;Better make sure you like it, because you&amp;rsquo;ll be using it for quite a while!&amp;rdquo;&lt;/p&gt;
 
@@ -100,47 +96,43 @@ I discovered &lt;a href=&#34;http://code.ravelsoft.com/node-sng&#34;&gt;node-sng
 
 &lt;p&gt;Let&amp;rsquo;s try the clear mainstream option. Nice checks off everything on my list.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;gem update
+&lt;pre&gt;&lt;code&gt;gem update
 gem install jekyll
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Nice! So let&amp;rsquo;s import everything. &lt;a href=&#34;http://import.jekyllrb.com/docs/wordpressdotcom/&#34;&gt;Awesome Doc&lt;/a&gt; is awesome!&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;ruby -rubygems -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;require &amp;quot;jekyll-import&amp;quot;;&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;    JekyllImport::Importers::WordpressDotCom.run({&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;quot;source&amp;quot; =&amp;gt; &amp;quot;wordpress.xml&amp;quot;,&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;quot;no_fetch_images&amp;quot; =&amp;gt; false,&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;quot;assets_folder&amp;quot; =&amp;gt; &amp;quot;assets&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;    })&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ruby -rubygems -e &#39;require &amp;quot;jekyll-import&amp;quot;;
+    JekyllImport::Importers::WordpressDotCom.run({
+      &amp;quot;source&amp;quot; =&amp;gt; &amp;quot;wordpress.xml&amp;quot;,
+      &amp;quot;no_fetch_images&amp;quot; =&amp;gt; false,
+      &amp;quot;assets_folder&amp;quot; =&amp;gt; &amp;quot;assets&amp;quot;
+    })&#39;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Mhm.. now my posts are still in HTML - I want them in &lt;code&gt;.md&lt;/code&gt; format. Okay Bash-Script to the rescue! (you need &lt;a href=&#34;http://johnmacfarlane.net/pandoc/installing.html&#34;&gt;pandoc&lt;/a&gt; to use this script)&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;FILES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/home/nh/Desktop/posts/*
-&lt;span class=&#34;nv&#34;&gt;MDFOLDER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/home/nh/Desktop/mdfiles/
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; f in &lt;span class=&#34;nv&#34;&gt;$FILES&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;completename&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;##*/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;          &lt;span class=&#34;c&#34;&gt;# complete file name with .ext&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;completename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;%.*&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;    &lt;span class=&#34;c&#34;&gt;# name without .ext&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;mdname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$filename&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.md&amp;quot;&lt;/span&gt;            &lt;span class=&#34;c&#34;&gt;# lets add .md extension&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+FILES=/home/nh/Desktop/posts/*
+MDFOLDER=/home/nh/Desktop/mdfiles/
+for f in $FILES
+do
+    completename=&amp;quot;${f##*/}&amp;quot;          # complete file name with .ext
+    filename=&amp;quot;${completename%.*}&amp;quot;    # name without .ext
+    mdname=&amp;quot;$filename.md&amp;quot;            # lets add .md extension
 
-    &lt;span class=&#34;nv&#34;&gt;pathToMd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$MDFOLDER$mdname&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;      &lt;span class=&#34;c&#34;&gt;# define the output path&lt;/span&gt;
+    pathToMd=&amp;quot;$MDFOLDER$mdname&amp;quot;      # define the output path
 
-    &lt;span class=&#34;c&#34;&gt;# Let&amp;#39;s rock!&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Processing &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$mdname&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-    pandoc -s &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$pathToMd&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+    # Let&#39;s rock!
+    echo &amp;quot;Processing $mdname&amp;quot;
+    pandoc -s &amp;quot;$f&amp;quot; -o &amp;quot;$pathToMd&amp;quot;
+done
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Awesome! Let&amp;rsquo;s compile them and look at what I&amp;rsquo;ve got so far.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;jekyll serve -w
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;jekyll serve -w
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Oh it looks kind of messy. The file header it not right. Okay I will go through my posts I also need to change some image urls and stuff.&lt;br&gt;
 Nice auto-compile function! While we&amp;rsquo;re at it let&amp;rsquo;s also install a &lt;a href=&#34;https://mademistakes.com/articles/hpstr-jekyll-theme/&#34;&gt;nice theme&lt;/a&gt;.&lt;/p&gt;

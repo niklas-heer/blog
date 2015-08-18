@@ -133,12 +133,12 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</loc>
+    <loc>http://localhost:1313/2012/07/11/ntfs-kostenlos-auf-dem-mac</loc>
     <lastmod>2012-07-11T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/07/11/ntfs-kostenlos-auf-dem-mac</loc>
+    <loc>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</loc>
     <lastmod>2012-07-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -168,12 +168,12 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/06/13/%C3%B6fter-mal-was-neues.-heute-nyc-phoneharmonic--cdza</loc>
+    <loc>http://localhost:1313/2012/06/13/kurze-info</loc>
     <lastmod>2012-06-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/06/13/kurze-info</loc>
+    <loc>http://localhost:1313/2012/06/13/%C3%B6fter-mal-was-neues.-heute-nyc-phoneharmonic--cdza</loc>
     <lastmod>2012-06-13T00:00:00+00:00</lastmod>
   </url>
   
@@ -233,18 +233,13 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/05/tunlrcontrol-1.0.0.12</loc>
-    <lastmod>2012-04-05T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/2012/04/05/tunlrcontrol-1.0.0.13---now-speaks-english-too</loc>
     <lastmod>2012-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.9---mit-status-anzeige</loc>
-    <lastmod>2012-04-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/2012/04/05/tunlrcontrol-1.0.0.12</loc>
+    <lastmod>2012-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -258,8 +253,8 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/03/tunlr---ausl%C3%A4ndische-videos-schauen</loc>
-    <lastmod>2012-04-03T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.9---mit-status-anzeige</loc>
+    <lastmod>2012-04-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -269,6 +264,11 @@
   
   <url>
     <loc>http://localhost:1313/2012/04/03/tunlr---how-to-video</loc>
+    <lastmod>2012-04-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/2012/04/03/tunlr---ausl%C3%A4ndische-videos-schauen</loc>
     <lastmod>2012-04-03T00:00:00+00:00</lastmod>
   </url>
   
@@ -318,17 +318,17 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/2011/11/24/gegen-energiesparlampen</loc>
-    <lastmod>2011-11-24T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/2011/11/24/blog-goes-facebook</loc>
     <lastmod>2011-11-24T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>http://localhost:1313/2011/11/24/bis-zur-unendlichkeit-und-noch-viel-viel-weiter</loc>
+    <lastmod>2011-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/2011/11/24/gegen-energiesparlampen</loc>
     <lastmod>2011-11-24T00:00:00+00:00</lastmod>
   </url>
   

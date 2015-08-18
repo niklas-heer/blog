@@ -29,17 +29,17 @@ Ich kann euch diesen Filebrowser nur wärmstens empfehlen!
 
 ### Installation: 
 
-{{< highlight bash >}}
+```
 sudo add-apt-repository ppa:elementary-os/daily
 sudo apt-get update
 sudo apt-get install pantheon-files
-{{< /highlight >}}
+```
 
 Danach solltet ihr es per Terminal starten, da der Ubuntu-Launcher beide Explorer unter demselben Namen führt.
 
-{{< highlight bash >}}
+```
 pantheon-files
-{{< /highlight >}}
+```
 
 Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.
 

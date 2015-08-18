@@ -55,9 +55,8 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt;(you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo npm install -g vtop
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo npm install -g vtop
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that you can execute it by typing &lt;code&gt;vtop&lt;/code&gt;&lt;/p&gt;
 

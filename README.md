@@ -3,5 +3,5 @@
 This blog is made with hugo.
 
 you will also need this:
-- Pygments: `pip install Pygments` - http://gohugo.io/extras/highlighting/
-- [prepros](https://prepros.io/)
+- [hugo](http://gohugo.io/overview/installing/)
+- for development: [prepros](https://prepros.io/)

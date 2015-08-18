@@ -17,7 +17,11 @@
     <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
 
     <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
+
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/vendor/highlight/styles/monokai_sublime.css" />
+    
 </head>
 <body>
     
@@ -118,61 +122,52 @@
 
 <h3 id="1-voraussetungen-prüfen:9fda1d7fdf802a2767563d8649c62eb6">1. Voraussetungen prüfen:</h3>
 
-<p><div class="highlight"><pre>    lsmod <span class="p">|</span> grep pad
-</pre></div>
-</p>
+<pre><code>    lsmod | grep pad
+</code></pre>
 
 <p>sollte ungefähr so aussehen:</p>
 
-<p><div class="highlight"><pre>thinkpad_acpi          <span class="m">81222</span>  <span class="m">0</span> 
-nvram                  <span class="m">14362</span>  <span class="m">1</span> thinkpad_acpi
-</pre></div>
-</p>
+<pre><code>thinkpad_acpi          81222  0 
+nvram                  14362  1 thinkpad_acpi
+</code></pre>
 
 <p>falls nicht kann man das Kernel-Modul damit nachinstallieren:</p>
 
-<p><div class="highlight"><pre>sudo modprobe -v thinkpad-acpi
-</pre></div>
-</p>
+<pre><code>sudo modprobe -v thinkpad-acpi
+</code></pre>
 
 <h3 id="2-script-installieren:9fda1d7fdf802a2767563d8649c62eb6">2. Script installieren</h3>
 
 <p>Script an dem richtigen Ort herunterladen und ausführbar machen:</p>
 
-<p><div class="highlight"><pre>sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
+<pre><code>sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
 sudo chmod +x /usr/local/bin/thinklight
-</pre></div>
-</p>
+</code></pre>
 
 <h3 id="3-script-benutzen:9fda1d7fdf802a2767563d8649c62eb6">3. Script benutzen</h3>
 
 <p>Zum Anschalten:
-<div class="highlight"><pre>sudo thinklight on
-</pre></div>
-</p>
+<code>sudo thinklight on</code></p>
 
 <p>Zum Abschalten:
-<div class="highlight"><pre>sudo thinklight off
-</pre></div>
- </p>
+<code>sudo thinklight off</code></p>
 
 <p>Und hier noch das Script selbst ;D</p>
 
-<p><div class="highlight"><pre><span class="c">#!/bin/sh</span>
-<span class="k">if</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;on&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo </span><span class="m">1</span> &gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
-<span class="k">elif</span> <span class="o">[</span> <span class="s2">&quot;</span><span class="nv">$1</span><span class="s2">&quot;</span> <span class="o">=</span> <span class="s2">&quot;off&quot;</span> <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-    <span class="nb">echo </span><span class="m">0</span> &gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
-<span class="k">else</span>
-    <span class="nb">echo</span> <span class="s2">&quot;Error: Wrong paramater! Only on/off allowed!&quot;</span>
-<span class="k">fi</span>
-</pre></div>
-</p>
+<pre><code>#!/bin/sh
+if [ &quot;$1&quot; = &quot;on&quot; ]; then
+    echo 1 &gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+elif [ &quot;$1&quot; = &quot;off&quot; ]; then
+    echo 0 &gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+else
+    echo &quot;Error: Wrong paramater! Only on/off allowed!&quot;
+fi
+</code></pre>
 
                 </div>
                 <div class="feat share">
                     <a href="//twitter.com/share" class="popup">
-                        <span class="icon-twitter"></span>
+                        <i class="fa fa-twitter"></i>
                     </a>
                 </div>
                 
@@ -196,12 +191,12 @@ sudo chmod +x /usr/local/bin/thinklight
                 
                 
                     <a rel="next" href="http://localhost:1313/2013/01/14/oemwn_sounds-just-like" id="next">
-                        <span class="nav-title nav-title-next">Older</span> &rarr;
+                        <span class="nav-title nav-title-next">Older</span> <i class="fa fa-long-arrow-right"></i>
                     </a>
                 
                 
                     <a rel="prev" href="http://localhost:1313/2013/04/30/ubuntu_pantheon-files" id="prev">
-                        &larr; <span class="nav-title nav-title-prev">Newer</span>
+                        <i class="fa fa-long-arrow-left"></i> <span class="nav-title nav-title-prev">Newer
                     </a>
                 
             </article>
@@ -214,14 +209,19 @@ sudo chmod +x /usr/local/bin/thinklight
 </footer>
     </div>
     
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="http://localhost:1313/js/main.js"></script>
-
-<script src="http://localhost:1313/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="http://localhost:1313/js/vendor/jquery-2.1.4.min.js"></script>
 <script src="http://localhost:1313/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
 <script src="http://localhost:1313/js/plugins/jquery.magnific-popup.js"></script>
 <script src="http://localhost:1313/js/plugins/jquery.fitvids.js"></script>
+<script src="http://localhost:1313/js/plugins/jquery.slimscroll.min.js"></script>
+
+<script src="http://localhost:1313/js/vendor/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script src="http://localhost:1313/js/main.js"></script>
+
+
 
 
 

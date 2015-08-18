@@ -45,28 +45,28 @@ After a few hours of fumbling around I admitted defeat and moved on the the next
 ### ***[Pelican][pelican]***<br>
 Aswell as [Nikola][nikola], [Pelican][pelican] checked off everything on my list so i also installed it. This time through [pip][pip]. Just for funsies.
 
-{{< highlight bash >}}
+```
 pip install pelican markdown
 pelican-quickstart
-{{< /highlight >}}
+```
 
 Okay so now let's import it.
 
-{{< highlight bash >}}
+```
 pelican-import --wpfile --dir-page -o content -m markdown posts.xml
-{{< /highlight >}}
+```
 
 Cool, so far so good let's look at my files.
 
-{{< highlight bash >}}
+```
 python -m SimpleHTTPServer
-{{< /highlight >}}
+```
 
 Doesn't work. Mhmmm... let's try Python2.
 
-{{< highlight bash >}}
+```
 python2 -m SimpleHTTPServer
-{{< /highlight >}}
+```
 
 Eureka! Long story short I really didn't like the way theming works in [Pelican][pelican]. Although I thought I could live with that, there where still some alternatives on my list and I thought: "Better make sure you like it, because you'll be using it for quite a while!"
 
@@ -80,25 +80,25 @@ But at this point I thought I just drop [Pico][pico] because it is not practical
 ### ***[Jekyll][jekyll]***<br>
 Let's try the clear mainstream option. Nice checks off everything on my list. 
 
-{{< highlight bash >}}
+```
 gem update
 gem install jekyll
-{{< /highlight >}}
+```
 
 Nice! So let's import everything. [Awesome Doc](http://import.jekyllrb.com/docs/wordpressdotcom/) is awesome!
 
-{{< highlight bash >}}
+```
 ruby -rubygems -e 'require "jekyll-import";
     JekyllImport::Importers::WordpressDotCom.run({
       "source" => "wordpress.xml",
       "no_fetch_images" => false,
       "assets_folder" => "assets"
     })'
-{{< /highlight >}}
+```
 
 Mhm.. now my posts are still in HTML - I want them in ```.md``` format. Okay Bash-Script to the rescue! (you need [pandoc](http://johnmacfarlane.net/pandoc/installing.html) to use this script)
 
-{{< highlight bash >}}
+```
 #!/bin/bash
 FILES=/home/nh/Desktop/posts/*
 MDFOLDER=/home/nh/Desktop/mdfiles/
@@ -114,13 +114,13 @@ do
     echo "Processing $mdname"
     pandoc -s "$f" -o "$pathToMd"
 done
-{{< /highlight >}}
+```
 
 Awesome! Let's compile them and look at what I've got so far.
 
-{{< highlight bash >}}
+```
 jekyll serve -w
-{{< /highlight >}}
+```
 
 Oh it looks kind of messy. The file header it not right. Okay I will go through my posts I also need to change some image urls and stuff.<br>
 Nice auto-compile function! While we're at it let's also install a [nice theme](https://mademistakes.com/articles/hpstr-jekyll-theme/).

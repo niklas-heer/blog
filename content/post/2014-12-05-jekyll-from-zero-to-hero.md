@@ -21,65 +21,65 @@ But if you want to start from scratch you can make a folder and initialize git i
 
 
 
-{{< highlight bash >}}
+```
 mkdir jekyll && cd jekyll
 git init
 cp -r /path/to/old_jekyll_folder /path/to/jekyll
 git add .
 git commit -am "initial commit."
-{{< /highlight >}}
+```
 
 
 ### The remote repository
 Now we need a new repository on your web-server, but it doesn't need to be inside your web directory - just somewhere inside the system. I assume you have configured your public-key to work as a login and you also need write-privileges to the web directory with this user.<br>
 First we need to initialize the repository:
 
-{{< highlight bash >}}
+```
 #Initialized empty Git repository in /home/nh/website.git/
 mkdir website.git && cd website.git
 git init --bare
-{{< /highlight >}}
+```
 
 Then we need define a post-receive hook that checks out the latest changes into the web-servers DocumentRoot (this directory must exist; Git will not create it for you):
 
-{{< highlight bash >}}
+```
 nano hooks/post-receive
-{{< /highlight >}}
+```
 
 Put this inside the file:
 
-{{< highlight bash >}}
+```
 #!/bin/sh
 GIT_WORK_TREE=/var/www/www.example.org git checkout -f
-{{< /highlight >}}
+```
 
 After that we need to enable the hook which will be triggered every time we push our changes to this repository. It will apply every commit to the directory which you have defined inside the post-receive hook.
 
-{{< highlight bash >}}
+```
 chmod +x hooks/post-receive
-{{< /highlight >}}
+```
 
 We are now done on the server and we only need to set up the update process on the local system.
 
 ### The update process
 First we need to edit our git config file in our local repository to add the remote server.
 
-{{< highlight bash >}}
+```
 nano .git/config
-{{< /highlight >}}
+```
 
 Add this to the file:
 
-{{< highlight bash >}}
+```
 [remote "production"]
     url = username@webserver:/home/nh/website.git
-{{< /highlight >}}
+```
 
 That's it! Now you have set up your deployment! To deploy your jekyll changes is now as easy as this:
 
-{{< highlight bash >}}
+```
 git push production
-{{< /highlight >}}
+```
 
 - - -
 
@@ -104,7 +104,7 @@ First I installed [Googles Pagespeed][pagespeed] on my CentOS machine which was 
 
 Now I needed some optimization of my servers cache, for this I needed to use the ```mod_expires``` module of my apache installation.<br>
 I made a new file ```/etc/httpd/conf.d/expires.conf``` with the following content:
-{{< highlight bash >}}
+```
 ExpiresActive On
 ExpiresByType image/gif "access plus 1 month"
 ExpiresByType image/png "access plus 1 month"
@@ -113,7 +113,7 @@ ExpiresByType text/css "access plus 1 month"
 ExpiresByType text/javascript "access plus 1 month"
 ExpiresByType application/x-javascript "access plus 1 month"
 ExpiresByType application/x-shockwave-flash "access plus 1 month"
-{{< /highlight >}}
+```
 
 After that I edited my DNS entry to use [CloudFlare][cloudflare] which I *highly* recommend to you!
 
@@ -122,23 +122,23 @@ Now I have a really fast Apache web-server with caching and [CloudFlare][cloudfl
 ### Optimizing pictures
 You can make images smaller by using [image_optim][image_optim]! This is a great tool and fairly simple to install:
 
-{{< highlight bash >}}
+```
 gem install image_optim image_optim_pack
-{{< /highlight >}}
+```
 
 If you want the full suit you also need to do this on ArchLinux:
 
-{{< highlight bash >}}
+```
 yaourt -S pngout
 sudo npm install -g svgo
-{{< /highlight >}}
+```
 
 After that you can simply go to the directory in which you stored your pictures and let [image_optim][image_optim] run through all subdirectories and files recursively with this command:
 
-{{< highlight bash >}}
+```
 # WARNING: This could take a while!
 image_optim -r .
-{{< /highlight >}}
+```
 
 - - -
 

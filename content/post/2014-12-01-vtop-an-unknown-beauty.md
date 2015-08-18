@@ -18,7 +18,7 @@ Although I really liked ```htop``` I always felt that it sometimes had a too clu
 Than I discovered ```vtop```! <br>
 But let's start at the beginning of my journey.
 
-### Why not simple old ```top```?
+### Why not simple old `top`?
 <center>
     <figure class="half">
         <a href="/assets/images/2014-12-01/top.png"><img src="/assets/images/2014-12-01/top.png" alt=""></a>
@@ -41,9 +41,9 @@ As you can guess from the pictures above ```htop``` does really exactly the same
 
 You can install it also very easily through ```npm```(you need to install [node.js](http://nodejs.org/) on your system)!
 
-{{< highlight bash >}}
+```
 sudo npm install -g vtop
-{{< /highlight >}}
+```
 
 After that you can execute it by typing ```vtop```
 

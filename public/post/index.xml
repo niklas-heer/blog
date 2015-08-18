@@ -31,43 +31,38 @@
 &lt;p&gt;You can host your site on &lt;a href=&#34;https://about.gitlab.com/&#34;&gt;Gitlab&lt;/a&gt;, &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; or something else - just like I do.
 But if you want to start from scratch you can make a folder and initialize git in it, after that you can copy over your Jekyll files.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;mkdir jekyll &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd &lt;/span&gt;jekyll
+&lt;pre&gt;&lt;code&gt;mkdir jekyll &amp;amp;&amp;amp; cd jekyll
 git init
 cp -r /path/to/old_jekyll_folder /path/to/jekyll
 git add .
-git commit -am &lt;span class=&#34;s2&#34;&gt;&amp;quot;initial commit.&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+git commit -am &amp;quot;initial commit.&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;the-remote-repository:abed85835c828a38e19690cbc75bb36d&#34;&gt;The remote repository&lt;/h3&gt;
 
 &lt;p&gt;Now we need a new repository on your web-server, but it doesn&amp;rsquo;t need to be inside your web directory - just somewhere inside the system. I assume you have configured your public-key to work as a login and you also need write-privileges to the web directory with this user.&lt;br&gt;
 First we need to initialize the repository:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;#Initialized empty Git repository in /home/nh/website.git/&lt;/span&gt;
-mkdir website.git &lt;span class=&#34;o&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;cd &lt;/span&gt;website.git
+&lt;pre&gt;&lt;code&gt;#Initialized empty Git repository in /home/nh/website.git/
+mkdir website.git &amp;amp;&amp;amp; cd website.git
 git init --bare
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Then we need define a post-receive hook that checks out the latest changes into the web-servers DocumentRoot (this directory must exist; Git will not create it for you):&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;nano hooks/post-receive
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nano hooks/post-receive
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Put this inside the file:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/sh&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;GIT_WORK_TREE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/var/www/www.example.org git checkout -f
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
+GIT_WORK_TREE=/var/www/www.example.org git checkout -f
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that we need to enable the hook which will be triggered every time we push our changes to this repository. It will apply every commit to the directory which you have defined inside the post-receive hook.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;chmod +x hooks/post-receive
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;chmod +x hooks/post-receive
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;We are now done on the server and we only need to set up the update process on the local system.&lt;/p&gt;
 
@@ -75,22 +70,19 @@ git init --bare
 
 &lt;p&gt;First we need to edit our git config file in our local repository to add the remote server.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;nano .git/config
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;nano .git/config
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Add this to the file:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;remote &lt;span class=&#34;s2&#34;&gt;&amp;quot;production&amp;quot;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; username@webserver:/home/nh/website.git
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;[remote &amp;quot;production&amp;quot;]
+    url = username@webserver:/home/nh/website.git
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That&amp;rsquo;s it! Now you have set up your deployment! To deploy your jekyll changes is now as easy as this:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;git push production
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git push production
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
@@ -115,17 +107,17 @@ This is the fastest site I&#39;ve ever built.
 &lt;p&gt;First I installed &lt;a href=&#34;https://developers.google.com/speed/pagespeed/module&#34;&gt;Googles Pagespeed&lt;/a&gt; on my CentOS machine which was a &lt;a href=&#34;http://www.tecmint.com/install-mod_pagespeed-website-optimizer-for-apache-in-rhel-centos-and-fedora/&#34;&gt;fairly easy process&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;Now I needed some optimization of my servers cache, for this I needed to use the &lt;code&gt;mod_expires&lt;/code&gt; module of my apache installation.&lt;br&gt;
-I made a new file &lt;code&gt;/etc/httpd/conf.d/expires.conf&lt;/code&gt; with the following content:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;ExpiresActive On
-ExpiresByType image/gif &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType image/png &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType image/jpeg &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType text/css &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType text/javascript &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType application/x-javascript &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
-ExpiresByType application/x-shockwave-flash &lt;span class=&#34;s2&#34;&gt;&amp;quot;access plus 1 month&amp;quot;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+I made a new file &lt;code&gt;/etc/httpd/conf.d/expires.conf&lt;/code&gt; with the following content:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;ExpiresActive On
+ExpiresByType image/gif &amp;quot;access plus 1 month&amp;quot;
+ExpiresByType image/png &amp;quot;access plus 1 month&amp;quot;
+ExpiresByType image/jpeg &amp;quot;access plus 1 month&amp;quot;
+ExpiresByType text/css &amp;quot;access plus 1 month&amp;quot;
+ExpiresByType text/javascript &amp;quot;access plus 1 month&amp;quot;
+ExpiresByType application/x-javascript &amp;quot;access plus 1 month&amp;quot;
+ExpiresByType application/x-shockwave-flash &amp;quot;access plus 1 month&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that I edited my DNS entry to use &lt;a href=&#34;https://www.cloudflare.com&#34;&gt;CloudFlare&lt;/a&gt; which I &lt;em&gt;highly&lt;/em&gt; recommend to you!&lt;/p&gt;
 
@@ -135,23 +127,20 @@ ExpiresByType application/x-shockwave-flash &lt;span class=&#34;s2&#34;&gt;&amp;
 
 &lt;p&gt;You can make images smaller by using &lt;a href=&#34;https://github.com/toy/image_optim&#34;&gt;image_optim&lt;/a&gt;! This is a great tool and fairly simple to install:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;gem install image_optim image_optim_pack
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;gem install image_optim image_optim_pack
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If you want the full suit you also need to do this on ArchLinux:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;yaourt -S pngout
+&lt;pre&gt;&lt;code&gt;yaourt -S pngout
 sudo npm install -g svgo
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that you can simply go to the directory in which you stored your pictures and let &lt;a href=&#34;https://github.com/toy/image_optim&#34;&gt;image_optim&lt;/a&gt; run through all subdirectories and files recursively with this command:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;# WARNING: This could take a while!&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;# WARNING: This could take a while!
 image_optim -r .
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;hr /&gt;
 
@@ -210,9 +199,8 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt;(you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo npm install -g vtop
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo npm install -g vtop
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that you can execute it by typing &lt;code&gt;vtop&lt;/code&gt;&lt;/p&gt;
 
@@ -276,28 +264,24 @@ After a few hours of fumbling around I admitted defeat and moved on the the next
 
 &lt;p&gt;Aswell as &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt;, &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt; checked off everything on my list so i also installed it. This time through &lt;a href=&#34;https://pypi.python.org/pypi/pip/&#34;&gt;pip&lt;/a&gt;. Just for funsies.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;pip install pelican markdown
+&lt;pre&gt;&lt;code&gt;pip install pelican markdown
 pelican-quickstart
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Okay so now let&amp;rsquo;s import it.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;pelican-import --wpfile --dir-page -o content -m markdown posts.xml
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pelican-import --wpfile --dir-page -o content -m markdown posts.xml
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Cool, so far so good let&amp;rsquo;s look at my files.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;python -m SimpleHTTPServer
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python -m SimpleHTTPServer
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Doesn&amp;rsquo;t work. Mhmmm&amp;hellip; let&amp;rsquo;s try Python2.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;python2 -m SimpleHTTPServer
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;python2 -m SimpleHTTPServer
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Eureka! Long story short I really didn&amp;rsquo;t like the way theming works in &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;. Although I thought I could live with that, there where still some alternatives on my list and I thought: &amp;ldquo;Better make sure you like it, because you&amp;rsquo;ll be using it for quite a while!&amp;rdquo;&lt;/p&gt;
 
@@ -313,47 +297,43 @@ I discovered &lt;a href=&#34;http://code.ravelsoft.com/node-sng&#34;&gt;node-sng
 
 &lt;p&gt;Let&amp;rsquo;s try the clear mainstream option. Nice checks off everything on my list.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;gem update
+&lt;pre&gt;&lt;code&gt;gem update
 gem install jekyll
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Nice! So let&amp;rsquo;s import everything. &lt;a href=&#34;http://import.jekyllrb.com/docs/wordpressdotcom/&#34;&gt;Awesome Doc&lt;/a&gt; is awesome!&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;ruby -rubygems -e &lt;span class=&#34;s1&#34;&gt;&amp;#39;require &amp;quot;jekyll-import&amp;quot;;&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;    JekyllImport::Importers::WordpressDotCom.run({&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;quot;source&amp;quot; =&amp;gt; &amp;quot;wordpress.xml&amp;quot;,&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;quot;no_fetch_images&amp;quot; =&amp;gt; false,&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;      &amp;quot;assets_folder&amp;quot; =&amp;gt; &amp;quot;assets&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;s1&#34;&gt;    })&amp;#39;&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ruby -rubygems -e &#39;require &amp;quot;jekyll-import&amp;quot;;
+    JekyllImport::Importers::WordpressDotCom.run({
+      &amp;quot;source&amp;quot; =&amp;gt; &amp;quot;wordpress.xml&amp;quot;,
+      &amp;quot;no_fetch_images&amp;quot; =&amp;gt; false,
+      &amp;quot;assets_folder&amp;quot; =&amp;gt; &amp;quot;assets&amp;quot;
+    })&#39;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Mhm.. now my posts are still in HTML - I want them in &lt;code&gt;.md&lt;/code&gt; format. Okay Bash-Script to the rescue! (you need &lt;a href=&#34;http://johnmacfarlane.net/pandoc/installing.html&#34;&gt;pandoc&lt;/a&gt; to use this script)&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/bash&lt;/span&gt;
-&lt;span class=&#34;nv&#34;&gt;FILES&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/home/nh/Desktop/posts/*
-&lt;span class=&#34;nv&#34;&gt;MDFOLDER&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;/home/nh/Desktop/mdfiles/
-&lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; f in &lt;span class=&#34;nv&#34;&gt;$FILES&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;do&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;completename&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;f&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;##*/&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;          &lt;span class=&#34;c&#34;&gt;# complete file name with .ext&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;filename&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;${&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;completename&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;%.*&lt;/span&gt;&lt;span class=&#34;si&#34;&gt;}&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;    &lt;span class=&#34;c&#34;&gt;# name without .ext&lt;/span&gt;
-    &lt;span class=&#34;nv&#34;&gt;mdname&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$filename&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;.md&amp;quot;&lt;/span&gt;            &lt;span class=&#34;c&#34;&gt;# lets add .md extension&lt;/span&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/bash
+FILES=/home/nh/Desktop/posts/*
+MDFOLDER=/home/nh/Desktop/mdfiles/
+for f in $FILES
+do
+    completename=&amp;quot;${f##*/}&amp;quot;          # complete file name with .ext
+    filename=&amp;quot;${completename%.*}&amp;quot;    # name without .ext
+    mdname=&amp;quot;$filename.md&amp;quot;            # lets add .md extension
 
-    &lt;span class=&#34;nv&#34;&gt;pathToMd&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$MDFOLDER$mdname&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;      &lt;span class=&#34;c&#34;&gt;# define the output path&lt;/span&gt;
+    pathToMd=&amp;quot;$MDFOLDER$mdname&amp;quot;      # define the output path
 
-    &lt;span class=&#34;c&#34;&gt;# Let&amp;#39;s rock!&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Processing &lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$mdname&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-    pandoc -s &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$f&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; -o &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$pathToMd&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+    # Let&#39;s rock!
+    echo &amp;quot;Processing $mdname&amp;quot;
+    pandoc -s &amp;quot;$f&amp;quot; -o &amp;quot;$pathToMd&amp;quot;
+done
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Awesome! Let&amp;rsquo;s compile them and look at what I&amp;rsquo;ve got so far.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;jekyll serve -w
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;jekyll serve -w
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Oh it looks kind of messy. The file header it not right. Okay I will go through my posts I also need to change some image urls and stuff.&lt;br&gt;
 Nice auto-compile function! While we&amp;rsquo;re at it let&amp;rsquo;s also install a &lt;a href=&#34;https://mademistakes.com/articles/hpstr-jekyll-theme/&#34;&gt;nice theme&lt;/a&gt;.&lt;/p&gt;
@@ -524,17 +504,15 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
 
 &lt;h3 id=&#34;installation:66744ec3ab086fa0a24dec09d9a0a5b4&#34;&gt;Installation:&lt;/h3&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo add-apt-repository ppa:elementary-os/daily
+&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:elementary-os/daily
 sudo apt-get update
 sudo apt-get install pantheon-files
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Danach solltet ihr es per Terminal starten, da der Ubuntu-Launcher beide Explorer unter demselben Namen führt.&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;pantheon-files
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;pantheon-files
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.&lt;/p&gt;
 
@@ -558,56 +536,47 @@ sudo apt-get install pantheon-files
 
 &lt;h3 id=&#34;1-voraussetungen-prüfen:9fda1d7fdf802a2767563d8649c62eb6&#34;&gt;1. Voraussetungen prüfen:&lt;/h3&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;    lsmod &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; grep pad
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    lsmod | grep pad
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;sollte ungefähr so aussehen:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;thinkpad_acpi          &lt;span class=&#34;m&#34;&gt;81222&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; 
-nvram                  &lt;span class=&#34;m&#34;&gt;14362&lt;/span&gt;  &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; thinkpad_acpi
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;thinkpad_acpi          81222  0 
+nvram                  14362  1 thinkpad_acpi
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;falls nicht kann man das Kernel-Modul damit nachinstallieren:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo modprobe -v thinkpad-acpi
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;sudo modprobe -v thinkpad-acpi
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;2-script-installieren:9fda1d7fdf802a2767563d8649c62eb6&#34;&gt;2. Script installieren&lt;/h3&gt;
 
 &lt;p&gt;Script an dem richtigen Ort herunterladen und ausführbar machen:&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
+&lt;pre&gt;&lt;code&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
 sudo chmod +x /usr/local/bin/thinklight
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h3 id=&#34;3-script-benutzen:9fda1d7fdf802a2767563d8649c62eb6&#34;&gt;3. Script benutzen&lt;/h3&gt;
 
 &lt;p&gt;Zum Anschalten:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo thinklight on
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;code&gt;sudo thinklight on&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Zum Abschalten:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;sudo thinklight off
-&lt;/pre&gt;&lt;/div&gt;
- &lt;/p&gt;
+&lt;code&gt;sudo thinklight off&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;Und hier noch das Script selbst ;D&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre&gt;&lt;span class=&#34;c&#34;&gt;#!/bin/sh&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;on&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
-&lt;span class=&#34;k&#34;&gt;elif&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$1&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;off&amp;quot;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;k&#34;&gt;then&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo &lt;/span&gt;&lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
-&lt;span class=&#34;k&#34;&gt;else&lt;/span&gt;
-    &lt;span class=&#34;nb&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s2&#34;&gt;&amp;quot;Error: Wrong paramater! Only on/off allowed!&amp;quot;&lt;/span&gt;
-&lt;span class=&#34;k&#34;&gt;fi&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;#!/bin/sh
+if [ &amp;quot;$1&amp;quot; = &amp;quot;on&amp;quot; ]; then
+    echo 1 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+elif [ &amp;quot;$1&amp;quot; = &amp;quot;off&amp;quot; ]; then
+    echo 0 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
+else
+    echo &amp;quot;Error: Wrong paramater! Only on/off allowed!&amp;quot;
+fi
+&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

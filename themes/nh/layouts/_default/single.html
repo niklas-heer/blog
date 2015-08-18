@@ -28,7 +28,7 @@
                 </div>
                 <div class="feat share">
                     <a href="//twitter.com/share" class="popup">
-                        <span class="icon-twitter"></span>
+                        <i class="fa fa-twitter"></i>
                     </a>
                 </div>
                 
@@ -39,12 +39,12 @@
                 
                 {{ if .PrevInSection }}
                     <a rel="next" href="{{ .PrevInSection.Permalink }}" id="next">
-                        <span class="nav-title nav-title-next">{{ with .Site.Params.older }}{{ . }}{{ end }}</span> &rarr;
+                        <span class="nav-title nav-title-next">{{ with .Site.Params.older }}{{ . }}{{ end }}</span> <i class="fa fa-long-arrow-right"></i>
                     </a>
                 {{ end }}
                 {{ if .NextInSection }}
                     <a rel="prev" href="{{ .NextInSection.Permalink }}" id="prev">
-                        &larr; <span class="nav-title nav-title-prev">{{ with .Site.Params.newer }}{{ . }}{{ end }}</span>
+                        <i class="fa fa-long-arrow-left"></i> <span class="nav-title nav-title-prev">{{ with .Site.Params.newer }}{{ . }}{{ end }}
                     </a>
                 {{ end }}
             </article>
