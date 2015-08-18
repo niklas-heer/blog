@@ -506,6 +506,7 @@ h6 a,
 p a,
 ul li a,
 ol li a,
+cite a,
 figcaption a {
   color: #0c8ac4;
   background-size: 200%;
@@ -528,6 +529,7 @@ h6 a:hover,
 p a:hover,
 ul li a:hover,
 ol li a:hover,
+cite a:hover,
 figcaption a:hover {
   color: white;
   background-color: #0c8ac4;
