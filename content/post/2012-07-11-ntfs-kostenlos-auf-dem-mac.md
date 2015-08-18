@@ -56,7 +56,3 @@ der kostenlosen Variante bleiben, weil OSXFuse eben auch Open Source ist
 und dadurch natürlich auch wesentlich mehr Neuerungen und Anpassungen
 zulässt. Ich hoffe ich konnte euch weiterhelfen, bei fragen einfach ein
 Kommentar ;D
-
-<center>
-	<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="/assets/images/cc/by-nc-sa.png" alt=""></a>
-</center>

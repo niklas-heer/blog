@@ -1,5 +1,6 @@
 ---
 title: 'Apfelkorb #8 - Pimp my Finder'
+slug: apfelkorb-8_Finder
 description: 'Apfelkorb #8 - Pimp my Finder'
 date: 2012-12-23
 tags: [youtube, apfelkorb]
@@ -12,9 +13,13 @@ Folge in dem ich euch den Befehl zeige Dateien sichtbar zu machen: <http://bit.l
 ***QuickLook Text selektieren:***
 
 Befehl zum anschalten: <br>
-```defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder```
+``` bash
+defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
+```
 Befehl zum ausschalten: <br>
-```defaults delete com.apple.finder QLEnableTextSelection; killall Finder```
+``` bash
+defaults delete com.apple.finder QLEnableTextSelection; killall Finder
+```
 
 ***QuickLook Plugin installieren:***
 
@@ -32,5 +37,4 @@ Total Finder (ca. 13,50€) - <http://totalfinder.binaryage.com/> <br>
 Path Finder (ca. 30€) - <http://cocoatech.com/pathfinder/> <br>
 ForkLift (ca. 15€) - <http://www.binarynights.com/> <br>
 
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/TmPBrhVv\_uY" frameborder="0"> </iframe>
+{{< youtube TmPBrhVv_uY >}}

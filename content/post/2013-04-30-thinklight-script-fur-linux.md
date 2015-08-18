@@ -33,7 +33,7 @@ sudo modprobe -v thinkpad-acpi
 
 Script an dem richtigen Ort herunterladen und ausführbar machen:
 
-```
+``` bash
 sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
 sudo chmod +x /usr/local/bin/thinklight
 ```
@@ -48,7 +48,7 @@ Zum Abschalten:
 
 Und hier noch das Script selbst ;D
 
-```
+``` bash
 #!/bin/sh
 if [ "$1" = "on" ]; then
     echo 1 > /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 

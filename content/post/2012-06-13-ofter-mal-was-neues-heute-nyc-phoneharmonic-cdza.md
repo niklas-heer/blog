@@ -1,13 +1,14 @@
 ---
 title: 'Öfter mal was neues. Heute: "NYC Phoneharmonic | cdza"'
+slug: oemwn_NYC-Phoneharmonic
 description: 'Öfter mal was neues. Heute: "NYC Phoneharmonic | cdza"'
-date: 2012-06-13
+date: 2012-06-13T17:00:00
 tags: [stuff, discussion, youtube]
 ---
 
 <center>	
 	<figure>
-		<a href="/assets/images/2012-06-13/nexus-one-256x256.png"><img src="/assets/images/2012-06-13/nexus-one-256x256.png" alt=""></a>
+		<a href="/assets/images/2012-06-13/nexus-one-256x256.png"><img  src="/assets/images/2012-06-13/nexus-one-256x256.png" alt=""></a>
 		<figcaption>Bild von <a href="http://miniartx.deviantart.com/">Mihail Nikitin</a>.</figcaption>
 	</figure>
 </center>
@@ -16,4 +17,4 @@ Ihr habt euch schon immer gefragt wie eine Symphonie aus Telefonklingeltönen 
 
 Kein Problem [cdza](http://www.youtube.com/user/collectivecadenza?feature=watch) zeigt uns wie es sich anhören kann ;)
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/ECYkqdx8ueQ" frameborder="0"> </iframe>
+{{< youtube ECYkqdx8ueQ >}}

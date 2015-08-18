@@ -80,6 +80,7 @@ $(document).ready ->
     # make it unique to apply your CSS animations just to this exact popup
     mainClass: "mfp-fade"
 
+
 # wrap code in highlight class
 $(document).ready ->
 	code = $("pre code").parent()

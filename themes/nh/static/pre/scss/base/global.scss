@@ -83,15 +83,26 @@ small {
 ul li { list-style-type: circle; }
 ol li { list-style-type: decimal; }
 
-a { 
-  color: $link-color;
-  background-size: 200%;
-  padding-left: 3px;
-  padding-right: 3px;
-  margin-left: -3px;
-  margin-right: -3px;
-  &:hover {
-    color: $bg-color;
-    background-color: $link-color;
+h1, 
+h2, 
+h3,
+h4,
+h5,
+h6,
+p,
+ul li,
+ol li,
+figcaption {
+    a { 
+    color: $link-color;
+    background-size: 200%;
+    padding-left: 3px;
+    padding-right: 3px;
+    margin-left: -3px;
+    margin-right: -3px;
+    &:hover {
+      color: $bg-color;
+      background-color: $link-color;
+    }
   }
 }

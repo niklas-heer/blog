@@ -1,5 +1,6 @@
 ---
-title: 'Öfter mal was neues. Heute: Dick Figures - Erster "Cool"-Tag [german dub by thetrueblacky]'
+title: 'Öfter mal was neues. Heute: Dick Figures - Erster "Cool"-Tag'
+slug: oemwn_Dick-Figures_Cool
 description: 'Öfter mal was neues. Heute: Dick Figures - Erster "Cool"-Tag [german dub by thetrueblacky]'
 date: 2012-06-15
 tags: [stuff, discussion, video]
@@ -15,7 +16,7 @@ Hier der deutsche Youtube-Kanal: [Dick Figures auf deutsch](http://www.youtube.c
 
 Der orginale Kanal: [MondoMedia](http://www.youtube.com/show?p=qKrZOTKMhto)
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/kn7sEPMSIlA" frameborder="0"> </iframe>
+{{< youtube kn7sEPMSIlA >}}
 
 Was ihr gerade gesehen habt waren die ersten paar Minuten des Spielfilms welches das Dick Figures Team produzieren will.
 

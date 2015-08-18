@@ -31,7 +31,7 @@
 &lt;p&gt;You can host your site on &lt;a href=&#34;https://about.gitlab.com/&#34;&gt;Gitlab&lt;/a&gt;, &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; or something else - just like I do.
 But if you want to start from scratch you can make a folder and initialize git in it, after that you can copy over your Jekyll files.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;mkdir jekyll &amp;amp;&amp;amp; cd jekyll
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir jekyll &amp;amp;&amp;amp; cd jekyll
 git init
 cp -r /path/to/old_jekyll_folder /path/to/jekyll
 git add .
@@ -43,25 +43,25 @@ git commit -am &amp;quot;initial commit.&amp;quot;
 &lt;p&gt;Now we need a new repository on your web-server, but it doesn&amp;rsquo;t need to be inside your web directory - just somewhere inside the system. I assume you have configured your public-key to work as a login and you also need write-privileges to the web directory with this user.&lt;br&gt;
 First we need to initialize the repository:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#Initialized empty Git repository in /home/nh/website.git/
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Initialized empty Git repository in /home/nh/website.git/
 mkdir website.git &amp;amp;&amp;amp; cd website.git
 git init --bare
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Then we need define a post-receive hook that checks out the latest changes into the web-servers DocumentRoot (this directory must exist; Git will not create it for you):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;nano hooks/post-receive
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nano hooks/post-receive
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Put this inside the file:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
 GIT_WORK_TREE=/var/www/www.example.org git checkout -f
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that we need to enable the hook which will be triggered every time we push our changes to this repository. It will apply every commit to the directory which you have defined inside the post-receive hook.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;chmod +x hooks/post-receive
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chmod +x hooks/post-receive
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;We are now done on the server and we only need to set up the update process on the local system.&lt;/p&gt;
@@ -70,19 +70,21 @@ GIT_WORK_TREE=/var/www/www.example.org git checkout -f
 
 &lt;p&gt;First we need to edit our git config file in our local repository to add the remote server.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;nano .git/config
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nano .git/config
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Add this to the file:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;[remote &amp;quot;production&amp;quot;]
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[remote &amp;quot;production&amp;quot;]
     url = username@webserver:/home/nh/website.git
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That&amp;rsquo;s it! Now you have set up your deployment! To deploy your jekyll changes is now as easy as this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git push production
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push production
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -109,7 +111,7 @@ This is the fastest site I&#39;ve ever built.
 &lt;p&gt;Now I needed some optimization of my servers cache, for this I needed to use the &lt;code&gt;mod_expires&lt;/code&gt; module of my apache installation.&lt;br&gt;
 I made a new file &lt;code&gt;/etc/httpd/conf.d/expires.conf&lt;/code&gt; with the following content:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;ExpiresActive On
+&lt;pre&gt;&lt;code class=&#34;language-apache&#34;&gt;ExpiresActive On
 ExpiresByType image/gif &amp;quot;access plus 1 month&amp;quot;
 ExpiresByType image/png &amp;quot;access plus 1 month&amp;quot;
 ExpiresByType image/jpeg &amp;quot;access plus 1 month&amp;quot;
@@ -127,18 +129,18 @@ ExpiresByType application/x-shockwave-flash &amp;quot;access plus 1 month&amp;qu
 
 &lt;p&gt;You can make images smaller by using &lt;a href=&#34;https://github.com/toy/image_optim&#34;&gt;image_optim&lt;/a&gt;! This is a great tool and fairly simple to install:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gem install image_optim image_optim_pack
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem install image_optim image_optim_pack
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If you want the full suit you also need to do this on ArchLinux:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;yaourt -S pngout
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yaourt -S pngout
 sudo npm install -g svgo
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that you can simply go to the directory in which you stored your pictures and let &lt;a href=&#34;https://github.com/toy/image_optim&#34;&gt;image_optim&lt;/a&gt; run through all subdirectories and files recursively with this command:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# WARNING: This could take a while!
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# WARNING: This could take a while!
 image_optim -r .
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -197,9 +199,9 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/MrRio/vtop&#34;&gt;vtop&lt;/a&gt; looks much cleaner than htop. One look and you exactly know whats going on on the system! You can list processes by CPU or Memory usage which is really awesome, you can navigate with your arrow keys or &lt;code&gt;k&lt;/code&gt; and &lt;code&gt;j&lt;/code&gt; which is also nice and the best of all you can simply highlight/select a process and kill it by typing &lt;code&gt;dd&lt;/code&gt;!&lt;/p&gt;
 
-&lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt;(you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
+&lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt; (you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo npm install -g vtop
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo npm install -g vtop
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that you can execute it by typing &lt;code&gt;vtop&lt;/code&gt;&lt;/p&gt;
@@ -301,21 +303,17 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;h3 id=&#34;installation:66744ec3ab086fa0a24dec09d9a0a5b4&#34;&gt;Installation:&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:elementary-os/daily
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo add-apt-repository ppa:elementary-os/daily
 sudo apt-get update
 sudo apt-get install pantheon-files
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Danach solltet ihr es per Terminal starten, da der Ubuntu-Launcher beide Explorer unter demselben Namen führt.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pantheon-files
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pantheon-files
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img id=&#34;cc&#34; src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -351,7 +349,7 @@ nvram                  14362  1 thinkpad_acpi
 
 &lt;p&gt;Script an dem richtigen Ort herunterladen und ausführbar machen:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
 sudo chmod +x /usr/local/bin/thinklight
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -365,7 +363,7 @@ sudo chmod +x /usr/local/bin/thinklight
 
 &lt;p&gt;Und hier noch das Script selbst ;D&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
 if [ &amp;quot;$1&amp;quot; = &amp;quot;on&amp;quot; ]; then
     echo 1 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
 elif [ &amp;quot;$1&amp;quot; = &amp;quot;off&amp;quot; ]; then
@@ -453,9 +451,9 @@ Tool dafür.&lt;/p&gt;
 
 &lt;p&gt;Upload-terminal muss auf jeden Fall angepasst werden. &amp;ldquo;save_img_from_clip.scpt&amp;rdquo; kann so bleiben ;)&lt;/p&gt;
 
-&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
-
-&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
 
 &lt;p&gt;Am besten man speichert sie unter &amp;ldquo;/Users/&amp;lt;username&amp;gt;/Scripte&amp;rdquo; ab.&lt;/p&gt;
 
@@ -502,10 +500,6 @@ Upload-terminal Script anpassen, sodass dieses noch Argumente für den
 Dateinamen bekommt. Und im Textexpander Script müsste man noch ein
 FillForm für diesen Dateinamen angeben. Wenn ihr es mögt werde ich die
 Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
 </description>
     </item>
     

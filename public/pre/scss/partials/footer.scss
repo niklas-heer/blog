@@ -3,6 +3,8 @@ footer {
   width: 100%;
   bottom: 0;
   left: 0;
-  text-align: center; 
-  small { text-transform: uppercase; }
+  text-align: center;
+  a img:hover {
+    transform: translate(0, -0.1em);	    
+  }
 }

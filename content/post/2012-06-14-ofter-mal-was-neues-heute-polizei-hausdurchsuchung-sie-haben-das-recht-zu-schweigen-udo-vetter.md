@@ -1,7 +1,8 @@
 ---
 title: 'Öfter mal was neues. Heute: "Polizei, Hausdurchsuchung: Sie haben das Recht zu schweigen (Udo Vetter)"'
+slug: oemwn_Hausdurchsuchung
 description: 'Öfter mal was neues. Heute: "Polizei, Hausdurchsuchung: Sie haben das Recht zu schweigen (Udo Vetter)"'
-date: 2012-06-14
+date: 2012-06-14T15:00:00
 tags: [stuff, discussion, video]
 ---
 
@@ -24,4 +25,4 @@ Es ist sehr informativ und Udo Vetter weiß auch wovon er redet ;)
 
 Leider ist es ein bisschen lang, aber trotzdem - hört es euch an!
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/a0n1PNpB00g" frameborder="0"> </iframe>
+{{< youtube a0n1PNpB00g >}}

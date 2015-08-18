@@ -15,7 +15,7 @@ pygmentsuseclasses = true
 	DateForm = "2. Jan 2006"
 	DateFormPost = "2. January 2006"
 	description = "My personal blog."
-	copyright = "© 2015 Niklas Heer<br /> [CC BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/3.0/) Some rights reserved."
+	copyright = "© 2015 Niklas Heer<br /> [![CC BY-NC-SA](/assets/images/cc/by-nc-sa.png)](http://creativecommons.org/licenses/by-nc-sa/3.0/)"
 
 	# Enable comments by entering your Disqus shortname
 	disqusshortname = "niklas_heer"

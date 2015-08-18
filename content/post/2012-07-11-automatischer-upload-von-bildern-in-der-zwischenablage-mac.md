@@ -24,9 +24,9 @@ Tool dafür.
 
 Upload-terminal muss auf jeden Fall angepasst werden. "save\_img\_from\_clip.scpt" kann so bleiben ;)
 
-<div markdown="0"><a href="/assets/files/2012-07-11/Upload-terminal.scpt" class="btn btn-success">download Upload-terminal.scpt</a></div>
-
-<div markdown="0"><a href="/assets/files/2012-07-11/save_img_from_clip.scpt" class="btn btn-success">download save_img_from_clip.scpt</a></div>
+<div class="download-button"><a href="/assets/files/2012-07-11/Upload-terminal.scpt" class="btn btn-success btn-lg">download Upload-terminal.scpt</a></div>
+<br>
+<div class="download-button"><a href="/assets/files/2012-07-11/save_img_from_clip.scpt" class="btn btn-success btn-lg">download save_img_from_clip.scpt</a></div>
 
 Am besten man speichert sie unter "/Users/\<username\>/Scripte" ab.
 
@@ -78,6 +78,3 @@ FillForm für diesen Dateinamen angeben. Wenn ihr es mögt werde ich die
 Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!
 
 
-<center>
-	<a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="/assets/images/cc/by-nc-sa.png" alt=""></a>
-</center>

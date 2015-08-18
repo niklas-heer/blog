@@ -83,10 +83,6 @@ der kostenlosen Variante bleiben, weil OSXFuse eben auch Open Source ist
 und dadurch natürlich auch wesentlich mehr Neuerungen und Anpassungen
 zulässt. Ich hoffe ich konnte euch weiterhelfen, bei fragen einfach ein
 Kommentar ;D&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -118,9 +114,9 @@ Tool dafür.&lt;/p&gt;
 
 &lt;p&gt;Upload-terminal muss auf jeden Fall angepasst werden. &amp;ldquo;save_img_from_clip.scpt&amp;rdquo; kann so bleiben ;)&lt;/p&gt;
 
-&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
-
-&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
+&lt;br&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
 
 &lt;p&gt;Am besten man speichert sie unter &amp;ldquo;/Users/&amp;lt;username&amp;gt;/Scripte&amp;rdquo; ab.&lt;/p&gt;
 
@@ -167,10 +163,6 @@ Upload-terminal Script anpassen, sodass dieses noch Argumente für den
 Dateinamen bekommt. Und im Textexpander Script müsste man noch ein
 FillForm für diesen Dateinamen angeben. Wenn ihr es mögt werde ich die
 Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
 </description>
     </item>
     

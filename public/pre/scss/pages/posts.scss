@@ -16,11 +16,11 @@
   .feat {
     text-align: center;
     border-bottom: 1px dotted $border-color;
-    //margin: 0 auto $spacing-l;
+    height: 0;
     a.popup {
       display: inline-block;
       position: relative;
-      top: .7em;
+      top: -0.5em;
       background: #fff;
       font-size: 130%;
       text-align: center;
@@ -44,7 +44,7 @@
   .page-date {
     display: inline-block;
     position: relative;
-    top: 1.1em;
+    top: -4.2em;
     background: $bg-color;
     font-family: $variant-family;
     font-size: 85%;
@@ -125,8 +125,8 @@
   } // end blockquote
 
   img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 
   }
 
@@ -219,6 +219,14 @@
       }
     }
 
+    .gist-file {
+      .gist-meta {
+        a:hover {
+          background-color: transparent;
+        }
+      }
+    }
+    
     .highlight:before {
       content: "";
     }

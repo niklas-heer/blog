@@ -1,7 +1,7 @@
 ---
 title: Kurze Info
 description: 'Kurze Info'
-date: 2012-06-13
+date: 2012-06-13T10:00:00
 tags: [news, discussion]
 ---
 

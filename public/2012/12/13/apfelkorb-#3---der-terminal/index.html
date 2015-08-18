@@ -14,13 +14,12 @@
     <meta name="generator" content="Hugo 0.14" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
-
-    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
-
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/vendor/highlight/styles/monokai_sublime.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
     
 </head>
 <body>
@@ -116,7 +115,11 @@
                 <div itemprop="articleBody">
                     <p>In diesem Video zeige ich euch wie man eine alternative Shell in Mac OS X verwendet und man damit auch besser arbeiten kann!</p>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/HvNfo9rRnQk" frameborder="0"> </iframe>
+<p><div class="video embed video-player">
+<iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/HvNfo9rRnQk" allowfullscreen frameborder="0">
+</iframe>
+</div>
+</p>
 
                 </div>
                 <div class="feat share">
@@ -144,12 +147,12 @@
 
                 
                 
-                    <a rel="next" href="http://localhost:1313/2012/12/13/apfelkorb-" id="next">
+                    <a rel="next" href="http://localhost:1313/2012/12/12/apfelkorb-" id="next">
                         <span class="nav-title nav-title-next">Older</span> <i class="fa fa-long-arrow-right"></i>
                     </a>
                 
                 
-                    <a rel="prev" href="http://localhost:1313/2012/12/22/apfelkorb-" id="prev">
+                    <a rel="prev" href="http://localhost:1313/2012/12/14/apfelkorb-4_java" id="prev">
                         <i class="fa fa-long-arrow-left"></i> <span class="nav-title nav-title-prev">Newer
                     </a>
                 
@@ -168,10 +171,16 @@
 
 <script src="http://localhost:1313/js/plugins/jquery.magnific-popup.js"></script>
 <script src="http://localhost:1313/js/plugins/jquery.fitvids.js"></script>
-<script src="http://localhost:1313/js/plugins/jquery.slimscroll.min.js"></script>
-
 <script src="http://localhost:1313/js/vendor/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+    $(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+</script>
 
 <script src="http://localhost:1313/js/main.js"></script>
 

@@ -41,7 +41,7 @@ nvram                  14362  1 thinkpad_acpi
 
 &lt;p&gt;Script an dem richtigen Ort herunterladen und ausführbar machen:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
 sudo chmod +x /usr/local/bin/thinklight
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -55,7 +55,7 @@ sudo chmod +x /usr/local/bin/thinklight
 
 &lt;p&gt;Und hier noch das Script selbst ;D&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
 if [ &amp;quot;$1&amp;quot; = &amp;quot;on&amp;quot; ]; then
     echo 1 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
 elif [ &amp;quot;$1&amp;quot; = &amp;quot;off&amp;quot; ]; then

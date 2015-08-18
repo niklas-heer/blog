@@ -33,7 +33,7 @@ So I looked at them all with the following requirements:
 - easy way to preview my work before uploading it to any server
 
 
-### ***[Nikola][nikola]***<br>
+### **[Nikola][nikola]**<br>
 I started with [Nikola][nikola] because it seemed like the perfect fit to me. It met all my requirements and also was very easy to install on [ArchLinux][arch] (```yaourt -S python-nikola-git```).
 So I headed right into it made a new git repo and ```nikola init``` to start a new [Nikola][nikola] instance.
 Okay now let's import my [Wordpress][wordpress] posts.<br>
@@ -42,52 +42,52 @@ Nope. Error. Damn it! [DuckDuckGo][duckduck] to the rescue!
 Okay installed [Nikola][nikola] from source on Github. Still that Error. 
 After a few hours of fumbling around I admitted defeat and moved on the the next generator on my list.
 
-### ***[Pelican][pelican]***<br>
+### **[Pelican][pelican]**<br>
 Aswell as [Nikola][nikola], [Pelican][pelican] checked off everything on my list so i also installed it. This time through [pip][pip]. Just for funsies.
 
-```
+``` bash
 pip install pelican markdown
 pelican-quickstart
 ```
 
 Okay so now let's import it.
 
-```
+``` bash
 pelican-import --wpfile --dir-page -o content -m markdown posts.xml
 ```
 
 Cool, so far so good let's look at my files.
 
-```
+``` bash
 python -m SimpleHTTPServer
 ```
 
 Doesn't work. Mhmmm... let's try Python2.
 
-```
+``` bash
 python2 -m SimpleHTTPServer
 ```
 
 Eureka! Long story short I really didn't like the way theming works in [Pelican][pelican]. Although I thought I could live with that, there where still some alternatives on my list and I thought: "Better make sure you like it, because you'll be using it for quite a while!"
 
-### ***[Pico][pico]***<br>
+### **[Pico][pico]**<br>
 Okay so I started on [Picos][pico] website. Oh my.. PHP? Why? Oh boy, now I have to set up a complete web developing environment for a "simple" static site generator? Nah!<br>
 So I searched for lightweight Web-Servers for in-place use.<br>
 I discovered [node-sng](http://code.ravelsoft.com/node-sng) and thanks to [Arch][arch] it was also easy to install.
 
 But at this point I thought I just drop [Pico][pico] because it is not practical for me and thus I wouldn't use it for long.
 
-### ***[Jekyll][jekyll]***<br>
+### **[Jekyll][jekyll]**<br>
 Let's try the clear mainstream option. Nice checks off everything on my list. 
 
-```
+``` bash
 gem update
 gem install jekyll
 ```
 
 Nice! So let's import everything. [Awesome Doc](http://import.jekyllrb.com/docs/wordpressdotcom/) is awesome!
 
-```
+``` bash
 ruby -rubygems -e 'require "jekyll-import";
     JekyllImport::Importers::WordpressDotCom.run({
       "source" => "wordpress.xml",
@@ -98,7 +98,7 @@ ruby -rubygems -e 'require "jekyll-import";
 
 Mhm.. now my posts are still in HTML - I want them in ```.md``` format. Okay Bash-Script to the rescue! (you need [pandoc](http://johnmacfarlane.net/pandoc/installing.html) to use this script)
 
-```
+``` bash
 #!/bin/bash
 FILES=/home/nh/Desktop/posts/*
 MDFOLDER=/home/nh/Desktop/mdfiles/
@@ -118,7 +118,7 @@ done
 
 Awesome! Let's compile them and look at what I've got so far.
 
-```
+``` bash
 jekyll serve -w
 ```
 

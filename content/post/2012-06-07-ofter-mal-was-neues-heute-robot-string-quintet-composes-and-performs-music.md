@@ -1,5 +1,6 @@
 ---
 title: 'Öfter mal was neues. Heute: "Robot string quintet composes and performs music"'
+slug: oemwn_Robot-string-quintet
 description: 'Öfter mal was neues. Heute: "Robot string quintet composes and performs music"'
 date: 2012-06-07
 tags: [stuff, discussion, video]

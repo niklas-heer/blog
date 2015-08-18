@@ -58,7 +58,6 @@ li {
 pre {
 	@include font-rem(16);
 	line-height: 1.5;
-	overflow-x: auto;
 	&::-webkit-scrollbar {
 		height: 14px;
 		background-color: #34362e;
@@ -72,14 +71,11 @@ pre {
 
 
 .highlight {
-	margin-bottom: 1.5em;
 	@include font(12);
-	color: #d0d0d0;
 	border: 1px solid darken($body-color, 5);
-	background-color: #272822;
 	pre {
-		position: relative;
-		margin: 0;
-		padding: 0.5em;
+		code {
+			padding: 1em;
+		}
 	}
 }

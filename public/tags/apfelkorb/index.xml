@@ -11,49 +11,62 @@
     
     <item>
       <title>Apfelkorb #10 - mit Moom Fenster verwalten</title>
-      <link>http://localhost:1313/2013/01/08/apfelkorb_moom</link>
+      <link>http://localhost:1313/2013/01/08/apfelkorb-10_moom</link>
       <pubDate>Tue, 08 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/01/08/apfelkorb_moom</guid>
+      <guid>http://localhost:1313/2013/01/08/apfelkorb-10_moom</guid>
       <description>&lt;p&gt;In diesem Video stelle ich euch die Software Moom vor, die euch euer Fenstermanagement erleichtert.&lt;/p&gt;
 
 &lt;p&gt;Hier könnt ihr es für ca. 7,50€ auf der Website bekommen bekommen: &lt;a href=&#34;http://bit.ly/11ceA9M&#34;&gt;http://bit.ly/11ceA9M&lt;/a&gt; &lt;br&gt;
 Oder im Appstore für 8,99€: &lt;a href=&#34;http://bit.ly/SicGSv&#34;&gt;http://bit.ly/SicGSv&lt;/a&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/Asi5wr_FerI&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/Asi5wr_FerI&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Apfelkorb #9 - Spotlight iStat Menus</title>
-      <link>http://localhost:1313/2012/12/28/apfelkorb-</link>
+      <link>http://localhost:1313/2012/12/28/apfelkorb-9_istat</link>
       <pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/28/apfelkorb-</guid>
+      <guid>http://localhost:1313/2012/12/28/apfelkorb-9_istat</guid>
       <description>&lt;p&gt;In diesem Video stelle ich das Programm iStat Menus für ca. 12€ vor.&lt;/p&gt;
 
 &lt;p&gt;Hier könnt ihr es bekommen: &lt;a href=&#34;http://bit.ly/TnymL2&#34;&gt;http://bit.ly/TnymL2&lt;/a&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/\_HR3QTYlqWg&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/_HR3QTYlqWg&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Apfelkorb #8 - Pimp my Finder</title>
-      <link>http://localhost:1313/2012/12/23/apfelkorb-</link>
+      <link>http://localhost:1313/2012/12/23/apfelkorb-8_finder</link>
       <pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/23/apfelkorb-</guid>
+      <guid>http://localhost:1313/2012/12/23/apfelkorb-8_finder</guid>
       <description>&lt;p&gt;In dieser Folge zeige ich euch wie ihr versteckte Funktionen im Finder aktiviert, eure QuickLook-Anzeige erweitert und ein paar Finder-Alternativen.&lt;/p&gt;
 
 &lt;p&gt;Folge in dem ich euch den Befehl zeige Dateien sichtbar zu machen: &lt;a href=&#34;http://bit.ly/TZcN0i&#34;&gt;http://bit.ly/TZcN0i&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;QuickLook Text selektieren:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Befehl zum anschalten: &lt;br&gt;
-&lt;code&gt;defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder&lt;/code&gt;
-Befehl zum ausschalten: &lt;br&gt;
-&lt;code&gt;defaults delete com.apple.finder QLEnableTextSelection; killall Finder&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Befehl zum anschalten: &lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Befehl zum ausschalten: &lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;defaults delete com.apple.finder QLEnableTextSelection; killall Finder
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;QuickLook Plugin installieren:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -71,45 +84,20 @@ Total Finder (ca. 13,50€) - &lt;a href=&#34;http://totalfinder.binaryage.com/&
 Path Finder (ca. 30€) - &lt;a href=&#34;http://cocoatech.com/pathfinder/&#34;&gt;http://cocoatech.com/pathfinder/&lt;/a&gt; &lt;br&gt;
 ForkLift (ca. 15€) - &lt;a href=&#34;http://www.binarynights.com/&#34;&gt;http://www.binarynights.com/&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/TmPBrhVv\_uY&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Apfelkorb #5 - Screensaver für den MAC</title>
-      <link>http://localhost:1313/2012/12/22/apfelkorb-</link>
-      <pubDate>Sat, 22 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/2012/12/22/apfelkorb-</guid>
-      <description>&lt;p&gt;In diesem Video zeige ich euch ein paar tolle Screensaver und wie man sie installiert. (OSX - Mountain Lion)&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;FlipClock&lt;/em&gt;: &lt;a href=&#34;http://bit.ly/QPavFk&#34;&gt;http://bit.ly/QPavFk&lt;/a&gt; &lt;br&gt;
-&lt;em&gt;PolarClock&lt;/em&gt;: &lt;a href=&#34;http://bit.ly/Ttk7l9&#34;&gt;http://bit.ly/Ttk7l9&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/LOpgRIgn7wo&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Apfelkorb #6 - Das Google Chrome Sound Problem heben</title>
-      <link>http://localhost:1313/2012/12/22/apfelkorb-</link>
-      <pubDate>Sat, 22 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/2012/12/22/apfelkorb-</guid>
-      <description>&lt;p&gt;In diesem Video zeige ich euch wie ihr ein Sound-Problem in Google Chrome beheben könnt.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Der Link&lt;/em&gt;: &lt;a href=&#34;chrome://plugins&#34;&gt;chrome://plugins&lt;/a&gt;&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/BB8QWjrmlGg&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/TmPBrhVv_uY&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Apfelkorb #7 - Dein Freund der Terminal</title>
-      <link>http://localhost:1313/2012/12/22/apfelkorb-</link>
+      <link>http://localhost:1313/2012/12/22/apfelkorb-7_terminal</link>
       <pubDate>Sat, 22 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/22/apfelkorb-</guid>
+      <guid>http://localhost:1313/2012/12/22/apfelkorb-7_terminal</guid>
       <description>&lt;p&gt;In diesem Video zeige ich euch, wie ihr lange unangenehme Arbeit einfach
 von eurem Terminal verrichten lassen könnt!&lt;/p&gt;
 
@@ -125,57 +113,80 @@ zu öffnen)&lt;/p&gt;
 
 &lt;p&gt;Die Befehle die in .zshrc in deinem Home-Verzeichnis rein kommen: &lt;a href=&#34;http://bit.ly/127Cgel&#34;&gt;http://bit.ly/127Cgel&lt;/a&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/dt6EbRIpm2M&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/dt6EbRIpm2M&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Apfelkorb #3 - Der Terminal</title>
-      <link>http://localhost:1313/2012/12/13/apfelkorb-</link>
-      <pubDate>Thu, 13 Dec 2012 00:00:00 +0000</pubDate>
+      <title>Apfelkorb #6 - Das Google Chrome Sound Problem heben</title>
+      <link>http://localhost:1313/2012/12/21/apfelkorb-6_chrome</link>
+      <pubDate>Fri, 21 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/13/apfelkorb-</guid>
-      <description>&lt;p&gt;In diesem Video zeige ich euch wie man eine alternative Shell in Mac OS X verwendet und man damit auch besser arbeiten kann!&lt;/p&gt;
+      <guid>http://localhost:1313/2012/12/21/apfelkorb-6_chrome</guid>
+      <description>&lt;p&gt;In diesem Video zeige ich euch wie ihr ein Sound-Problem in Google Chrome beheben könnt.&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/HvNfo9rRnQk&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;em&gt;Der Link&lt;/em&gt;: &lt;a href=&#34;chrome://plugins&#34;&gt;chrome://plugins&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/BB8QWjrmlGg&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apfelkorb #5 - Screensaver für den MAC</title>
+      <link>http://localhost:1313/2012/12/20/apfelkorb-5_screensaver</link>
+      <pubDate>Thu, 20 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/12/20/apfelkorb-5_screensaver</guid>
+      <description>&lt;p&gt;In diesem Video zeige ich euch ein paar tolle Screensaver und wie man sie installiert. (OSX - Mountain Lion)&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;FlipClock&lt;/em&gt;: &lt;a href=&#34;http://bit.ly/QPavFk&#34;&gt;http://bit.ly/QPavFk&lt;/a&gt; &lt;br&gt;
+&lt;em&gt;PolarClock&lt;/em&gt;: &lt;a href=&#34;http://bit.ly/Ttk7l9&#34;&gt;http://bit.ly/Ttk7l9&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/LOpgRIgn7wo&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Apfelkorb #4 - Java JRE6 in OS X Mountain Lion</title>
-      <link>http://localhost:1313/2012/12/13/apfelkorb-</link>
-      <pubDate>Thu, 13 Dec 2012 00:00:00 +0000</pubDate>
+      <link>http://localhost:1313/2012/12/14/apfelkorb-4_java</link>
+      <pubDate>Fri, 14 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/13/apfelkorb-</guid>
+      <guid>http://localhost:1313/2012/12/14/apfelkorb-4_java</guid>
       <description>&lt;p&gt;In diesem Video zeige ich euch wie ihr in OS X Mountain Lion von Java JRE 1.7 auf Java JRE 1.6 umstellt und auch wie ihr das ganze wieder rückgängig machen könnt!&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/4noAhK05frg&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4noAhK05frg&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
-      <title>Apfelkorb #1 - Automator</title>
-      <link>http://localhost:1313/2012/12/12/apfelkorb-</link>
-      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
+      <title>Apfelkorb #3 - Der Terminal</title>
+      <link>http://localhost:1313/2012/12/13/apfelkorb-3_terminal</link>
+      <pubDate>Thu, 13 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/12/apfelkorb-</guid>
-      <description>&lt;p&gt;In diesem Video zeige ich euch was man mit dem in OSX integierten
-Automator alles machen kann.&lt;/p&gt;
+      <guid>http://localhost:1313/2012/12/13/apfelkorb-3_terminal</guid>
+      <description>&lt;p&gt;In diesem Video zeige ich euch wie man eine alternative Shell in Mac OS X verwendet und man damit auch besser arbeiten kann!&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/GuhbFHFZkY0&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Apfelkorb #2 - Mac Bar organisieren</title>
-      <link>http://localhost:1313/2012/12/12/apfelkorb-</link>
-      <pubDate>Wed, 12 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/2012/12/12/apfelkorb-</guid>
-      <description>&lt;p&gt;In diesem Video zeige ich euch das Programm Bartender und wie ihr damit
-euern Desktop schön und sauber haltet.&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/0t5H4Qu67Tw&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/HvNfo9rRnQk&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -195,6 +206,40 @@ Ich werde Programme vorstellen, Tipps geben und vielleicht auch das ein oder and
 &lt;p&gt;Falls ihr einen Themen-Vorschlag hab, gerne her damit! :)&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;div markdown=&#34;0&#34;&gt;&lt;a href=&#34;https://github.com/niklas-heer/awesome-password-change&#34; class=&#34;btn btn-success&#34;&gt;Zum Apfelkorb&lt;/a&gt;&lt;/div&gt;&lt;/center&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apfelkorb #2 - Mac Bar organisieren</title>
+      <link>http://localhost:1313/2012/12/11/apfelkorb-2_mac-bar</link>
+      <pubDate>Tue, 11 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/12/11/apfelkorb-2_mac-bar</guid>
+      <description>&lt;p&gt;In diesem Video zeige ich euch das Programm Bartender und wie ihr damit
+euern Desktop schön und sauber haltet.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/0t5H4Qu67Tw&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Apfelkorb #1 - Automator</title>
+      <link>http://localhost:1313/2012/12/10/apfelkorb-1_automator</link>
+      <pubDate>Mon, 10 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/12/10/apfelkorb-1_automator</guid>
+      <description>&lt;p&gt;In diesem Video zeige ich euch was man mit dem in OSX integierten
+Automator alles machen kann.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/GuhbFHFZkY0&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     

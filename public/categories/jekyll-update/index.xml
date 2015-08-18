@@ -49,7 +49,7 @@ There is &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;, 
 &lt;li&gt;easy way to preview my work before uploading it to any server&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;nikola-nikola-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;nikola-nikola-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
 
 &lt;p&gt;I started with &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt; because it seemed like the perfect fit to me. It met all my requirements and also was very easy to install on &lt;a href=&#34;https://www.archlinux.org/&#34;&gt;ArchLinux&lt;/a&gt; (&lt;code&gt;yaourt -S python-nikola-git&lt;/code&gt;).
 So I headed right into it made a new git repo and &lt;code&gt;nikola init&lt;/code&gt; to start a new &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt; instance.
@@ -59,32 +59,32 @@ Nope. Error. Damn it! &lt;a href=&#34;https://duckduckgo.com/&#34;&gt;DuckDuckGo
 Okay installed &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt; from source on Github. Still that Error.
 After a few hours of fumbling around I admitted defeat and moved on the the next generator on my list.&lt;/p&gt;
 
-&lt;h3 id=&#34;pelican-pelican-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pelican-pelican-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
 
 &lt;p&gt;Aswell as &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt;, &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt; checked off everything on my list so i also installed it. This time through &lt;a href=&#34;https://pypi.python.org/pypi/pip/&#34;&gt;pip&lt;/a&gt;. Just for funsies.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pip install pelican markdown
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip install pelican markdown
 pelican-quickstart
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Okay so now let&amp;rsquo;s import it.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pelican-import --wpfile --dir-page -o content -m markdown posts.xml
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pelican-import --wpfile --dir-page -o content -m markdown posts.xml
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Cool, so far so good let&amp;rsquo;s look at my files.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;python -m SimpleHTTPServer
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;python -m SimpleHTTPServer
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Doesn&amp;rsquo;t work. Mhmmm&amp;hellip; let&amp;rsquo;s try Python2.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;python2 -m SimpleHTTPServer
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;python2 -m SimpleHTTPServer
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Eureka! Long story short I really didn&amp;rsquo;t like the way theming works in &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;. Although I thought I could live with that, there where still some alternatives on my list and I thought: &amp;ldquo;Better make sure you like it, because you&amp;rsquo;ll be using it for quite a while!&amp;rdquo;&lt;/p&gt;
 
-&lt;h3 id=&#34;pico-pico-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://picocms.org/&#34;&gt;Pico&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pico-pico-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://picocms.org/&#34;&gt;Pico&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
 
 &lt;p&gt;Okay so I started on &lt;a href=&#34;http://picocms.org/&#34;&gt;Picos&lt;/a&gt; website. Oh my.. PHP? Why? Oh boy, now I have to set up a complete web developing environment for a &amp;ldquo;simple&amp;rdquo; static site generator? Nah!&lt;br&gt;
 So I searched for lightweight Web-Servers for in-place use.&lt;br&gt;
@@ -92,17 +92,17 @@ I discovered &lt;a href=&#34;http://code.ravelsoft.com/node-sng&#34;&gt;node-sng
 
 &lt;p&gt;But at this point I thought I just drop &lt;a href=&#34;http://picocms.org/&#34;&gt;Pico&lt;/a&gt; because it is not practical for me and thus I wouldn&amp;rsquo;t use it for long.&lt;/p&gt;
 
-&lt;h3 id=&#34;jekyll-jekyll-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;jekyll-jekyll-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
 
 &lt;p&gt;Let&amp;rsquo;s try the clear mainstream option. Nice checks off everything on my list.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gem update
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem update
 gem install jekyll
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Nice! So let&amp;rsquo;s import everything. &lt;a href=&#34;http://import.jekyllrb.com/docs/wordpressdotcom/&#34;&gt;Awesome Doc&lt;/a&gt; is awesome!&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;ruby -rubygems -e &#39;require &amp;quot;jekyll-import&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ruby -rubygems -e &#39;require &amp;quot;jekyll-import&amp;quot;;
     JekyllImport::Importers::WordpressDotCom.run({
       &amp;quot;source&amp;quot; =&amp;gt; &amp;quot;wordpress.xml&amp;quot;,
       &amp;quot;no_fetch_images&amp;quot; =&amp;gt; false,
@@ -112,7 +112,7 @@ gem install jekyll
 
 &lt;p&gt;Mhm.. now my posts are still in HTML - I want them in &lt;code&gt;.md&lt;/code&gt; format. Okay Bash-Script to the rescue! (you need &lt;a href=&#34;http://johnmacfarlane.net/pandoc/installing.html&#34;&gt;pandoc&lt;/a&gt; to use this script)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 FILES=/home/nh/Desktop/posts/*
 MDFOLDER=/home/nh/Desktop/mdfiles/
 for f in $FILES
@@ -131,7 +131,7 @@ done
 
 &lt;p&gt;Awesome! Let&amp;rsquo;s compile them and look at what I&amp;rsquo;ve got so far.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;jekyll serve -w
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jekyll serve -w
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Oh it looks kind of messy. The file header it not right. Okay I will go through my posts I also need to change some image urls and stuff.&lt;br&gt;

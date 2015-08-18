@@ -1,5 +1,6 @@
 ---
 title: 'Apfelkorb #7 - Dein Freund der Terminal'
+slug: apfelkorb-7_Terminal
 description: 'Apfelkorb #7 - Dein Freund der Terminal'
 date: 2012-12-22
 tags: [youtube, apfelkorb]
@@ -20,4 +21,4 @@ zu öffnen)
 
 Die Befehle die in .zshrc in deinem Home-Verzeichnis rein kommen: <http://bit.ly/127Cgel>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/dt6EbRIpm2M" frameborder="0"> </iframe>
+{{< youtube dt6EbRIpm2M >}}

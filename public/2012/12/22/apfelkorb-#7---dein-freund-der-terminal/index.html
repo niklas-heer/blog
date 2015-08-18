@@ -14,13 +14,12 @@
     <meta name="generator" content="Hugo 0.14" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
-
-    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
-
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/vendor/highlight/styles/monokai_sublime.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
     
 </head>
 <body>
@@ -129,7 +128,11 @@ zu öffnen)</p>
 
 <p>Die Befehle die in .zshrc in deinem Home-Verzeichnis rein kommen: <a href="http://bit.ly/127Cgel">http://bit.ly/127Cgel</a></p>
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/dt6EbRIpm2M" frameborder="0"> </iframe>
+<p><div class="video embed video-player">
+<iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/dt6EbRIpm2M" allowfullscreen frameborder="0">
+</iframe>
+</div>
+</p>
 
                 </div>
                 <div class="feat share">
@@ -181,10 +184,16 @@ zu öffnen)</p>
 
 <script src="http://localhost:1313/js/plugins/jquery.magnific-popup.js"></script>
 <script src="http://localhost:1313/js/plugins/jquery.fitvids.js"></script>
-<script src="http://localhost:1313/js/plugins/jquery.slimscroll.min.js"></script>
-
 <script src="http://localhost:1313/js/vendor/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+    $(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+</script>
 
 <script src="http://localhost:1313/js/main.js"></script>
 

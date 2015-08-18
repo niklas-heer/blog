@@ -14,13 +14,12 @@
     <meta name="generator" content="Hugo 0.14" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
-
-    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
-
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/vendor/highlight/styles/monokai_sublime.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
     
 </head>
 <body>
@@ -168,7 +167,8 @@ alle profitieren!</p>
 
         <footer>
 	
-	<small>© 2015 Niklas Heer<br /> <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA</a> Some rights reserved.</small>
+	<small>© 2015 Niklas Heer<br /> <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="/assets/images/cc/by-nc-sa.png" alt="CC BY-NC-SA" />
+</a></small>
 	
 </footer>
     </div>
@@ -178,10 +178,16 @@ alle profitieren!</p>
 
 <script src="http://localhost:1313/js/plugins/jquery.magnific-popup.js"></script>
 <script src="http://localhost:1313/js/plugins/jquery.fitvids.js"></script>
-<script src="http://localhost:1313/js/plugins/jquery.slimscroll.min.js"></script>
-
 <script src="http://localhost:1313/js/vendor/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+    $(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+</script>
 
 <script src="http://localhost:1313/js/main.js"></script>
 

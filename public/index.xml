@@ -31,7 +31,7 @@
 &lt;p&gt;You can host your site on &lt;a href=&#34;https://about.gitlab.com/&#34;&gt;Gitlab&lt;/a&gt;, &lt;a href=&#34;https://github.com/&#34;&gt;Github&lt;/a&gt; or something else - just like I do.
 But if you want to start from scratch you can make a folder and initialize git in it, after that you can copy over your Jekyll files.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;mkdir jekyll &amp;amp;&amp;amp; cd jekyll
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;mkdir jekyll &amp;amp;&amp;amp; cd jekyll
 git init
 cp -r /path/to/old_jekyll_folder /path/to/jekyll
 git add .
@@ -43,25 +43,25 @@ git commit -am &amp;quot;initial commit.&amp;quot;
 &lt;p&gt;Now we need a new repository on your web-server, but it doesn&amp;rsquo;t need to be inside your web directory - just somewhere inside the system. I assume you have configured your public-key to work as a login and you also need write-privileges to the web directory with this user.&lt;br&gt;
 First we need to initialize the repository:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#Initialized empty Git repository in /home/nh/website.git/
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#Initialized empty Git repository in /home/nh/website.git/
 mkdir website.git &amp;amp;&amp;amp; cd website.git
 git init --bare
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Then we need define a post-receive hook that checks out the latest changes into the web-servers DocumentRoot (this directory must exist; Git will not create it for you):&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;nano hooks/post-receive
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nano hooks/post-receive
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Put this inside the file:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
 GIT_WORK_TREE=/var/www/www.example.org git checkout -f
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that we need to enable the hook which will be triggered every time we push our changes to this repository. It will apply every commit to the directory which you have defined inside the post-receive hook.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;chmod +x hooks/post-receive
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;chmod +x hooks/post-receive
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;We are now done on the server and we only need to set up the update process on the local system.&lt;/p&gt;
@@ -70,19 +70,21 @@ GIT_WORK_TREE=/var/www/www.example.org git checkout -f
 
 &lt;p&gt;First we need to edit our git config file in our local repository to add the remote server.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;nano .git/config
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;nano .git/config
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Add this to the file:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;[remote &amp;quot;production&amp;quot;]
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;[remote &amp;quot;production&amp;quot;]
     url = username@webserver:/home/nh/website.git
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;That&amp;rsquo;s it! Now you have set up your deployment! To deploy your jekyll changes is now as easy as this:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;git push production
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git push production
 &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -109,7 +111,7 @@ This is the fastest site I&#39;ve ever built.
 &lt;p&gt;Now I needed some optimization of my servers cache, for this I needed to use the &lt;code&gt;mod_expires&lt;/code&gt; module of my apache installation.&lt;br&gt;
 I made a new file &lt;code&gt;/etc/httpd/conf.d/expires.conf&lt;/code&gt; with the following content:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;ExpiresActive On
+&lt;pre&gt;&lt;code class=&#34;language-apache&#34;&gt;ExpiresActive On
 ExpiresByType image/gif &amp;quot;access plus 1 month&amp;quot;
 ExpiresByType image/png &amp;quot;access plus 1 month&amp;quot;
 ExpiresByType image/jpeg &amp;quot;access plus 1 month&amp;quot;
@@ -127,18 +129,18 @@ ExpiresByType application/x-shockwave-flash &amp;quot;access plus 1 month&amp;qu
 
 &lt;p&gt;You can make images smaller by using &lt;a href=&#34;https://github.com/toy/image_optim&#34;&gt;image_optim&lt;/a&gt;! This is a great tool and fairly simple to install:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gem install image_optim image_optim_pack
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem install image_optim image_optim_pack
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;If you want the full suit you also need to do this on ArchLinux:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;yaourt -S pngout
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;yaourt -S pngout
 sudo npm install -g svgo
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that you can simply go to the directory in which you stored your pictures and let &lt;a href=&#34;https://github.com/toy/image_optim&#34;&gt;image_optim&lt;/a&gt; run through all subdirectories and files recursively with this command:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# WARNING: This could take a while!
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;# WARNING: This could take a while!
 image_optim -r .
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -197,9 +199,9 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/MrRio/vtop&#34;&gt;vtop&lt;/a&gt; looks much cleaner than htop. One look and you exactly know whats going on on the system! You can list processes by CPU or Memory usage which is really awesome, you can navigate with your arrow keys or &lt;code&gt;k&lt;/code&gt; and &lt;code&gt;j&lt;/code&gt; which is also nice and the best of all you can simply highlight/select a process and kill it by typing &lt;code&gt;dd&lt;/code&gt;!&lt;/p&gt;
 
-&lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt;(you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
+&lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt; (you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo npm install -g vtop
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo npm install -g vtop
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that you can execute it by typing &lt;code&gt;vtop&lt;/code&gt;&lt;/p&gt;
@@ -250,7 +252,7 @@ There is &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;, 
 &lt;li&gt;easy way to preview my work before uploading it to any server&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;nikola-nikola-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;nikola-nikola-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
 
 &lt;p&gt;I started with &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt; because it seemed like the perfect fit to me. It met all my requirements and also was very easy to install on &lt;a href=&#34;https://www.archlinux.org/&#34;&gt;ArchLinux&lt;/a&gt; (&lt;code&gt;yaourt -S python-nikola-git&lt;/code&gt;).
 So I headed right into it made a new git repo and &lt;code&gt;nikola init&lt;/code&gt; to start a new &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt; instance.
@@ -260,32 +262,32 @@ Nope. Error. Damn it! &lt;a href=&#34;https://duckduckgo.com/&#34;&gt;DuckDuckGo
 Okay installed &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt; from source on Github. Still that Error.
 After a few hours of fumbling around I admitted defeat and moved on the the next generator on my list.&lt;/p&gt;
 
-&lt;h3 id=&#34;pelican-pelican-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pelican-pelican-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
 
 &lt;p&gt;Aswell as &lt;a href=&#34;http://getnikola.com/&#34;&gt;Nikola&lt;/a&gt;, &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt; checked off everything on my list so i also installed it. This time through &lt;a href=&#34;https://pypi.python.org/pypi/pip/&#34;&gt;pip&lt;/a&gt;. Just for funsies.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pip install pelican markdown
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pip install pelican markdown
 pelican-quickstart
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Okay so now let&amp;rsquo;s import it.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pelican-import --wpfile --dir-page -o content -m markdown posts.xml
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pelican-import --wpfile --dir-page -o content -m markdown posts.xml
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Cool, so far so good let&amp;rsquo;s look at my files.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;python -m SimpleHTTPServer
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;python -m SimpleHTTPServer
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Doesn&amp;rsquo;t work. Mhmmm&amp;hellip; let&amp;rsquo;s try Python2.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;python2 -m SimpleHTTPServer
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;python2 -m SimpleHTTPServer
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Eureka! Long story short I really didn&amp;rsquo;t like the way theming works in &lt;a href=&#34;http://blog.getpelican.com/&#34;&gt;Pelican&lt;/a&gt;. Although I thought I could live with that, there where still some alternatives on my list and I thought: &amp;ldquo;Better make sure you like it, because you&amp;rsquo;ll be using it for quite a while!&amp;rdquo;&lt;/p&gt;
 
-&lt;h3 id=&#34;pico-pico-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://picocms.org/&#34;&gt;Pico&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;pico-pico-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://picocms.org/&#34;&gt;Pico&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
 
 &lt;p&gt;Okay so I started on &lt;a href=&#34;http://picocms.org/&#34;&gt;Picos&lt;/a&gt; website. Oh my.. PHP? Why? Oh boy, now I have to set up a complete web developing environment for a &amp;ldquo;simple&amp;rdquo; static site generator? Nah!&lt;br&gt;
 So I searched for lightweight Web-Servers for in-place use.&lt;br&gt;
@@ -293,17 +295,17 @@ I discovered &lt;a href=&#34;http://code.ravelsoft.com/node-sng&#34;&gt;node-sng
 
 &lt;p&gt;But at this point I thought I just drop &lt;a href=&#34;http://picocms.org/&#34;&gt;Pico&lt;/a&gt; because it is not practical for me and thus I wouldn&amp;rsquo;t use it for long.&lt;/p&gt;
 
-&lt;h3 id=&#34;jekyll-jekyll-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;em&gt;&lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;&lt;/em&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
+&lt;h3 id=&#34;jekyll-jekyll-br:d5a808063d1d9dde412fd5be3cf23a83&#34;&gt;&lt;strong&gt;&lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;&lt;br&gt;&lt;/h3&gt;
 
 &lt;p&gt;Let&amp;rsquo;s try the clear mainstream option. Nice checks off everything on my list.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;gem update
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;gem update
 gem install jekyll
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Nice! So let&amp;rsquo;s import everything. &lt;a href=&#34;http://import.jekyllrb.com/docs/wordpressdotcom/&#34;&gt;Awesome Doc&lt;/a&gt; is awesome!&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;ruby -rubygems -e &#39;require &amp;quot;jekyll-import&amp;quot;;
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;ruby -rubygems -e &#39;require &amp;quot;jekyll-import&amp;quot;;
     JekyllImport::Importers::WordpressDotCom.run({
       &amp;quot;source&amp;quot; =&amp;gt; &amp;quot;wordpress.xml&amp;quot;,
       &amp;quot;no_fetch_images&amp;quot; =&amp;gt; false,
@@ -313,7 +315,7 @@ gem install jekyll
 
 &lt;p&gt;Mhm.. now my posts are still in HTML - I want them in &lt;code&gt;.md&lt;/code&gt; format. Okay Bash-Script to the rescue! (you need &lt;a href=&#34;http://johnmacfarlane.net/pandoc/installing.html&#34;&gt;pandoc&lt;/a&gt; to use this script)&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/bin/bash
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/bash
 FILES=/home/nh/Desktop/posts/*
 MDFOLDER=/home/nh/Desktop/mdfiles/
 for f in $FILES
@@ -332,7 +334,7 @@ done
 
 &lt;p&gt;Awesome! Let&amp;rsquo;s compile them and look at what I&amp;rsquo;ve got so far.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;jekyll serve -w
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;jekyll serve -w
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Oh it looks kind of messy. The file header it not right. Okay I will go through my posts I also need to change some image urls and stuff.&lt;br&gt;
@@ -504,21 +506,17 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
 
 &lt;h3 id=&#34;installation:66744ec3ab086fa0a24dec09d9a0a5b4&#34;&gt;Installation:&lt;/h3&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo add-apt-repository ppa:elementary-os/daily
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo add-apt-repository ppa:elementary-os/daily
 sudo apt-get update
 sudo apt-get install pantheon-files
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Danach solltet ihr es per Terminal starten, da der Ubuntu-Launcher beide Explorer unter demselben Namen führt.&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;pantheon-files
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;pantheon-files
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Danach könnt ihr den Explorer in eurem Launcher verankern und dann mit Strg+C den Prozess beenden.&lt;/p&gt;
-
-&lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://creativecommons.org/licenses/by-nc-sa/3.0/&#34;&gt;&lt;img id=&#34;cc&#34; src=&#34;http://localhost:1313/assets/images/cc/by-nc-sa.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-&lt;/center&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -554,7 +552,7 @@ nvram                  14362  1 thinkpad_acpi
 
 &lt;p&gt;Script an dem richtigen Ort herunterladen und ausführbar machen:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
 sudo chmod +x /usr/local/bin/thinklight
 &lt;/code&gt;&lt;/pre&gt;
 
@@ -568,7 +566,7 @@ sudo chmod +x /usr/local/bin/thinklight
 
 &lt;p&gt;Und hier noch das Script selbst ;D&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;#!/bin/sh
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;#!/bin/sh
 if [ &amp;quot;$1&amp;quot; = &amp;quot;on&amp;quot; ]; then
     echo 1 &amp;gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
 elif [ &amp;quot;$1&amp;quot; = &amp;quot;off&amp;quot; ]; then
@@ -596,61 +594,62 @@ fi
     
     <item>
       <title>Apfelkorb #10 - mit Moom Fenster verwalten</title>
-      <link>http://localhost:1313/2013/01/08/apfelkorb_moom</link>
+      <link>http://localhost:1313/2013/01/08/apfelkorb-10_moom</link>
       <pubDate>Tue, 08 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/01/08/apfelkorb_moom</guid>
+      <guid>http://localhost:1313/2013/01/08/apfelkorb-10_moom</guid>
       <description>&lt;p&gt;In diesem Video stelle ich euch die Software Moom vor, die euch euer Fenstermanagement erleichtert.&lt;/p&gt;
 
 &lt;p&gt;Hier könnt ihr es für ca. 7,50€ auf der Website bekommen bekommen: &lt;a href=&#34;http://bit.ly/11ceA9M&#34;&gt;http://bit.ly/11ceA9M&lt;/a&gt; &lt;br&gt;
 Oder im Appstore für 8,99€: &lt;a href=&#34;http://bit.ly/SicGSv&#34;&gt;http://bit.ly/SicGSv&lt;/a&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/Asi5wr_FerI&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/Asi5wr_FerI&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Apfelkorb #9 - Spotlight iStat Menus</title>
-      <link>http://localhost:1313/2012/12/28/apfelkorb-</link>
+      <link>http://localhost:1313/2012/12/28/apfelkorb-9_istat</link>
       <pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/28/apfelkorb-</guid>
+      <guid>http://localhost:1313/2012/12/28/apfelkorb-9_istat</guid>
       <description>&lt;p&gt;In diesem Video stelle ich das Programm iStat Menus für ca. 12€ vor.&lt;/p&gt;
 
 &lt;p&gt;Hier könnt ihr es bekommen: &lt;a href=&#34;http://bit.ly/TnymL2&#34;&gt;http://bit.ly/TnymL2&lt;/a&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/\_HR3QTYlqWg&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>Ausblick #1 - Neue Homepage und neues Design</title>
-      <link>http://localhost:1313/2012/12/23/ausblick-</link>
-      <pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/2012/12/23/ausblick-</guid>
-      <description>&lt;p&gt;In diesem Video gebe ich euch ein Update über meinen Kanal und einen Ausblick auf kommende Projekte von mir.&lt;/p&gt;
-
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/2U9EtWoDi7A&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/_HR3QTYlqWg&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Apfelkorb #8 - Pimp my Finder</title>
-      <link>http://localhost:1313/2012/12/23/apfelkorb-</link>
+      <link>http://localhost:1313/2012/12/23/apfelkorb-8_finder</link>
       <pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/23/apfelkorb-</guid>
+      <guid>http://localhost:1313/2012/12/23/apfelkorb-8_finder</guid>
       <description>&lt;p&gt;In dieser Folge zeige ich euch wie ihr versteckte Funktionen im Finder aktiviert, eure QuickLook-Anzeige erweitert und ein paar Finder-Alternativen.&lt;/p&gt;
 
 &lt;p&gt;Folge in dem ich euch den Befehl zeige Dateien sichtbar zu machen: &lt;a href=&#34;http://bit.ly/TZcN0i&#34;&gt;http://bit.ly/TZcN0i&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;QuickLook Text selektieren:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Befehl zum anschalten: &lt;br&gt;
-&lt;code&gt;defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder&lt;/code&gt;
-Befehl zum ausschalten: &lt;br&gt;
-&lt;code&gt;defaults delete com.apple.finder QLEnableTextSelection; killall Finder&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Befehl zum anschalten: &lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;defaults write com.apple.finder QLEnableTextSelection -bool TRUE; killall Finder
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Befehl zum ausschalten: &lt;br&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;defaults delete com.apple.finder QLEnableTextSelection; killall Finder
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;em&gt;QuickLook Plugin installieren:&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
 
@@ -668,7 +667,27 @@ Total Finder (ca. 13,50€) - &lt;a href=&#34;http://totalfinder.binaryage.com/&
 Path Finder (ca. 30€) - &lt;a href=&#34;http://cocoatech.com/pathfinder/&#34;&gt;http://cocoatech.com/pathfinder/&lt;/a&gt; &lt;br&gt;
 ForkLift (ca. 15€) - &lt;a href=&#34;http://www.binarynights.com/&#34;&gt;http://www.binarynights.com/&lt;/a&gt; &lt;br&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/TmPBrhVv\_uY&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/TmPBrhVv_uY&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ausblick #1 - Neue Homepage und neues Design</title>
+      <link>http://localhost:1313/2012/12/23/ausblick-1_neue-homepage</link>
+      <pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://localhost:1313/2012/12/23/ausblick-1_neue-homepage</guid>
+      <description>&lt;p&gt;In diesem Video gebe ich euch ein Update über meinen Kanal und einen Ausblick auf kommende Projekte von mir.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/2U9EtWoDi7A&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     

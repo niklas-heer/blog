@@ -1,7 +1,8 @@
 ---
 title: 'Öfter mal was neues. Heute: "A Floating Chinese Spherical Car Created by Volkswagen"'
+slug: oemwn_Floating-Car
 description: 'Öfter mal was neues. Heute: "A Floating Chinese Spherical Car Created by Volkswagen"'
-date: 2012-06-14
+date: 2012-06-14T10:00:00
 tags: [stuff, discussion, video]
 ---
 
@@ -14,6 +15,6 @@ Gewonnen hat eine junge Frau die Animation und Game Design an der [Chengdu city
 
 Ihr Design ist sehr futuristisch und kommt ohne Räder aus.
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/kbytE\_FAZuA" frameborder="0"> </iframe>
+{{< youtube JWh2qT9yiTo >}}
 
 [Quelle: [Micgadget](http://micgadget.com/25621/a-floating-chinese-spherical-car-created-by-a-volkswagen-video/)]

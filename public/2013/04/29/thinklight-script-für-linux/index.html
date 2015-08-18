@@ -14,13 +14,12 @@
     <meta name="generator" content="Hugo 0.14" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
-
-    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
-
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,300italic,400italic,700italic' rel='stylesheet' type='text/css'>
 
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/vendor/highlight/styles/monokai_sublime.css" />
+
+    <link rel="stylesheet" type="text/css" href="http://localhost:1313/css/main.css" />
     
 </head>
 <body>
@@ -140,7 +139,7 @@ nvram                  14362  1 thinkpad_acpi
 
 <p>Script an dem richtigen Ort herunterladen und ausführbar machen:</p>
 
-<pre><code>sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
+<pre><code class="language-bash">sudo wget -O /usr/local/bin/thinklight https://gist.github.com/niklas-heer/5490084/raw/990ab4c0ec70a39791b4369fddc2e12498c82cd0/thinklight
 sudo chmod +x /usr/local/bin/thinklight
 </code></pre>
 
@@ -154,7 +153,7 @@ sudo chmod +x /usr/local/bin/thinklight
 
 <p>Und hier noch das Script selbst ;D</p>
 
-<pre><code>#!/bin/sh
+<pre><code class="language-bash">#!/bin/sh
 if [ &quot;$1&quot; = &quot;on&quot; ]; then
     echo 1 &gt; /sys/devices/platform/thinkpad_acpi/leds/tpacpi::thinklight/brightness 
 elif [ &quot;$1&quot; = &quot;off&quot; ]; then
@@ -204,7 +203,8 @@ fi
 
         <footer>
 	
-	<small>© 2015 Niklas Heer<br /> <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/">CC BY-NC-SA</a> Some rights reserved.</small>
+	<small>© 2015 Niklas Heer<br /> <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img src="/assets/images/cc/by-nc-sa.png" alt="CC BY-NC-SA" />
+</a></small>
 	
 </footer>
     </div>
@@ -214,10 +214,16 @@ fi
 
 <script src="http://localhost:1313/js/plugins/jquery.magnific-popup.js"></script>
 <script src="http://localhost:1313/js/plugins/jquery.fitvids.js"></script>
-<script src="http://localhost:1313/js/plugins/jquery.slimscroll.min.js"></script>
-
 <script src="http://localhost:1313/js/vendor/highlight.pack.js"></script>
-<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script>
+    $(document).ready(function() {
+      $('pre code').each(function(i, block) {
+        hljs.highlightBlock(block);
+      });
+    });
+</script>
 
 <script src="http://localhost:1313/js/main.js"></script>
 

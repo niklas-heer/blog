@@ -53,9 +53,9 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/MrRio/vtop&#34;&gt;vtop&lt;/a&gt; looks much cleaner than htop. One look and you exactly know whats going on on the system! You can list processes by CPU or Memory usage which is really awesome, you can navigate with your arrow keys or &lt;code&gt;k&lt;/code&gt; and &lt;code&gt;j&lt;/code&gt; which is also nice and the best of all you can simply highlight/select a process and kill it by typing &lt;code&gt;dd&lt;/code&gt;!&lt;/p&gt;
 
-&lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt;(you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
+&lt;p&gt;You can install it also very easily through &lt;code&gt;npm&lt;/code&gt; (you need to install &lt;a href=&#34;http://nodejs.org/&#34;&gt;node.js&lt;/a&gt; on your system)!&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;sudo npm install -g vtop
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;sudo npm install -g vtop
 &lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;After that you can execute it by typing &lt;code&gt;vtop&lt;/code&gt;&lt;/p&gt;

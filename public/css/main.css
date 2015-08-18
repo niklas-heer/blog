@@ -493,7 +493,20 @@ ol li {
   list-style-type: decimal;
 }
 
-a {
+h1 a,
+h2 a,
+h3 a,
+.h-wrap h1.title a,
+.off-canvas .bio h1 a,
+h4 a,
+h5 a,
+h6 a,
+h5 a,
+h6 a,
+p a,
+ul li a,
+ol li a,
+figcaption a {
   color: #0c8ac4;
   background-size: 200%;
   padding-left: 3px;
@@ -502,7 +515,20 @@ a {
   margin-right: -3px;
 }
 
-a:hover {
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+.h-wrap h1.title a:hover,
+.off-canvas .bio h1 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover,
+h5 a:hover,
+h6 a:hover,
+p a:hover,
+ul li a:hover,
+ol li a:hover,
+figcaption a:hover {
   color: white;
   background-color: #0c8ac4;
 }
@@ -542,7 +568,6 @@ pre {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.5;
-  overflow-x: auto;
 }
 
 pre::-webkit-scrollbar {
@@ -559,19 +584,14 @@ pre::-webkit-scrollbar-thumb:horizontal {
 }
 
 .highlight {
-  margin-bottom: 1.5em;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 2.1667;
-  color: #d0d0d0;
   border: 1px solid #dbdbdb;
-  background-color: #272822;
 }
 
-.highlight pre {
-  position: relative;
-  margin: 0;
-  padding: 0.5em;
+.highlight pre code {
+  padding: 1em;
 }
 
 header {
@@ -763,8 +783,8 @@ footer {
   text-align: center;
 }
 
-footer small {
-  text-transform: uppercase;
+footer a img:hover {
+  transform: translate(0, -0.1em);
 }
 
 .posts {
@@ -903,12 +923,13 @@ footer small {
 .single-wrap .feat {
   text-align: center;
   border-bottom: 1px dotted #bbbbbb;
+  height: 0;
 }
 
 .single-wrap .feat a.popup {
   display: inline-block;
   position: relative;
-  top: .7em;
+  top: -0.5em;
   background: #fff;
   font-size: 130%;
   text-align: center;
@@ -934,7 +955,7 @@ footer small {
 .single-wrap .page-date {
   display: inline-block;
   position: relative;
-  top: 1.1em;
+  top: -4.2em;
   background: white;
   font-family: "Raleway", Georgia, serif;
   font-size: 85%;
@@ -1023,8 +1044,8 @@ footer small {
 }
 
 .single-wrap img {
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
 .single-wrap figure {
@@ -1110,6 +1131,10 @@ footer small {
     margin-top: -5px;
     float: left;
   }
+}
+
+.single-wrap .gist .gist-file .gist-meta a:hover {
+  background-color: transparent;
 }
 
 .single-wrap .gist .highlight:before {

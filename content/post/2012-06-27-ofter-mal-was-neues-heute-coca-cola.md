@@ -1,5 +1,6 @@
 ---
 title: 'Öfter mal was neues. Heute: "Coca Cola"'
+slug: oemwn_Coca-Cola
 description: 'Öfter mal was neues. Heute: "Coca Cola"'
 date: 2012-06-27
 tags: [stuff, discussion, recipe]
@@ -43,4 +44,4 @@ doch bitte in die Kommentare wie's schmeckt ;D
 Hier noch ein Link  zu "Open Cola", dort werden Rezepte für Cola
 gesammelt die unter der GPL veröffentlicht werden ;D
 
-[Open Cola](http://en.wikipedia.org/wiki/OpenCola_(drink))
+## <a href="http://en.wikipedia.org/wiki/OpenCola_(drink)">Open Cola</a>
