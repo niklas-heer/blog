@@ -9,7 +9,6 @@
 
 	// The commands
 	$commands = array(
-		'cd ..',
 		'pwd',
 		'whoami',
 		'git pull',
@@ -19,6 +18,7 @@
 
 	// Run the commands for output
 	$output = '';
+	chdir('/var/www/sites/blog');
 	foreach($commands AS $command){
 		// Run it
 		$tmp = shell_exec($command);
