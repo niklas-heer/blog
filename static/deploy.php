@@ -8,11 +8,14 @@
 	 */
 
 	// The commands
+
+	// Maybe for later use:
+	// 		'git stash save --keep-index',
+	//	    'git stash drop',
 	$commands = array(
 		'pwd',
 		'whoami',
-		'git stash save --keep-index',
-		'git stash drop',
+
 		'git pull',
 		'git status',
 		'hugo',
