@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Video on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/video/</link>
+    <link>http://blog.nheer.io/tags/video/</link>
     <description>Recent content in Video on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 19 Jun 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/video/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/video/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Öfter mal was neues. Heute: &#34;Pinched! (Minecraft Machinima)&#34;</title>
-      <link>http://localhost:1313/2012/06/19/oemwn_minecraft-pinched</link>
+      <link>http://blog.nheer.io/2012/06/19/oemwn_minecraft-pinched</link>
       <pubDate>Tue, 19 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/19/oemwn_minecraft-pinched</guid>
+      <guid>http://blog.nheer.io/2012/06/19/oemwn_minecraft-pinched</guid>
       <description>&lt;p&gt;Minecraft ist kein normales Spiel, aber die Idee mit Hilfe solch eines
 Spiels&lt;/p&gt;
 
@@ -32,10 +32,10 @@ Spiels&lt;/p&gt;
     
     <item>
       <title>Öfter mal was neues. Heute: Dick Figures - Erster &#34;Cool&#34;-Tag</title>
-      <link>http://localhost:1313/2012/06/15/oemwn_dick-figures_cool</link>
+      <link>http://blog.nheer.io/2012/06/15/oemwn_dick-figures_cool</link>
       <pubDate>Fri, 15 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/15/oemwn_dick-figures_cool</guid>
+      <guid>http://blog.nheer.io/2012/06/15/oemwn_dick-figures_cool</guid>
       <description>&lt;p&gt;Es gibt eine unglaublich gute Zeichentrick-Serie auf Youtube.&lt;/p&gt;
 
 &lt;p&gt;Sie handelt von Red, dem coolen Draufgänger und Blue dem liebenswürdigen Nerd.&lt;/p&gt;
@@ -60,13 +60,13 @@ Spiels&lt;/p&gt;
     
     <item>
       <title>Öfter mal was neues. Heute: &#34;Polizei, Hausdurchsuchung: Sie haben das Recht zu schweigen (Udo Vetter)&#34;</title>
-      <link>http://localhost:1313/2012/06/14/oemwn_hausdurchsuchung</link>
+      <link>http://blog.nheer.io/2012/06/14/oemwn_hausdurchsuchung</link>
       <pubDate>Thu, 14 Jun 2012 15:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/14/oemwn_hausdurchsuchung</guid>
+      <guid>http://blog.nheer.io/2012/06/14/oemwn_hausdurchsuchung</guid>
       <description>&lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-06-14/Paragraph-icon.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-06-14/Paragraph-icon.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-06-14/Paragraph-icon.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-06-14/Paragraph-icon.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;Bild von &lt;a href=&#34;http://www.iconarchive.com/show/red-orb-alphabet-icons-by-iconarchive.html&#34;&gt;Red Orb Alphabet Icons&lt;/a&gt;.&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -93,10 +93,10 @@ Spiels&lt;/p&gt;
     
     <item>
       <title>Öfter mal was neues. Heute: &#34;A Floating Chinese Spherical Car Created by Volkswagen&#34;</title>
-      <link>http://localhost:1313/2012/06/14/oemwn_floating-car</link>
+      <link>http://blog.nheer.io/2012/06/14/oemwn_floating-car</link>
       <pubDate>Thu, 14 Jun 2012 10:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/14/oemwn_floating-car</guid>
+      <guid>http://blog.nheer.io/2012/06/14/oemwn_floating-car</guid>
       <description>&lt;p&gt;Wie die Zukunft im Automobilmarkt aussehen könnte hat VW China in einem
 neuen Projekt namens ‘The People’s Car Project&amp;rsquo;,&lt;/p&gt;
 
@@ -118,10 +118,10 @@ neuen Projekt namens ‘The People’s Car Project&amp;rsquo;,&lt;/p&gt;
     
     <item>
       <title>Öfter mal was neues. Heute: &#34;Robot string quintet composes and performs music&#34;</title>
-      <link>http://localhost:1313/2012/06/07/oemwn_robot-string-quintet</link>
+      <link>http://blog.nheer.io/2012/06/07/oemwn_robot-string-quintet</link>
       <pubDate>Thu, 07 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/07/oemwn_robot-string-quintet</guid>
+      <guid>http://blog.nheer.io/2012/06/07/oemwn_robot-string-quintet</guid>
       <description>&lt;p&gt;Das die Roboter uns einmal unterdrücken werden macht uns ja Hollywood
 des öfteren klar,&lt;/p&gt;
 
@@ -133,7 +133,7 @@ des öfteren klar,&lt;/p&gt;
 anhören könnte:&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-    &lt;iframe width=&#34;500&#34; height=&#34;420&#34; src=&#34;http://localhost:1313/assets/pages/robot_music.html&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;&gt; &lt;/iframe&gt;
+    &lt;iframe width=&#34;500&#34; height=&#34;420&#34; src=&#34;http://blog.nheer.io/assets/pages/robot_music.html&#34; frameborder=&#34;0&#34; scrolling=&#34;no&#34;&gt; &lt;/iframe&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Hier noch der Artikel: &lt;a href=&#34;http://www.newscientist.com/blogs/nstv/2012/05/smart-string-instruments-compose-and-perform-symphony.html&#34;&gt;New Scientist TV Artikel&lt;/a&gt;&lt;/p&gt;

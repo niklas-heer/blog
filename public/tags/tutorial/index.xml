@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tutorial on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/tutorial/</link>
+    <link>http://blog.nheer.io/tags/tutorial/</link>
     <description>Recent content in Tutorial on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Feb 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/tutorial/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>R.I.P. WhatsApp - Es lebe Telegram!</title>
-      <link>http://localhost:1313/2014/02/20/threema-vs-telegram</link>
+      <link>http://blog.nheer.io/2014/02/20/threema-vs-telegram</link>
       <pubDate>Thu, 20 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/02/20/threema-vs-telegram</guid>
+      <guid>http://blog.nheer.io/2014/02/20/threema-vs-telegram</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
@@ -71,10 +71,10 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
     
     <item>
       <title>Tunlr - Ausländische Videos schauen</title>
-      <link>http://localhost:1313/2012/04/03/tunlr---ausl%C3%A4ndische-videos-schauen</link>
+      <link>http://blog.nheer.io/2012/04/03/tunlr---ausl%C3%A4ndische-videos-schauen</link>
       <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/03/tunlr---ausl%C3%A4ndische-videos-schauen</guid>
+      <guid>http://blog.nheer.io/2012/04/03/tunlr---ausl%C3%A4ndische-videos-schauen</guid>
       <description>&lt;p&gt;Ihr wollt gerne auf Dienste wie Netflix, Hulu, MTV, CBS, ABC, Pandora
 oder andere aus Deutschland zugreifen, aber könnt dies nicht, weil die
 Seiten euch daran hindern?&lt;/p&gt;
@@ -92,7 +92,7 @@ ausschalten könnt.&lt;/p&gt;
 Internet gehen.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-03/tunlrControl.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-03/tunlrControl.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-03/tunlrControl.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-03/tunlrControl.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Hier der Link: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl&lt;/a&gt;&lt;/p&gt;
@@ -105,10 +105,10 @@ Kommentare entgegen.&lt;/p&gt;
     
     <item>
       <title>Walkthrough durch Etherpad</title>
-      <link>http://localhost:1313/2012/03/14/walkthrough-durch-etherpad</link>
+      <link>http://blog.nheer.io/2012/03/14/walkthrough-durch-etherpad</link>
       <pubDate>Wed, 14 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/03/14/walkthrough-durch-etherpad</guid>
+      <guid>http://blog.nheer.io/2012/03/14/walkthrough-durch-etherpad</guid>
       <description>&lt;p&gt;Nach längerer Pause nun endlich wieder ein Video von mir.&lt;/p&gt;
 
 &lt;p&gt;Es geht um Etherpad.&lt;/p&gt;

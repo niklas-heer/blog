@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Automator on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/automator/</link>
+    <link>http://blog.nheer.io/tags/automator/</link>
     <description>Recent content in Automator on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Jan 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/automator/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/automator/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>MAC Tipp 01 - Arbeiten mit dem Automator</title>
-      <link>http://localhost:1313/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</link>
+      <link>http://blog.nheer.io/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</link>
       <pubDate>Thu, 05 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</guid>
+      <guid>http://blog.nheer.io/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</guid>
       <description>&lt;p&gt;In diesem Video zeige ich euch wie ihr mit Hilfe eures Automator ein
 alltägliches Problem, wie das Entfernen eines bestimmten Dateityps aus
 einem Ordner, lösen könnt.&lt;/p&gt;

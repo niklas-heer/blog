@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Teamviewer on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/teamviewer/</link>
+    <link>http://blog.nheer.io/tags/teamviewer/</link>
     <description>Recent content in Teamviewer on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 28 Nov 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/teamviewer/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/teamviewer/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Bis zur Unendlichkeit (animiert)</title>
-      <link>http://localhost:1313/2011/11/28/bis-zur-unendlichkeit-animiert</link>
+      <link>http://blog.nheer.io/2011/11/28/bis-zur-unendlichkeit-animiert</link>
       <pubDate>Mon, 28 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/11/28/bis-zur-unendlichkeit-animiert</guid>
+      <guid>http://blog.nheer.io/2011/11/28/bis-zur-unendlichkeit-animiert</guid>
       <description>&lt;p&gt;Wegen den hohen Nachfrage nach meinem kleinen Experiment mit Teamviewer,
 hab ich jetzt mal eine neue animierte Version gemacht. :)&lt;/p&gt;
 
 &lt;p&gt;Ich hoffe Es gefällt euch ^^&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;figure&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2011-11-28/animation_unendlich.gif&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2011-11-28/animation_unendlich_klein.gif&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2011-11-28/animation_unendlich.gif&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2011-11-28/animation_unendlich_klein.gif&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/figure&gt;&lt;/center&gt;&lt;/p&gt;
 </description>
     </item>

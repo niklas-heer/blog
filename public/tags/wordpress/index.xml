@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordpress on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/wordpress/</link>
+    <link>http://blog.nheer.io/tags/wordpress/</link>
     <description>Recent content in Wordpress on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 06 Jun 2012 13:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Wordpress zu Twitter Plugin?</title>
-      <link>http://localhost:1313/2012/06/06/wordpress-zu-twitter-plugin</link>
+      <link>http://blog.nheer.io/2012/06/06/wordpress-zu-twitter-plugin</link>
       <pubDate>Wed, 06 Jun 2012 13:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/06/wordpress-zu-twitter-plugin</guid>
+      <guid>http://blog.nheer.io/2012/06/06/wordpress-zu-twitter-plugin</guid>
       <description>&lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2012-06-06/twitter1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-06-06/twitter1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-06-06/twitter1.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-06-06/twitter1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Ihr habt euch gefragt wie ihr es hin bekommt, dass eure &lt;strong&gt;Artikel&lt;/strong&gt; in Wordpress &lt;strong&gt;automatisch als&lt;/strong&gt; &lt;strong&gt;Tweet veröffentlicht&lt;/strong&gt; werden?&lt;/p&gt;

@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Code on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/code/</link>
+    <link>http://blog.nheer.io/tags/code/</link>
     <description>Recent content in Code on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/code/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/code/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Jekyll - from zero to hero</title>
-      <link>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</link>
+      <link>http://blog.nheer.io/2014/12/05/jekyll---from-zero-to-hero</link>
       <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</guid>
+      <guid>http://blog.nheer.io/2014/12/05/jekyll---from-zero-to-hero</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;my blog was never faster nor easier to deploy!&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -96,8 +96,8 @@ This is the fastest site I&#39;ve ever built.
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/before.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/before.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;before and after&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -157,10 +157,10 @@ Maybe it will help you!&lt;/p&gt;
     
     <item>
       <title>vtop an unknown terminal beauty</title>
-      <link>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</link>
+      <link>http://blog.nheer.io/2014/12/01/vtop-an-unknown-terminal-beauty</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
+      <guid>http://blog.nheer.io/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -180,8 +180,8 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;top vs htop&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -192,7 +192,7 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;vtop&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -214,10 +214,10 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
     
     <item>
       <title>Let&#39;s Learn - Programmieren #4 - Netbeans &amp; Java auf dem Mac</title>
-      <link>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</link>
+      <link>http://blog.nheer.io/2013/12/03/lets-learn_programmieren-4</link>
       <pubDate>Tue, 03 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</guid>
+      <guid>http://blog.nheer.io/2013/12/03/lets-learn_programmieren-4</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/qj1oLI7bL8c&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
@@ -228,10 +228,10 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
     
     <item>
       <title>Let&#39;s Learn - Programmieren #3 - Netbeans &amp; Java in Linux</title>
-      <link>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</link>
+      <link>http://blog.nheer.io/2013/10/27/lets-learn_programmieren-3</link>
       <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</guid>
+      <guid>http://blog.nheer.io/2013/10/27/lets-learn_programmieren-3</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4WahwewBgDs&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
@@ -242,10 +242,10 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
     
     <item>
       <title>Let&#39;s Learn - Programmieren #2 - Netbeans &amp; Java in Windows</title>
-      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</link>
+      <link>http://blog.nheer.io/2013/10/26/lets-learn_programmieren-2</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</guid>
+      <guid>http://blog.nheer.io/2013/10/26/lets-learn_programmieren-2</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4TxI4wmhzP4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
@@ -256,10 +256,10 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
     
     <item>
       <title>Let&#39;s Learn - Programmieren #1 - Teaser</title>
-      <link>http://localhost:1313/2013/10/25/lets-learn_programmieren-1</link>
+      <link>http://blog.nheer.io/2013/10/25/lets-learn_programmieren-1</link>
       <pubDate>Fri, 25 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/25/lets-learn_programmieren-1</guid>
+      <guid>http://blog.nheer.io/2013/10/25/lets-learn_programmieren-1</guid>
       <description>&lt;p&gt;Hier wolltet schon immer mal Programmieren lernen?&lt;/p&gt;
 
 &lt;p&gt;Dann ist diese Video-Reihe ideal für euch!&lt;/p&gt;
@@ -274,15 +274,15 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
     
     <item>
       <title>Ubuntu 13.04 - Ein besserer File-Browser</title>
-      <link>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</link>
+      <link>http://blog.nheer.io/2013/04/30/ubuntu_pantheon-files</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</guid>
+      <guid>http://blog.nheer.io/2013/04/30/ubuntu_pantheon-files</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;Pantheon Files&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -319,10 +319,10 @@ sudo apt-get install pantheon-files
     
     <item>
       <title>Thinklight Script für Linux</title>
-      <link>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</link>
+      <link>http://blog.nheer.io/2013/04/29/thinklight-script-f%C3%BCr-linux</link>
       <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</guid>
+      <guid>http://blog.nheer.io/2013/04/29/thinklight-script-f%C3%BCr-linux</guid>
       <description>
 
 &lt;p&gt;Wolltet ihr schon immer mal das LED-Licht in einem Script benutzen, oder es einfach nur per Terminal-Befehl an- und ausschalten?&lt;/p&gt;
@@ -377,10 +377,10 @@ fi
     
     <item>
       <title>Awesome Password Change now on Github!</title>
-      <link>http://localhost:1313/2012/08/14/awesome-password-change-now-on-github</link>
+      <link>http://blog.nheer.io/2012/08/14/awesome-password-change-now-on-github</link>
       <pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/08/14/awesome-password-change-now-on-github</guid>
+      <guid>http://blog.nheer.io/2012/08/14/awesome-password-change-now-on-github</guid>
       <description>&lt;p&gt;Ich habe beschlossen mein Script auf Github zu tun.&lt;/p&gt;
 
 &lt;p&gt;Wer mit mir daran arbeiten will, kontaktiert mich einfach! ;D&lt;/p&gt;
@@ -393,10 +393,10 @@ fi
     
     <item>
       <title>Awesome Password Change [PHP Script]</title>
-      <link>http://localhost:1313/2012/07/24/awesome-password-change-php-script</link>
+      <link>http://blog.nheer.io/2012/07/24/awesome-password-change-php-script</link>
       <pubDate>Tue, 24 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/07/24/awesome-password-change-php-script</guid>
+      <guid>http://blog.nheer.io/2012/07/24/awesome-password-change-php-script</guid>
       <description>
 
 &lt;p&gt;Ich verwalte meinen Server mit ZPanel und da ich dort auch Nutzern eine Mail-Adresse mache, hatte ich das Problem, dass diese zwar auf ihre Mails problemlos zugreifen konnten, aber nicht eigenständig ihr Passwort ändern konnten.&lt;/p&gt;
@@ -407,7 +407,7 @@ fi
 
 &lt;p&gt;Wer übersetzten will, kann sich gern bei mir melden und Feedback, Lob und Kritik höre ich auch gerne :P&lt;/p&gt;
 
-&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-24/awesome_password_change_v1.0.zip&#34; class=&#34;btn btn-lg btn-success&#34;&gt;Download v1.0&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://blog.nheer.io/assets/files/2012-07-24/awesome_password_change_v1.0.zip&#34; class=&#34;btn btn-lg btn-success&#34;&gt;Download v1.0&lt;/a&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;deutsch:938690065cb95c6fe18357fe8268958d&#34;&gt;DEUTSCH:&lt;/h4&gt;
 
@@ -425,10 +425,10 @@ A fancy script to let users change their mail passwords. It was designed for mai
     
     <item>
       <title>automatischer Upload von Bildern in der Zwischenablage [Mac]</title>
-      <link>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</link>
+      <link>http://blog.nheer.io/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</link>
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</guid>
+      <guid>http://blog.nheer.io/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</guid>
       <description>
 
 &lt;p&gt;Ihr kennt das vielleicht, ihr habt ein Bild mit &amp;ldquo;⌘ + Ctrl + ⇧ + 4&amp;rdquo;
@@ -451,9 +451,9 @@ Tool dafür.&lt;/p&gt;
 
 &lt;p&gt;Upload-terminal muss auf jeden Fall angepasst werden. &amp;ldquo;save_img_from_clip.scpt&amp;rdquo; kann so bleiben ;)&lt;/p&gt;
 
-&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://blog.nheer.io/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
 &lt;br&gt;
-&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://blog.nheer.io/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
 
 &lt;p&gt;Am besten man speichert sie unter &amp;ldquo;/Users/&amp;lt;username&amp;gt;/Scripte&amp;rdquo; ab.&lt;/p&gt;
 
@@ -480,7 +480,7 @@ end ignoring
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/TextExpander1.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/TextExpander1-150x150.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-07-11/TextExpander1.jpg&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-07-11/TextExpander1-150x150.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;TextExpander&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -505,12 +505,12 @@ Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!&lt;/
     
     <item>
       <title>Wordpress zu Twitter Plugin?</title>
-      <link>http://localhost:1313/2012/06/06/wordpress-zu-twitter-plugin</link>
+      <link>http://blog.nheer.io/2012/06/06/wordpress-zu-twitter-plugin</link>
       <pubDate>Wed, 06 Jun 2012 13:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/06/wordpress-zu-twitter-plugin</guid>
+      <guid>http://blog.nheer.io/2012/06/06/wordpress-zu-twitter-plugin</guid>
       <description>&lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2012-06-06/twitter1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-06-06/twitter1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-06-06/twitter1.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-06-06/twitter1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Ihr habt euch gefragt wie ihr es hin bekommt, dass eure &lt;strong&gt;Artikel&lt;/strong&gt; in Wordpress &lt;strong&gt;automatisch als&lt;/strong&gt; &lt;strong&gt;Tweet veröffentlicht&lt;/strong&gt; werden?&lt;/p&gt;
@@ -525,10 +525,10 @@ Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!&lt;/
     
     <item>
       <title>Google Chrome Apps</title>
-      <link>http://localhost:1313/2012/05/02/google-chrome-apps</link>
+      <link>http://blog.nheer.io/2012/05/02/google-chrome-apps</link>
       <pubDate>Wed, 02 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/05/02/google-chrome-apps</guid>
+      <guid>http://blog.nheer.io/2012/05/02/google-chrome-apps</guid>
       <description>
 
 &lt;p&gt;Ich habe mich in der letzten Zeit ein wenig mit Google Chrome Apps
@@ -540,7 +540,7 @@ beschäftigt und sogleich 4 erstellt.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;https://chrome.google.com/webstore/detail/cgagfhejeenbaomfbdipcknalolodkkm&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-05-02/Niklas-Logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;https://chrome.google.com/webstore/detail/cgagfhejeenbaomfbdipcknalolodkkm&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-05-02/Niklas-Logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/cgagfhejeenbaomfbdipcknalolodkkm&#34;&gt;niklas-Heer.de&lt;/a&gt;&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -549,7 +549,7 @@ beschäftigt und sogleich 4 erstellt.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;https://chrome.google.com/webstore/detail/gmhhndbopniohlapeafgoddeohgbdokg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-05-02/logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;https://chrome.google.com/webstore/detail/gmhhndbopniohlapeafgoddeohgbdokg&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-05-02/logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/gmhhndbopniohlapeafgoddeohgbdokg/publish-accepted&#34;&gt;JusosSHOK&lt;/a&gt;&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -563,16 +563,16 @@ habe (Bild :D) werde ich euch darüber informieren! ;)&lt;/p&gt;
     
     <item>
       <title>TunlrControl 1.0.0.16</title>
-      <link>http://localhost:1313/2012/04/10/tunlrcontrol-16</link>
+      <link>http://blog.nheer.io/2012/04/10/tunlrcontrol-16</link>
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/10/tunlrcontrol-16</guid>
+      <guid>http://blog.nheer.io/2012/04/10/tunlrcontrol-16</guid>
       <description>&lt;p&gt;TunlrControl 1.0.0.16 ist da!&lt;/p&gt;
 
 &lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.16&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;
  &lt;/p&gt;
 
@@ -591,18 +591,18 @@ habe (Bild :D) werde ich euch darüber informieren! ;)&lt;/p&gt;
     
     <item>
       <title>TunlrControl 1.0.0.15 ist da!</title>
-      <link>http://localhost:1313/2012/04/06/tunlrcontrol-15</link>
+      <link>http://blog.nheer.io/2012/04/06/tunlrcontrol-15</link>
       <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/06/tunlrcontrol-15</guid>
+      <guid>http://blog.nheer.io/2012/04/06/tunlrcontrol-15</guid>
       <description>&lt;p&gt;TunlrControl 1.0.0.15 ist da!&lt;/p&gt;
 
 &lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.15&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
     &lt;/figure&gt;
 &lt;/center&gt;
  &lt;/p&gt;

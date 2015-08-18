@@ -1,4 +1,4 @@
-baseurl = "http://blog.nheer.io/"
+BaseURL = "http://blog.nheer.io/"
 languageCode = "en-us"
 title = "Niklas' Blog"
 theme = "nh"

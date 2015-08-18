@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Niklas&#39; Blog</title>
-    <link>http://localhost:1313/</link>
+    <link>http://blog.nheer.io/</link>
     <description>Recent content on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Jekyll - from zero to hero</title>
-      <link>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</link>
+      <link>http://blog.nheer.io/2014/12/05/jekyll---from-zero-to-hero</link>
       <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</guid>
+      <guid>http://blog.nheer.io/2014/12/05/jekyll---from-zero-to-hero</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;my blog was never faster nor easier to deploy!&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -96,8 +96,8 @@ This is the fastest site I&#39;ve ever built.
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/before.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/before.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;before and after&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -157,10 +157,10 @@ Maybe it will help you!&lt;/p&gt;
     
     <item>
       <title>vtop an unknown terminal beauty</title>
-      <link>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</link>
+      <link>http://blog.nheer.io/2014/12/01/vtop-an-unknown-terminal-beauty</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
+      <guid>http://blog.nheer.io/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -180,8 +180,8 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;top vs htop&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -192,7 +192,7 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;vtop&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -214,10 +214,10 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
     
     <item>
       <title>Hello Jekyll!</title>
-      <link>http://localhost:1313/2014/11/30/hello-jekyll</link>
+      <link>http://blog.nheer.io/2014/11/30/hello-jekyll</link>
       <pubDate>Sun, 30 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/11/30/hello-jekyll</guid>
+      <guid>http://blog.nheer.io/2014/11/30/hello-jekyll</guid>
       <description>
 
 &lt;p&gt;I changed my blog from &lt;a href=&#34;https://wordpress.org/&#34;&gt;Wordpress&lt;/a&gt; to &lt;a href=&#34;http://jekyllrb.com&#34;&gt;Jekyll&lt;/a&gt;!&lt;/p&gt;
@@ -357,10 +357,10 @@ Nice auto-compile function! While we&amp;rsquo;re at it let&amp;rsquo;s also ins
     
     <item>
       <title>R.I.P. WhatsApp - Es lebe Telegram!</title>
-      <link>http://localhost:1313/2014/02/20/threema-vs-telegram</link>
+      <link>http://blog.nheer.io/2014/02/20/threema-vs-telegram</link>
       <pubDate>Thu, 20 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/02/20/threema-vs-telegram</guid>
+      <guid>http://blog.nheer.io/2014/02/20/threema-vs-telegram</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
@@ -417,10 +417,10 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
     
     <item>
       <title>Let&#39;s Learn - Programmieren #4 - Netbeans &amp; Java auf dem Mac</title>
-      <link>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</link>
+      <link>http://blog.nheer.io/2013/12/03/lets-learn_programmieren-4</link>
       <pubDate>Tue, 03 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</guid>
+      <guid>http://blog.nheer.io/2013/12/03/lets-learn_programmieren-4</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/qj1oLI7bL8c&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
@@ -431,10 +431,10 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
     
     <item>
       <title>Let&#39;s Learn - Programmieren #3 - Netbeans &amp; Java in Linux</title>
-      <link>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</link>
+      <link>http://blog.nheer.io/2013/10/27/lets-learn_programmieren-3</link>
       <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</guid>
+      <guid>http://blog.nheer.io/2013/10/27/lets-learn_programmieren-3</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4WahwewBgDs&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
@@ -445,10 +445,10 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
     
     <item>
       <title>Let&#39;s Learn - Programmieren #2 - Netbeans &amp; Java in Windows</title>
-      <link>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</link>
+      <link>http://blog.nheer.io/2013/10/26/lets-learn_programmieren-2</link>
       <pubDate>Sat, 26 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/26/lets-learn_programmieren-2</guid>
+      <guid>http://blog.nheer.io/2013/10/26/lets-learn_programmieren-2</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4TxI4wmhzP4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
@@ -459,10 +459,10 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
     
     <item>
       <title>Let&#39;s Learn - Programmieren #1 - Teaser</title>
-      <link>http://localhost:1313/2013/10/25/lets-learn_programmieren-1</link>
+      <link>http://blog.nheer.io/2013/10/25/lets-learn_programmieren-1</link>
       <pubDate>Fri, 25 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/25/lets-learn_programmieren-1</guid>
+      <guid>http://blog.nheer.io/2013/10/25/lets-learn_programmieren-1</guid>
       <description>&lt;p&gt;Hier wolltet schon immer mal Programmieren lernen?&lt;/p&gt;
 
 &lt;p&gt;Dann ist diese Video-Reihe ideal für euch!&lt;/p&gt;
@@ -477,15 +477,15 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
     
     <item>
       <title>Ubuntu 13.04 - Ein besserer File-Browser</title>
-      <link>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</link>
+      <link>http://blog.nheer.io/2013/04/30/ubuntu_pantheon-files</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</guid>
+      <guid>http://blog.nheer.io/2013/04/30/ubuntu_pantheon-files</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;Pantheon Files&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -522,10 +522,10 @@ sudo apt-get install pantheon-files
     
     <item>
       <title>Thinklight Script für Linux</title>
-      <link>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</link>
+      <link>http://blog.nheer.io/2013/04/29/thinklight-script-f%C3%BCr-linux</link>
       <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</guid>
+      <guid>http://blog.nheer.io/2013/04/29/thinklight-script-f%C3%BCr-linux</guid>
       <description>
 
 &lt;p&gt;Wolltet ihr schon immer mal das LED-Licht in einem Script benutzen, oder es einfach nur per Terminal-Befehl an- und ausschalten?&lt;/p&gt;
@@ -580,10 +580,10 @@ fi
     
     <item>
       <title>Öfter mal was neues. Heute: “Sounds Just Like”</title>
-      <link>http://localhost:1313/2013/01/14/oemwn_sounds-just-like</link>
+      <link>http://blog.nheer.io/2013/01/14/oemwn_sounds-just-like</link>
       <pubDate>Mon, 14 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/01/14/oemwn_sounds-just-like</guid>
+      <guid>http://blog.nheer.io/2013/01/14/oemwn_sounds-just-like</guid>
       <description>&lt;p&gt;Das Radio ist an und das Lied läuft und ihr denkt euch: &amp;ldquo;Hört sich das nicht genauso an wie&amp;hellip;?&amp;rdquo;&lt;/p&gt;
 
 &lt;p&gt;Kommt euch das Szenario bekannt vor? Also mir passiert das irgendwie häufiger und deshalb möchte ich euch heute gerne die Website &lt;strong&gt;&lt;a href=&#34;http://soundsjustlike.com/&#34;&gt;Sounds Just Like&lt;/a&gt;&lt;/strong&gt; empfehlen. Dort könnt ihr euch Lieder anhören die tatsächlich ähnlich sind und falls ihr ähnliche Lieder gefunden habt, könnt ihr sie dort auch einstellen, sodass auch andere die verblüffende Ähnlichkeiten von z.B. &lt;strong&gt;Smash Mouth&lt;/strong&gt; &amp;ldquo;&lt;em&gt;Then the morning comes&lt;/em&gt;&amp;rdquo; (1999) und &lt;strong&gt;The Animals&lt;/strong&gt; &amp;ldquo;&lt;em&gt;It&amp;rsquo;s my life&lt;/em&gt;&amp;rdquo; (1965) anhören können!&lt;/p&gt;
@@ -594,10 +594,10 @@ fi
     
     <item>
       <title>Apfelkorb #10 - mit Moom Fenster verwalten</title>
-      <link>http://localhost:1313/2013/01/08/apfelkorb-10_moom</link>
+      <link>http://blog.nheer.io/2013/01/08/apfelkorb-10_moom</link>
       <pubDate>Tue, 08 Jan 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/01/08/apfelkorb-10_moom</guid>
+      <guid>http://blog.nheer.io/2013/01/08/apfelkorb-10_moom</guid>
       <description>&lt;p&gt;In diesem Video stelle ich euch die Software Moom vor, die euch euer Fenstermanagement erleichtert.&lt;/p&gt;
 
 &lt;p&gt;Hier könnt ihr es für ca. 7,50€ auf der Website bekommen bekommen: &lt;a href=&#34;http://bit.ly/11ceA9M&#34;&gt;http://bit.ly/11ceA9M&lt;/a&gt; &lt;br&gt;
@@ -613,10 +613,10 @@ Oder im Appstore für 8,99€: &lt;a href=&#34;http://bit.ly/SicGSv&#34;&gt;http
     
     <item>
       <title>Apfelkorb #9 - Spotlight iStat Menus</title>
-      <link>http://localhost:1313/2012/12/28/apfelkorb-9_istat</link>
+      <link>http://blog.nheer.io/2012/12/28/apfelkorb-9_istat</link>
       <pubDate>Fri, 28 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/28/apfelkorb-9_istat</guid>
+      <guid>http://blog.nheer.io/2012/12/28/apfelkorb-9_istat</guid>
       <description>&lt;p&gt;In diesem Video stelle ich das Programm iStat Menus für ca. 12€ vor.&lt;/p&gt;
 
 &lt;p&gt;Hier könnt ihr es bekommen: &lt;a href=&#34;http://bit.ly/TnymL2&#34;&gt;http://bit.ly/TnymL2&lt;/a&gt;&lt;/p&gt;
@@ -630,27 +630,11 @@ Oder im Appstore für 8,99€: &lt;a href=&#34;http://bit.ly/SicGSv&#34;&gt;http
     </item>
     
     <item>
-      <title>Ausblick #1 - Neue Homepage und neues Design</title>
-      <link>http://localhost:1313/2012/12/23/ausblick-1_neue-homepage</link>
-      <pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate>
-      
-      <guid>http://localhost:1313/2012/12/23/ausblick-1_neue-homepage</guid>
-      <description>&lt;p&gt;In diesem Video gebe ich euch ein Update über meinen Kanal und einen Ausblick auf kommende Projekte von mir.&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
-&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/2U9EtWoDi7A&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
-&lt;/iframe&gt;
-&lt;/div&gt;
-&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
       <title>Apfelkorb #8 - Pimp my Finder</title>
-      <link>http://localhost:1313/2012/12/23/apfelkorb-8_finder</link>
+      <link>http://blog.nheer.io/2012/12/23/apfelkorb-8_finder</link>
       <pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/12/23/apfelkorb-8_finder</guid>
+      <guid>http://blog.nheer.io/2012/12/23/apfelkorb-8_finder</guid>
       <description>&lt;p&gt;In dieser Folge zeige ich euch wie ihr versteckte Funktionen im Finder aktiviert, eure QuickLook-Anzeige erweitert und ein paar Finder-Alternativen.&lt;/p&gt;
 
 &lt;p&gt;Folge in dem ich euch den Befehl zeige Dateien sichtbar zu machen: &lt;a href=&#34;http://bit.ly/TZcN0i&#34;&gt;http://bit.ly/TZcN0i&lt;/a&gt;&lt;/p&gt;
@@ -676,7 +660,7 @@ Oder im Appstore für 8,99€: &lt;a href=&#34;http://bit.ly/SicGSv&#34;&gt;http
 &lt;p&gt;Dann führe folgenden Befehl im Terminal aus: &lt;br&gt;
 &lt;code&gt;qlmanage -r&lt;/code&gt; oder melde dich ab und wieder an.&lt;/p&gt;
 
-&lt;p&gt;mein QuickLook Plugin Pack: &lt;a href=&#34;http://localhost:1313/assets/files/2012-12-23/Quick-Look_Plugins.zip&#34;&gt;download&lt;/a&gt; &lt;br&gt;
+&lt;p&gt;mein QuickLook Plugin Pack: &lt;a href=&#34;http://blog.nheer.io/assets/files/2012-12-23/Quick-Look_Plugins.zip&#34;&gt;download&lt;/a&gt; &lt;br&gt;
 mehr QuickLook-Plugins: &lt;a href=&#34;http://www.qlplugins.com/&#34;&gt;http://www.qlplugins.com/&lt;/a&gt; &lt;br&gt;
 Zip QuickLook-Plugin: &lt;a href=&#34;http://macitbetter.com/BetterZip-Quick-Look-Generator/&#34;&gt;http://macitbetter.com/BetterZip-Quick-Look-Generator/&lt;/a&gt; &lt;br&gt;
 Total Finder (ca. 13,50€) - &lt;a href=&#34;http://totalfinder.binaryage.com/&#34;&gt;http://totalfinder.binaryage.com/&lt;/a&gt; &lt;br&gt;
@@ -685,6 +669,22 @@ ForkLift (ca. 15€) - &lt;a href=&#34;http://www.binarynights.com/&#34;&gt;http
 
 &lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/TmPBrhVv_uY&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Ausblick #1 - Neue Homepage und neues Design</title>
+      <link>http://blog.nheer.io/2012/12/23/ausblick-1_neue-homepage</link>
+      <pubDate>Sun, 23 Dec 2012 00:00:00 +0000</pubDate>
+      
+      <guid>http://blog.nheer.io/2012/12/23/ausblick-1_neue-homepage</guid>
+      <description>&lt;p&gt;In diesem Video gebe ich euch ein Update über meinen Kanal und einen Ausblick auf kommende Projekte von mir.&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/2U9EtWoDi7A&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
 &lt;/div&gt;
 &lt;/p&gt;

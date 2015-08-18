@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Php on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/php/</link>
+    <link>http://blog.nheer.io/tags/php/</link>
     <description>Recent content in Php on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 14 Aug 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Awesome Password Change now on Github!</title>
-      <link>http://localhost:1313/2012/08/14/awesome-password-change-now-on-github</link>
+      <link>http://blog.nheer.io/2012/08/14/awesome-password-change-now-on-github</link>
       <pubDate>Tue, 14 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/08/14/awesome-password-change-now-on-github</guid>
+      <guid>http://blog.nheer.io/2012/08/14/awesome-password-change-now-on-github</guid>
       <description>&lt;p&gt;Ich habe beschlossen mein Script auf Github zu tun.&lt;/p&gt;
 
 &lt;p&gt;Wer mit mir daran arbeiten will, kontaktiert mich einfach! ;D&lt;/p&gt;
@@ -27,10 +27,10 @@
     
     <item>
       <title>Awesome Password Change [PHP Script]</title>
-      <link>http://localhost:1313/2012/07/24/awesome-password-change-php-script</link>
+      <link>http://blog.nheer.io/2012/07/24/awesome-password-change-php-script</link>
       <pubDate>Tue, 24 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/07/24/awesome-password-change-php-script</guid>
+      <guid>http://blog.nheer.io/2012/07/24/awesome-password-change-php-script</guid>
       <description>
 
 &lt;p&gt;Ich verwalte meinen Server mit ZPanel und da ich dort auch Nutzern eine Mail-Adresse mache, hatte ich das Problem, dass diese zwar auf ihre Mails problemlos zugreifen konnten, aber nicht eigenständig ihr Passwort ändern konnten.&lt;/p&gt;
@@ -41,7 +41,7 @@
 
 &lt;p&gt;Wer übersetzten will, kann sich gern bei mir melden und Feedback, Lob und Kritik höre ich auch gerne :P&lt;/p&gt;
 
-&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-24/awesome_password_change_v1.0.zip&#34; class=&#34;btn btn-lg btn-success&#34;&gt;Download v1.0&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://blog.nheer.io/assets/files/2012-07-24/awesome_password_change_v1.0.zip&#34; class=&#34;btn btn-lg btn-success&#34;&gt;Download v1.0&lt;/a&gt;&lt;/div&gt;
 
 &lt;h4 id=&#34;deutsch:938690065cb95c6fe18357fe8268958d&#34;&gt;DEUTSCH:&lt;/h4&gt;
 

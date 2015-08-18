@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Nodejs on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/nodejs/</link>
+    <link>http://blog.nheer.io/tags/nodejs/</link>
     <description>Recent content in Nodejs on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Nov 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Upload-Server via NodeJS</title>
-      <link>http://localhost:1313/2011/11/29/upload-server-via-nodejs</link>
+      <link>http://blog.nheer.io/2011/11/29/upload-server-via-nodejs</link>
       <pubDate>Tue, 29 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/11/29/upload-server-via-nodejs</guid>
+      <guid>http://blog.nheer.io/2011/11/29/upload-server-via-nodejs</guid>
       <description>&lt;p&gt;Ich hab hier mal einen Upload-Server geschrieben.&lt;/p&gt;
 
 &lt;p&gt;Er funktioniert (getestet unter Ubuntu-1104-natty-64-minimal) soweit.&lt;/p&gt;

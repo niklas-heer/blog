@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/ubuntu/</link>
+    <link>http://blog.nheer.io/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 30 Apr 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Ubuntu 13.04 - Ein besserer File-Browser</title>
-      <link>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</link>
+      <link>http://blog.nheer.io/2013/04/30/ubuntu_pantheon-files</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</guid>
+      <guid>http://blog.nheer.io/2013/04/30/ubuntu_pantheon-files</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;Pantheon Files&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;

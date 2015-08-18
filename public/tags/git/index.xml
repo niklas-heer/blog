@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Git on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/git/</link>
+    <link>http://blog.nheer.io/tags/git/</link>
     <description>Recent content in Git on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Jekyll - from zero to hero</title>
-      <link>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</link>
+      <link>http://blog.nheer.io/2014/12/05/jekyll---from-zero-to-hero</link>
       <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</guid>
+      <guid>http://blog.nheer.io/2014/12/05/jekyll---from-zero-to-hero</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;my blog was never faster nor easier to deploy!&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -96,8 +96,8 @@ This is the fastest site I&#39;ve ever built.
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/before.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/before.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;before and after&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Terminal on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/terminal/</link>
+    <link>http://blog.nheer.io/tags/terminal/</link>
     <description>Recent content in Terminal on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 01 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/terminal/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>vtop an unknown terminal beauty</title>
-      <link>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</link>
+      <link>http://blog.nheer.io/2014/12/01/vtop-an-unknown-terminal-beauty</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
+      <guid>http://blog.nheer.io/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -34,8 +34,8 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;top vs htop&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -46,7 +46,7 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;vtop&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;

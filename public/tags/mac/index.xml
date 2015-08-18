@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Mac on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/mac/</link>
+    <link>http://blog.nheer.io/tags/mac/</link>
     <description>Recent content in Mac on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 03 Dec 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/mac/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Let&#39;s Learn - Programmieren #4 - Netbeans &amp; Java auf dem Mac</title>
-      <link>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</link>
+      <link>http://blog.nheer.io/2013/12/03/lets-learn_programmieren-4</link>
       <pubDate>Tue, 03 Dec 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/12/03/lets-learn_programmieren-4</guid>
+      <guid>http://blog.nheer.io/2013/12/03/lets-learn_programmieren-4</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/qj1oLI7bL8c&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
@@ -25,10 +25,10 @@
     
     <item>
       <title>NTFS kostenlos auf dem MAC</title>
-      <link>http://localhost:1313/2012/07/11/ntfs-kostenlos-auf-dem-mac</link>
+      <link>http://blog.nheer.io/2012/07/11/ntfs-kostenlos-auf-dem-mac</link>
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/07/11/ntfs-kostenlos-auf-dem-mac</guid>
+      <guid>http://blog.nheer.io/2012/07/11/ntfs-kostenlos-auf-dem-mac</guid>
       <description>
 
 &lt;p&gt;Wer kennt das nicht, man hat eine Festplatte von einem Windows-Rechner
@@ -54,7 +54,7 @@ so einfach gar nicht geht.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/Fuse-install.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/Fuse-install.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-07-11/Fuse-install.jpg&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-07-11/Fuse-install.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;OSX Fuse&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -65,8 +65,8 @@ so einfach gar nicht geht.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-1.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-1.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-2.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/NTFS-3G-2.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-07-11/NTFS-3G-1.jpg&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-07-11/NTFS-3G-1.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-07-11/NTFS-3G-2.jpg&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-07-11/NTFS-3G-2.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;NTFS-3G for Mac&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -88,10 +88,10 @@ Kommentar ;D&lt;/p&gt;
     
     <item>
       <title>automatischer Upload von Bildern in der Zwischenablage [Mac]</title>
-      <link>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</link>
+      <link>http://blog.nheer.io/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</link>
       <pubDate>Wed, 11 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</guid>
+      <guid>http://blog.nheer.io/2012/07/11/automatischer-upload-von-bildern-in-der-zwischenablage-mac</guid>
       <description>
 
 &lt;p&gt;Ihr kennt das vielleicht, ihr habt ein Bild mit &amp;ldquo;⌘ + Ctrl + ⇧ + 4&amp;rdquo;
@@ -114,9 +114,9 @@ Tool dafür.&lt;/p&gt;
 
 &lt;p&gt;Upload-terminal muss auf jeden Fall angepasst werden. &amp;ldquo;save_img_from_clip.scpt&amp;rdquo; kann so bleiben ;)&lt;/p&gt;
 
-&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://blog.nheer.io/assets/files/2012-07-11/Upload-terminal.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download Upload-terminal.scpt&lt;/a&gt;&lt;/div&gt;
 &lt;br&gt;
-&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://localhost:1313/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
+&lt;div class=&#34;download-button&#34;&gt;&lt;a href=&#34;http://blog.nheer.io/assets/files/2012-07-11/save_img_from_clip.scpt&#34; class=&#34;btn btn-success btn-lg&#34;&gt;download save_img_from_clip.scpt&lt;/a&gt;&lt;/div&gt;
 
 &lt;p&gt;Am besten man speichert sie unter &amp;ldquo;/Users/&amp;lt;username&amp;gt;/Scripte&amp;rdquo; ab.&lt;/p&gt;
 
@@ -143,7 +143,7 @@ end ignoring
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-07-11/TextExpander1.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-07-11/TextExpander1-150x150.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-07-11/TextExpander1.jpg&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-07-11/TextExpander1-150x150.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;TextExpander&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -168,10 +168,10 @@ Funktionalität evtl. später mal hinzufügen. Betrachtet das mal als Beta!&lt;/
     
     <item>
       <title>MAC Tipp 01 - Arbeiten mit dem Automator</title>
-      <link>http://localhost:1313/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</link>
+      <link>http://blog.nheer.io/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</link>
       <pubDate>Thu, 05 Jan 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</guid>
+      <guid>http://blog.nheer.io/2012/01/05/mac-tipp-01---arbeiten-mit-dem-automator</guid>
       <description>&lt;p&gt;In diesem Video zeige ich euch wie ihr mit Hilfe eures Automator ein
 alltägliches Problem, wie das Entfernen eines bestimmten Dateityps aus
 einem Ordner, lösen könnt.&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>News on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/news/</link>
+    <link>http://blog.nheer.io/tags/news/</link>
     <description>Recent content in News on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 20 Feb 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/news/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/news/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>R.I.P. WhatsApp - Es lebe Telegram!</title>
-      <link>http://localhost:1313/2014/02/20/threema-vs-telegram</link>
+      <link>http://blog.nheer.io/2014/02/20/threema-vs-telegram</link>
       <pubDate>Thu, 20 Feb 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/02/20/threema-vs-telegram</guid>
+      <guid>http://blog.nheer.io/2014/02/20/threema-vs-telegram</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
@@ -71,12 +71,12 @@ Hinzu kommt die extra Funktionalität und die Tatsache, dass Telegram eine &lt;a
     
     <item>
       <title>Kurze Info</title>
-      <link>http://localhost:1313/2012/06/13/kurze-info</link>
+      <link>http://blog.nheer.io/2012/06/13/kurze-info</link>
       <pubDate>Wed, 13 Jun 2012 10:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/13/kurze-info</guid>
+      <guid>http://blog.nheer.io/2012/06/13/kurze-info</guid>
       <description>&lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2012-06-13/copyright1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-06-13/copyright1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-06-13/copyright1.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-06-13/copyright1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Ihr habt vielleicht schon bemerkt, dass ein paar Artikel aus meinem Blog
@@ -91,10 +91,10 @@ Situation geklärt hat.&lt;/p&gt;
     
     <item>
       <title>Blog goes Facebook</title>
-      <link>http://localhost:1313/2011/11/24/blog-goes-facebook</link>
+      <link>http://blog.nheer.io/2011/11/24/blog-goes-facebook</link>
       <pubDate>Thu, 24 Nov 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/11/24/blog-goes-facebook</guid>
+      <guid>http://blog.nheer.io/2011/11/24/blog-goes-facebook</guid>
       <description>&lt;p&gt;So nun ist mein Blog endlich mit Facebook vernetzt. :D&lt;/p&gt;
 
 &lt;p&gt;Ich kann euch allen die Wordpress nutzen und das auch machen wollen nur

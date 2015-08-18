@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Recipe on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/recipe/</link>
+    <link>http://blog.nheer.io/tags/recipe/</link>
     <description>Recent content in Recipe on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Jun 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/recipe/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/recipe/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Öfter mal was neues. Heute: &#34;Coca Cola&#34;</title>
-      <link>http://localhost:1313/2012/06/27/oemwn_coca-cola</link>
+      <link>http://blog.nheer.io/2012/06/27/oemwn_coca-cola</link>
       <pubDate>Wed, 27 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/27/oemwn_coca-cola</guid>
+      <guid>http://blog.nheer.io/2012/06/27/oemwn_coca-cola</guid>
       <description>
 
 &lt;p&gt;Eine amerikanische Zeitung (&lt;a href=&#34;http://www.thisamericanlife.org&#34;&gt;this american life&lt;/a&gt;) meint nun das orginal Coca-Cola Rezept gefunden zu haben.&lt;/p&gt;

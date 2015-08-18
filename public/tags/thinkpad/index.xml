@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Thinkpad on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/thinkpad/</link>
+    <link>http://blog.nheer.io/tags/thinkpad/</link>
     <description>Recent content in Thinkpad on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 29 Apr 2013 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/thinkpad/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/thinkpad/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Thinklight Script für Linux</title>
-      <link>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</link>
+      <link>http://blog.nheer.io/2013/04/29/thinklight-script-f%C3%BCr-linux</link>
       <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</guid>
+      <guid>http://blog.nheer.io/2013/04/29/thinklight-script-f%C3%BCr-linux</guid>
       <description>
 
 &lt;p&gt;Wolltet ihr schon immer mal das LED-Licht in einem Script benutzen, oder es einfach nur per Terminal-Befehl an- und ausschalten?&lt;/p&gt;

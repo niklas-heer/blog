@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Linux on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/linux/</link>
+    <link>http://blog.nheer.io/tags/linux/</link>
     <description>Recent content in Linux on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 05 Dec 2014 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Jekyll - from zero to hero</title>
-      <link>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</link>
+      <link>http://blog.nheer.io/2014/12/05/jekyll---from-zero-to-hero</link>
       <pubDate>Fri, 05 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/12/05/jekyll---from-zero-to-hero</guid>
+      <guid>http://blog.nheer.io/2014/12/05/jekyll---from-zero-to-hero</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;my blog was never faster nor easier to deploy!&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -96,8 +96,8 @@ This is the fastest site I&#39;ve ever built.
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/before.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/before.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/before.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-05/after.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;before and after&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -157,10 +157,10 @@ Maybe it will help you!&lt;/p&gt;
     
     <item>
       <title>vtop an unknown terminal beauty</title>
-      <link>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</link>
+      <link>http://blog.nheer.io/2014/12/01/vtop-an-unknown-terminal-beauty</link>
       <pubDate>Mon, 01 Dec 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
+      <guid>http://blog.nheer.io/2014/12/01/vtop-an-unknown-terminal-beauty</guid>
       <description>
 
 &lt;blockquote&gt;
@@ -180,8 +180,8 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/top.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/top.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/htop.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/htop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;top vs htop&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -192,7 +192,7 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2014-12-01/vtop.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2014-12-01/vtop.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;vtop&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -214,10 +214,10 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
     
     <item>
       <title>Let&#39;s Learn - Programmieren #3 - Netbeans &amp; Java in Linux</title>
-      <link>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</link>
+      <link>http://blog.nheer.io/2013/10/27/lets-learn_programmieren-3</link>
       <pubDate>Sun, 27 Oct 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/10/27/lets-learn_programmieren-3</guid>
+      <guid>http://blog.nheer.io/2013/10/27/lets-learn_programmieren-3</guid>
       <description>&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
 &lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/4WahwewBgDs&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
 &lt;/iframe&gt;
@@ -228,15 +228,15 @@ But let&amp;rsquo;s start at the beginning of my journey.&lt;/p&gt;
     
     <item>
       <title>Ubuntu 13.04 - Ein besserer File-Browser</title>
-      <link>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</link>
+      <link>http://blog.nheer.io/2013/04/30/ubuntu_pantheon-files</link>
       <pubDate>Tue, 30 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/30/ubuntu_pantheon-files</guid>
+      <guid>http://blog.nheer.io/2013/04/30/ubuntu_pantheon-files</guid>
       <description>
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2013-04-30/Arbeitsfläche-1_002.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;Pantheon Files&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -273,10 +273,10 @@ sudo apt-get install pantheon-files
     
     <item>
       <title>Thinklight Script für Linux</title>
-      <link>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</link>
+      <link>http://blog.nheer.io/2013/04/29/thinklight-script-f%C3%BCr-linux</link>
       <pubDate>Mon, 29 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2013/04/29/thinklight-script-f%C3%BCr-linux</guid>
+      <guid>http://blog.nheer.io/2013/04/29/thinklight-script-f%C3%BCr-linux</guid>
       <description>
 
 &lt;p&gt;Wolltet ihr schon immer mal das LED-Licht in einem Script benutzen, oder es einfach nur per Terminal-Befehl an- und ausschalten?&lt;/p&gt;

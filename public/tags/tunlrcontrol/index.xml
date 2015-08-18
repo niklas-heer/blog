@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tunlrcontrol on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/tunlrcontrol/</link>
+    <link>http://blog.nheer.io/tags/tunlrcontrol/</link>
     <description>Recent content in Tunlrcontrol on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 10 Apr 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/tunlrcontrol/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/tunlrcontrol/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>TunlrControl 1.0.0.16</title>
-      <link>http://localhost:1313/2012/04/10/tunlrcontrol-16</link>
+      <link>http://blog.nheer.io/2012/04/10/tunlrcontrol-16</link>
       <pubDate>Tue, 10 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/10/tunlrcontrol-16</guid>
+      <guid>http://blog.nheer.io/2012/04/10/tunlrcontrol-16</guid>
       <description>&lt;p&gt;TunlrControl 1.0.0.16 ist da!&lt;/p&gt;
 
 &lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.16&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-10/TunlrControl-1.0.0.161.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;
  &lt;/p&gt;
 
@@ -39,18 +39,18 @@
     
     <item>
       <title>TunlrControl 1.0.0.15 ist da!</title>
-      <link>http://localhost:1313/2012/04/06/tunlrcontrol-15</link>
+      <link>http://blog.nheer.io/2012/04/06/tunlrcontrol-15</link>
       <pubDate>Fri, 06 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/06/tunlrcontrol-15</guid>
+      <guid>http://blog.nheer.io/2012/04/06/tunlrcontrol-15</guid>
       <description>&lt;p&gt;TunlrControl 1.0.0.15 ist da!&lt;/p&gt;
 
 &lt;p&gt;Download-Seite: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.15&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-06/tunlrControl-1.0.0.15-de.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-06/tunlrControl-1.0.0.15-en1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
     &lt;/figure&gt;
 &lt;/center&gt;
  &lt;/p&gt;
@@ -73,10 +73,10 @@ Eintrag ;)&lt;/p&gt;
     
     <item>
       <title>TunlrControl 1.0.0.12</title>
-      <link>http://localhost:1313/2012/04/05/tunlrcontrol-12</link>
+      <link>http://blog.nheer.io/2012/04/05/tunlrcontrol-12</link>
       <pubDate>Thu, 05 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/05/tunlrcontrol-12</guid>
+      <guid>http://blog.nheer.io/2012/04/05/tunlrcontrol-12</guid>
       <description>&lt;p&gt;Und wieder gibt es eine neue Version!&lt;/p&gt;
 
 &lt;p&gt;TunlrControl 1.0.0.12 ist da!&lt;/p&gt;
@@ -86,7 +86,7 @@ Funktionsweise wurde überarbeitet und sollte jetzt
 weniger störanfällig sein.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.12.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.12.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-05/tunlrControl-1.0.0.12.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-05/tunlrControl-1.0.0.12.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;
  &lt;/p&gt;
 
@@ -110,18 +110,18 @@ bei denen sie nicht tat.&lt;/li&gt;
     
     <item>
       <title>TunlrControl 1.0.0.13 - Now speaks English, too!</title>
-      <link>http://localhost:1313/2012/04/05/tunlrcontrol-13</link>
+      <link>http://blog.nheer.io/2012/04/05/tunlrcontrol-13</link>
       <pubDate>Thu, 05 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/05/tunlrcontrol-13</guid>
+      <guid>http://blog.nheer.io/2012/04/05/tunlrcontrol-13</guid>
       <description>&lt;p&gt;Und wieder gibt es ein Update von TunlrControl.&lt;/p&gt;
 
 &lt;p&gt;Diesmal ist es die Version 1.0.0.13&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure class=&#34;half&#34;&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.13_de.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.13_de.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
-        &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.13_en1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-05/tunlrControl-1.0.0.13_en1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-05/tunlrControl-1.0.0.13_de.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-05/tunlrControl-1.0.0.13_de.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-05/tunlrControl-1.0.0.13_en1.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-05/tunlrControl-1.0.0.13_en1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
 
@@ -145,10 +145,10 @@ in selbiger angezeigt.&lt;/li&gt;
     
     <item>
       <title>TunlrControl 1.0.0.11 - mehr Produktivität!</title>
-      <link>http://localhost:1313/2012/04/04/tunlrcontrol-11</link>
+      <link>http://blog.nheer.io/2012/04/04/tunlrcontrol-11</link>
       <pubDate>Wed, 04 Apr 2012 14:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/04/tunlrcontrol-11</guid>
+      <guid>http://blog.nheer.io/2012/04/04/tunlrcontrol-11</guid>
       <description>&lt;p&gt;Und schon wieder gibt es eine neue Version! :D&lt;/p&gt;
 
 &lt;p&gt;Was ist neu?&lt;/p&gt;
@@ -169,10 +169,10 @@ in selbiger angezeigt.&lt;/li&gt;
     
     <item>
       <title>TunlrControl 1.0.0.9 - mit Status-Anzeige!</title>
-      <link>http://localhost:1313/2012/04/04/tunlrcontrol-9</link>
+      <link>http://blog.nheer.io/2012/04/04/tunlrcontrol-9</link>
       <pubDate>Wed, 04 Apr 2012 12:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/04/tunlrcontrol-9</guid>
+      <guid>http://blog.nheer.io/2012/04/04/tunlrcontrol-9</guid>
       <description>&lt;p&gt;Und schon wieder gibt es ein Update!&lt;/p&gt;
 
 &lt;p&gt;TunlrControl 1.0.0.9 ist da und diesmal könnt ihr wesentlich einfacher
@@ -190,14 +190,14 @@ sehen, ob der Dienst aktiv ist oder nicht!&lt;/p&gt;
     
     <item>
       <title>TunlrControl 1.0.0.8 ist da!</title>
-      <link>http://localhost:1313/2012/04/04/tunlrcontrol-8</link>
+      <link>http://blog.nheer.io/2012/04/04/tunlrcontrol-8</link>
       <pubDate>Wed, 04 Apr 2012 08:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/04/tunlrcontrol-8</guid>
+      <guid>http://blog.nheer.io/2012/04/04/tunlrcontrol-8</guid>
       <description>&lt;p&gt;Ich habe das Programm überarbeitet.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-04/tunlrControl-1.0.0.8.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-04/tunlrControl-1.0.0.8.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-04/tunlrControl-1.0.0.8.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-04/tunlrControl-1.0.0.8.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Was ist neu?&lt;/p&gt;
@@ -211,15 +211,15 @@ irgendetwas online geht TunlrContorl nutzen!&lt;/p&gt;
     
     <item>
       <title>TunlrControl - Update!</title>
-      <link>http://localhost:1313/2012/04/03/tunlrcontrol---update</link>
+      <link>http://blog.nheer.io/2012/04/03/tunlrcontrol---update</link>
       <pubDate>Tue, 03 Apr 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/04/03/tunlrcontrol---update</guid>
+      <guid>http://blog.nheer.io/2012/04/03/tunlrcontrol---update</guid>
       <description>&lt;p&gt;Ich habe nun meinem Programm eine rudimentäre Installationsroutine
 verpasst und eine Update-Funktion hinzugefügt!&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2012-04-03/tunlrControl1.png&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-04-03/tunlrControl1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2012-04-03/tunlrControl1.png&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-04-03/tunlrControl1.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
 &lt;/center&gt;&lt;/p&gt;
 
 &lt;p&gt;Hier ist die neue URL: &lt;a href=&#34;http://wedevelop.de/software/tunlrControl/publish.htm&#34;&gt;TunlrControl 1.0.0.7&lt;/a&gt;&lt;/p&gt;

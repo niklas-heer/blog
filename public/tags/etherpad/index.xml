@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Etherpad on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/etherpad/</link>
+    <link>http://blog.nheer.io/tags/etherpad/</link>
     <description>Recent content in Etherpad on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 14 Mar 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/etherpad/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/etherpad/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Walkthrough durch Etherpad</title>
-      <link>http://localhost:1313/2012/03/14/walkthrough-durch-etherpad</link>
+      <link>http://blog.nheer.io/2012/03/14/walkthrough-durch-etherpad</link>
       <pubDate>Wed, 14 Mar 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/03/14/walkthrough-durch-etherpad</guid>
+      <guid>http://blog.nheer.io/2012/03/14/walkthrough-durch-etherpad</guid>
       <description>&lt;p&gt;Nach längerer Pause nun endlich wieder ein Video von mir.&lt;/p&gt;
 
 &lt;p&gt;Es geht um Etherpad.&lt;/p&gt;

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Social Network on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/social-network/</link>
+    <link>http://blog.nheer.io/tags/social-network/</link>
     <description>Recent content in Social Network on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 10 Dec 2011 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/social-network/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/social-network/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>&#34;Gefällt mir nicht&#34;</title>
-      <link>http://localhost:1313/2011/12/10/gef%C3%A4llt-mir-nicht</link>
+      <link>http://blog.nheer.io/2011/12/10/gef%C3%A4llt-mir-nicht</link>
       <pubDate>Sat, 10 Dec 2011 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2011/12/10/gef%C3%A4llt-mir-nicht</guid>
+      <guid>http://blog.nheer.io/2011/12/10/gef%C3%A4llt-mir-nicht</guid>
       <description>&lt;p&gt;Ich komme in letzter Zeit immer öfter ins krübeln und frage mich kann es
 wirklich ausreichen eine Sache mit den 2 Möglichkeiten &amp;ldquo;Gefällt mir&amp;rdquo;
 oder eben nichts zu bewerten? Wir könnten auch sagen implizit sage ich
@@ -22,7 +22,7 @@ wenn ich nichts sage &amp;ldquo;Gefällt mir nicht&amp;rdquo;. Nehmt zum Beispie
 Bild:&lt;/p&gt;
 
 &lt;figure&gt;
-    &lt;a href=&#34;http://localhost:1313/assets/images/2011-12-10/nazi_aufmarsch.jpg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2011-12-10/nazi_aufmarsch.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+    &lt;a href=&#34;http://blog.nheer.io/assets/images/2011-12-10/nazi_aufmarsch.jpg&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2011-12-10/nazi_aufmarsch.jpg&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
     &lt;figcaption&gt;Anti Nazi Aufmarsch von &lt;a href=&#34;http://www.macventure.de/post/13893240838/risiken-und-nebenwirkungen-von-naziaufm-rschen&#34;&gt;Michael Elte&lt;/a&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
 

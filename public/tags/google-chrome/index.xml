@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google Chrome on Niklas&#39; Blog</title>
-    <link>http://localhost:1313/tags/google-chrome/</link>
+    <link>http://blog.nheer.io/tags/google-chrome/</link>
     <description>Recent content in Google Chrome on Niklas&#39; Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 02 May 2012 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/google-chrome/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.nheer.io/tags/google-chrome/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Google Chrome Apps</title>
-      <link>http://localhost:1313/2012/05/02/google-chrome-apps</link>
+      <link>http://blog.nheer.io/2012/05/02/google-chrome-apps</link>
       <pubDate>Wed, 02 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/05/02/google-chrome-apps</guid>
+      <guid>http://blog.nheer.io/2012/05/02/google-chrome-apps</guid>
       <description>
 
 &lt;p&gt;Ich habe mich in der letzten Zeit ein wenig mit Google Chrome Apps
@@ -26,7 +26,7 @@ beschäftigt und sogleich 4 erstellt.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;https://chrome.google.com/webstore/detail/cgagfhejeenbaomfbdipcknalolodkkm&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-05-02/Niklas-Logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;https://chrome.google.com/webstore/detail/cgagfhejeenbaomfbdipcknalolodkkm&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-05-02/Niklas-Logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/cgagfhejeenbaomfbdipcknalolodkkm&#34;&gt;niklas-Heer.de&lt;/a&gt;&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
@@ -35,7 +35,7 @@ beschäftigt und sogleich 4 erstellt.&lt;/p&gt;
 
 &lt;p&gt;&lt;center&gt;
     &lt;figure&gt;
-        &lt;a href=&#34;https://chrome.google.com/webstore/detail/gmhhndbopniohlapeafgoddeohgbdokg&#34;&gt;&lt;img src=&#34;http://localhost:1313/assets/images/2012-05-02/logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
+        &lt;a href=&#34;https://chrome.google.com/webstore/detail/gmhhndbopniohlapeafgoddeohgbdokg&#34;&gt;&lt;img src=&#34;http://blog.nheer.io/assets/images/2012-05-02/logo.png&#34; alt=&#34;&#34;&gt;&lt;/a&gt;
         &lt;figcaption&gt;&lt;a href=&#34;https://chrome.google.com/webstore/detail/gmhhndbopniohlapeafgoddeohgbdokg/publish-accepted&#34;&gt;JusosSHOK&lt;/a&gt;&lt;/figcaption&gt;
     &lt;/figure&gt;
 &lt;/center&gt;&lt;/p&gt;
