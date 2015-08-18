@@ -12,7 +12,7 @@ description = "Hugo, even faster than jekyll"
     </figure>
 </center>
 
-## Why I changed to [Hugo][hugo]
+## Why I switched to [Hugo][hugo]
 [Jekyll][jekyll] was my first real static site generator. I loved it! There was only one problem: I really dislike ruby and the gem system. It is simply to slow!
 
 ### The speed battle
