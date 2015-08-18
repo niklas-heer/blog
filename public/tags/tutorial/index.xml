@@ -116,7 +116,11 @@ Kommentare entgegen.&lt;/p&gt;
 &lt;p&gt;Was kann man damit machen, wozu ist es gedacht, dies sind alles Fragen,
 die ich in meinem neuen Video beantworte, also schaut es euch an. ;)&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/QojQgfl5i0M&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/QojQgfl5i0M&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     

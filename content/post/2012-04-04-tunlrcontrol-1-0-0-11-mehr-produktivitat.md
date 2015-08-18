@@ -1,7 +1,8 @@
 ---
 title: TunlrControl 1.0.0.11 - mehr Produktivität!
+slug: tunlrcontrol-11
 description: "TunlrControl 1.0.0.11 - mehr Produktivität!"
-date: 2012-04-04
+date: 2012-04-04T14:00:00
 tags: [youtube, code, tunlr, tunlrcontrol]
 ---
 
@@ -13,5 +14,4 @@ Was ist neu?
 * es gibt keine nervigen aufpoppenden Fenster mehr
 * Informationen werden in Tooltipps angezeigt
 
-
-<iframe width="560" height="315" src="//www.youtube.com/embed/1sL6SDe-QaE" frameborder="0"> </iframe>
+{{< youtube 1sL6SDe-QaE >}}

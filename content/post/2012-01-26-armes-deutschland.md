@@ -49,5 +49,4 @@ Deutschland mit solchen Menschen im Bundestag, tust du mir Leid!
 
 **Für mehr Input noch ein Video:**
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/zhyr4915UU8" frameborder="0"> </iframe>
-
+{{< youtube zhyr4915UU8 >}}

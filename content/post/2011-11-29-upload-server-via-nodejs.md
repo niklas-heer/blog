@@ -21,7 +21,7 @@ Wer mit mir zusammen ein Projekt starten möchte (Git und SVN-Repo kann ich stel
 
 Ansonsten unterliegt der Code hier der GNU/GPL 3!
 
-```
+``` javascript
 // Code unterliegt der GNU/GPL 3
 // Autor: Niklas Heer
  

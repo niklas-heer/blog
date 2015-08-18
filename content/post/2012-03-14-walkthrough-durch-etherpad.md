@@ -12,4 +12,4 @@ Es geht um Etherpad.
 Was kann man damit machen, wozu ist es gedacht, dies sind alles Fragen,
 die ich in meinem neuen Video beantworte, also schaut es euch an. ;)
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/QojQgfl5i0M" frameborder="0"> </iframe>
+{{< youtube QojQgfl5i0M >}}

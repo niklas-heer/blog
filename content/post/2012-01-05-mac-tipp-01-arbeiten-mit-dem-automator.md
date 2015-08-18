@@ -11,5 +11,4 @@ einem Ordner, lösen könnt.
 
 Ich hoffe es gefällt und hilft euch ;D
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/GuhbFHFZkY0" frameborder="0"> </iframe>
-
+{{< youtube GuhbFHFZkY0 >}}

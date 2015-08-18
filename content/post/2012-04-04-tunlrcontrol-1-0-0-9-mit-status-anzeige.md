@@ -1,7 +1,8 @@
 ---
 title: TunlrControl 1.0.0.9 - mit Status-Anzeige!
+slug: tunlrcontrol-9
 description: "TunlrControl 1.0.0.9 - mit Status-Anzeige!"
-date: 2012-04-04
+date: 2012-04-04T12:00:00
 tags: [youtube, code, tunlr, tunlrcontrol]
 ---
 
@@ -13,4 +14,4 @@ sehen, ob der Dienst aktiv ist oder nicht!
 
 Download-Seite: [TunlrControl 1.0.0.9](http://wedevelop.de/software/tunlrControl/publish.htm)
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/SKnrVX9tgbc" frameborder="0"> </iframe>
+{{< youtube SKnrVX9tgbc >}}

@@ -1,5 +1,6 @@
 ---
 title: TunlrControl 1.0.0.13 - Now speaks English, too!
+slug: tunlrcontrol-13
 description: "TunlrControl 1.0.0.13 - Now speaks English, too!"
 date: 2012-04-05
 tags: [code, tunlr, tunlrcontrol]

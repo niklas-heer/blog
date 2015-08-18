@@ -62,11 +62,11 @@
     </item>
     
     <item>
-      <title>Auch wir sind Urheber/innen</title>
-      <link>http://localhost:1313/2012/05/11/auch-wir-sind-urheber/innen</link>
+      <title>Auch wir sind UrheberInnen</title>
+      <link>http://localhost:1313/2012/05/11/auch-wir-sind-urheberinnen</link>
       <pubDate>Fri, 11 May 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/05/11/auch-wir-sind-urheber/innen</guid>
+      <guid>http://localhost:1313/2012/05/11/auch-wir-sind-urheberinnen</guid>
       <description>&lt;p&gt;Ich bin nicht nur Urheber sondern eben auch Konsument und wie alle
 Urheber kommen meine Werke nicht vom Himmel, denn auch ich schnappe als
 Konsument Ideen auf und setzte diese dann um.&lt;/p&gt;
@@ -79,7 +79,11 @@ alle profitieren!&lt;/p&gt;
 
 &lt;p&gt;Selber mitmachen: &lt;a href=&#34;https://docs.google.com/document/d/1HeB2yC1_gty568VhGUxixvHuJj9PX9Raa8iLZ4-yYQM/preview?pli=1&amp;amp;sle=true&#34;&gt;Google Docs&lt;/a&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/eUi7PPDl65U&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/eUi7PPDl65U&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -92,15 +96,35 @@ alle profitieren!&lt;/p&gt;
       <description>&lt;p&gt;Hier mal eine durchaus interessante Serie von SemperCensio zum
 Handelsblatt und dem Schutz bzw. Begriff des &amp;ldquo;geistigen Eigentums&amp;rdquo;.&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/6TG5ZoNwAg4&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/6TG5ZoNwAg4&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/U9XCHJq-Sfk&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/U9XCHJq-Sfk&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/HL7ZP1D7yUc&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/HL7ZP1D7yUc&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/wbYE4jwfkSA&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;&lt;br&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/wbYE4jwfkSA&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/vOu4rasz8Oc&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/vOu4rasz8Oc&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -114,11 +138,19 @@ Handelsblatt und dem Schutz bzw. Begriff des &amp;ldquo;geistigen Eigentums&amp;
 
 &lt;p&gt;&lt;strong&gt;Die Frage:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/DF3jw2xtsPM&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/DF3jw2xtsPM&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Die Antwort:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/TIGHi1bmG_I&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/TIGHi1bmG_I&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     

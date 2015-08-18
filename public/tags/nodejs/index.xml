@@ -33,7 +33,7 @@ Wer mit mir zusammen ein Projekt starten möchte (Git und SVN-Repo kann ich stel
 
 &lt;p&gt;Ansonsten unterliegt der Code hier der GNU/GPL 3!&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;// Code unterliegt der GNU/GPL 3
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// Code unterliegt der GNU/GPL 3
 // Autor: Niklas Heer
  
 require(&#39;../test/common&#39;);

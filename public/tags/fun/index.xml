@@ -18,7 +18,11 @@
       <description>&lt;p&gt;Zugegeben - es ist sehr nerdig. Aber ich finde es wirklich eine geniale
 Idee und die Umsetzung ist natürlich auch 1a. Schaut&amp;rsquo;s euch einfach an.&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/w68qZ8JvBds#!&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/w68qZ8JvBds&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -32,14 +36,19 @@ Idee und die Umsetzung ist natürlich auch 1a. Schaut&amp;rsquo;s euch einfach
 Version ihres genialen Lieds &amp;ldquo;4 Chords&amp;rdquo; rausgebracht. Da sind ein paar
 neue und bekannte Songs drin! Hier ist es:&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/oOlDewpCfZQ&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
- 
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/oOlDewpCfZQ&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 
-und noch das Original:
+&lt;p&gt;und noch das Original:&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/5pidokakU4I&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
-
-&lt;p&gt;BILD-QUELLEN: &lt;a href=&#34;http://www.axisofawesome.net/&#34;&gt;The Axis of Awesome&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/5pidokakU4I&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     
@@ -69,7 +78,11 @@ hab ich jetzt mal eine neue animierte Version gemacht. :)&lt;/p&gt;
       <description>&lt;p&gt;Hier ein Lied von &amp;ldquo;&lt;a href=&#34;http://www.zwavoitrottln.at/&#34;&gt;ZwaVoitrottln&lt;/a&gt;&amp;rdquo; gegen
 Energiesparlampen:&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/inC_zWsmuus&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/inC_zWsmuus&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 </description>
     </item>
     

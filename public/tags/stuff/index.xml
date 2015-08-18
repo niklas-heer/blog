@@ -281,16 +281,20 @@ anhören könnte:&lt;/p&gt;
     
     <item>
       <title>Öfter mal was neues. Heute: &#34;Pencil Vs Camera&#34;</title>
-      <link>http://localhost:1313/2012/06/05/%C3%B6fter-mal-was-neues.-heute-pencil-vs-camera</link>
+      <link>http://localhost:1313/2012/06/05/oemwn_pencil-vs-camera</link>
       <pubDate>Tue, 05 Jun 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://localhost:1313/2012/06/05/%C3%B6fter-mal-was-neues.-heute-pencil-vs-camera</guid>
+      <guid>http://localhost:1313/2012/06/05/oemwn_pencil-vs-camera</guid>
       <description>&lt;p&gt;Ich bin auf die beeindruckenden Bilder von &lt;strong&gt;&lt;a href=&#34;http://www.flickr.com/photos/benheine/&#34;&gt;Ben Heine&lt;/a&gt; &lt;/strong&gt;gestoßen und wollte sie
 gleich mit euch teilen! :)&lt;/p&gt;
 
 &lt;p&gt;Hier noch ein Entstehungsvideo der Bilder:&lt;/p&gt;
 
-&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/2JQYUwskc\_I&#34; frameborder=&#34;0&#34;&gt; &lt;/iframe&gt;
+&lt;p&gt;&lt;div class=&#34;video embed video-player&#34;&gt;
+&lt;iframe class=&#34;youtube-player&#34; type=&#34;text/html&#34; src=&#34;http://www.youtube.com/embed/2JQYUwskc_I&#34; allowfullscreen frameborder=&#34;0&#34;&gt;
+&lt;/iframe&gt;
+&lt;/div&gt;
+&lt;/p&gt;
 
 &lt;p&gt;Website von Ben Heine: &lt;a href=&#34;http://www.benheine.com/&#34;&gt;http://www.benheine.com&lt;/a&gt;&lt;/p&gt;
 </description>

@@ -10,8 +10,8 @@ Hier mal zwei interessante Gedanken zum Thema Raubkopierer.
 
 **Die Frage:**
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/DF3jw2xtsPM" frameborder="0"> </iframe>
+{{< youtube DF3jw2xtsPM >}}
 
 **Die Antwort:**
 
-<iframe width="560" height="315" src="//www.youtube.com/embed/TIGHi1bmG_I" frameborder="0"> </iframe>
+{{< youtube TIGHi1bmG_I >}}

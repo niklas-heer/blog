@@ -73,12 +73,12 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/12/23/ausblick-1_neue-homepage</loc>
+    <loc>http://localhost:1313/2012/12/23/apfelkorb-8_finder</loc>
     <lastmod>2012-12-23T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/12/23/apfelkorb-8_finder</loc>
+    <loc>http://localhost:1313/2012/12/23/ausblick-1_neue-homepage</loc>
     <lastmod>2012-12-23T00:00:00+00:00</lastmod>
   </url>
   
@@ -203,12 +203,12 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/06/05/%C3%B6fter-mal-was-neues.-heute-pencil-vs-camera</loc>
+    <loc>http://localhost:1313/2012/06/05/oemwn_pencil-vs-camera</loc>
     <lastmod>2012-06-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/05/11/auch-wir-sind-urheber/innen</loc>
+    <loc>http://localhost:1313/2012/05/11/auch-wir-sind-urheberinnen</loc>
     <lastmod>2012-05-11T00:00:00+00:00</lastmod>
   </url>
   
@@ -223,38 +223,38 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/10/tunlrcontrol-1.0.0.16</loc>
+    <loc>http://localhost:1313/2012/04/10/tunlrcontrol-16</loc>
     <lastmod>2012-04-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/06/tunlrcontrol-1.0.0.15-ist-da</loc>
+    <loc>http://localhost:1313/2012/04/06/tunlrcontrol-15</loc>
     <lastmod>2012-04-06T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/05/tunlrcontrol-1.0.0.13---now-speaks-english-too</loc>
+    <loc>http://localhost:1313/2012/04/05/tunlrcontrol-13</loc>
     <lastmod>2012-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/05/tunlrcontrol-1.0.0.12</loc>
+    <loc>http://localhost:1313/2012/04/05/tunlrcontrol-12</loc>
     <lastmod>2012-04-05T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.9---mit-status-anzeige</loc>
-    <lastmod>2012-04-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/2012/04/04/tunlrcontrol-11</loc>
+    <lastmod>2012-04-04T14:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.11---mehr-produktivit%C3%A4t</loc>
-    <lastmod>2012-04-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/2012/04/04/tunlrcontrol-9</loc>
+    <lastmod>2012-04-04T12:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2012/04/04/tunlrcontrol-1.0.0.8-ist-da</loc>
-    <lastmod>2012-04-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/2012/04/04/tunlrcontrol-8</loc>
+    <lastmod>2012-04-04T08:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -308,18 +308,13 @@
   </url>
   
   <url>
-    <loc>http://localhost:1313/2011/11/28/4-chord-song</loc>
-    <lastmod>2011-11-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>http://localhost:1313/2011/11/28/bis-zur-unendlichkeit-animiert</loc>
     <lastmod>2011-11-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http://localhost:1313/2011/11/24/bis-zur-unendlichkeit-und-noch-viel-viel-weiter</loc>
-    <lastmod>2011-11-24T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/2011/11/28/4-chord-song</loc>
+    <lastmod>2011-11-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -329,6 +324,11 @@
   
   <url>
     <loc>http://localhost:1313/2011/11/24/blog-goes-facebook</loc>
+    <lastmod>2011-11-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/2011/11/24/bis-zur-unendlichkeit-und-noch-viel-viel-weiter</loc>
     <lastmod>2011-11-24T00:00:00+00:00</lastmod>
   </url>
   
