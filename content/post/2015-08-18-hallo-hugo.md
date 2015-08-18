@@ -41,7 +41,7 @@ That is pretty neat.
     </figure>
 </center>
 
-When I'm writing new posts, I can view my changes instantly in my browser. Hugo serves my page locally and rebuilds and reloads the site whenever I change and save a file. This is achieved with this command: `hugo server -w -t "nh"`
+When I'm writing new posts, I can view my changes instantly in my browser. Hugo serves my page locally and rebuilds and reloads the site whenever I change and save a file. This is achieved with this command: `hugo server -w -t "nh"`. When listening it should look similar to this:
 
 <center>
     <figure>
