@@ -15,7 +15,6 @@
 	$commands = array(
 		'pwd',
 		'whoami',
-
 		'git pull',
 		'git status',
 		'hugo',
