@@ -17,7 +17,7 @@
 		'whoami',
 		'git pull',
 		'git status',
-		'hugo',
+		'/usr/local/bin/hugo',
 	);
 
 	// Run the commands for output
