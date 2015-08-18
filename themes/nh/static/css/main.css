@@ -514,6 +514,7 @@ figcaption a {
   padding-right: 3px;
   margin-left: -3px;
   margin-right: -3px;
+  border-radius: 0.15em;
 }
 
 h1 a:hover,
