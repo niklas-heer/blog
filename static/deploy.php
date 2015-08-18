@@ -11,6 +11,8 @@
 	$commands = array(
 		'pwd',
 		'whoami',
+		'git stash save --keep-index',
+		'git stash drop',
 		'git pull',
 		'git status',
 		'hugo',
