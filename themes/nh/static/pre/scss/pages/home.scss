@@ -124,15 +124,11 @@
       margin: 0.5em 0;
       //border-bottom: 0.4em solid darken($main-color, 6%);
       position: relative;
-      transition: transform .3s ease;
+      transition: transform .3s linear;
 
 
       a:after {
         display: none;
-      }
-
-      &:hover {
-
       }
 
       &:after{
