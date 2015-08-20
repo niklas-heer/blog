@@ -15,7 +15,6 @@ header {
 
     a{
       white-space: nowrap;
-      //font-weight: normal;
       padding-left: 3px;
       padding-right: 3px;
       background: white;
@@ -35,7 +34,8 @@ header {
       content: '';
       position: absolute;
       width: 0;
-      min-height: inherit;;
+      min-height: inherit;
+      transition: 0.3;
       background-color: darken($main-color, 6%);
     }
 
