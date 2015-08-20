@@ -11,15 +11,36 @@ header {
     display: inline-block;
     margin: 0;
     padding: 0;
-    white-space: nowrap;
-    font-weight: normal;
-    a {
-      color: $link-color;
-      text-decoration: none;
-      padding: 4px;
-      &:hover {
-        color: white;
-      }
+
+
+    a{
+      white-space: nowrap;
+      //font-weight: normal;
+      padding-left: 3px;
+      padding-right: 3px;
+      background: white;
+      transition: all .3s linear;
+      color: $text-color;
+    }
+
+    a:hover{
+      color: white;
+      background-color: lighten($main-color, 6%);
+    }
+    a:after{
+      top: 100%;
+      left: 0;
+      border: none;
+      height: 4px;
+      content: '';
+      position: absolute;
+      width: 0;
+      min-height: inherit;;
+      background-color: darken($main-color, 6%);
+    }
+
+    a:hover:after{
+      width: 100%;
     }
   } // end h1.title
 

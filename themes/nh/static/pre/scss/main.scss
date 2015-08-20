@@ -5,7 +5,8 @@
 // Original Author: Mathieu Mayer-Mazzoli http://m3xm.github.io
 // License: MIT License http://opensource.org/licenses/MIT
 
-
+// Tools
+@import 'tools/mixins';
 
 // Base
 @import 'base/reset';
@@ -13,8 +14,7 @@
 @import 'base/utilities';
 @import 'base/global';
 
-// Tools
-@import 'tools/mixins';
+
 
 // Components
 //@import 'components/icons';

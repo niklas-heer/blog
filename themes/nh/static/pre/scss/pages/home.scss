@@ -3,7 +3,7 @@
   li {
     display: inline-block;
     width: 100%;
-    border-bottom: 1px solid darken($main-color, 6%);
+    //border-bottom: 1px solid darken($main-color, 6%);
 
     &:first-child {
       border-top: 1px solid darken($main-color, 6%);
@@ -12,15 +12,13 @@
     .p-wrap {
       padding: $spacing-ml $spacing-m;
       background: $main-color;
-      transition: all .15s ease-in;
+      transition: all .3s ease-in;
       &:active {
         background: darken($main-color, 3%);
       }
       &:hover {
         background: lighten($main-color, 3%);
         .inner {
-          -webkit-transform: translateX($spacing-s);
-          -ms-transform: translateX($spacing-s);
           transform: translateX($spacing-s);
           &::after {
             content:'\2192';
@@ -124,7 +122,39 @@
 
     li {
       margin: 0.5em 0;
-      border-bottom: 0.4em solid darken($main-color, 6%);
+      //border-bottom: 0.4em solid darken($main-color, 6%);
+      position: relative;
+      transition: transform .3s ease;
+
+
+      a:after {
+        display: none;
+      }
+
+      &:hover {
+
+      }
+
+      &:after{
+        text-align: justify;
+        display: inline-block;
+        left: 0;
+        top: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        height: 5px;
+        content: '';
+        position: absolute;
+        width: 0;
+        min-height: inherit;
+        transition: .3s;
+        background-color: darken($main-color, 6%);
+      }
+
+      &:hover:after{
+        width: 942px;
+      }
+
 
       &:first-child {
         border-top: none;
