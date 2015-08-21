@@ -13,7 +13,7 @@ description = "Hugo, even faster than jekyll"
 </center>
 
 ## Why I switched to [Hugo][hugo]
-[Jekyll][jekyll] was my first real static site generator. I loved it! There was only one problem: I really dislike ruby and the gem system. It is simply to slow!
+[Jekyll][jekyll] was my first real static site generator. I loved it! There was only one problem: I really dislike ruby and the gem system. It is simply too slow!
 
 ### The speed battle
 Lately I've been obsessed with the [Go](http://golang.org/) language. Because of that I discovered [Hugo][hugo], which also makes use of the Go language. This is why it is so fast. Normally my site builds in 120ms with Hugo. That is incredibly fast! Jekyll takes much longer, even minutes sometimes!
