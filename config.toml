@@ -32,7 +32,7 @@ pygmentsuseclasses = true
 	bio = "I love to write stuff about things that grab my attention!"
 	subscribe = "Subscribe"
 	followme = "Follow me on"
-	mysites = "Other interesting sites"
+	mysites = "Cooperations"
 	links = "Links"
 
 	[[params.offcanvas.linksentries]]
@@ -76,3 +76,6 @@ pygmentsuseclasses = true
 		name = "Linux statt Windows"
 		url = "https://linux-statt-windows.org"
 
+	[[params.offcanvas.mysitesentries]]
+		name = "PC-Hilfe in Bremen"
+		url = "http://fragbenny.de/"
