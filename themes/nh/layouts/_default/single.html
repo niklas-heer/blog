@@ -1,20 +1,20 @@
 {{ partial "head" . }}
 <body>
-    
+
     {{ partial "off-canvas" . }}
 
     <div class="site-wrapper">
         {{ partial "header" . }}
-        
+
         <section class="single-wrap">
             <article class="single-content" itemscope itemtype="//schema.org/BlogPosting">
                 <div class="feat">
                     <h5 class="page-date">
                     <time datetime="" itemprop="datePublished">
                     {{ .Date.Format .Site.Params.DateFormPost }}
-                    </time>                  
+                    </time>
                     </h5>
-                    
+
                 </div>
                 <div class="feat-sub">
                     <span class="post-reading-time">
@@ -23,7 +23,7 @@
                     </span>
                 </div>
                 <h1 class="page-title" itemprop="name headline">{{ .Title }}</h1>
-                <div itemprop="articleBody">
+                <div class="articleBody" itemprop="articleBody">
                     {{ .Content }}
                 </div>
                 <div class="feat share">
@@ -31,12 +31,12 @@
                         <i class="fa fa-twitter"></i>
                     </a>
                 </div>
-                
+
                 {{ if isset .Site.Params "disqusshortname" }}
                     {{ partial "disqus" . }}
                 {{ end }}
 
-                
+
                 {{ if .PrevInSection }}
                     <a rel="next" href="{{ .PrevInSection.Permalink }}" id="next">
                         <span class="nav-title nav-title-next">{{ with .Site.Params.older }}{{ . }}{{ end }}</span> <i class="fa fa-long-arrow-right"></i>
@@ -52,7 +52,7 @@
 
         {{ partial "footer" . }}
     </div>
-    
+
     {{ partial "js" . }}
 </body>
 </html>
