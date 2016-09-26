@@ -1,4 +1,4 @@
-BaseURL = "http://blog.nheer.io/"
+BaseURL = "https://blog.nheer.io/"
 languageCode = "en-us"
 title = "Niklas' Blog"
 theme = "nh"
@@ -15,7 +15,7 @@ pygmentsuseclasses = true
 	DateForm = "2. Jan 2006"
 	DateFormPost = "2. January 2006"
 	description = "My personal blog."
-	copyright = "© 2015 Niklas Heer<br /> [![CC BY-SA](/assets/images/cc/by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)"
+	copyright = "© 2015-2016 Niklas Heer<br /> [![CC BY-SA](/assets/images/cc/by-sa.png)](http://creativecommons.org/licenses/by-sa/4.0/)"
 
 	# Enable comments by entering your Disqus shortname
 	disqusshortname = "nheer"
@@ -55,7 +55,6 @@ pygmentsuseclasses = true
 		name = "Source of this Site"
 		url = "https://github.com/niklas-heer/blog"
 
-	
 	[[params.offcanvas.socialnetworks]]
 		name = "Github"
 		url = "//github.com/niklas-heer"
@@ -67,10 +66,6 @@ pygmentsuseclasses = true
 	[[params.offcanvas.socialnetworks]]
 		name = "Twitter"
 		url = "//twitter.com/niklas_heer"
-
-
-
-	
 
 	[[params.offcanvas.mysitesentries]]
 		name = "Linux statt Windows"
