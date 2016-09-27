@@ -13,9 +13,9 @@ Sie handelt von Red, dem coolen Draufgänger und Blue dem liebenswürdigen Nerd.
 
 Das ganze hat auch in Deutschland eine Fan-Gemeinde gefunden und daher werden die Folgen auch ins deutsche übersetzt und synchronisiert.
 
-Hier der deutsche Youtube-Kanal: [Dick Figures auf deutsch](http://www.youtube.com/watch?v=CMUW-cRh67g&list=PL33C696C7A7C703B6&feature=plcp)
+Hier der deutsche Youtube-Kanal: [Dick Figures auf deutsch](https://www.youtube.com/watch?v=CMUW-cRh67g&list=PL33C696C7A7C703B6&feature=plcp)
 
-Der orginale Kanal: [MondoMedia](http://www.youtube.com/show?p=qKrZOTKMhto)
+Der orginale Kanal: [MondoMedia](https://www.youtube.com/show?p=qKrZOTKMhto)
 
 {{< youtube kn7sEPMSIlA >}}
 

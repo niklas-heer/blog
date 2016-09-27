@@ -16,6 +16,6 @@ tags: [stuff, discussion, youtube]
 
 Ihr habt euch schon immer gefragt wie eine Symphonie aus Telefonklingeltönen sich anhören würde?
 
-Kein Problem [cdza](http://www.youtube.com/user/collectivecadenza?feature=watch) zeigt uns wie es sich anhören kann ;)
+Kein Problem [cdza](https://www.youtube.com/user/collectivecadenza?feature=watch) zeigt uns wie es sich anhören kann ;)
 
 {{< youtube ECYkqdx8ueQ >}}

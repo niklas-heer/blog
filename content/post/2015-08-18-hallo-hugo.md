@@ -25,7 +25,7 @@ Speed is nice, but I also should be able to use my static site generator as I us
 
 ``` html
 <div class="video embed video-player">
-  <iframe class="youtube-player" type="text/html" src="http://www.youtube.com/embed/{{ index .Params 0 }}" allowfullscreen frameborder="0">
+  <iframe class="youtube-player" type="text/html" src="https://www.youtube.com/embed/{{ index .Params 0 }}" allowfullscreen frameborder="0">
   </iframe>
 </div>
 ```
